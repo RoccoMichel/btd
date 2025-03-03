@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
+using Unity.VisualScripting;
 
 public class WaveManager : MonoBehaviour
 {
@@ -9,13 +10,15 @@ public class WaveManager : MonoBehaviour
       [SerializeField] private Player player;
       [SerializeField] private WaveManagerUI waveManagerUI;
     */
-    [SerializeField] private Session session;
+    [SerializeField] private Session sesion;
 
     [Header("Settings")]
     [SerializeField] private float waveDuration;
     private float timer;
     private bool isTimerOn;
     private int currentWaveIndex;
+    private float waveTransitionTimer;
+   [SerializeField] private float waveTransitionTime;
 
 
     [Header("Waves")]
@@ -37,6 +40,7 @@ public class WaveManager : MonoBehaviour
         }
         timer = 0;
         isTimerOn = true;
+        Debug.Log("Starting wave " + currentWaveIndex);
     }
     private void StartNextWave()
     {
@@ -61,19 +65,28 @@ public class WaveManager : MonoBehaviour
     private void StartWaveTransition()
     {
         isTimerOn = false;
-        ClearAllEnemies();
 
         currentWaveIndex++;
 
         if (currentWaveIndex >= waves.Length)
         {
             Debug.Log("Waves completed");
-            isTimerOn = false;
+
             /* waveManagerUI.UpdateTimerText("");
              waveManagerUI.UpdateWaveText("Waves Completed");
              GameManager.Instance.SetGameState(GameState.STAGECOMPLETE);*/
         }
-        else StartNextWave();
+        else
+        {
+            waveTransitionTimer += Time.deltaTime;
+            if(waveTransitionTimer>= waveTransitionTime)
+            {
+                waveTransitionTimer = 0f;
+                StartNextWave();
+
+
+            }
+        }
        // else GameManager.Instance.WaveCompletedCallback();
     }
     private void MangeCurrentWave()
@@ -93,7 +106,9 @@ public class WaveManager : MonoBehaviour
 
             if (timeSinceSegmentStart / (1f / segment.spawnFrequency) > localCounters[i])
             {
-                Instantiate(segment.prefab, GetSpawnPosition(), Quaternion.identity, transform).GetComponent<RatBase>().session = session;
+                GameObject rat = Instantiate(segment.prefab, GetSpawnPosition(), Quaternion.identity, transform);
+                rat.GetComponent<RatBase>().OnStart();
+
                 localCounters[i]++;
             }
         }
