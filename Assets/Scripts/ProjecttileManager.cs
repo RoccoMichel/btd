@@ -10,7 +10,7 @@ public class ProjecttileManager : MonoBehaviour
 
     int damage;
     float speed;
-
+    public bool prsig;
     bool doDamageWhenDied;
     float damageRange;
 
@@ -51,7 +51,8 @@ public class ProjecttileManager : MonoBehaviour
         if(collision.transform.tag == "Rat")
         {
             // Damage the rat here
-
+            collision.gameObject.GetComponent<RatBase>().Damage(damage);
+            if (!prsig) Destroy(gameObject);
             DestroyObject(false);
         }
     }

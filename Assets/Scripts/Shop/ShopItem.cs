@@ -8,7 +8,7 @@ public class uiItem : MonoBehaviour
     PlaseCat buildingSystem;
 
     [Tooltip("File name in Resources")]
-    public string structureName;
+    public GameObject structure;
     public TMP_Text price;
     public int cost;
 
@@ -39,7 +39,8 @@ public class uiItem : MonoBehaviour
         {
             ui.session.Expenditure(cost);
 
-            buildingSystem.cat = Resources.Load(structureName).GameObject();
+            buildingSystem.cat = Instantiate(structure);
+            buildingSystem.cat.GetComponent<CatBase>().findWhaveMan();
             buildingSystem.setOldMaterols();
         }
         else PurchaseFail();

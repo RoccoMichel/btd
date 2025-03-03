@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efbf0fb6338e598418122f26aaf0fd4d, type: 3}
   m_Name: Projectile
   m_EditorClassIdentifier: 
-  lifeTime: 5
+  lifeTime: 0.5
   damage: 1
-  speed: 10
+  speed: 0
   doDamageWhenDied: 0
   damageRange: 0
   doEfect: 0

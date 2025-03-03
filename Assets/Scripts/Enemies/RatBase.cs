@@ -51,6 +51,7 @@ public class RatBase : MonoBehaviour
     {
         spline.Container = FindAnyObjectByType<SplineContainer>();
         spline.MaxSpeed = speed;
+        spline.Play();
     }
 
     /// <summary>
