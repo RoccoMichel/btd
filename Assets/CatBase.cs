@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CatBase : MonoBehaviour
@@ -8,7 +9,12 @@ public class CatBase : MonoBehaviour
     public WaveManager waveMan;
     public List<RatBase> Enemys;
 
-    public float atackDilay;
+    public ScriptableObject Stats;
+
+    // Stats
+    public float atackDilay, prodekilSpred;
+    public int prodektilCont;
+    
     float atackTimer = 0;
     RatBase target;
     void UpdateEnemyCont()
@@ -33,10 +39,13 @@ public class CatBase : MonoBehaviour
         return Enemys[curentTaget];
     }
 
-    void Atacke()
-    {
+    //void SpaneProdetils()
+    //{
+    //    for (int i = 0; i < prodektilCont; i++)
+    //    {
 
-    }
+    //    }
+    //}
     void Update()
     {
         // Sode run when enemys dey or get spand in : temp
@@ -45,6 +54,9 @@ public class CatBase : MonoBehaviour
 
         // Atack lodick
         atackTimer += Time.deltaTime;
+
+        //if (atackTimer < atackDilay) SpaneProdetils();
+
 
     }
 }
