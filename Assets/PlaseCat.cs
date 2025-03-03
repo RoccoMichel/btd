@@ -40,9 +40,10 @@ public class PlaseCat : MonoBehaviour
             {
                 meshes[i].material = canBild;
                 canBild.color = canPlase ? new Color(1, 0, 0, 0.5f) : new Color(0, 0, 1, 0.5f);
+                canBild.SetColor("_EmissionColor", canPlase ? new Color(1, 0, 0, 0.25f) : new Color(0, 0, 1, 0.25f));
             }
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !canPlase)
             {
                 for (int i = 0; i < meshes.Length; i++)
                     meshes[i].material = oldMaterols[i];
