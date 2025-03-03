@@ -39,7 +39,6 @@ public class CatBase : MonoBehaviour
         transform.LookAt(Enemys[curentTaget].transform);
         return Enemys[curentTaget];
     }
-
     void SpaneProdetils()
     {
         for (float i = 0; i < prodektilCont; i++)
