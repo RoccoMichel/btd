@@ -21,10 +21,6 @@ public class ProjecttileManager : MonoBehaviour
 
     bool bounce;
 
-    [HideInInspector]
-    public Vector3 targetPos;
-    float sinTime = 0;
-
     float timeAlive = 0;
 
     private void Update()
@@ -36,13 +32,7 @@ public class ProjecttileManager : MonoBehaviour
         }
         else
         {
-            if (transform.position != targetPos)
-            {
-                sinTime += Time.deltaTime * speed;
-                sinTime = Mathf.Clamp(sinTime, 0, Mathf.PI);
-                float t = 0.5f * Mathf.Sin(sinTime - Mathf.PI / 2) + 0.5f;
-                transform.position = Vector3.Lerp(transform.position, targetPos, t);
-            }
+            transform.position += transform.forward * speed * Time.deltaTime;
         }
 
         timeAlive += Time.deltaTime;

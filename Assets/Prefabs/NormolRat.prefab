@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spline: {fileID: 3322255633057438394}
   session: {fileID: 0}
-  speed: 5
+  speed: 1
   health: 10
   damage: 10
   value: 10

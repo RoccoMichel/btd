@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: 5
   damage: 1
-  speed: 2
+  speed: 10
   doDamageWhenDied: 0
   damageRange: 0
   doEfect: 0

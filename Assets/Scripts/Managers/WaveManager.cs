@@ -107,7 +107,9 @@ public class WaveManager : MonoBehaviour
             if (timeSinceSegmentStart / (1f / segment.spawnFrequency) > localCounters[i])
             {
                 GameObject rat = Instantiate(segment.prefab, GetSpawnPosition(), Quaternion.identity, transform);
+                rat.GetComponent<RatBase>().session = sesion;
                 rat.GetComponent<RatBase>().OnStart();
+
 
                 localCounters[i]++;
             }

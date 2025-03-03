@@ -9,7 +9,7 @@ public class CatBase : MonoBehaviour
     public WaveManager waveMan;
     public List<RatBase> Enemys;
 
-
+    public Transform spanPos;
     public GameObject prodectile;
     public bool isColiding;
 
@@ -54,11 +54,11 @@ public class CatBase : MonoBehaviour
     {
         for (float i = 0; i < prodektilCont; i++)
         {
-            Instantiate(prodectile, transform.position, transform.rotation).transform.forward = (transform.forward + new Vector3
+            Instantiate(prodectile, spanPos.position, spanPos.rotation).transform.forward = (spanPos.forward + new Vector3
             {
                 x = 1,
                 y = 0,
-                z = prodekilSpred * (i / prodektilCont)
+                z = prodekilSpred * (i - prodektilCont/2f)
 
 
             }).normalized;
@@ -73,7 +73,8 @@ public class CatBase : MonoBehaviour
         // Atack lodick
         atackTimer += Time.deltaTime;
 
-        if (atackTimer < atackDilay) SpaneProdetils();
+        if (atackTimer > atackDilay)
+        { SpaneProdetils(); atackTimer = 0; }
 
 
     }

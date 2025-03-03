@@ -59,6 +59,6 @@ public class RatBase : MonoBehaviour
     /// </summary>
     public virtual void OnUpdate()
     {        
-        if (spline.NormalizedTime > 0.99f) Score();
+        if (spline.NormalizedTime > 0.9f) Score();
     }
 }
