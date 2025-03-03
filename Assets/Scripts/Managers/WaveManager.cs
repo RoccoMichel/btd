@@ -4,15 +4,19 @@ using NaughtyAttributes;
 
 public class WaveManager : MonoBehaviour
 {
-  /*  [Header("Elements")]
-    [SerializeField] private Player player;
-    [SerializeField] private WaveManagerUI waveManagerUI;
-  */
+    [Header("Elements")]
+    /*  
+      [SerializeField] private Player player;
+      [SerializeField] private WaveManagerUI waveManagerUI;
+    */
+    [SerializeField] private Session session;
+
     [Header("Settings")]
     [SerializeField] private float waveDuration;
     private float timer;
     private bool isTimerOn;
     private int currentWaveIndex;
+
 
     [Header("Waves")]
     [SerializeField] private Wave[] waves;
@@ -64,6 +68,7 @@ public class WaveManager : MonoBehaviour
         if (currentWaveIndex >= waves.Length)
         {
             Debug.Log("Waves completed");
+            isTimerOn = false;
             /* waveManagerUI.UpdateTimerText("");
              waveManagerUI.UpdateWaveText("Waves Completed");
              GameManager.Instance.SetGameState(GameState.STAGECOMPLETE);*/
@@ -88,7 +93,7 @@ public class WaveManager : MonoBehaviour
 
             if (timeSinceSegmentStart / (1f / segment.spawnFrequency) > localCounters[i])
             {
-                Instantiate(segment.prefab, GetSpawnPosition(), Quaternion.identity, transform);
+                Instantiate(segment.prefab, GetSpawnPosition(), Quaternion.identity, transform).GetComponent<RatBase>().session = session;
                 localCounters[i]++;
             }
         }
@@ -121,10 +126,6 @@ public class WaveManager : MonoBehaviour
 
         }
     }*/
-
-
-
-
 }
 
 
