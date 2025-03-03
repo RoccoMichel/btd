@@ -11,21 +11,27 @@ public class PlaseCat : MonoBehaviour
    
     void Update()
     {
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        ray.direction *= 1000;
-
-
-        if (Physics.Raycast(ray, out hit)) cat.transform.position = hit.point;
-
-        MeshRenderer[] meshes = cat.GetComponentsInChildren<MeshRenderer>();
-        bool canPlase = cat.GetComponent<CatBase>().isColiding;
-        for (int i = 0; i < meshes.Length; i++)
+        if (cat != null)
         {
-            meshes[i].material = canBild;
-            canBild.color = canPlase ? new Color(1, 0, 0, 0.5f) : new Color(0, 0, 1, 0.5f);
-        }
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            ray.direction *= 1000;
+            RaycastHit[] hit = Physics.RaycastAll(ray.origin, ray.direction);
 
+
+            for (int i = 0; i < hit.Length; i++)
+            {
+                if (hit[i].transform.CompareTag("CanPlase"))
+                    cat.transform.position = hit[i].point;
+            }
+
+            MeshRenderer[] meshes = cat.GetComponentsInChildren<MeshRenderer>();
+            bool canPlase = cat.GetComponent<CatBase>().isColiding;
+            for (int i = 0; i < meshes.Length; i++)
+            {
+                meshes[i].material = canBild;
+                canBild.color = canPlase ? new Color(1, 0, 0, 0.5f) : new Color(0, 0, 1, 0.5f);
+            }
+        }
 
     }
 }
