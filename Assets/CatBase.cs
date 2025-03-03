@@ -9,8 +9,9 @@ public class CatBase : MonoBehaviour
     public WaveManager waveMan;
     public List<RatBase> Enemys;
 
-    public ScriptableObject Stats;
 
+    public GameObject prodectile;
+   
     // Stats
     public float atackDilay, prodekilSpred;
     public int prodektilCont;
@@ -39,13 +40,20 @@ public class CatBase : MonoBehaviour
         return Enemys[curentTaget];
     }
 
-    //void SpaneProdetils()
-    //{
-    //    for (int i = 0; i < prodektilCont; i++)
-    //    {
+    void SpaneProdetils()
+    {
+        for (float i = 0; i < prodektilCont; i++)
+        {
+            Instantiate(prodectile, transform.position, transform.rotation).transform.forward = (transform.forward + new Vector3
+            {
+                x = 1,
+                y = 0,
+                z = prodekilSpred * (i / prodektilCont)
 
-    //    }
-    //}
+
+            }).normalized;
+        }
+    }
     void Update()
     {
         // Sode run when enemys dey or get spand in : temp
@@ -55,7 +63,7 @@ public class CatBase : MonoBehaviour
         // Atack lodick
         atackTimer += Time.deltaTime;
 
-        //if (atackTimer < atackDilay) SpaneProdetils();
+        if (atackTimer < atackDilay) SpaneProdetils();
 
 
     }

@@ -434,6 +434,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &690755857
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 690755858}
+  m_Layer: 0
+  m_Name: NomolCat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &690755858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690755857}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.72, y: 0.9549999, z: -0.86}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &717922390
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,7 +726,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveMan: {fileID: 1710930622}
   Enemys: []
-  atackDilay: 0
+  prodectile: {fileID: 0}
+  atackDilay: 1
+  prodekilSpred: 0.5
+  prodektilCont: 3
 --- !u!1 &1577326606
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,6 +1016,7 @@ GameObject:
   - component: {fileID: 2084706953}
   - component: {fileID: 2084706952}
   - component: {fileID: 2084706951}
+  - component: {fileID: 2084706954}
   m_Layer: 0
   m_Name: Rode
   m_TagString: Untagged
@@ -1060,35 +1095,35 @@ MonoBehaviour:
       TangentIn:
         x: -0
         y: -0
-        z: -1.4993672
+        z: -1.501318
       TangentOut:
         x: 0
         y: 0
-        z: 2.0672317
+        z: 2.0739806
       Rotation:
         value:
           x: 0
-          y: 0.93439263
+          y: 0.9359132
           z: 0
-          w: -0.35624468
+          w: -0.35223082
     - Position:
-        x: -6.459227
+        x: -6.389227
         y: 0
-        z: -10.882235
+        z: -10.992235
       TangentIn:
         x: -0
         y: -0
-        z: -2.242961
+        z: -2.2425525
       TangentOut:
         x: 0
         y: 0
-        z: 1.9454634
+        z: 1.9456822
       Rotation:
         value:
           x: 0
-          y: 0.8806005
+          y: 0.87991315
           z: 0
-          w: -0.4738593
+          w: -0.47513446
     - Position:
         x: -11.612676
         y: 0
@@ -1096,17 +1131,17 @@ MonoBehaviour:
       TangentIn:
         x: -0
         y: -0
-        z: -2.0975475
+        z: -2.1102057
       TangentOut:
         x: 0
         y: 0
-        z: 2.890829
+        z: 2.9017267
       Rotation:
         value:
-          x: -0.000000011759625
-          y: 0.76388156
-          z: 0.000000009934983
-          w: -0.6453565
+          x: -0.000000010017017
+          y: 0.76016414
+          z: 0.000000008561795
+          w: -0.64973116
     - Position:
         x: -22.159227
         y: 0
@@ -1308,6 +1343,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2084706948}
   m_Mesh: {fileID: 4300000, guid: 37ed2c332817db249969b3c7d4bf52ae, type: 2}
+--- !u!64 &2084706954
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084706948}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 37ed2c332817db249969b3c7d4bf52ae, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1319,3 +1376,4 @@ SceneRoots:
   - {fileID: 1591255624}
   - {fileID: 1710930621}
   - {fileID: 1190350520}
+  - {fileID: 690755858}
