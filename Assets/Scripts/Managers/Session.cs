@@ -14,6 +14,7 @@ public class Session : MonoBehaviour
 
     [Header("Session Details")]
     public int wave = 0;
+    public int maxWaves = 20;
 
     public void Damage(float amount)
     {
@@ -62,9 +63,15 @@ public class Session : MonoBehaviour
 
     public bool TryPurchase(int cost)
     {
+        if (CanPurchase(cost)) Expenditure(cost);
+
+        return CanPurchase(cost);
+    }
+
+    public bool CanPurchase(int cost)
+    {
         if (balance - cost < minBalance) return false;
 
-        Expenditure(cost);
         return true;
     }
 
