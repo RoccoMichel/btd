@@ -1,15 +1,11 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 public class Session : MonoBehaviour
 {
-    /* 
-     * currency
-     * interest
-     * 
-     */
     [Header("Player Economy")]
-    public float currency;
+    public float balance;
+    public float minBalance;
+    public float interestRate = 1; // not implemented
 
     [Header("Player Attributes")]
     public bool immortal = false;
@@ -47,7 +43,29 @@ public class Session : MonoBehaviour
     public void NextWave()
     {
         wave++;
+
+        // give reward money
+        Profit(wave * 100 + 1000);
+
         // reference the wave manager
+    }
+
+    public void Profit(float amount)
+    {
+        balance += Mathf.RoundToInt(amount);
+    }
+
+    public void Expenditure(float amount)
+    {        
+        balance -= Mathf.RoundToInt(amount);
+    }
+
+    public bool TryPurchase(int cost)
+    {
+        if (balance - cost < minBalance) return false;
+
+        Expenditure(cost);
+        return true;
     }
 
     public void Lose()
