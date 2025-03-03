@@ -11,7 +11,17 @@ public class CatBase : MonoBehaviour
 
 
     public GameObject prodectile;
-   
+    public bool isColiding;
+
+    private void OnCollisionStay(Collision collision)
+    {
+        isColiding = true;
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        isColiding = false;
+    }
     // Stats
     public float atackDilay, prodekilSpred;
     public int prodektilCont;
