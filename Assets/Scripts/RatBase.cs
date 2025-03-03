@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.Splines;
 using UnityEngine.UI;
@@ -5,19 +6,20 @@ using UnityEngine.UI;
 public class RatBase : MonoBehaviour
 {
     public SplineAnimate spline;
-
-    public float spede, health, damitsh;
-    public Slider temp;
+    public Session session;
+    public float spede, health, damitsh, killMuny;
+    
 
     void Start() { spline.MaxSpeed = spede; }
     public virtual void IsDedFrFr()
     {
+        session.currency += killMuny;
         Destroy(gameObject);
     }
 
     public virtual void AtEnd()
     {
-        temp.value -= damitsh;
+        session.health -= damitsh;
         Destroy(gameObject);
     }
 
