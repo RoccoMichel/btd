@@ -1,0 +1,50 @@
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using UnityEngine;
+
+public class CatBase : MonoBehaviour
+{
+    public WaveManager waveMan;
+    public List<RatBase> Enemys;
+
+    public float atackDilay;
+    float atackTimer = 0;
+    RatBase target;
+    void UpdateEnemyCont()
+    {
+        Enemys = waveMan.GetComponentsInChildren<RatBase>().ToList();
+    }
+    RatBase FindeTarget()
+    {
+        float minDis = Mathf.Infinity;
+        int curentTaget = 0;
+        for (int i = 0; i < Enemys.Count; i++)
+        {
+            float dis = Vector3.Distance(Enemys[i].transform.position, transform.position);
+            if (dis < minDis)
+            {
+                curentTaget = i;
+                minDis = dis;
+            }
+        }
+
+        transform.LookAt(Enemys[curentTaget].transform);
+        return Enemys[curentTaget];
+    }
+
+    void Atacke()
+    {
+
+    }
+    void Update()
+    {
+        // Sode run when enemys dey or get spand in : temp
+        UpdateEnemyCont();
+        target = FindeTarget();
+
+        // Atack lodick
+        atackTimer += Time.deltaTime;
+
+    }
+}

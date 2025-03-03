@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7019691787733071731}
   - component: {fileID: 5788835019495883656}
   - component: {fileID: 3322255633057438394}
-  - component: {fileID: 994519239673759560}
+  - component: {fileID: 2364166806318110886}
   m_Layer: 0
   m_Name: NormolRat
   m_TagString: Untagged
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_ObjectForwardAxis: 2
   m_ObjectUpAxis: 1
   m_StartOffset: 0
---- !u!114 &994519239673759560
+--- !u!114 &2364166806318110886
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,12 +144,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4825668182265712296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e37a680979761a243aa1fce54fa75f25, type: 3}
+  m_Script: {fileID: 11500000, guid: 9bc702cbca41ddb4ba94db7b63d415a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spline: {fileID: 3322255633057438394}
   session: {fileID: 0}
-  spede: 5
-  health: 5
-  damitsh: 1
-  killMuny: 10
+  speed: 5
+  health: 10
+  damage: 10
+  value: 10
