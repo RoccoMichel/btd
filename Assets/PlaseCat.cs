@@ -8,10 +8,20 @@ public class PlaseCat : MonoBehaviour
     public Material canBild;
     public List<Material> oldMaterols;
 
-   
+    public void setOldMaterols()
+    {
+        oldMaterols.Clear();
+        
+        MeshRenderer[] meshes = cat.GetComponentsInChildren<MeshRenderer>();
+        for (int i = 0; i < meshes.Length; i++)
+        {
+            oldMaterols.Add(meshes[i].material);
+        }
+    }
     void Update()
     {
-        if (cat != null)
+        if (Input.GetKeyDown(KeyCode.Space)) setOldMaterols();
+        if (cat != null && oldMaterols.Count > 0)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             ray.direction *= 1000;
@@ -30,6 +40,15 @@ public class PlaseCat : MonoBehaviour
             {
                 meshes[i].material = canBild;
                 canBild.color = canPlase ? new Color(1, 0, 0, 0.5f) : new Color(0, 0, 1, 0.5f);
+            }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                for (int i = 0; i < meshes.Length; i++)
+                    meshes[i].material = oldMaterols[i];
+
+                cat = null;
+                oldMaterols.Clear();
             }
         }
 
