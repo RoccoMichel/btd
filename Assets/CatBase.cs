@@ -16,6 +16,7 @@ public class CatBase : MonoBehaviour
     private void OnCollisionStay(Collision collision)
     {
         isColiding = true;
+        print("TOUCHI TOCUHUI");
     }
 
     private void OnCollisionExit(Collision collision)
