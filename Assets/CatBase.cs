@@ -53,6 +53,7 @@ public class CatBase : MonoBehaviour
     }
     void SpaneProdetils() 
     {
+        spanPos.LookAt(FindeTarget().transform);
         for (float i = 0; i < prodektilCont; i++)
         {
             Instantiate(prodectile, spanPos.position, spanPos.rotation).transform.rotation = 

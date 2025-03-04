@@ -40,4 +40,14 @@ public class LoadLogic : MonoBehaviour
     {
         Application.OpenURL(url);
     }
+
+    public void UnLoadObject(GameObject gameobject)
+    {
+        gameobject.SetActive(false);
+    }
+
+    public void LoadObject(GameObject gameobject)
+    {
+        gameobject.SetActive(true);
+    }
 }
