@@ -87,39 +87,30 @@ public class Settings : MonoBehaviour
 
     public void UpdateVolume()
     {
-        musicText.text = "Music: " + PlayerPrefs.GetFloat("Music");
-        soundText.text = "Sound Efects: " + PlayerPrefs.GetFloat("Sound");
-        uiText.text = "UI Sound: " + PlayerPrefs.GetFloat("UI");
+        musicText.text = "Music: " + PlayerPrefs.GetFloat("Music", 100);
+        soundText.text = "Sound Effects: " + PlayerPrefs.GetFloat("Sound", 100);
+        uiText.text = "UI Sound: " + PlayerPrefs.GetFloat("UI", 100);
 
-        musicInput.text = PlayerPrefs.GetFloat("Music").ToString();
-        soundInput.text = PlayerPrefs.GetFloat("Sound").ToString();
-        uiInput.text = PlayerPrefs.GetFloat("UI").ToString();
+        musicInput.text = PlayerPrefs.GetFloat("Music", 100).ToString();
+        soundInput.text = PlayerPrefs.GetFloat("Sound", 100).ToString();
+        uiInput.text = PlayerPrefs.GetFloat("UI", 100).ToString();
 
-        float musicVolume = Mathf.Lerp(-80, 0, PlayerPrefs.GetFloat("Music") / 100);
+        float musicVolume = Mathf.Lerp(-80, 0, PlayerPrefs.GetFloat("Music", 100) / 100);
         music.SetFloat("Music", musicVolume);
 
-        float soundVolume = Mathf.Lerp(-80, 0, PlayerPrefs.GetFloat("Sound") / 100);
+        float soundVolume = Mathf.Lerp(-80, 0, PlayerPrefs.GetFloat("Sound", 100) / 100);
         sound.SetFloat("Sound", soundVolume);
 
-        float uiVolume = Mathf.Lerp(-80, 0, PlayerPrefs.GetFloat("UI") / 100);
+        float uiVolume = Mathf.Lerp(-80, 0, PlayerPrefs.GetFloat("UI", 100) / 100);
         ui.SetFloat("UISound", uiVolume);
 
-        musicSlider.value = PlayerPrefs.GetFloat("Music");
-        soundSlider.value = PlayerPrefs.GetFloat("Sound");
-        uiSlider.value = PlayerPrefs.GetFloat("UI");
+        musicSlider.value = PlayerPrefs.GetFloat("Music", 100);
+        soundSlider.value = PlayerPrefs.GetFloat("Sound", 100);
+        uiSlider.value = PlayerPrefs.GetFloat("UI", 100);
     }
 
     private void Start()
     {
-        if(PlayerPrefs.GetInt("FirstTimePlayeing") == 0)
-        {
-            PlayerPrefs.SetFloat("Music", 100);
-            PlayerPrefs.SetFloat("Sound", 100);
-            PlayerPrefs.SetFloat("UI", 100);
-
-            PlayerPrefs.SetInt("FirstTimePlayeing", 1);
-        }
-
         UpdateVolume();
     }
 }
