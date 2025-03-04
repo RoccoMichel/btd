@@ -35,7 +35,7 @@ public class CatBase : MonoBehaviour
     public void FineWaveManager() { waveMan = FindAnyObjectByType<WaveManager>(); }
     void UpdateEnemyCont()
     {
-        Enemys = waveMan.GetComponentsInChildren<RatBase>().ToList();
+        Enemys = FindObjectsOfType<RatBase>().ToList();
     }
     RatBase FindeTarget()
     {
@@ -51,8 +51,14 @@ public class CatBase : MonoBehaviour
             }
         }
 
-        if (Enemys.Count > 0 && Vector3.Distance(transform.position, Enemys[curentTaget].transform.position) < ransh) transform.LookAt(Enemys[curentTaget].transform);
-        return Enemys[curentTaget];
+        if (Enemys.Count > 0 && Vector3.Distance(transform.position, Enemys[curentTaget].transform.position) < ransh)
+        {
+            transform.LookAt(Enemys[curentTaget].transform);
+            return Enemys[curentTaget];
+        }
+
+        return null;
+
     }
     void SpaneProdetils() 
     {
@@ -63,12 +69,16 @@ public class CatBase : MonoBehaviour
                 Quaternion.Euler(0, ( (i - (prodektilCont-1)/2) / prodektilCont ) * prodekilSpred, 0) * spanPos.rotation;
         }
     }
+
+    void OnMouseOver()
+    {
+        if (Input.GetMouseButtonDown(0)) ShowUpgrade();
+    }
     void Update()
     {
         // Should run when enemys die or get spawned in : temp
         UpdateEnemyCont();
         target = FindeTarget();
-
         // Attack locking
         atackTimer += Time.deltaTime;
 
