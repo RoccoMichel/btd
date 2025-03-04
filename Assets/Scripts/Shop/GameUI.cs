@@ -7,6 +7,7 @@ public class GameUI : MonoBehaviour
     [HideInInspector] public Session session;
 
     [Header("UI References")]
+    [SerializeField] internal GameObject settings;
     [SerializeField] internal TMP_Text balanceDisplay;
     [SerializeField] internal TMP_Text wavesDisplay;
     [SerializeField] internal TMP_Text healthDisplay;
@@ -20,6 +21,7 @@ public class GameUI : MonoBehaviour
             catch { Debug.LogError("No session script was found in active scene"); }
         }
 
+        ToggleSettings(false);
         DisplayRefresh();
     }
     void FixedUpdate()
@@ -37,9 +39,18 @@ public class GameUI : MonoBehaviour
         healthBar.value = session.health;
     }
 
-    public void ToggleOptions()
+    public void ToggleSettings()
     {
-        // not done lol cause we got no settings dawg
+        if (settings == null) return;
+
+        settings.SetActive(!settings.activeSelf);
+    }
+
+    public void ToggleSettings(bool state)
+    {
+        if (settings == null) return;
+
+        settings.SetActive(state);
     }
 
     public void TogglePause()

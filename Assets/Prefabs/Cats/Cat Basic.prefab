@@ -224,8 +224,8 @@ MonoBehaviour:
   waveMan: {fileID: 0}
   Enemys: []
   spanPos: {fileID: 6120640807579444328}
-  prodectile: {fileID: 2815010670045982513, guid: 39eb439ccfef7bb498ec2686f4480df4, type: 3}
-  isColiding: 1
+  prodectile: {fileID: 2815010670045982513, guid: cb475cffa808c5e43923f10f42096b51, type: 3}
+  isColiding: 0
   atackDilay: 1
   prodekilSpred: 10
   ransh: 5
