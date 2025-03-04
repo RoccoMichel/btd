@@ -87,7 +87,9 @@ public class CatBase : MonoBehaviour
         // Attack locking
         attackTimer += Time.deltaTime;
 
-        if (Enemies.Count() > 0 && attackTimer > attackDelay && Vector3.Distance(transform.position, target.transform.position) < range)
+        if (Enemies.Count() > 0 
+            && attackTimer > attackDelay 
+            && Vector3.Distance(transform.position, target.transform.position) < range)
         { SpawnProjectiles(); attackTimer = 0; } 
     }
 
