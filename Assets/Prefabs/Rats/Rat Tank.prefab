@@ -105,7 +105,7 @@ MonoBehaviour:
   spline: {fileID: 3322255633057438394}
   session: {fileID: 0}
   speed: 1
-  health: 2
+  health: 30
   damage: 2
   value: 10
   spawnAmmount: 3
