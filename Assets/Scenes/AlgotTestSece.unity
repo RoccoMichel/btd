@@ -976,6 +976,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4563658932850657876, guid: e93b14e3c68078f499dc8c34f901a9c0, type: 3}
+      propertyPath: m_Name
+      value: TerosristCat
+      objectReference: {fileID: 0}
     - target: {fileID: 5112464049559547187, guid: e93b14e3c68078f499dc8c34f901a9c0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1059,7 +1063,7 @@ PrefabInstance:
     - target: {fileID: 8971357275584779398, guid: e93b14e3c68078f499dc8c34f901a9c0, type: 3}
       propertyPath: structure
       value: 
-      objectReference: {fileID: 3585982105108571785, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
+      objectReference: {fileID: 5529446915622836170, guid: 840d47f0dae77f248a4100e3e741fe33, type: 3}
     - target: {fileID: 8971357275584779398, guid: e93b14e3c68078f499dc8c34f901a9c0, type: 3}
       propertyPath: structureName
       value: Cat

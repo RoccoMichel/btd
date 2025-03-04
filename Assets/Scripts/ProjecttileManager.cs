@@ -43,10 +43,10 @@ public class ProjecttileManager : MonoBehaviour
 
         if(timeAlive >= lifeTime)
         {
-            //if (doEfectWhenDied) Instantiate(efect, transform.position, Quaternion.identity);
+            if (doEfectWhenDied) Instantiate(efect, transform.position, Quaternion.identity);
 
-            Destroy(gameObject);
-            //DestroyObject(true);
+            //Destroy(gameObject);
+            DestroyObject(doDamageWhenDied);
         }
     }
 
@@ -57,8 +57,7 @@ public class ProjecttileManager : MonoBehaviour
             // Damage the rat here
             collision.gameObject.GetComponent<RatBase>().Damage(damage);
             
-            if (!prsig) Destroy(gameObject);
-            //DestroyObject(false);
+            if (!prsig) DestroyObject(doEfectWhenHitEnemy);
         }
     }
 
