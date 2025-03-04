@@ -280,10 +280,10 @@ RectTransform:
   - {fileID: 5558097099082885624}
   m_Father: {fileID: 6287762246086824035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 275, y: -375}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &572725176016243218
 MonoBehaviour:
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7524f60d87bec8c4aa4c3679aeb898f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  structureName: 
+  structure: {fileID: 0}
   price: {fileID: 5291687224242360450}
   cost: 45
 --- !u!114 &5693364435915633800
@@ -429,10 +429,10 @@ RectTransform:
   - {fileID: 6936691399843624799}
   m_Father: {fileID: 6287762246086824035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 75, y: -75}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5478512462863459441
 MonoBehaviour:
@@ -446,7 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7524f60d87bec8c4aa4c3679aeb898f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  structureName: 
+  structure: {fileID: 3585982105108571785, guid: a2702f284fd6cfe42920b99b02258a1f, type: 3}
   price: {fileID: 3046215669937506907}
   cost: 5
 --- !u!114 &2481441196344433105
@@ -825,10 +825,10 @@ RectTransform:
   - {fileID: 247516631850560241}
   m_Father: {fileID: 6287762246086824035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 75, y: -375}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3132933690135794359
 MonoBehaviour:
@@ -842,7 +842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7524f60d87bec8c4aa4c3679aeb898f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  structureName: 
+  structure: {fileID: 0}
   price: {fileID: 3981072701988539187}
   cost: 1253
 --- !u!114 &2397604296688555806
@@ -974,10 +974,10 @@ RectTransform:
   - {fileID: 2245385081968606646}
   m_Father: {fileID: 6287762246086824035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 275, y: -225}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8971357275584779398
 MonoBehaviour:
@@ -991,7 +991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7524f60d87bec8c4aa4c3679aeb898f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  structureName: 
+  structure: {fileID: 0}
   price: {fileID: 2685549352765696891}
   cost: 44
 --- !u!114 &1156866149081278495
@@ -1908,7 +1908,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 5926151039396902008}
   m_Direction: 0
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9999998
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1948,10 +1948,10 @@ RectTransform:
   - {fileID: 8901494510356787290}
   m_Father: {fileID: 6287762246086824035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 275, y: -75}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8462091033480092642
 MonoBehaviour:
@@ -1965,7 +1965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7524f60d87bec8c4aa4c3679aeb898f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  structureName: 
+  structure: {fileID: 3108415689083583674, guid: fc33e34d5cec6a34ea3f8d89ae26aee3, type: 3}
   price: {fileID: 2500136179123033527}
   cost: 5
 --- !u!114 &6358818640501328522
@@ -2299,10 +2299,10 @@ RectTransform:
   - {fileID: 3517295537708900668}
   m_Father: {fileID: 6287762246086824035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 75, y: -225}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3441494196678619060
 MonoBehaviour:
@@ -2316,7 +2316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7524f60d87bec8c4aa4c3679aeb898f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  structureName: 
+  structure: {fileID: 0}
   price: {fileID: 264551466906459168}
   cost: 55
 --- !u!114 &3405376450626713912

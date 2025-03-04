@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 688870104695935717}
   - component: {fileID: 2723553589483365085}
   m_Layer: 0
-  m_Name: BaickCat
+  m_Name: Cat BASE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,12 +224,12 @@ MonoBehaviour:
   waveMan: {fileID: 0}
   Enemys: []
   spanPos: {fileID: 6120640807579444328}
-  prodectile: {fileID: 2815010670045982513, guid: e200d5093a0fa664985f5a30ca51bb2b, type: 3}
+  prodectile: {fileID: 2815010670045982513, guid: 39eb439ccfef7bb498ec2686f4480df4, type: 3}
   isColiding: 1
   atackDilay: 1
   prodekilSpred: 10
   ransh: 5
-  prodektilCont: 1
+  prodektilCont: 3
 --- !u!136 &688870104695935717
 CapsuleCollider:
   m_ObjectHideFlags: 0
