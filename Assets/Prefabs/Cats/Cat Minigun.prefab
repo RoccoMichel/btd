@@ -27,7 +27,11 @@ PrefabInstance:
     - target: {fileID: 2129321114186096723, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
       propertyPath: prodectile
       value: 
-      objectReference: {fileID: 3108415689083583674}
+      objectReference: {fileID: 2815010670045982513, guid: d8d5ec442dc06a04bacb4266ba713057, type: 3}
+    - target: {fileID: 2129321114186096723, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
+      propertyPath: prodekilSpred
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 2129321114186096723, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
       propertyPath: prodektilCont
       value: 1
@@ -81,8 +85,3 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
---- !u!1 &3108415689083583674 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3585982105108571785, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
-  m_PrefabInstance: {fileID: 1936750287548357171}
-  m_PrefabAsset: {fileID: 0}

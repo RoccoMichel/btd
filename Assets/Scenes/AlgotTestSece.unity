@@ -1663,6 +1663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   session: {fileID: 0}
+  settings: {fileID: 0}
   balanceDisplay: {fileID: 2046013027}
   wavesDisplay: {fileID: 163952782}
   healthDisplay: {fileID: 1976503152}
