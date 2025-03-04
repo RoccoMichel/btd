@@ -123,7 +123,7 @@ public class WaveManager : MonoBehaviour
     }
     private Vector2 GetSpawnPosition()
     {
-        Vector2 targetPos = new Vector2(0, 0);
+        Vector2 targetPos = new Vector2(1000, 1000);
 
         return targetPos;
     }

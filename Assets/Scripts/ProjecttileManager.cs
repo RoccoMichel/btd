@@ -39,10 +39,10 @@ public class ProjecttileManager : MonoBehaviour
 
         if(timeAlive >= lifeTime)
         {
-            if (doEfectWhenDied)
-                Instantiate(efect, transform.position, Quaternion.identity);
+            //if (doEfectWhenDied) Instantiate(efect, transform.position, Quaternion.identity);
 
-            DestroyObject(true);
+            Destroy(gameObject);
+            //DestroyObject(true);
         }
     }
 
