@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - CanPlase
+  - Rat
   layers:
   - Default
   - TransparentFX

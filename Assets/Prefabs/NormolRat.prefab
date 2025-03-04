@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2364166806318110886}
   m_Layer: 0
   m_Name: NormolRat
-  m_TagString: Untagged
+  m_TagString: Rat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spline: {fileID: 3322255633057438394}
   session: {fileID: 0}
-  speed: 5
-  health: 10
+  speed: 1
+  health: 3
   damage: 10
   value: 10

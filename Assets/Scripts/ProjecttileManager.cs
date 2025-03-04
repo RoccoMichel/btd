@@ -8,9 +8,9 @@ public class ProjecttileManager : MonoBehaviour
 
     float lifeTime;
 
-    int damage;
+    float damage;
     float speed;
-
+    public bool prsig;
     bool doDamageWhenDied;
     float damageRange;
 
@@ -20,10 +20,6 @@ public class ProjecttileManager : MonoBehaviour
     GameObject efect;
 
     bool bounce;
-
-    [HideInInspector]
-    public Vector3 targetPos;
-    float sinTime = 0;
 
     float timeAlive = 0;
 
@@ -36,13 +32,7 @@ public class ProjecttileManager : MonoBehaviour
         }
         else
         {
-            if (transform.position != targetPos)
-            {
-                sinTime += Time.deltaTime * speed;
-                sinTime = Mathf.Clamp(sinTime, 0, Mathf.PI);
-                float t = 0.5f * Mathf.Sin(sinTime - Mathf.PI / 2) + 0.5f;
-                transform.position = Vector3.Lerp(transform.position, targetPos, t);
-            }
+            transform.position += transform.forward * speed * Time.deltaTime;
         }
 
         timeAlive += Time.deltaTime;
@@ -61,8 +51,10 @@ public class ProjecttileManager : MonoBehaviour
         if(collision.transform.tag == "Rat")
         {
             // Damage the rat here
-
-            DestroyObject(false);
+            collision.gameObject.GetComponent<RatBase>().Damage(damage);
+            
+            if (!prsig) Destroy(gameObject);
+            //DestroyObject(false);
         }
     }
 

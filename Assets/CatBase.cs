@@ -9,8 +9,9 @@ public class CatBase : MonoBehaviour
     public WaveManager waveMan;
     public List<RatBase> Enemys;
 
-
+    public Transform spanPos;
     public GameObject prodectile;
+
     public bool isColiding;
 
     private void OnCollisionStay(Collision collision)
@@ -24,11 +25,12 @@ public class CatBase : MonoBehaviour
         isColiding = false;
     }
     // Stats
-    public float atackDilay, prodekilSpred;
+    public float atackDilay, prodekilSpred, ransh;
     public int prodektilCont;
     
     float atackTimer = 0;
     RatBase target;
+    public void findWhaveMan() { waveMan = FindAnyObjectByType<WaveManager>(); }
     void UpdateEnemyCont()
     {
         Enemys = waveMan.GetComponentsInChildren<RatBase>().ToList();
@@ -47,21 +49,14 @@ public class CatBase : MonoBehaviour
             }
         }
 
-        transform.LookAt(Enemys[curentTaget].transform);
+        if (Vector3.Distance(transform.position, Enemys[curentTaget].transform.position) < ransh) transform.LookAt(Enemys[curentTaget].transform);
         return Enemys[curentTaget];
     }
     void SpaneProdetils()
     {
         for (float i = 0; i < prodektilCont; i++)
         {
-            Instantiate(prodectile, transform.position, transform.rotation).transform.forward = (transform.forward + new Vector3
-            {
-                x = 1,
-                y = 0,
-                z = prodekilSpred * (i / prodektilCont)
-
-
-            }).normalized;
+            Instantiate(prodectile, spanPos.position, spanPos.rotation).transform.rotation = Quaternion.Euler(0, ( (i - prodektilCont / 2f) / prodektilCont ) * prodekilSpred, 0) * transform.rotation;
         }
     }
     void Update()
@@ -73,8 +68,7 @@ public class CatBase : MonoBehaviour
         // Atack lodick
         atackTimer += Time.deltaTime;
 
-        if (atackTimer < atackDilay) SpaneProdetils();
-
-
+        if (Enemys.Count() > 0 && atackTimer > atackDilay && Vector3.Distance(transform.position, target.transform.position) < ransh)
+        { SpaneProdetils(); atackTimer = 0; } 
     }
 }
