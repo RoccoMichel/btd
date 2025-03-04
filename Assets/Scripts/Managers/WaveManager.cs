@@ -108,7 +108,7 @@ public class WaveManager : MonoBehaviour
             {
                 GameObject rat = Instantiate(segment.prefab, GetSpawnPosition(), Quaternion.identity, transform);
                 rat.GetComponent<RatBase>().session = sesion;
-                rat.GetComponent<RatBase>().OnStart();
+                rat.GetComponent<RatBase>().OnStart(0f);
 
 
                 localCounters[i]++;
@@ -123,7 +123,7 @@ public class WaveManager : MonoBehaviour
     }
     private Vector2 GetSpawnPosition()
     {
-        Vector2 targetPos = new Vector2(0, 0);
+        Vector2 targetPos = new Vector2(1000, 1000);
 
         return targetPos;
     }

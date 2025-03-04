@@ -11,6 +11,7 @@ public class ProjecttileManager : MonoBehaviour
     float damage;
     float speed;
     public bool prsig;
+    public AnimationCurve SacleOwerTime;
     bool doDamageWhenDied;
     float damageRange;
 
@@ -18,6 +19,7 @@ public class ProjecttileManager : MonoBehaviour
     bool doEfectWhenDied;
     bool doEfectWhenHitEnemy;
     GameObject efect;
+    Vector3 startSacale = Vector3.one;
 
     bool bounce;
 
@@ -25,6 +27,8 @@ public class ProjecttileManager : MonoBehaviour
 
     private void Update()
     {
+
+        transform.localScale = startSacale * SacleOwerTime.Evaluate(timeAlive/lifeTime);
         if (bounce)
         {
             // Algot You Fix This
@@ -39,10 +43,10 @@ public class ProjecttileManager : MonoBehaviour
 
         if(timeAlive >= lifeTime)
         {
-            if (doEfectWhenDied)
-                Instantiate(efect, transform.position, Quaternion.identity);
+            //if (doEfectWhenDied) Instantiate(efect, transform.position, Quaternion.identity);
 
-            DestroyObject(true);
+            Destroy(gameObject);
+            //DestroyObject(true);
         }
     }
 
@@ -82,6 +86,7 @@ public class ProjecttileManager : MonoBehaviour
     private void Awake()
     {
         SetSettings();
+        startSacale = transform.localScale;
     }
 
     void SetSettings()

@@ -24,6 +24,7 @@ public class GameUI : MonoBehaviour
     }
     void FixedUpdate()
     {
+        DisplayRefresh();
         balanceDisplay.color = Color.Lerp(balanceDisplay.color, Color.white, .1f);
     }
 

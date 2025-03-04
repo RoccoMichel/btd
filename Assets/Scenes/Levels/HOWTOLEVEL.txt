@@ -1,0 +1,13 @@
+PLEASE UPDATE IF NEW CHANGES ARE MADE
+
+> CHECK AllIn1 level as example Template
+
+Rat-attack how to make a level:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+> Ground: Cube with Collider & Ground Layer & CanPlase Tag
+> Path: Create Spline (Draw Spline Tools) with Mesh Collider & Spline Extrude.
+> Import 'SYSTEM' Prefab
+> Import '--- Canvas ---' Prefab
+> Import 'CameraControler' & 'CinemachineCamera', add 'Cinemashcine Brain' component to MainCamera
+> Add Global Volume
+> Create you Waves with in the 'Wavemanager' on 'SYSTEM' GameObject

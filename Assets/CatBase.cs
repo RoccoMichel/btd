@@ -56,7 +56,8 @@ public class CatBase : MonoBehaviour
     {
         for (float i = 0; i < prodektilCont; i++)
         {
-            Instantiate(prodectile, spanPos.position, spanPos.rotation).transform.rotation = Quaternion.Euler(0, ( (i - prodektilCont / 2f) / prodektilCont ) * prodekilSpred, 0) * transform.rotation;
+            Instantiate(prodectile, spanPos.position, spanPos.rotation).transform.rotation = 
+                Quaternion.Euler(0, ( (i - (prodektilCont-1)/2) / prodektilCont ) * prodekilSpred, 0) * spanPos.rotation;
         }
     }
     void Update()

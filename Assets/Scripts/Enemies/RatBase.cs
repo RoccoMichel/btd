@@ -9,7 +9,7 @@ public class RatBase : MonoBehaviour
 
     void Start()
     {
-        OnStart();
+   
     }
     void Update()
     {
@@ -47,11 +47,23 @@ public class RatBase : MonoBehaviour
     /// <summary>
     /// Base method for logic that will run when instance is created
     /// </summary>
-    public virtual void OnStart()
+    public virtual void OnStart(float startPos)
     {
-        spline.Container = FindAnyObjectByType<SplineContainer>();
+        var container = FindAnyObjectByType<SplineContainer>();
+        if (container == null)
+        {
+            Debug.LogError("SplineContainer not found in the scene!");
+            return;
+        }
+
+        spline.Container = container;
         spline.MaxSpeed = speed;
-        spline.Play();
+
+        // Set starting position (0 = start, 1 = end)
+        float startPosition = startPos; // Change this value to set where the object starts (e.g., 0.5f for halfway)
+        spline.NormalizedTime = startPosition;
+
+        spline.Play(); ;
     }
 
     /// <summary>
