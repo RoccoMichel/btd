@@ -34,7 +34,7 @@ public class RatTank : RatBase
             // Get world position using normalized time
             Vector3 position = SplineUtility.EvaluatePosition(splineData, t);
 
-            Debug.Log("Current Position on Spline: " + position);
+            //Debug.Log("Current Position on Spline: " + position);
         }
     }
 }

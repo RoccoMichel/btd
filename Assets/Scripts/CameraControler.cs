@@ -1,19 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.Cinemachine;
+using Cinemachine;
 
 public class CameraControler : MonoBehaviour
 {
     private const float MIN_FOLLOW_YOFFSET = 8f;
     private const float MAX_FOLLOW_YOFFSET = 24f;
     private Vector3 targetFollowOffset;
-    private CinemachineFollow cinemachineTransposer;
-    [SerializeField] private CinemachineCamera cinemachineVirtualCamera;
+    private CinemachineTransposer cinemachineTransposer;
+    [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
     private void Start()
     {
-        cinemachineTransposer = cinemachineVirtualCamera.GetComponent<CinemachineFollow>();
-        targetFollowOffset = cinemachineTransposer.FollowOffset;
+        cinemachineTransposer = cinemachineVirtualCamera.GetCinemachineComponent<CinemachineTransposer>();
+        targetFollowOffset = cinemachineTransposer.m_FollowOffset;
     }
     private void Update()
     {
@@ -21,9 +21,6 @@ public class CameraControler : MonoBehaviour
         HandleMovement();
         HandleRotation();
         HandleZoom();
-
-
-
 
     }
     private void HandleMovement()
@@ -54,6 +51,6 @@ public class CameraControler : MonoBehaviour
         targetFollowOffset.y += InputManager.Instance.GetCameraZoomAmmount();
         float zoomSpeed = 5f;
         targetFollowOffset.y = Mathf.Clamp(targetFollowOffset.y, MIN_FOLLOW_YOFFSET, MAX_FOLLOW_YOFFSET);
-        cinemachineTransposer.FollowOffset = Vector3.Lerp(cinemachineTransposer.FollowOffset, targetFollowOffset, Time.deltaTime * zoomSpeed);
+        cinemachineTransposer.m_FollowOffset = Vector3.Lerp(cinemachineTransposer.m_FollowOffset, targetFollowOffset, Time.deltaTime * zoomSpeed);
     }
 }
