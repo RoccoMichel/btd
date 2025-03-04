@@ -1,11 +1,10 @@
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class uiItem : MonoBehaviour
+public class ShopItem : MonoBehaviour
 {
-    GameUI ui;
-    PlaseCat buildingSystem;
+    private GameUI ui;
+    private PlaseCat buildingSystem;
 
     [Tooltip("File name in Resources")]
     public GameObject structure;
@@ -41,7 +40,7 @@ public class uiItem : MonoBehaviour
 
             buildingSystem.cat = Instantiate(structure);
             buildingSystem.cat.GetComponent<CatBase>().FineWaveManager();
-            buildingSystem.setOldMaterols();
+            buildingSystem.VisualizeRange();
         }
         else PurchaseFail();
     }

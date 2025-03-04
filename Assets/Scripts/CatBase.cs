@@ -8,65 +8,65 @@ public class CatBase : MonoBehaviour
     public string displayName = "Killer Kitty";
     public int upgradeLevel;
     public float value = 10;
-    public bool isColiding;
+    public bool isColliding;
 
     public WaveManager waveMan;
-    public List<RatBase> Enemys;
+    public List<RatBase> Enemies;
 
     public Transform spanPos;
-    public GameObject prodectile;
+    public GameObject projectile;
 
 
     private void OnCollisionStay(Collision collision)
     {
-        isColiding = true;
+        isColliding = true;
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        isColiding = false;
+        isColliding = false;
     }
     // Stats
-    public float atackDilay, prodekilSpred, ransh;
-    public int prodektilCont;
+    public float attackDelay, projectileSpread, range;
+    public int projectileCount;
     
-    float atackTimer = 0;
+    float attackTimer = 0;
     RatBase target;
     public void FineWaveManager() { waveMan = FindAnyObjectByType<WaveManager>(); }
-    void UpdateEnemyCont()
+    void UpdateEnemyCount()
     {
-        Enemys = FindObjectsOfType<RatBase>().ToList();
+        Enemies = FindObjectsByType<RatBase>(FindObjectsSortMode.None).ToList();
     }
-    RatBase FindeTarget()
+    RatBase FindTarget()
     {
         float minDis = Mathf.Infinity;
-        int curentTaget = 0;
-        for (int i = 0; i < Enemys.Count; i++)
+        int currentTarget = 0;
+        for (int i = 0; i < Enemies.Count; i++)
         {
-            float dis = Vector3.Distance(Enemys[i].transform.position, transform.position);
+            float dis = Vector3.Distance(Enemies[i].transform.position, transform.position);
             if (dis < minDis)
             {
-                curentTaget = i;
+                currentTarget = i;
                 minDis = dis;
             }
         }
 
-        if (Enemys.Count > 0 && Vector3.Distance(transform.position, Enemys[curentTaget].transform.position) < ransh)
+        if (Enemies.Count > 0 && Vector3.Distance(transform.position, Enemies[currentTarget].transform.position) < range)
         {
-            transform.LookAt(Enemys[curentTaget].transform);
-            return Enemys[curentTaget];
+            transform.LookAt(Enemies[currentTarget].transform);
+            return Enemies[currentTarget];
         }
 
         return null;
 
     }
-    void SpaneProdetils() 
+    void SpawnProjectiles() 
     {
-        spanPos.LookAt(FindeTarget().transform);
-        for (float i = 0; i < prodektilCont; i++)
+        spanPos.LookAt(FindTarget().transform);
+        for (float i = 0; i < projectileCount; i++)
         {
-            Instantiate(prodectile, spanPos.position, spanPos.rotation).transform.rotation = 
-                Quaternion.Euler(0, ( (i - (prodektilCont-1)/2) / prodektilCont ) * prodekilSpred, 0) * spanPos.rotation;
+            Instantiate(projectile, spanPos.position, spanPos.rotation).transform.rotation = 
+                Quaternion.Euler(0, ( (i - (projectileCount-1)/2) / projectileCount ) * projectileSpread, 0) * spanPos.rotation;
         }
     }
 
@@ -76,14 +76,14 @@ public class CatBase : MonoBehaviour
     }
     void Update()
     {
-        // Should run when enemys die or get spawned in : temp
-        UpdateEnemyCont();
-        target = FindeTarget();
+        // Should run when enemies die or get spawned in : temp
+        UpdateEnemyCount();
+        target = FindTarget();
         // Attack locking
-        atackTimer += Time.deltaTime;
+        attackTimer += Time.deltaTime;
 
-        if (Enemys.Count() > 0 && atackTimer > atackDilay && Vector3.Distance(transform.position, target.transform.position) < ransh)
-        { SpaneProdetils(); atackTimer = 0; } 
+        if (Enemies.Count() > 0 && attackTimer > attackDelay && Vector3.Distance(transform.position, target.transform.position) < range)
+        { SpawnProjectiles(); attackTimer = 0; } 
     }
 
     // UPGRADE RELATED METHODS
@@ -93,7 +93,7 @@ public class CatBase : MonoBehaviour
     /// </summary>
     public void ShowUpgrade()
     {
-        CatUpgrade upgradeMenu = Resources.Load("Cat Upgrade").GameObject().GetComponent<CatUpgrade>();
+        CatUpgrade upgradeMenu = Resources.Load("Upgrade Menu").GameObject().GetComponent<CatUpgrade>();
         upgradeMenu.gameObject.transform.position = transform.position + Vector3.up * 10; // Position above the cat
         upgradeMenu.cat = this;
     }
