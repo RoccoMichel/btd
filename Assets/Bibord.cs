@@ -2,5 +2,11 @@ using UnityEngine;
 
 public class Bibord : MonoBehaviour
 {
-    void Update() { transform.LookAt(Camera.main.transform); }
+    void Update() 
+    {
+        //if not bibord
+        //transform.LookAt(Camera.main.transform);
+
+        transform.rotation = Camera.main.transform.rotation;
+    }
 }

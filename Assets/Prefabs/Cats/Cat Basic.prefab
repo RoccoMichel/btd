@@ -228,7 +228,7 @@ MonoBehaviour:
   isColiding: 0
   atackDilay: 1
   prodekilSpred: 10
-  ransh: 5
+  ransh: 2
   prodektilCont: 1
 --- !u!136 &688870104695935717
 CapsuleCollider:

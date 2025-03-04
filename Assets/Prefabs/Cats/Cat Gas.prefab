@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 2129321114186096723, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
       propertyPath: ransh
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2129321114186096723, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
       propertyPath: atackDilay
