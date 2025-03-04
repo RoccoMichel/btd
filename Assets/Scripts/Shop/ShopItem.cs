@@ -40,7 +40,7 @@ public class uiItem : MonoBehaviour
             ui.session.Expenditure(cost);
 
             buildingSystem.cat = Instantiate(structure);
-            buildingSystem.cat.GetComponent<CatBase>().findWhaveMan();
+            buildingSystem.cat.GetComponent<CatBase>().FineWaveManager();
             buildingSystem.setOldMaterols();
         }
         else PurchaseFail();

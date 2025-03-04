@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3129400066393429972}
   m_Layer: 0
   m_Name: SYSTEM
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,6 +94,7 @@ MonoBehaviour:
     m_Bits: 8
   canBild: {fileID: 2100000, guid: 35eb8a2c6b4957146811fcfa7bd38904, type: 2}
   oldMaterols: []
+  rahseVishols: {fileID: 0}
 --- !u!114 &3129400066393429972
 MonoBehaviour:
   m_ObjectHideFlags: 0

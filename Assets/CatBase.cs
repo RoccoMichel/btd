@@ -1,18 +1,21 @@
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class CatBase : MonoBehaviour
 {
+    public string displayName = "Killer Kitty";
+    public int upgradeLevel;
+    public float value = 10;
+    public bool isColiding;
+
     public WaveManager waveMan;
     public List<RatBase> Enemys;
 
     public Transform spanPos;
     public GameObject prodectile;
 
-    public bool isColiding;
 
     private void OnCollisionStay(Collision collision)
     {
@@ -29,7 +32,7 @@ public class CatBase : MonoBehaviour
     
     float atackTimer = 0;
     RatBase target;
-    public void findWhaveMan() { waveMan = FindAnyObjectByType<WaveManager>(); }
+    public void FineWaveManager() { waveMan = FindAnyObjectByType<WaveManager>(); }
     void UpdateEnemyCont()
     {
         Enemys = waveMan.GetComponentsInChildren<RatBase>().ToList();
@@ -62,14 +65,47 @@ public class CatBase : MonoBehaviour
     }
     void Update()
     {
-        // Sode run when enemys dey or get spand in : temp
+        // Should run when enemys die or get spawned in : temp
         UpdateEnemyCont();
         target = FindeTarget();
 
-        // Atack lodick
+        // Attack locking
         atackTimer += Time.deltaTime;
 
         if (Enemys.Count() > 0 && atackTimer > atackDilay && Vector3.Distance(transform.position, target.transform.position) < ransh)
         { SpaneProdetils(); atackTimer = 0; } 
+    }
+
+    // UPGRADE RELATED METHODS
+
+    /// <summary>
+    /// Create Upgrade Menu and give it the Cats info
+    /// </summary>
+    public void ShowUpgrade()
+    {
+        CatUpgrade upgradeMenu = Resources.Load("Cat Upgrade").GameObject().GetComponent<CatUpgrade>();
+        upgradeMenu.gameObject.transform.position = transform.position + Vector3.up * 10; // Position above the cat
+        upgradeMenu.cat = this;
+    }
+
+    /// <summary>
+    /// Increases the Cats stats and its value
+    /// </summary>
+    public void Upgrade()
+    {
+        upgradeLevel++;
+        value += value / 2;
+
+        /////////////////////////////////////////////////////
+        // SOMEONE NEEDS THE ACCTUAL UPGRADING OF THE CATS //           !!!
+        /////////////////////////////////////////////////////
+    }
+
+    /// <summary>
+    /// Destroys the Cat & nothing else
+    /// </summary>
+    public void Kill()
+    {
+        Destroy(gameObject);
     }
 }

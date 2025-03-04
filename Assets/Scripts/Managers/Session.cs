@@ -51,16 +51,27 @@ public class Session : MonoBehaviour
         // reference the wave manager
     }
 
+    /// <summary>
+    /// ADD money from balance
+    /// </summary>
     public void Profit(float amount)
     {
         balance += Mathf.RoundToInt(amount);
     }
 
+    /// <summary>
+    /// REMOVE money from balance
+    /// </summary>
     public void Expenditure(float amount)
     {        
         balance -= Mathf.RoundToInt(amount);
     }
 
+    /// <summary>
+    /// Expends funds if CanPurchase()
+    /// </summary>
+    /// <param name="cost">minimum funds needed for purchase</param>
+    /// <returns>if Purchase was success or not</returns>
     public bool TryPurchase(int cost)
     {
         if (CanPurchase(cost)) Expenditure(cost);
@@ -68,6 +79,10 @@ public class Session : MonoBehaviour
         return CanPurchase(cost);
     }
 
+    /// <summary>
+    /// Is player balance big enough for this purchase?
+    /// </summary>
+    /// <returns>If the player can afford this purchase</returns>
     public bool CanPurchase(int cost)
     {
         if (balance - cost < minBalance) return false;
@@ -75,8 +90,12 @@ public class Session : MonoBehaviour
         return true;
     }
 
+    /// <summary>
+    /// Universal Lose State to end the game
+    /// </summary>
     public void Lose()
     {
         Debug.LogWarning($"Player lost at wave {wave}");
+        LoadLogic.LoadSceneByNumber(0);
     }
 }
