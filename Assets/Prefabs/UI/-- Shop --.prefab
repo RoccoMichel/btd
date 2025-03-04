@@ -39,7 +39,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 367.4904, y: 640}
+  m_SizeDelta: {x: 370, y: 640}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &6208553333564907842
 CanvasRenderer:
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7524f60d87bec8c4aa4c3679aeb898f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  structureName: 
+  structure: {fileID: 0}
   price: {fileID: 5291687224242360450}
   cost: 45
 --- !u!114 &5693364435915633800
@@ -446,7 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7524f60d87bec8c4aa4c3679aeb898f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  structureName: 
+  structure: {fileID: 0}
   price: {fileID: 3046215669937506907}
   cost: 5
 --- !u!114 &2481441196344433105
@@ -842,7 +842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7524f60d87bec8c4aa4c3679aeb898f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  structureName: 
+  structure: {fileID: 0}
   price: {fileID: 3981072701988539187}
   cost: 1253
 --- !u!114 &2397604296688555806
@@ -991,7 +991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7524f60d87bec8c4aa4c3679aeb898f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  structureName: 
+  structure: {fileID: 0}
   price: {fileID: 2685549352765696891}
   cost: 44
 --- !u!114 &1156866149081278495
@@ -1965,7 +1965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7524f60d87bec8c4aa4c3679aeb898f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  structureName: 
+  structure: {fileID: 0}
   price: {fileID: 2500136179123033527}
   cost: 5
 --- !u!114 &6358818640501328522
@@ -2316,7 +2316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7524f60d87bec8c4aa4c3679aeb898f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  structureName: 
+  structure: {fileID: 0}
   price: {fileID: 264551466906459168}
   cost: 55
 --- !u!114 &3405376450626713912
