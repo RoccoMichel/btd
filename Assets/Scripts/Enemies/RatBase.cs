@@ -63,9 +63,9 @@ public class RatBase : MonoBehaviour
         float startPosition = startPos; // Change this value to set where the object starts (e.g., 0.5f for halfway)
         spline.NormalizedTime = startPosition;
 
-        spline.StartOffset =startPosition;
+        spline.StartOffset = startPosition;
 
-        spline.Play(); ;
+        spline.Play();
     }
 
     /// <summary>
