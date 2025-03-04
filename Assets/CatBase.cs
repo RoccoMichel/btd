@@ -49,10 +49,10 @@ public class CatBase : MonoBehaviour
             }
         }
 
-        if (Vector3.Distance(transform.position, Enemys[curentTaget].transform.position) < ransh) transform.LookAt(Enemys[curentTaget].transform);
+        if (Enemys.Count > 0 && Vector3.Distance(transform.position, Enemys[curentTaget].transform.position) < ransh) transform.LookAt(Enemys[curentTaget].transform);
         return Enemys[curentTaget];
     }
-    void SpaneProdetils()
+    void SpaneProdetils() 
     {
         for (float i = 0; i < prodektilCont; i++)
         {
