@@ -68,7 +68,7 @@ public class CatBase : MonoBehaviour
         // Atack lodick
         atackTimer += Time.deltaTime;
 
-        if (atackTimer > atackDilay && Vector3.Distance(transform.position, target.transform.position) < ransh)
-        { SpaneProdetils(); atackTimer = 0; }
+        if (Enemys.Count() > 0 && atackTimer > atackDilay && Vector3.Distance(transform.position, target.transform.position) < ransh)
+        { SpaneProdetils(); atackTimer = 0; } 
     }
 }

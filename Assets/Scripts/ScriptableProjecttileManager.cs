@@ -7,7 +7,7 @@ public class ScriptableProjecttileManager : ScriptableObject
     [Tooltip("How Long It Should Exist")]
     public float lifeTime;
 
-    public int damage;
+    public float damage;
     public float speed;
 
     public bool doDamageWhenDied;

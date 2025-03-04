@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 688870104695935717}
   - component: {fileID: 2723553589483365085}
   m_Layer: 0
-  m_Name: Cat
+  m_Name: BaickCat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -229,7 +229,7 @@ MonoBehaviour:
   atackDilay: 1
   prodekilSpred: 10
   ransh: 5
-  prodektilCont: 3
+  prodektilCont: 1
 --- !u!136 &688870104695935717
 CapsuleCollider:
   m_ObjectHideFlags: 0

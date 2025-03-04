@@ -8,7 +8,7 @@ public class ProjecttileManager : MonoBehaviour
 
     float lifeTime;
 
-    int damage;
+    float damage;
     float speed;
     public bool prsig;
     bool doDamageWhenDied;
@@ -52,8 +52,9 @@ public class ProjecttileManager : MonoBehaviour
         {
             // Damage the rat here
             collision.gameObject.GetComponent<RatBase>().Damage(damage);
+            
             if (!prsig) Destroy(gameObject);
-            DestroyObject(false);
+            //DestroyObject(false);
         }
     }
 
