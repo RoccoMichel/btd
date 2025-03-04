@@ -108,7 +108,7 @@ public class WaveManager : MonoBehaviour
             {
                 GameObject rat = Instantiate(segment.prefab, GetSpawnPosition(), Quaternion.identity, transform);
                 rat.GetComponent<RatBase>().session = sesion;
-                rat.GetComponent<RatBase>().OnStart(0f);
+                rat.GetComponent<RatBase>().OnStart(0.01f);
 
 
                 localCounters[i]++;
