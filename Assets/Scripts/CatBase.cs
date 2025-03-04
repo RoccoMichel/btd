@@ -16,6 +16,12 @@ public class CatBase : MonoBehaviour
     public Transform spanPos;
     public GameObject projectile;
 
+    // Stats
+    public float attackDelay, projectileSpread, range;
+    public int projectileCount;
+
+    float attackTimer = 0;
+    RatBase target;
 
     private void OnCollisionStay(Collision collision)
     {
@@ -26,12 +32,7 @@ public class CatBase : MonoBehaviour
     {
         isColliding = false;
     }
-    // Stats
-    public float attackDelay, projectileSpread, range;
-    public int projectileCount;
-    
-    float attackTimer = 0;
-    RatBase target;
+   
     public void FineWaveManager() { waveMan = FindAnyObjectByType<WaveManager>(); }
     void UpdateEnemyCount()
     {
@@ -105,6 +106,14 @@ public class CatBase : MonoBehaviour
     {
         upgradeLevel++;
         value += value / 2;
+
+        float ran = Random.Range(0f, 1f);
+
+        if (ran < 0.3f) attackTimer *= 0.9f;
+        else if (ran < 0.6f) projectileSpread *= 0.9f;
+        else if (ran < 0.9f) range *= 1.2f;
+        else projectileCount++;
+
 
         /////////////////////////////////////////////////////
         // SOMEONE NEEDS THE ACCTUAL UPGRADING OF THE CATS //           !!!
