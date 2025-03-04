@@ -40,7 +40,7 @@ public class SetNewIntOnPlayerPrefs : EditorWindow
 
     public void ChangePlayerPres()
     {
-        PlayerPrefs.SetFloat(playerPrefs, newPlayerPrefs);
+        PlayerPrefs.SetInt(playerPrefs, newPlayerPrefs);
     }
 }
 
@@ -76,7 +76,10 @@ public class SetNewStringtOnPlayerPrefs : EditorWindow
 public class SeePlayerPrefs : EditorWindow
 {
     string playerPfrefs;
-    string playerPrefsValue;
+    string playerPrefsValue = "";
+
+    string newValue = "";
+    bool showText = false;
 
     [MenuItem("Tools/See PlayerPrefs")]
     public static void ShowWidow()
@@ -90,13 +93,38 @@ public class SeePlayerPrefs : EditorWindow
 
         if (GUILayout.Button("Check"))
             Check();
+
+        if (showText)
+        {
+            GUILayout.Label(newValue, EditorStyles.boldLabel);
+        }
     }
 
     public void Check()
     {
-        if(PlayerPrefs.HasKey(playerPfrefs))
-            playerPrefsValue = EditorGUILayout.TextField(PlayerPrefs.GetString(playerPfrefs), playerPrefsValue);
+        newValue = GetPlayerPfresAsString(playerPfrefs);
+
+        showText = true;
+    }
+
+    public string GetPlayerPfresAsString(string key)
+    {
+        string finalString = "";
+
+        if (!PlayerPrefs.HasKey(key))
+            return key + " Does Not Have A value!";
+
+        int intValue = PlayerPrefs.GetInt(key);
+        float floatValue = PlayerPrefs.GetFloat(key);
+        string stringValue = PlayerPrefs.GetString(key);
+
+        if (intValue != int.MinValue)
+            finalString = intValue.ToString();
+        else if (floatValue != float.MinValue)
+            finalString = floatValue.ToString();
         else
-            playerPrefsValue = EditorGUILayout.TextField(playerPfrefs + " Does Not Have A value!", playerPrefsValue);
+            finalString = stringValue;
+
+        return finalString;
     }
 }

@@ -91,8 +91,8 @@ public class Settings : MonoBehaviour
         soundText.text = "Sound Efects: " + PlayerPrefs.GetFloat("Sound");
         uiText.text = "UI Sound: " + PlayerPrefs.GetFloat("UI");
 
-        musicInput.text = PlayerPrefs.GetFloat("Music", 100).ToString();
-        soundInput.text = PlayerPrefs.GetFloat("Sound", 100).ToString();
+        musicInput.text = PlayerPrefs.GetFloat("Music").ToString();
+        soundInput.text = PlayerPrefs.GetFloat("Sound").ToString();
         uiInput.text = PlayerPrefs.GetFloat("UI").ToString();
 
         float musicVolume = Mathf.Lerp(-80, 0, PlayerPrefs.GetFloat("Music") / 100);
@@ -117,7 +117,7 @@ public class Settings : MonoBehaviour
             PlayerPrefs.SetFloat("Sound", 100);
             PlayerPrefs.SetFloat("UI", 100);
 
-            PlayerPrefs.SetFloat("FirstTimePlayeing", 1);
+            PlayerPrefs.SetInt("FirstTimePlayeing", 1);
         }
 
         UpdateVolume();
