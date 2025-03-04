@@ -14,11 +14,11 @@ PrefabInstance:
       objectReference: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 2129321114186096723, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
       propertyPath: ransh
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2129321114186096723, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
       propertyPath: atackDilay
-      value: 0.5
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2129321114186096723, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
       propertyPath: prodectile
@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 2815010670045982513, guid: 0161434a5c176df4a90486d5cf8a80e7, type: 3}
     - target: {fileID: 2129321114186096723, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
       propertyPath: prodekilSpred
-      value: 180
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 2129321114186096723, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
       propertyPath: prodektilCont

@@ -50,6 +50,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPM: {fileID: 11400000, guid: f46332bd60035a645bc553f1f9636785, type: 2}
   prsig: 1
+  SacleOwerTime:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!135 &265688832539884319
 SphereCollider:
   m_ObjectHideFlags: 0
