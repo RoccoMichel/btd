@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.6067367, y: 0.72469974, z: -0.7046404}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -48,8 +48,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c349d1662e7fd25499608926654b8b4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SPM: {fileID: 11400000, guid: 5b774e829ef8d9e47b29ddbfc60e8507, type: 2}
-  prsig: 0
+  SPM: {fileID: 11400000, guid: 34fe237de0fe5c0459acd2b7f954ab10, type: 2}
+  prsig: 1
+  SacleOwerTime:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -0.10888591
+      outSlope: -0.10888591
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5366667
+      value: 0.94156456
+      inSlope: -0.22906542
+      outSlope: -0.22906542
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.5266739
+    - serializedVersion: 3
+      time: 0.99331665
+      value: 0.2874794
+      inSlope: -1.4323556
+      outSlope: -1.4323556
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!135 &265688832539884319
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -69,7 +102,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 2
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &8484349293958041298
 MeshRenderer:
@@ -94,7 +127,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68102ef85ec17d84bb99c8d854b4b3bb, type: 2}
+  - {fileID: 2100000, guid: 79ba4d44a3907444abcd036ca4650ca6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

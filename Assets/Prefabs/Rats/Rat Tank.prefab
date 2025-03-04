@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3322255633057438394}
   - component: {fileID: 3051218362407655760}
   m_Layer: 0
-  m_Name: TankRat
+  m_Name: Rat Tank
   m_TagString: Rat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
