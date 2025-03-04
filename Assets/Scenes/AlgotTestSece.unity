@@ -2289,42 +2289,7 @@ MonoBehaviour:
     segments:
     - tStartEnd: {x: 0, y: 100}
       spawnFrequency: 1
-      prefab: {fileID: 4825668182265712296, guid: 7962ce53eb8c2a245a4d53b72b4cc869, type: 3}
-  - name: 1
-    segments:
-    - tStartEnd: {x: 0, y: 100}
-      spawnFrequency: 1
-      prefab: {fileID: 4825668182265712296, guid: 7962ce53eb8c2a245a4d53b72b4cc869, type: 3}
-  - name: 1
-    segments:
-    - tStartEnd: {x: 0, y: 100}
-      spawnFrequency: 1
-      prefab: {fileID: 4825668182265712296, guid: 7962ce53eb8c2a245a4d53b72b4cc869, type: 3}
-  - name: 1
-    segments:
-    - tStartEnd: {x: 0, y: 100}
-      spawnFrequency: 1
-      prefab: {fileID: 4825668182265712296, guid: 7962ce53eb8c2a245a4d53b72b4cc869, type: 3}
-  - name: 1
-    segments:
-    - tStartEnd: {x: 0, y: 100}
-      spawnFrequency: 1
-      prefab: {fileID: 4825668182265712296, guid: 7962ce53eb8c2a245a4d53b72b4cc869, type: 3}
-  - name: 1
-    segments:
-    - tStartEnd: {x: 0, y: 100}
-      spawnFrequency: 1
-      prefab: {fileID: 4825668182265712296, guid: 7962ce53eb8c2a245a4d53b72b4cc869, type: 3}
-  - name: 1
-    segments:
-    - tStartEnd: {x: 0, y: 100}
-      spawnFrequency: 1
-      prefab: {fileID: 4825668182265712296, guid: 7962ce53eb8c2a245a4d53b72b4cc869, type: 3}
-  - name: 1
-    segments:
-    - tStartEnd: {x: 0, y: 100}
-      spawnFrequency: 1
-      prefab: {fileID: 4825668182265712296, guid: 7962ce53eb8c2a245a4d53b72b4cc869, type: 3}
+      prefab: {fileID: 4825668182265712296, guid: 6a2b8ba1e932c774aae0168b5f4cfe22, type: 3}
 --- !u!1 &1808958955
 GameObject:
   m_ObjectHideFlags: 0
