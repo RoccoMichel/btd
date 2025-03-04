@@ -5,22 +5,26 @@ using UnityEngine;
 
 public class CatBase : MonoBehaviour
 {
+    [Header("Instance Attributes")]
     public string displayName = "Killer Kitty";
-    public int upgradeLevel;
+    public int upgradeLevel = 1;
     public float value = 10;
     public bool isColliding;
 
-    public WaveManager waveMan;
+    [Header("References")]
     public List<RatBase> Enemies;
+    public WaveManager waveMan;
 
-    public Transform spanPos;
+    public Transform spawnPos;
     public GameObject projectile;
 
-    // Stats
-    public float attackDelay, projectileSpread, range;
-    public int projectileCount;
+    [Header("Statistics")]
+    public float attackDelay = 1;
+    public float projectileSpread;
+    public float range = 5;
+    public int projectileCount = 3;
 
-    float attackTimer = 0;
+    float attackTimer;
     RatBase target;
 
     private void OnCollisionStay(Collision collision)
@@ -63,11 +67,11 @@ public class CatBase : MonoBehaviour
     }
     void SpawnProjectiles() 
     {
-        spanPos.LookAt(FindTarget().transform);
+        spawnPos.LookAt(FindTarget().transform);
         for (float i = 0; i < projectileCount; i++)
         {
-            Instantiate(projectile, spanPos.position, spanPos.rotation).transform.rotation = 
-                Quaternion.Euler(0, ( (i - (projectileCount-1)/2) / projectileCount ) * projectileSpread, 0) * spanPos.rotation;
+            Instantiate(projectile, spawnPos.position, spawnPos.rotation).transform.rotation = 
+                Quaternion.Euler(0, ( (i - (projectileCount-1)/2) / projectileCount ) * projectileSpread, 0) * spawnPos.rotation;
         }
     }
 

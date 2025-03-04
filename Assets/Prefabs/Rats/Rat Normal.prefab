@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1054378809486336649}
+  - component: {fileID: 2364166806318110886}
   - component: {fileID: 6730537279312695796}
   - component: {fileID: 7019691787733071731}
   - component: {fileID: 5788835019495883656}
   - component: {fileID: 3322255633057438394}
-  - component: {fileID: 2364166806318110886}
   m_Layer: 0
   m_Name: Rat Normal
   m_TagString: Rat
@@ -37,6 +37,24 @@ Transform:
   - {fileID: 2889442794898475912}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -70.373, z: 0}
+--- !u!114 &2364166806318110886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4825668182265712296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bc702cbca41ddb4ba94db7b63d415a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spline: {fileID: 3322255633057438394}
+  session: {fileID: 0}
+  speed: 1
+  health: 3
+  damage: 10
+  value: 10
 --- !u!33 &6730537279312695796
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -136,24 +154,6 @@ MonoBehaviour:
   m_ObjectForwardAxis: 2
   m_ObjectUpAxis: 1
   m_StartOffset: 0.5379205
---- !u!114 &2364166806318110886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4825668182265712296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bc702cbca41ddb4ba94db7b63d415a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spline: {fileID: 3322255633057438394}
-  session: {fileID: 0}
-  speed: 1
-  health: 3
-  damage: 10
-  value: 10
 --- !u!1001 &3428336168431856739
 PrefabInstance:
   m_ObjectHideFlags: 0

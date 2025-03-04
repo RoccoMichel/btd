@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +8,7 @@ public class AddSoundToButton : MonoBehaviour
 {
     public List<AudioClip> soundEfects;
     public List<Button> exclude;
-    public static List<Button> staticExclude = new List<Button>();
+    public static List<Button> staticExclude = new();
 
     public static AudioSource AS;
 
@@ -19,9 +18,11 @@ public class AddSoundToButton : MonoBehaviour
     {
         AS = GetComponent<AudioSource>();
 
-        defultPlayClip = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Sounds/SoundEfects/UI/LevelSelected.wav");
+#if UNITY_EDITOR
+        defultPlayClip = UnityEditor.AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Sounds/SoundEfects/UI/LevelSelected.wav");
+#endif
 
-        Button[] buttons = FindObjectsOfType<Button>();
+        Button[] buttons = FindObjectsByType<Button>(FindObjectsSortMode.None);
         List<Button> buttonsList = buttons.ToList();
 
         for (int i = 0; i < staticExclude.Count; i++)

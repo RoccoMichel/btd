@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
-using UnityEditor;
 using System.Reflection;
 
 public class MainMenu : MonoBehaviour
@@ -12,7 +11,7 @@ public class MainMenu : MonoBehaviour
     public GameObject levelButton;
     public RectTransform parent;
 
-    List<GameObject> levelButtons = new List<GameObject>();
+    List<GameObject> levelButtons = new();
 
     int sceneID = 0;
 
@@ -76,7 +75,9 @@ public class MainMenu : MonoBehaviour
 
         AddSoundToButton.staticExclude.Add(newLevel.GetComponent<Button>());
 
-        EditorUtility.SetDirty(newLevel);
+#if UNITY_EDITOR
+        UnityEditor.EditorUtility.SetDirty(newLevel);
+#endif
 
         newLevel.GetComponent<RectTransform>().SetParent(parent, false);
 

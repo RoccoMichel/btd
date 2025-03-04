@@ -221,15 +221,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c37c5dcdd1cd6449a6e9b7723640f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayName: BASE
+  upgradeLevel: 1
+  value: 5
+  isColliding: 0
+  Enemies: []
   waveMan: {fileID: 0}
-  Enemys: []
-  spanPos: {fileID: 6120640807579444328}
-  prodectile: {fileID: 2815010670045982513, guid: cb475cffa808c5e43923f10f42096b51, type: 3}
-  isColiding: 0
-  atackDilay: 1
-  prodekilSpred: 10
-  ransh: 2
-  prodektilCont: 3
+  spawnPos: {fileID: 6120640807579444328}
+  projectile: {fileID: 2815010670045982513, guid: cb475cffa808c5e43923f10f42096b51, type: 3}
+  attackDelay: 1
+  projectileSpread: 10
+  range: 2
+  projectileCount: 3
 --- !u!136 &688870104695935717
 CapsuleCollider:
   m_ObjectHideFlags: 0

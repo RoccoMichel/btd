@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1054378809486336649}
+  - component: {fileID: 3051218362407655760}
   - component: {fileID: 6730537279312695796}
   - component: {fileID: 5788835019495883656}
   - component: {fileID: 3322255633057438394}
-  - component: {fileID: 3051218362407655760}
   m_Layer: 0
   m_Name: Rat Tank
   m_TagString: Rat
@@ -36,6 +36,26 @@ Transform:
   - {fileID: 8459217909310346268}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -70.373, z: 0}
+--- !u!114 &3051218362407655760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4825668182265712296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bba70b2dd99ff0541953987618fab59c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spline: {fileID: 3322255633057438394}
+  session: {fileID: 0}
+  speed: 1
+  health: 30
+  damage: 2
+  value: 10
+  spawnAmmount: 3
+  rat: {fileID: 4825668182265712296, guid: 6a2b8ba1e932c774aae0168b5f4cfe22, type: 3}
 --- !u!33 &6730537279312695796
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -90,26 +110,6 @@ MonoBehaviour:
   m_ObjectForwardAxis: 2
   m_ObjectUpAxis: 1
   m_StartOffset: 0
---- !u!114 &3051218362407655760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4825668182265712296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bba70b2dd99ff0541953987618fab59c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spline: {fileID: 3322255633057438394}
-  session: {fileID: 0}
-  speed: 1
-  health: 30
-  damage: 2
-  value: 10
-  spawnAmmount: 3
-  rat: {fileID: 4825668182265712296, guid: 6a2b8ba1e932c774aae0168b5f4cfe22, type: 3}
 --- !u!1 &7310663883771706066
 GameObject:
   m_ObjectHideFlags: 0
