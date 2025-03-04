@@ -150,6 +150,6 @@ MonoBehaviour:
   spline: {fileID: 3322255633057438394}
   session: {fileID: 0}
   speed: 1
-  health: 3
+  health: 100
   damage: 10
   value: 10

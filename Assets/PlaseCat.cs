@@ -7,6 +7,7 @@ public class PlaseCat : MonoBehaviour
     public LayerMask grond;
     public Material canBild;
     public List<Material> oldMaterols;
+    public Transform rahseVishols;
 
     public void setOldMaterols()
     {
@@ -23,6 +24,12 @@ public class PlaseCat : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)) setOldMaterols();
         if (cat != null && oldMaterols.Count > 0)
         {
+
+            rahseVishols.position = cat.transform.position + Vector3.up * 0.01f;
+            float ransh = cat.GetComponent<CatBase>().ransh;
+
+            rahseVishols.localScale = new Vector3(ransh * 2, ransh * 2, 0);
+
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             ray.direction *= 1000;
             RaycastHit[] hit = Physics.RaycastAll(ray.origin, ray.direction);
@@ -52,6 +59,8 @@ public class PlaseCat : MonoBehaviour
                 oldMaterols.Clear();
             }
         }
+        else rahseVishols.position = Vector3.down * 1000;
+
 
     }
 }

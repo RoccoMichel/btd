@@ -9,5 +9,7 @@ Rat-attack how to make a level:
 > Import 'SYSTEM' Prefab
 > Import '--- Canvas ---' Prefab
 > Import 'CameraControler' & 'CinemachineCamera', add 'Cinemashcine Brain' component to MainCamera
+	> Set Tracking target in CinemachineCamera to CamaraController
+	> Set Main Camera to Octographic
 > Add Global Volume
 > Create you Waves with in the 'Wavemanager' on 'SYSTEM' GameObject
