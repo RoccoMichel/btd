@@ -2378,14 +2378,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sesion: {fileID: 1710930620}
-  waveDuration: 20
+  waveDuration: 50
   waveTransitionTime: 0
   waves:
   - name: 1
     segments:
     - tStartEnd: {x: 0, y: 100}
-      spawnFrequency: 1
+      spawnFrequency: 0.5
       prefab: {fileID: 4825668182265712296, guid: 6a2b8ba1e932c774aae0168b5f4cfe22, type: 3}
+    - tStartEnd: {x: 0, y: 100}
+      spawnFrequency: 0.25
+      prefab: {fileID: 4825668182265712296, guid: 32acb91f6111e7e49bdea406bab32e7a, type: 3}
 --- !u!1 &1808958955
 GameObject:
   m_ObjectHideFlags: 0
