@@ -4,31 +4,31 @@ using UnityEngine;
 public class PlaseCat : MonoBehaviour
 {
     public GameObject cat;
-    public LayerMask grond;
+    public LayerMask ground;
     public Material canBild;
-    public List<Material> oldMaterols;
-    public Transform rahseVishols;
+    public List<Material> oldMaterials;
+    public Transform RangeVisualization;
 
-    public void setOldMaterols()
+    public void VisualizeRange()
     {
-        oldMaterols.Clear();
+        oldMaterials.Clear();
         
         MeshRenderer[] meshes = cat.GetComponentsInChildren<MeshRenderer>();
         for (int i = 0; i < meshes.Length; i++)
         {
-            oldMaterols.Add(meshes[i].material);
+            oldMaterials.Add(meshes[i].material);
         }
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) setOldMaterols();
-        if (cat != null && oldMaterols.Count > 0)
+        if (Input.GetKeyDown(KeyCode.Space)) VisualizeRange();
+        if (cat != null && oldMaterials.Count > 0)
         {
 
-            rahseVishols.position = cat.transform.position + Vector3.up * 0.01f;
-            float ransh = cat.GetComponent<CatBase>().ransh;
+            RangeVisualization.position = cat.transform.position + Vector3.up * 0.01f;
+            float range = cat.GetComponent<CatBase>().range;
 
-            rahseVishols.localScale = new Vector3(ransh * 2, ransh * 2, 0);
+            RangeVisualization.localScale = new Vector3(range * 2, range * 2, 0);
 
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             ray.direction *= 1000;
@@ -42,7 +42,7 @@ public class PlaseCat : MonoBehaviour
             }
 
             MeshRenderer[] meshes = cat.GetComponentsInChildren<MeshRenderer>();
-            bool canPlase = cat.GetComponent<CatBase>().isColiding;
+            bool canPlase = cat.GetComponent<CatBase>().isColliding;
             for (int i = 0; i < meshes.Length; i++)
             {
                 meshes[i].material = canBild;
@@ -53,14 +53,12 @@ public class PlaseCat : MonoBehaviour
             if (Input.GetMouseButtonDown(0) && !canPlase)
             {
                 for (int i = 0; i < meshes.Length; i++)
-                    meshes[i].material = oldMaterols[i];
+                    meshes[i].material = oldMaterials[i];
 
                 cat = null;
-                oldMaterols.Clear();
+                oldMaterials.Clear();
             }
         }
-        else rahseVishols.position = Vector3.down * 1000;
-
-
+        else RangeVisualization.position = Vector3.down * 1000;
     }
 }

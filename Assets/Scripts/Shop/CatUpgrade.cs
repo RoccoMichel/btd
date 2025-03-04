@@ -16,14 +16,11 @@ public class CatUpgrade : MonoBehaviour
 
     void Update()
     {
+        if (cat == null) KillYourSelf();
         if (shop == null) shop = FindAnyObjectByType<GameUI>().GetComponent<GameUI>();
+
         transform.LookAt(Camera.main.transform);
         RefreshDisplays();
-    }
-
-    private void LateUpdate()
-    {
-        
     }
 
     /// <summary>
@@ -35,6 +32,7 @@ public class CatUpgrade : MonoBehaviour
 
         // Sell value is half of cat value
         shop.session.Profit(cat.value / 2);
+        shop.balanceDisplay.color = Color.green;
         cat.Kill();
         KillYourSelf();
     }
@@ -44,7 +42,7 @@ public class CatUpgrade : MonoBehaviour
         // Cost is 1/3 of cat value rounded up
         if (shop.session.TryPurchase(Mathf.RoundToInt(cat.value / 3)))
             cat.Upgrade();
-        else shop.balanceDisplay.color = Color.red;
+        else shop.balanceDisplay.color = Color.yellow;
 
         // Animation & Sound ?
     }
