@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor;
+using System.Reflection;
 
 public class MainMenu : MonoBehaviour
 {
@@ -24,6 +26,11 @@ public class MainMenu : MonoBehaviour
         LoadLogic.LoadSceneByNumber(sceneID);
     }
 
+    public void PlaySound()
+    {
+        AddSoundToButton.PlaySelectedSound();
+    }
+
     [Button("Create New Level")]
     public void CreateNewLevel()
     {
@@ -31,8 +38,45 @@ public class MainMenu : MonoBehaviour
         newLevel.name = (levelButtons.Count + 1).ToString();
         newLevel.GetComponentInChildren<TMP_Text>().text = "Level: " + (levelButtons.Count + 1).ToString();
 
-        newLevel.GetComponent<Button>().onClick.AddListener(SetSceneID);
-        newLevel.GetComponent<Button>().onClick.AddListener(LoadLevel);
+        MonoBehaviour sctipt = this;
+
+        UnityEditor.Events.UnityEventTools.AddPersistentListener(newLevel.GetComponent<Button>().onClick, () =>
+        {
+            MethodInfo methodInfo = sctipt.GetType().GetMethod("SetSceneID", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+
+            if (methodInfo != null)
+                methodInfo.Invoke(sctipt, null);
+            else
+                Debug.LogError("Something Is Wrong");
+        });
+
+        UnityEditor.Events.UnityEventTools.AddPersistentListener(newLevel.GetComponent<Button>().onClick, () =>
+        {
+            MethodInfo methodInfo = sctipt.GetType().GetMethod("LoadLevel", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+
+            if (methodInfo != null)
+                methodInfo.Invoke(sctipt, null);
+            else
+                Debug.LogError("Something Is Wrong");
+        });
+
+        UnityEditor.Events.UnityEventTools.AddPersistentListener(newLevel.GetComponent<Button>().onClick, () =>
+        {
+            MethodInfo methodInfo = sctipt.GetType().GetMethod("PlaySound", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+
+            if (methodInfo != null)
+                methodInfo.Invoke(sctipt, null);
+            else
+                Debug.LogError("Something Is Wrong");
+        });
+
+        //newLevel.GetComponent<Button>().onClick.AddListener(SetSceneID);
+        //newLevel.GetComponent<Button>().onClick.AddListener(LoadLevel);
+        //newLevel.GetComponent<Button>().onClick.AddListener(PlaySound);
+
+        AddSoundToButton.staticExclude.Add(newLevel.GetComponent<Button>());
+
+        EditorUtility.SetDirty(newLevel);
 
         newLevel.GetComponent<RectTransform>().SetParent(parent, false);
 
