@@ -6,7 +6,7 @@ public class RatBase : MonoBehaviour
     public SplineAnimate spline;
     public Session session;
     public float speed, health, damage, value;    
-
+    Vector3 ofsert = Vector3.zero;
     void Start()
     {
    
@@ -49,6 +49,16 @@ public class RatBase : MonoBehaviour
     /// </summary>
     public virtual void OnStart(float startPos)
     {
+        ofsert = new Vector3
+        {
+            x = Random.Range(-.5f, .5f),
+            y = 0,
+            z = Random.Range(-.5f, .5f)
+
+        };
+        GetComponentInChildren<MeshRenderer>().transform.localPosition += ofsert;
+
+
         var container = FindAnyObjectByType<SplineContainer>();
         if (container == null)
         {
