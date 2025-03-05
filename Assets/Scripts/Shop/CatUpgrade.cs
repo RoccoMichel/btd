@@ -48,6 +48,7 @@ public class CatUpgrade : MonoBehaviour
         // Cost is 2 times of cat value rounded up
         if (shop.session.TryPurchase(Mathf.RoundToInt(cat.value * 2)))
         {
+            shop.session.Expenditure(Mathf.RoundToInt(cat.value * 2));
             cat.Upgrade();
             shop.balanceDisplay.color = Color.yellow;
         }

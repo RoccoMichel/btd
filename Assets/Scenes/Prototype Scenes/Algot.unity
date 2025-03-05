@@ -1905,7 +1905,7 @@ MonoBehaviour:
   - {fileID: 4825668182265712296, guid: 6a2b8ba1e932c774aae0168b5f4cfe22, type: 3}
   - {fileID: 4825668182265712296, guid: 32acb91f6111e7e49bdea406bab32e7a, type: 3}
   lastTime: 0000000000000000
-  difecolty: 2
+  difecolty: 1
   timer: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

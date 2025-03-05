@@ -15,7 +15,7 @@ public class RandomRatSponer : MonoBehaviour
         rat.GetComponent<RatBase>().session = GetComponent<Session>();
         rat.GetComponent<RatBase>().OnStart(0.01f);
 
-        if (difecolty > 2.5f) SetBigRat(rat, Mathf.Log(1 + Random.Range(0.25f, 1f) * difecolty, 2));
+        if (difecolty > 2f) SetBigRat(rat, Mathf.Log(1 + Random.Range(0.25f, 1f) * difecolty, 2));
     }
 
     void SetBigRat(GameObject rat, float scaleProsent)
@@ -31,13 +31,13 @@ public class RandomRatSponer : MonoBehaviour
     {
         difecolty += Time.deltaTime * 0.01f;
 
-        timer += Time.deltaTime * difecolty * 0.25f;
+        timer += Time.deltaTime * difecolty * 0.5f;
 
         if (Mathf.Round(timer) != 0)
         {
             int time = Mathf.RoundToInt(timer);
 
-            if (time % 2 == 0 && lastTime[0] != time) 
+            if (time % 0.5f == 0 && lastTime[0] != time) 
             {
                 SpaneRat(0); lastTime[0] = time;
             }

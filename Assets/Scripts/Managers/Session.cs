@@ -74,7 +74,7 @@ public class Session : MonoBehaviour
     /// <returns>if Purchase was success or not</returns>
     public bool TryPurchase(int cost)
     {
-        if (CanPurchase(cost)) Expenditure(cost);
+        //if (CanPurchase(cost)) Expenditure(cost);
 
         return CanPurchase(cost);
     }
