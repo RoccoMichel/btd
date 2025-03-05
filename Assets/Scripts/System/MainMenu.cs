@@ -4,30 +4,24 @@ using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
-using System.Reflection;
+using System.Collections;
 
 public class MainMenu : MonoBehaviour
 {
     public GameObject levelButton;
     public RectTransform parent;
 
-    List<GameObject> levelButtons = new();
+    [HideInInspector]
+    public List<GameObject> levelButtons = new List<GameObject>();
 
-    int sceneID = 0;
+    public AddSoundToButton astb;
 
-    public void SetSceneID()
-    {
-        sceneID = int.Parse(EventSystem.current.currentSelectedGameObject.gameObject.name);
-    }
+    public GameObject loadingObject;
+    Animator aniL;
 
     public void LoadLevel()
     {
-        LoadLogic.LoadSceneByNumber(sceneID);
-    }
-
-    public void PlaySound()
-    {
-        AddSoundToButton.PlaySelectedSound();
+        StartCoroutine(SwitchScenes());        
     }
 
     [Button("Create New Level")]
@@ -37,51 +31,11 @@ public class MainMenu : MonoBehaviour
         newLevel.name = (levelButtons.Count + 1).ToString();
         newLevel.GetComponentInChildren<TMP_Text>().text = "Level: " + (levelButtons.Count + 1).ToString();
 
-        MonoBehaviour sctipt = this;
-
-        UnityEditor.Events.UnityEventTools.AddPersistentListener(newLevel.GetComponent<Button>().onClick, () =>
-        {
-            MethodInfo methodInfo = sctipt.GetType().GetMethod("SetSceneID", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-
-            if (methodInfo != null)
-                methodInfo.Invoke(sctipt, null);
-            else
-                Debug.LogError("Something Is Wrong");
-        });
-
-        UnityEditor.Events.UnityEventTools.AddPersistentListener(newLevel.GetComponent<Button>().onClick, () =>
-        {
-            MethodInfo methodInfo = sctipt.GetType().GetMethod("LoadLevel", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-
-            if (methodInfo != null)
-                methodInfo.Invoke(sctipt, null);
-            else
-                Debug.LogError("Something Is Wrong");
-        });
-
-        UnityEditor.Events.UnityEventTools.AddPersistentListener(newLevel.GetComponent<Button>().onClick, () =>
-        {
-            MethodInfo methodInfo = sctipt.GetType().GetMethod("PlaySound", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-
-            if (methodInfo != null)
-                methodInfo.Invoke(sctipt, null);
-            else
-                Debug.LogError("Something Is Wrong");
-        });
-
-        //newLevel.GetComponent<Button>().onClick.AddListener(SetSceneID);
-        //newLevel.GetComponent<Button>().onClick.AddListener(LoadLevel);
-        //newLevel.GetComponent<Button>().onClick.AddListener(PlaySound);
-
-        AddSoundToButton.staticExclude.Add(newLevel.GetComponent<Button>());
-
-#if UNITY_EDITOR
-        UnityEditor.EditorUtility.SetDirty(newLevel);
-#endif
-
         newLevel.GetComponent<RectTransform>().SetParent(parent, false);
 
         levelButtons.Add(newLevel);
+
+        astb.exclude.Add(newLevel.GetComponent<Button>());
 
         print("Made New Level");
     }
@@ -89,7 +43,10 @@ public class MainMenu : MonoBehaviour
     [Button("Remove Level")]
     public void RemoveLevel()
     {
+        astb.exclude.Remove(levelButtons[levelButtons.Count - 1].GetComponent<Button>());
+
         DestroyImmediate(levelButtons[levelButtons.Count - 1]);
+
         levelButtons.Remove(levelButtons[levelButtons.Count - 1]);
 
         print("Removed A Level");
@@ -99,5 +56,27 @@ public class MainMenu : MonoBehaviour
     public void ResetList()
     {
         levelButtons.Clear();
+        astb.exclude.Clear();
+    }
+
+    public void Start()
+    {
+        loadingObject.SetActive(true);
+        aniL = loadingObject.GetComponent<Animator>();
+        loadingObject.SetActive(false);
+
+        for(int i = 0; i < levelButtons.Count; i++)
+            levelButtons[i].GetComponent<Button>().onClick.AddListener(LoadLevel);
+    }
+
+    IEnumerator SwitchScenes()
+    {
+        loadingObject.SetActive(true);
+
+        astb.PlaySelectedSound();
+        
+        yield return new WaitForSeconds(aniL.GetCurrentAnimatorStateInfo(0).length);
+
+        LoadLogic.LoadSceneByNumber(int.Parse(EventSystem.current.currentSelectedGameObject.gameObject.name));
     }
 }
