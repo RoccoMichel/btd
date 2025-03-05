@@ -47,18 +47,11 @@ public class GameUI : MonoBehaviour
         Time.timeScale = Time.timeScale == 1 ? 0 : 1;
     }
 
-    public void Play()
-    {
-        Time.timeScale = Time.timeScale = 1;
-        FastForwardText.gameObject.SetActive(!FastForwardText.gameObject.activeSelf);
-    }
-
-    public void FastForward()
+    public void ToggleSpeed()
     {
         
         Time.timeScale = Time.timeScale == 1 ? 3 : 1;
-        FastForwardText.gameObject.SetActive(!FastForwardText.gameObject.activeSelf);
-        Debug.Log("Timescale" + Time.timeScale);
+        FastForwardText.gameObject.SetActive(Time.timeScale != 1);
     }
 
     public void ToggleShop()

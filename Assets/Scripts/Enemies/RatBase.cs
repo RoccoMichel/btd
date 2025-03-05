@@ -23,7 +23,8 @@ public class RatBase : MonoBehaviour
 
     void Start()
     {
-        normalMat = ratMesh.material;
+        try { normalMat = ratMesh.material; }
+        catch { Debug.LogError("Material couldn't be assigned"); }        
 
         AS = GetComponent<AudioSource>();
     }
