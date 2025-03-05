@@ -17,10 +17,10 @@ public class Settings : MonoBehaviour
     public TMP_InputField soundInput;
     public TMP_InputField uiInput;
 
-    [Space(15)]
-    public TMP_Text musicText;
-    public TMP_Text soundText;
-    public TMP_Text uiText;
+    //[Space(15)]
+    //public TMP_Text musicText;
+    //public TMP_Text soundText;
+    //public TMP_Text uiText;
 
     public void SetMusicVolumeSlider(float value)
     {
@@ -87,9 +87,9 @@ public class Settings : MonoBehaviour
 
     public void UpdateVolume()
     {
-        musicText.text = "Music: " + PlayerPrefs.GetFloat("Music", 100);
-        soundText.text = "Sound Effects: " + PlayerPrefs.GetFloat("Sound", 100);
-        uiText.text = "UI Sound: " + PlayerPrefs.GetFloat("UI", 100);
+        //musicText.text = "Music: " + PlayerPrefs.GetFloat("Music", 100);
+        //soundText.text = "Sound Effects: " + PlayerPrefs.GetFloat("Sound", 100);
+        //uiText.text = "UI Sound: " + PlayerPrefs.GetFloat("UI", 100);
 
         musicInput.text = PlayerPrefs.GetFloat("Music", 100).ToString();
         soundInput.text = PlayerPrefs.GetFloat("Sound", 100).ToString();
@@ -112,5 +112,10 @@ public class Settings : MonoBehaviour
     private void Start()
     {
         UpdateVolume();
+    }
+
+    public void Return()
+    {
+        gameObject.SetActive(false);
     }
 }

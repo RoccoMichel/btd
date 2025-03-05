@@ -1,4 +1,7 @@
-PLEASE UPDATE IF NEW CHANGES ARE MADE
+IT IS RECOMMEND TO USE THE 'Template' scene for future levels!
+(Assets/Scenes/Levels/Template.unity) just copy, paste, rename & customize
+
+!!! NOTE: as of now Template scene is not done. Ask rocco
 
 > CHECK AllIn1 level as example Template
 
