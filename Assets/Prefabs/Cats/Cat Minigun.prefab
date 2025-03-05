@@ -95,6 +95,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4420144552142149116, guid: b793664dc44116043b098da7d04d0fed, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d63162fda1e4a454d9e3ce6bfb1d6a80, type: 2}
     - target: {fileID: 919132149155446097, guid: b793664dc44116043b098da7d04d0fed, type: 3}
       propertyPath: m_Name
       value: Minigun CAT (with minigun)
