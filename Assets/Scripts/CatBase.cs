@@ -158,7 +158,7 @@ public class CatBase : MonoBehaviour
     public void Upgrade()
     {
         upgradeLevel++;
-        value += value / 2;
+        value *= 1.5f;
 
         float ran = Random.Range(0f, 1f);
 

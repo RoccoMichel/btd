@@ -54,7 +54,7 @@ MonoBehaviour:
   speed: 3
   health: 10
   damage: 20
-  value: 10
+  value: 20
   isPoisoned: 0
   poisoneTimes: 0
   poisoneRate: 0
