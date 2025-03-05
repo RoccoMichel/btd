@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Splines;
 
@@ -5,11 +6,16 @@ public class RatBase : MonoBehaviour
 {
     public SplineAnimate spline;
     public Session session;
-    public float speed, health, damage, value;    
+    public float speed, health, damage, value;
+
+    public bool isPoisoned;
+    public float poisoneTimes, poisoneRate, poisoneDamage;
+    float poisonedtime;
+
     Vector3 ofsert = Vector3.zero;
     void Start()
     {
-   
+        poisonedtime = poisoneTimes;
     }
     void Update()
     {
@@ -42,6 +48,13 @@ public class RatBase : MonoBehaviour
         health -= amount;
 
         if (health <= 0) Kill();
+
+        if (isPoisoned && poisonedtime != 0)
+        {
+            StartCoroutine(Poisone());
+
+            poisonedtime--;
+        }
     }
 
     /// <summary>
@@ -84,5 +97,11 @@ public class RatBase : MonoBehaviour
     public virtual void OnUpdate()
     {        
         if (spline.NormalizedTime > 0.9f) Score();
+    }
+
+    IEnumerator Poisone()
+    {
+        yield return new WaitForSeconds(poisoneRate);
+        Damage(poisoneDamage);
     }
 }

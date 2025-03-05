@@ -24,4 +24,9 @@ public class ScriptableProjecttileManager : ScriptableObject
     public GameObject efect;
 
     public bool bounce;
+
+    public bool doPoisone;
+
+    [ShowIf("doPoisone")]
+    public float poisoneDamage, poisoneRate, poisoneTimes;
 }
