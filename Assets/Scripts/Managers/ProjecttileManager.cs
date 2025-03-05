@@ -82,6 +82,9 @@ public class ProjecttileManager : MonoBehaviour
             // Gonna Fix This Later!
         }
 
+        if (doEfectWhenHitEnemy)
+            Instantiate(efect, transform.position, Quaternion.identity);
+
         if (timeRanOut)
         {
             if (doEfectWhenDied)
@@ -89,8 +92,7 @@ public class ProjecttileManager : MonoBehaviour
         }
         else
         {
-            if (doEfectWhenHitEnemy)
-                Instantiate(efect, transform.position, Quaternion.identity);
+           
         }
             
         Destroy(gameObject);

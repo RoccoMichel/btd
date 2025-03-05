@@ -119,7 +119,10 @@ public class CatBase : MonoBehaviour
             && Enemies.Count() > 0 
             && attackTimer > attackDelay 
             && Vector3.Distance(transform.position, target.transform.position) < range)
-        { SpawnProjectiles(); attackTimer = 0; } 
+        { SpawnProjectiles(); attackTimer = 0; }
+
+
+        if (hasBoomb && attackTimer > attackDelay) { SpawnProjectiles(); attackTimer = 0; }
     }
 
     // UPGRADE RELATED METHODS

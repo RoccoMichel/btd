@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efbf0fb6338e598418122f26aaf0fd4d, type: 3}
   m_Name: NormolCat
   m_EditorClassIdentifier: 
-  lifeTime: 0.1
+  lifeTime: 0.2
   damage: 1
   speed: 0
   doDamageWhenDied: 0
@@ -22,3 +22,7 @@ MonoBehaviour:
   doEfectWhenHitEnemy: 0
   efect: {fileID: 2815010670045982513, guid: 95086e320e808a744b6d47c4f4338b19, type: 3}
   bounce: 0
+  doPoisone: 0
+  poisoneDamage: 0
+  poisoneRate: 0
+  poisoneTimes: 0
