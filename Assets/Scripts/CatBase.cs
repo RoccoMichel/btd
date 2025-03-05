@@ -12,7 +12,7 @@ public class CatBase : MonoBehaviour
     public bool isColliding;
 
     [Header("References")]
-    public List<RatBase> Enemies;
+    public List<RatBase> Enemies = new();
     public WaveManager waveMan;
 
     public Transform spawnPos;
@@ -24,8 +24,9 @@ public class CatBase : MonoBehaviour
     public float range = 5;
     public int projectileCount = 3;
 
-    float attackTimer;
+    float attackTimer = 0;
     RatBase target;
+    CatUpgrade upgradeMenu;
 
     private void OnCollisionStay(Collision collision)
     {
@@ -87,7 +88,9 @@ public class CatBase : MonoBehaviour
         // Attack locking
         attackTimer += Time.deltaTime;
 
-        if (Enemies.Count() > 0 
+
+        if (target != null
+            && Enemies.Count() > 0 
             && attackTimer > attackDelay 
             && Vector3.Distance(transform.position, target.transform.position) < range)
         { SpawnProjectiles(); attackTimer = 0; } 
@@ -100,8 +103,15 @@ public class CatBase : MonoBehaviour
     /// </summary>
     public void ShowUpgrade()
     {
-        CatUpgrade upgradeMenu = Resources.Load("Upgrade Menu").GameObject().GetComponent<CatUpgrade>();
-        upgradeMenu.gameObject.transform.position = transform.position + Vector3.up * 10; // Position above the cat
+
+        if (upgradeMenu != null) 
+        { 
+            upgradeMenu.KillYourSelf(); 
+            return; 
+        } // Don't create dublicate upgradeMenus if spam clicking
+
+        upgradeMenu = Instantiate(Resources.Load("Upgrade Menu").GameObject().GetComponent<CatUpgrade>());
+        upgradeMenu.gameObject.transform.position = transform.position + Vector3.up * 6; // Position above the cat
         upgradeMenu.cat = this;
     }
 

@@ -1,3 +1,4 @@
+using System.Xml;
 using UnityEngine;
 
 public class WorldUpgradeButton : MonoBehaviour
@@ -6,9 +7,11 @@ public class WorldUpgradeButton : MonoBehaviour
     [SerializeField] private Methods method;
 
     public enum Methods { Sell, Upgrade }
-
     private void OnMouseOver()
     {
+        if (method == Methods.Sell) upgradeMenu.suacidalSell = false;
+        else upgradeMenu.suacidalUpgrade = false;
+
         if (Input.GetMouseButtonDown(0))
         {
             switch (method)
@@ -21,5 +24,11 @@ public class WorldUpgradeButton : MonoBehaviour
                     break;
             }
         }
+    }
+
+    private void OnMouseExit()
+    {
+        if (method == Methods.Sell) upgradeMenu.suacidalSell = true;
+        else upgradeMenu.suacidalUpgrade = true;
     }
 }

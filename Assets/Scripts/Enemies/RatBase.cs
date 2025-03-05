@@ -51,9 +51,9 @@ public class RatBase : MonoBehaviour
     {
         ofsert = new Vector3
         {
-            x = Random.Range(-.5f, .5f),
+            x = Random.Range(-.2f, .2f),
             y = 0,
-            z = Random.Range(-.5f, .5f)
+            z = 0
 
         };
         GetComponentInChildren<MeshRenderer>().transform.localPosition += ofsert;

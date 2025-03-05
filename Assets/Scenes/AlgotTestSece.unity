@@ -755,7 +755,7 @@ Camera:
   near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 8.17
   m_Depth: -1
   m_CullingMask:
@@ -3219,8 +3219,8 @@ SceneRoots:
   - {fileID: 1577326608}
   - {fileID: 246352019}
   - {fileID: 2084706950}
-  - {fileID: 1591255624}
   - {fileID: 1710930621}
   - {fileID: 1877919490}
   - {fileID: 1310517798}
+  - {fileID: 1591255624}
   - {fileID: 880881566}
