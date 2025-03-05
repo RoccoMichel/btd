@@ -3325,6 +3325,10 @@ PrefabInstance:
       propertyPath: cost
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 1165608896557729677, guid: ee7b7bad9f8cb6e43a884eff349ada0a, type: 3}
+      propertyPath: structure
+      value: 
+      objectReference: {fileID: 3585982105108571785, guid: a2702f284fd6cfe42920b99b02258a1f, type: 3}
     - target: {fileID: 1874484034369950517, guid: ee7b7bad9f8cb6e43a884eff349ada0a, type: 3}
       propertyPath: m_Name
       value: Minigun
