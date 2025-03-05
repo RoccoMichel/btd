@@ -125,9 +125,9 @@ public class CatBase : MonoBehaviour
 
         float ran = Random.Range(0f, 1f);
 
-        if (ran < 0.3f) attackTimer *= 0.9f;
-        else if (ran < 0.6f) projectileSpread *= 0.9f;
-        else if (ran < 0.9f) range *= 1.2f;
+        if (ran < 0.3f) attackTimer *= 0.6f;
+        else if (ran < 0.6f) projectileSpread *= 0.6f;
+        else if (ran < 0.9f) range *= 1.4f;
         else projectileCount++;
 
 

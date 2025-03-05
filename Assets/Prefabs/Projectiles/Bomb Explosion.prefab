@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3291483712896781155}
   - component: {fileID: 4325358431054874942}
   - component: {fileID: 6677500484195367498}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bomb Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 8085112278825314773}
   - component: {fileID: 8091714048359504824}
   - component: {fileID: 7950679429018825001}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

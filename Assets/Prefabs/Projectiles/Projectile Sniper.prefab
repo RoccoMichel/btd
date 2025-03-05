@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7220171884346978441}
   - component: {fileID: 3291483712896781155}
   - component: {fileID: 5627488681370505534}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Projectile Sniper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 8887628891403794484}
   - component: {fileID: 1668782353817325131}
   - component: {fileID: 5527668079624386542}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

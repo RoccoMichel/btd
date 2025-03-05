@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3585982105108571785, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
       propertyPath: m_Name
-      value: Cat Sniper Variant
+      value: Cat Sniper
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
