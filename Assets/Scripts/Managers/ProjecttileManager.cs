@@ -23,6 +23,9 @@ public class ProjecttileManager : MonoBehaviour
 
     bool bounce;
 
+    bool doPoisone;
+    float poisoneDamage, poisoneRate, poisoneTimes;
+
     float timeAlive = 0;
 
     private void Update()
@@ -54,6 +57,14 @@ public class ProjecttileManager : MonoBehaviour
     {
         if(collision.transform.tag == "Rat")
         {
+            if (doPoisone)
+            {
+                collision.gameObject.GetComponent<RatBase>().isPoisoned = true;
+                collision.gameObject.GetComponent<RatBase>().poisoneTimes = poisoneTimes;
+                collision.gameObject.GetComponent<RatBase>().poisoneRate = poisoneRate;
+                collision.gameObject.GetComponent<RatBase>().poisoneDamage = poisoneDamage;
+            }
+
             // Damage the rat here
             collision.gameObject.GetComponent<RatBase>().Damage(damage);
             
@@ -104,5 +115,11 @@ public class ProjecttileManager : MonoBehaviour
         efect = SPM.efect;
 
         bounce = SPM.bounce;
+
+        doPoisone = SPM.doPoisone;
+
+        poisoneDamage = SPM.poisoneDamage;
+        poisoneRate = SPM.poisoneRate;
+        poisoneTimes = SPM.poisoneTimes;
     }
 }
