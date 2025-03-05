@@ -23,6 +23,7 @@ public class CatBase : MonoBehaviour
     public float projectileSpread;
     public float range = 5;
     public int projectileCount = 3;
+    public bool hasBoomb;
 
     float attackTimer = 0;
     RatBase target;
@@ -68,11 +69,19 @@ public class CatBase : MonoBehaviour
     }
     void SpawnProjectiles() 
     {
-        spawnPos.LookAt(FindTarget().transform);
-        for (float i = 0; i < projectileCount; i++)
+        if (hasBoomb)
         {
-            Instantiate(projectile, spawnPos.position, spawnPos.rotation).transform.rotation = 
-                Quaternion.Euler(0, ( (i - (projectileCount-1)/2) / projectileCount ) * projectileSpread, 0) * spawnPos.rotation;
+            // Algot You Fix It So The Boomb Spawns On The Road
+            // IDK How To Do It
+        }
+        else
+        {
+            spawnPos.LookAt(FindTarget().transform);
+            for (float i = 0; i < projectileCount; i++)
+            {
+                Instantiate(projectile, spawnPos.position, spawnPos.rotation).transform.rotation =
+                    Quaternion.Euler(0, ((i - (projectileCount - 1) / 2) / projectileCount) * projectileSpread, 0) * spawnPos.rotation;
+            }
         }
     }
 
