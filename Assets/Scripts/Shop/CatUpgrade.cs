@@ -45,8 +45,8 @@ public class CatUpgrade : MonoBehaviour
 
     public void Upgrade()
     {
-        // Cost is 1/3 of cat value rounded up
-        if (shop.session.TryPurchase(Mathf.RoundToInt(cat.value / 3)))
+        // Cost is 2 times of cat value rounded up
+        if (shop.session.TryPurchase(Mathf.RoundToInt(cat.value * 2)))
         {
             cat.Upgrade();
             shop.balanceDisplay.color = Color.yellow;
@@ -59,7 +59,7 @@ public class CatUpgrade : MonoBehaviour
     public void RefreshDisplays()
     {
         nameDisplay.text = $"{cat.displayName}\n(lv. {cat.upgradeLevel})";
-        upgradeDisplay.text = $"UPGRADE\n$ {Mathf.RoundToInt(cat.value)}";
+        upgradeDisplay.text = $"UPGRADE\n$ {Mathf.RoundToInt(cat.value * 2)}";
         sellDisplay.text = $"$ {Mathf.RoundToInt(cat.value / 2)}";
         // Sell value is half of cat value
     }
