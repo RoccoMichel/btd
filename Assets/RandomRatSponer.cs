@@ -22,7 +22,7 @@ public class RandomRatSponer : MonoBehaviour
     {
         rat.GetComponent<RatBase>().health *= scaleProsent;
         rat.GetComponent<RatBase>().speed *= scaleProsent;
-        rat.GetComponent<RatBase>().value *= scaleProsent;
+        //rat.GetComponent<RatBase>().value *= scaleProsent;
         rat.GetComponent<RatBase>().damage *= scaleProsent;
         rat.transform.localScale *= scaleProsent;
     }
