@@ -51,9 +51,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spline: {fileID: 3322255633057438394}
   session: {fileID: 0}
-  speed: 1
-  health: 30
-  damage: 2
+  speed: 3
+  health: 10
+  damage: 20
   value: 10
   isPoisoned: 0
   poisoneTimes: 0
