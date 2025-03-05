@@ -5,7 +5,7 @@ using Cinemachine;
 
 public class CameraControler : MonoBehaviour
 {
-    private const float MIN_FOLLOW_YOFFSET = 8f;
+    private const float MIN_FOLLOW_YOFFSET = 4f;
     private const float MAX_FOLLOW_YOFFSET = 24f;
     private Vector3 targetFollowOffset;
     private CinemachineTransposer cinemachineTransposer;

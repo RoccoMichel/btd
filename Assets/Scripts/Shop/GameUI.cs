@@ -13,6 +13,7 @@ public class GameUI : MonoBehaviour
     [SerializeField] internal TMP_Text balanceDisplay;
     [SerializeField] internal TMP_Text wavesDisplay;
     [SerializeField] internal TMP_Text healthDisplay;
+    [SerializeField] internal TMP_Text FastForwardText;
     [SerializeField] internal Slider healthBar;
 
     private void Start()
@@ -49,12 +50,14 @@ public class GameUI : MonoBehaviour
     public void Play()
     {
         Time.timeScale = Time.timeScale = 1;
+        FastForwardText.gameObject.SetActive(!FastForwardText.gameObject.activeSelf);
     }
 
     public void FastForward()
     {
         
         Time.timeScale = Time.timeScale == 1 ? 3 : 1;
+        FastForwardText.gameObject.SetActive(!FastForwardText.gameObject.activeSelf);
         Debug.Log("Timescale" + Time.timeScale);
     }
 
