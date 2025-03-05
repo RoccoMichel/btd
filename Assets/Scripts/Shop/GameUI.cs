@@ -39,6 +39,18 @@ public class GameUI : MonoBehaviour
         healthBar.value = session.health;
     }
 
+    public void Stop()
+    {
+
+    }
+
+    public void Play()
+    {
+
+    }
+
+
+
     public void ToggleSettings()
     {
         if (settings == null) return;
