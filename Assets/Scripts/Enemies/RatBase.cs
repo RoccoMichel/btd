@@ -12,6 +12,8 @@ public class RatBase : MonoBehaviour
     public float poisoneTimes, poisoneRate, poisoneDamage;
     float poisonedtime;
 
+    public Color poisonedColor;
+
     Vector3 ofsert = Vector3.zero;
     void Start()
     {
@@ -51,6 +53,12 @@ public class RatBase : MonoBehaviour
 
         if (isPoisoned && poisonedtime != 0)
         {
+            Material newMat = new Material(GetComponent<Material>());
+
+            newMat.color = poisonedColor;
+
+            GetComponent<MeshRenderer>().material = newMat;
+
             StartCoroutine(Poisone());
 
             poisonedtime--;
