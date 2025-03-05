@@ -25,6 +25,10 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2129321114186096723, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
+      propertyPath: AtackSond
+      value: 
+      objectReference: {fileID: 8300000, guid: 57e1796357b277741a84ebffaae00cf2, type: 3}
+    - target: {fileID: 2129321114186096723, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
       propertyPath: atackDilay
       value: 0.25
       objectReference: {fileID: 0}

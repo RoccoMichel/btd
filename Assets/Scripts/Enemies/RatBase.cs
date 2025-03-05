@@ -49,7 +49,8 @@ public class RatBase : MonoBehaviour
     /// </summary>
     public virtual void Score()
     {
-        session.health -= damage;
+
+        session.Damage(damage);
         Destroy(gameObject);
     }
 
