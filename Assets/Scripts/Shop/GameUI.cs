@@ -8,6 +8,8 @@ public class GameUI : MonoBehaviour
 
     [Header("UI References")]
     [SerializeField] internal GameObject settings;
+    [SerializeField] internal GameObject pauseMenu;
+    [SerializeField] internal GameObject shop;
     [SerializeField] internal TMP_Text balanceDisplay;
     [SerializeField] internal TMP_Text wavesDisplay;
     [SerializeField] internal TMP_Text healthDisplay;
@@ -41,14 +43,27 @@ public class GameUI : MonoBehaviour
 
     public void Stop()
     {
-
+        Time.timeScale = Time.timeScale == 1 ? 0 : 1;
     }
 
     public void Play()
     {
-
+        Time.timeScale = Time.timeScale = 1;
     }
 
+    public void FastForward()
+    {
+        
+        Time.timeScale = Time.timeScale == 1 ? 3 : 1;
+        Debug.Log("Timescale" + Time.timeScale);
+    }
+
+    public void ToggleShop()
+    {
+        if (shop == null) return;
+
+        shop.SetActive(!shop.activeSelf);
+    }
 
 
     public void ToggleSettings()
@@ -68,5 +83,6 @@ public class GameUI : MonoBehaviour
     public void TogglePause()
     {
         Time.timeScale = Time.timeScale == 0 ? 1 : 0;
+        pauseMenu.SetActive(!pauseMenu.activeSelf);
     }
 }
