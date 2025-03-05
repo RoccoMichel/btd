@@ -11,6 +11,7 @@ public class CatBase : MonoBehaviour
     public int upgradeLevel = 1;
     public float value = 10;
     public bool isColliding;
+    public AudioClip AtackSond;
 
     [Header("References")]
     public List<RatBase> Enemies = new();
@@ -100,9 +101,12 @@ public class CatBase : MonoBehaviour
         }else spawnPos.LookAt(FindTarget().transform);
         for (float i = 0; i < projectileCount; i++)
         {
-            AS.Stop();
-            AS.clip = shootSound[Random.Range(0, shootSound.Count - 1)];
-            AS.Play();
+            //AS.Stop();
+            //AS.clip = shootSound[Random.Range(0, shootSound.Count - 1)];
+
+            AS.pitch = Random.Range(0.95f, 1.05f);
+            AS.PlayOneShot(AtackSond);
+            
 
             Instantiate(projectile, spawnPos.position, spawnPos.rotation).transform.rotation =
                 Quaternion.Euler(0, ((i - (projectileCount - 1) / 2) / projectileCount) * projectileSpread, 0) * spawnPos.rotation;

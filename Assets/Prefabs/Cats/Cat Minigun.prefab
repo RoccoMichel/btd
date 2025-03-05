@@ -154,6 +154,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 700350328000661231}
     - target: {fileID: 2129321114186096723, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
+      propertyPath: AtackSond
+      value: 
+      objectReference: {fileID: 8300000, guid: 5a0554aa0720a1f4b8d08a1355a1a428, type: 3}
+    - target: {fileID: 2129321114186096723, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
       propertyPath: atackDilay
       value: 0.1
       objectReference: {fileID: 0}
@@ -309,6 +313,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -4.819
       objectReference: {fileID: 0}
+    - target: {fileID: 5814849705636762059, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814849705636762059, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 6e9e0b81095e6274abc8bb34028f3bc9, type: 3}
+    - target: {fileID: 5814849705636762059, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6e9e0b81095e6274abc8bb34028f3bc9, type: 3}
     - target: {fileID: 5814849705636762059, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
