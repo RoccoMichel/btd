@@ -6,7 +6,6 @@ TagManager:
   tags:
   - CanPlase
   - Rat
-  - Start
   layers:
   - Default
   - TransparentFX

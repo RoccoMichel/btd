@@ -9,9 +9,6 @@ public class RandomRatSponer : MonoBehaviour
     public float difecolty;
     public float timer = 0;
 
-    Transform splineStart;
-    Vector3 splineStartPos;
-
     void SpaneRat(int ratTyp)
     {
         GameObject rat = Instantiate(rats[ratTyp], transform.position, transform.rotation);
@@ -32,9 +29,6 @@ public class RandomRatSponer : MonoBehaviour
 
     void Update()
     {
-        if (splineStart == null)
-            splineStart = GameObject.FindGameObjectWithTag("Start").transform;
-
         difecolty += Time.deltaTime * 0.01f;
 
         timer += Time.deltaTime * difecolty * 0.25f;
@@ -46,15 +40,11 @@ public class RandomRatSponer : MonoBehaviour
             if (time % 2 == 0 && lastTime[0] != time) 
             {
                 SpaneRat(0); lastTime[0] = time;
-
-                splineStartPos = splineStart.position;
             }
 
             if (time % 4 == 0 && lastTime[1] != time)
             {
                 SpaneRat(1); lastTime[1] = time;
-
-                splineStartPos = splineStart.position;
             }
         }
 
@@ -63,8 +53,6 @@ public class RandomRatSponer : MonoBehaviour
             timer = 0;
             for (int i = 0; i < lastTime.Length; i++)
                 lastTime[i] = -1;
-
-            splineStart.position = splineStartPos;
         }
     }
 }

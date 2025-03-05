@@ -102,20 +102,6 @@ public class RatBase : MonoBehaviour
         spline.StartOffset = startPosition;
 
         spline.Play();
-
-        Transform pos = GameObject.FindGameObjectWithTag("Start").transform;
-        var firstKnot = container.Spline.ToArray()[0];
-
-        pos.rotation = firstKnot.Rotation;
-
-        Vector3 newPos = pos.transform.forward * (transform.localScale.x * 5);
-        newPos.y = 0;
-        pos.position -= newPos;
-
-        firstKnot.Position = container.transform.InverseTransformPoint(pos.position);
-
-        container.Spline.SetKnot(0, firstKnot);
-        Debug.Break();
     }
 
     /// <summary>
