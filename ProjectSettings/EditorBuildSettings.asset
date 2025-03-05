@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prototype Scenes/AllIn1.unity
     guid: e890ec60c29b28345bcb2f335029b93f
+  - enabled: 1
+    path: Assets/Scenes/Levels/Credits.unity
+    guid: b8fd5c89303665e40b335ce259616acb
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 511e4e32fce7f6b42a44845443263fc5, type: 3}
   m_UseUCBPForAssetBundles: 0
