@@ -15,6 +15,8 @@ public class CatBase : MonoBehaviour
     [Header("References")]
     public List<RatBase> Enemies = new();
     public WaveManager waveMan;
+    public List<AudioClip> shootSound;
+    AudioSource AS;
 
     public Transform spawnPos;
     public GameObject projectile;
@@ -43,6 +45,8 @@ public class CatBase : MonoBehaviour
     private void Start()
     {
         if (hasBoomb) splin = FindAnyObjectByType<SplineContainer>();
+
+        AS = GetComponent<AudioSource>();
     }
 
     public void FineWaveManager() { waveMan = FindAnyObjectByType<WaveManager>(); }
@@ -96,6 +100,10 @@ public class CatBase : MonoBehaviour
         }else spawnPos.LookAt(FindTarget().transform);
         for (float i = 0; i < projectileCount; i++)
         {
+            AS.Stop();
+            AS.clip = shootSound[Random.Range(0, shootSound.Count - 1)];
+            AS.Play();
+
             Instantiate(projectile, spawnPos.position, spawnPos.rotation).transform.rotation =
                 Quaternion.Euler(0, ((i - (projectileCount - 1) / 2) / projectileCount) * projectileSpread, 0) * spawnPos.rotation;
         }
