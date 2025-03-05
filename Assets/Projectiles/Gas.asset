@@ -23,6 +23,6 @@ MonoBehaviour:
   efect: {fileID: 0}
   bounce: 0
   doPoisone: 1
-  poisoneDamage: 0.01
+  poisoneDamage: 0.1
   poisoneRate: 1
   poisoneTimes: 10

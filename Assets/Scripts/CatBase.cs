@@ -96,9 +96,14 @@ public class CatBase : MonoBehaviour
         {
             Vector3 pos = findCloseSplinePos();
             if (pos == Vector3.zero) return;
-            
+
             spawnPos.position = pos;
-        }else spawnPos.LookAt(FindTarget().transform);
+        }
+        else
+        { 
+            spawnPos.LookAt(FindTarget().transform);
+        }
+
         for (float i = 0; i < projectileCount; i++)
         {
             //AS.Stop();
