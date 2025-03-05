@@ -22,3 +22,7 @@ MonoBehaviour:
   doEfectWhenHitEnemy: 0
   efect: {fileID: 0}
   bounce: 0
+  doPoisone: 1
+  poisoneDamage: 0.1
+  poisoneRate: 0.1
+  poisoneTimes: 5
