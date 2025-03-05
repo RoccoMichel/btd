@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Splines;
 
@@ -16,9 +17,15 @@ public class RatBase : MonoBehaviour
     public MeshRenderer ratMesh;
 
     Vector3 ofsert = Vector3.zero;
+
+    public List<AudioClip> deathSound;
+    AudioSource AS;
+
     void Start()
     {
         normalMat = ratMesh.material;
+
+        AS = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -30,6 +37,9 @@ public class RatBase : MonoBehaviour
     /// </summary>
     public virtual void Kill()
     {
+        AS.clip = deathSound[Random.Range(0, deathSound.Count - 1)];
+        AS.Play();
+
         session.Profit(value);
         Destroy(gameObject);
     }
