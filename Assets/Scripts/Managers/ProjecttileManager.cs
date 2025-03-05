@@ -1,5 +1,7 @@
 using UnityEngine;
 using NaughtyAttributes;
+using System.Collections.Generic;
+using System.Linq;
 
 public class ProjecttileManager : MonoBehaviour
 {
@@ -26,11 +28,12 @@ public class ProjecttileManager : MonoBehaviour
     bool doPoisone;
     float poisoneDamage, poisoneRate, poisoneTimes;
 
+    List<GameObject> poiseonedRats = new List<GameObject>();
+
     float timeAlive = 0;
 
     private void Update()
     {
-
         transform.localScale = startSacale * SacleOwerTime.Evaluate(timeAlive/lifeTime);
         if (bounce)
         {

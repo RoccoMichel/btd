@@ -10,14 +10,15 @@ public class RatBase : MonoBehaviour
 
     public bool isPoisoned;
     public float poisoneTimes, poisoneRate, poisoneDamage;
-    float poisonedtime;
 
-    public Color poisonedColor;
+    public Material poisonedMat;
+    Material normalMat;
+    public MeshRenderer ratMesh;
 
     Vector3 ofsert = Vector3.zero;
     void Start()
     {
-        poisonedtime = poisoneTimes;
+        normalMat = ratMesh.material;
     }
     void Update()
     {
@@ -51,17 +52,21 @@ public class RatBase : MonoBehaviour
 
         if (health <= 0) Kill();
 
-        if (isPoisoned && poisonedtime != 0)
+        if (isPoisoned)
         {
-            Material newMat = new Material(GetComponent<Material>());
+            if(poisoneTimes != 0)
+            {
+                ratMesh.material = poisonedMat;
 
-            newMat.color = poisonedColor;
+                StartCoroutine(Poisone());
 
-            GetComponent<MeshRenderer>().material = newMat;
-
-            StartCoroutine(Poisone());
-
-            poisonedtime--;
+                poisoneTimes--;
+            }
+            else
+            {
+                ratMesh.material = normalMat;
+                isPoisoned = false;
+            }
         }
     }
 

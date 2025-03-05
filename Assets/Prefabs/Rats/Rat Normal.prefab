@@ -54,6 +54,12 @@ MonoBehaviour:
   health: 3
   damage: 10
   value: 10
+  isPoisoned: 0
+  poisoneTimes: 0
+  poisoneRate: 0
+  poisoneDamage: 0
+  poisonedMat: {fileID: 2100000, guid: 17595e54bba9a544dae08735b880bc1b, type: 2}
+  ratMesh: {fileID: 4058429587428978919}
 --- !u!33 &6730537279312695796
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -200,5 +206,10 @@ PrefabInstance:
 --- !u!4 &2889442794898475912 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 42dcb49344b107e44bbb57b889a1d3ce, type: 3}
+  m_PrefabInstance: {fileID: 3428336168431856739}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4058429587428978919 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 42dcb49344b107e44bbb57b889a1d3ce, type: 3}
   m_PrefabInstance: {fileID: 3428336168431856739}
   m_PrefabAsset: {fileID: 0}
