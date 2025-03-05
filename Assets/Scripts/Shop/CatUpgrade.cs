@@ -7,19 +7,25 @@ public class CatUpgrade : MonoBehaviour
 
     internal CatBase cat;
     protected GameUI shop;
-    
+
+    public bool suacidalSell = false;
+    public bool suacidalUpgrade = false;
 
     [Header("References")]
     [SerializeField] private TMP_Text nameDisplay;
     [SerializeField] private TMP_Text upgradeDisplay;
     [SerializeField] private TMP_Text sellDisplay;
 
+    
     void Update()
     {
         if (cat == null) KillYourSelf();
         if (shop == null) shop = FindAnyObjectByType<GameUI>().GetComponent<GameUI>();
 
         transform.LookAt(Camera.main.transform);
+
+        // adjust scale based on distance from camera
+
         RefreshDisplays();
     }
 
@@ -41,15 +47,18 @@ public class CatUpgrade : MonoBehaviour
     {
         // Cost is 1/3 of cat value rounded up
         if (shop.session.TryPurchase(Mathf.RoundToInt(cat.value / 3)))
+        {
             cat.Upgrade();
-        else shop.balanceDisplay.color = Color.yellow;
+            shop.balanceDisplay.color = Color.yellow;
+        }
+        else shop.balanceDisplay.color = Color.red;
 
         // Animation & Sound ?
     }
 
     public void RefreshDisplays()
     {
-        nameDisplay.text = $"{cat.displayName} (lv. {cat.upgradeLevel})";
+        nameDisplay.text = $"{cat.displayName}\n(lv. {cat.upgradeLevel})";
         upgradeDisplay.text = $"UPGRADE\n$ {Mathf.RoundToInt(cat.value)}";
         sellDisplay.text = $"$ {Mathf.RoundToInt(cat.value / 2)}";
         // Sell value is half of cat value
