@@ -25,6 +25,10 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2129321114186096723, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
+      propertyPath: hasBoomb
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2129321114186096723, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
       propertyPath: prodectile
       value: 
       objectReference: {fileID: 2815010670045982513, guid: 0a507ac2389d5fc49b99f492124e88b7, type: 3}
@@ -90,7 +94,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7461765394342535601, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

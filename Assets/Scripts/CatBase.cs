@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Splines;
 
 public class CatBase : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class CatBase : MonoBehaviour
     float attackTimer = 0;
     RatBase target;
     CatUpgrade upgradeMenu;
-
+    SplineContainer splin;
     private void OnCollisionStay(Collision collision)
     {
         isColliding = true;
@@ -38,7 +39,12 @@ public class CatBase : MonoBehaviour
     {
         isColliding = false;
     }
-   
+
+    private void Start()
+    {
+        if (hasBoomb) splin = FindAnyObjectByType<SplineContainer>();
+    }
+
     public void FineWaveManager() { waveMan = FindAnyObjectByType<WaveManager>(); }
     void UpdateEnemyCount()
     {
@@ -67,22 +73,33 @@ public class CatBase : MonoBehaviour
         return null;
 
     }
+    Vector3 findCloseSplinePos()
+    {
+        for (int i = 0; i < 1000; i++)
+        {
+            float ran = Random.Range(0f, 1f);
+            Vector3 pos = splin.EvaluatePosition(ran);
+            if (Vector3.Distance(pos, transform.position) < range)
+                return pos;
+        }
+
+        return Vector3.zero;
+    }
     void SpawnProjectiles() 
     {
         if (hasBoomb)
         {
-            // Algot You Fix It So The Boomb Spawns On The Road
-            // IDK How To Do It
-        }
-        else
+            Vector3 pos = findCloseSplinePos();
+            if (pos == Vector3.zero) return;
+            
+            spawnPos.position = pos;
+        }else spawnPos.LookAt(FindTarget().transform);
+        for (float i = 0; i < projectileCount; i++)
         {
-            spawnPos.LookAt(FindTarget().transform);
-            for (float i = 0; i < projectileCount; i++)
-            {
-                Instantiate(projectile, spawnPos.position, spawnPos.rotation).transform.rotation =
-                    Quaternion.Euler(0, ((i - (projectileCount - 1) / 2) / projectileCount) * projectileSpread, 0) * spawnPos.rotation;
-            }
+            Instantiate(projectile, spawnPos.position, spawnPos.rotation).transform.rotation =
+                Quaternion.Euler(0, ((i - (projectileCount - 1) / 2) / projectileCount) * projectileSpread, 0) * spawnPos.rotation;
         }
+
     }
 
     void OnMouseOver()
