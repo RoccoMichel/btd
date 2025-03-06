@@ -132,7 +132,6 @@ public class CatBase : MonoBehaviour
             if (ani != null)
                 ani.SetTrigger(aniShootParam);
         }
-
     }
 
     void OnMouseOver()
@@ -168,12 +167,15 @@ public class CatBase : MonoBehaviour
     public void ShowUpgrade()
     {
         if (!canAtacke) return;
-        if (upgradeMenu != null) 
-        { 
-            upgradeMenu.KillYourSelf(); 
-            return; 
-        } // Don't create dublicate upgradeMenus if spam clicking
 
+        // Kill all other menus
+        if (GameObject.FindGameObjectsWithTag("UpgradeMenu") != null) 
+        {
+            GameObject[] unwantedMenus = GameObject.FindGameObjectsWithTag("UpgradeMenu");
+            foreach (GameObject unwantedMenu in unwantedMenus) unwantedMenu.GetComponent<CatUpgrade>().KillYourSelf();
+        }
+
+        // Create new menu
         upgradeMenu = Instantiate(Resources.Load("Upgrade Menu").GameObject().GetComponent<CatUpgrade>());
         upgradeMenu.gameObject.transform.position = transform.position + Vector3.up * 6; // Position above the cat
         upgradeMenu.cat = this;
