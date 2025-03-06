@@ -3,6 +3,7 @@ using UnityEngine;
 using NaughtyAttributes;
 using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class WaveManager : MonoBehaviour
 {
@@ -83,18 +84,15 @@ public class WaveManager : MonoBehaviour
              waveManagerUI.UpdateWaveText("Waves Completed");
              GameManager.Instance.SetGameState(GameState.STAGECOMPLETE);*/
         }
-        else
-        {
-            waveTransitionTimer += Time.deltaTime;
-            if(waveTransitionTimer>= waveTransitionTime)
-            {
-                waveTransitionTimer = 0f;
-                StartNextWave();
-
-
-            }
-        }
+        else StartCoroutine(startNext());
        // else GameManager.Instance.WaveCompletedCallback();
+    }
+
+    public IEnumerator startNext()
+    {
+
+        yield return new WaitForSeconds(waveTransitionTime);
+        StartNextWave();
     }
     private void MangeCurrentWave()
     {

@@ -14,14 +14,13 @@ public class PlaseCat : MonoBehaviour
         oldMaterials.Clear();
         
         MeshRenderer[] meshes = cat.GetComponentsInChildren<MeshRenderer>();
-        for (int i = 0; i < meshes.Length; i++)
-        {
-            oldMaterials.Add(meshes[i].material);
-        }
+        SkinnedMeshRenderer[] skins = cat.GetComponentsInChildren<SkinnedMeshRenderer>();
+
+        for (int i = 0; i < meshes.Length; i++) { oldMaterials.Add(meshes[i].material); }
+        for (int i = 0; i < skins.Length; i++) { oldMaterials.Add(skins[i].material); }
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) VisualizeRange();
         if (cat != null && oldMaterials.Count > 0)
         {
 
@@ -42,6 +41,7 @@ public class PlaseCat : MonoBehaviour
             }
 
             MeshRenderer[] meshes = cat.GetComponentsInChildren<MeshRenderer>();
+            SkinnedMeshRenderer[] skins = cat.GetComponentsInChildren<SkinnedMeshRenderer>();
             bool canPlase = cat.GetComponent<CatBase>().isColliding;
             for (int i = 0; i < meshes.Length; i++)
             {
@@ -50,11 +50,23 @@ public class PlaseCat : MonoBehaviour
                 canBild.SetColor("_EmissionColor", canPlase ? new Color(1, 0, 0, 0.25f) : new Color(0, 0, 1, 0.25f));
             }
 
+            for (int i = 0; i < skins.Length; i++)
+            {
+                skins[i].material = canBild;
+                canBild.color = canPlase ? new Color(1, 0, 0, 0.5f) : new Color(0, 0, 1, 0.5f);
+                canBild.SetColor("_EmissionColor", canPlase ? new Color(1, 0, 0, 0.25f) : new Color(0, 0, 1, 0.25f));
+            }
+
             if (Input.GetMouseButtonDown(0) && !canPlase)
             {
                 cat.GetComponent<CatBase>().canAtacke = true;
+
+                int n = 0;
                 for (int i = 0; i < meshes.Length; i++)
-                    meshes[i].material = oldMaterials[i];
+                { meshes[i].material = oldMaterials[i]; n++; }
+
+                for (int i = 0; i < skins.Length; i++)
+                    skins[i].material = oldMaterials[i + n];
 
                 cat = null;
                 oldMaterials.Clear();

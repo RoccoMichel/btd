@@ -55,8 +55,7 @@ MonoBehaviour:
   damage: 20
   value: 10
   isPoisoned: 0
-  poisoneTimes: 0
-  poisoneRate: 0
+  posendTime: 0
   poisoneDamage: 0
   poisonedMat: {fileID: 2100000, guid: 17595e54bba9a544dae08735b880bc1b, type: 2}
   ratMesh: {fileID: 0}
@@ -88,10 +87,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
+  m_Radius: 1.05
+  m_Height: 3.05
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3322255633057438394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +122,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1054378809486336649}
     m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 02570e5dfd7b6de4ab9378ee20a77545, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 02570e5dfd7b6de4ab9378ee20a77545, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 02570e5dfd7b6de4ab9378ee20a77545, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 02570e5dfd7b6de4ab9378ee20a77545, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -162,6 +173,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 02570e5dfd7b6de4ab9378ee20a77545, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 02570e5dfd7b6de4ab9378ee20a77545, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 02570e5dfd7b6de4ab9378ee20a77545, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
