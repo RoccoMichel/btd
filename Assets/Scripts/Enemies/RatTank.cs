@@ -16,12 +16,9 @@ public class RatTank : RatBase
             Vector3 s = new Vector3(0, 0, 0);
             GameObject Rat = Instantiate(rat, s, Quaternion.identity);
             Rat.GetComponent<RatBase>().session = session;
-<<<<<<< Updated upstream
             Rat.GetComponent<RatBase>().OnStart(spline.NormalizedTime + Random.Range(-0.05f, 0.05f));
-=======
             rat.GetComponent<RatBase>().OnStart(t + Random.Range(-0.05f, 0.05f));
             Debug.Log(t);
->>>>>>> Stashed changes
         }
 
         Destroy(gameObject);

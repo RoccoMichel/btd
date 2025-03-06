@@ -68,7 +68,6 @@ public class RatBase : MonoBehaviour
     /// </summary>
     public virtual void OnStart(float startPos)
     {
-<<<<<<< Updated upstream
         ofsert = new Vector3
         {
             x = Random.Range(-.2f, .2f),
@@ -79,9 +78,7 @@ public class RatBase : MonoBehaviour
         GetComponentInChildren<MeshRenderer>().transform.localPosition = ofsert;
 
 
-=======
         transform.SetParent(FindAnyObjectByType<WaveManager>().transform);
->>>>>>> Stashed changes
         var container = FindAnyObjectByType<SplineContainer>();
         if (container == null)
         {
@@ -93,19 +90,16 @@ public class RatBase : MonoBehaviour
         spline.MaxSpeed = speed;
 
         // Set starting position (0 = start, 1 = end)
-<<<<<<< Updated upstream
 
         spline.StartOffset = startPos;
 
         spline.Play();
-=======
         float startPosition = startPos; // Change this value to set where the object starts (e.g., 0.5f for halfway)
         spline.NormalizedTime = startPosition;
         spline.StartOffset = startPosition;
 
         spline.Play();
         spline.StartOffset = startPosition;
->>>>>>> Stashed changes
     }
 
     /// <summary>
