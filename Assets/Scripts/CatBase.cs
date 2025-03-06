@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
@@ -17,6 +18,11 @@ public class CatBase : MonoBehaviour
     [Header("References")]
     public List<RatBase> Enemies = new();
     public WaveManager waveMan;
+    public Animator ani;
+
+    [AnimatorParam("ani")]
+    public string aniShootParam;
+
     public List<AudioClip> shootSound;
     AudioSource AS;
 
@@ -120,6 +126,9 @@ public class CatBase : MonoBehaviour
 
             Instantiate(projectile, spawnPos.position, spawnPos.rotation).transform.rotation =
                 Quaternion.Euler(0, ((i - (projectileCount - 1) / 2) / projectileCount) * projectileSpread, 0) * spawnPos.rotation;
+
+            if (ani != null)
+                ani.SetTrigger(aniShootParam);
         }
 
     }
