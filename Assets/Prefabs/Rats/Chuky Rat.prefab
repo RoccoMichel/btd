@@ -51,7 +51,7 @@ MonoBehaviour:
   spline: {fileID: 3322255633057438394}
   session: {fileID: 0}
   speed: 2
-  health: 50
+  health: 10
   damage: 15
   value: 15
   isShoky: 1
