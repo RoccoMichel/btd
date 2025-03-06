@@ -169,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2235105960903188471, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2235105960903188471, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
       propertyPath: waveDuration
@@ -358,6 +358,10 @@ PrefabInstance:
     - target: {fileID: 2235105960903188471, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
       propertyPath: waves.Array.data[3].segments.Array.data[4].spawnFrequency
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103068700183774869, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
+      propertyPath: balance
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 5141230678794946091, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
       propertyPath: m_Name
@@ -647,7 +651,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602826294}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9528636c8961454b890d11091e4597d, type: 3}
   m_Name: 
