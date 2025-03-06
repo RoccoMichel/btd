@@ -1,0 +1,4 @@
+Normal: Weak in every way
+Mutant: Very fast, high damage
+Tank: Slow & spawns new rats
+Steroids: Slow & a lot of health & mid damage

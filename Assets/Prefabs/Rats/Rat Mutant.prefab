@@ -50,8 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spline: {fileID: 3322255633057438394}
   session: {fileID: 0}
-  speed: 10
-  health: 2
+  speed: 15
+  health: 5
   damage: 20
   value: 10
   isPoisoned: 0
@@ -59,6 +59,8 @@ MonoBehaviour:
   poisoneDamage: 0
   poisonedMat: {fileID: 2100000, guid: 17595e54bba9a544dae08735b880bc1b, type: 2}
   ratMesh: {fileID: 0}
+  ani: {fileID: 0}
+  deathParam: 
   deathSound: []
 --- !u!33 &6730537279312695796
 MeshFilter:

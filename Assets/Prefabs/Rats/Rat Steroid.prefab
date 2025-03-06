@@ -51,7 +51,7 @@ MonoBehaviour:
   spline: {fileID: 3322255633057438394}
   session: {fileID: 0}
   speed: 0.8
-  health: 20
+  health: 50
   damage: 15
   value: 15
   isPoisoned: 0
