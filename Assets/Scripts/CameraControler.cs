@@ -10,6 +10,9 @@ public class CameraControler : MonoBehaviour
     private Vector3 targetFollowOffset;
     private CinemachineTransposer cinemachineTransposer;
     [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
+
+    public float zoomSpeed = 5f;
+
     private void Start()
     {
         cinemachineTransposer = cinemachineVirtualCamera.GetCinemachineComponent<CinemachineTransposer>();
@@ -17,16 +20,13 @@ public class CameraControler : MonoBehaviour
     }
     private void Update()
     {
-
         HandleMovement();
         HandleRotation();
         HandleZoom();
-
     }
     private void HandleMovement()
     {
         Vector2 inputMoveDir = InputManager.Instance.GetCameraMoveVector();
-
 
 
         float moveSpeed = 10f;
@@ -42,14 +42,10 @@ public class CameraControler : MonoBehaviour
         float rotationSpeed = 100f;
 
         transform.eulerAngles += rotationVector * rotationSpeed * Time.deltaTime;
-
-
     }
     private void HandleZoom()
     {
-        float zoomAmmount = 1f;
         targetFollowOffset.y += InputManager.Instance.GetCameraZoomAmmount();
-        float zoomSpeed = 5f;
         targetFollowOffset.y = Mathf.Clamp(targetFollowOffset.y, MIN_FOLLOW_YOFFSET, MAX_FOLLOW_YOFFSET);
         cinemachineTransposer.m_FollowOffset = Vector3.Lerp(cinemachineTransposer.m_FollowOffset, targetFollowOffset, Time.deltaTime * zoomSpeed);
     }
