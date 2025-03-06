@@ -28,5 +28,5 @@ public class ScriptableProjecttileManager : ScriptableObject
     public bool doPoisone;
 
     [ShowIf("doPoisone")]
-    public float poisoneDamage, poisoneRate, poisoneTimes;
+    public float poisoneDamage, poisoneTimes;
 }
