@@ -22,6 +22,7 @@ public class RatBase : MonoBehaviour
     public Animator ani;
     [AnimatorParam("ani")]
     public string deathParam;
+    public float deathTimeAfterAni = 0.2f;
 
     public List<AudioClip> deathSound;
     AudioSource AS;
@@ -48,18 +49,18 @@ public class RatBase : MonoBehaviour
 
         spline.Pause();
 
-        ani.SetTrigger(deathParam);
-
         float time = 0;
-        if (deathParam != null)
+        if (deathParam != "")
+        {
+            ani.SetTrigger(deathParam);
+
             time = ani.GetCurrentAnimatorStateInfo(0).length;
-        else
-            print(deathParam);
+        }
 
         gameObject.tag = "Untagged";
 
         session.Profit(value);
-        Destroy(gameObject, time);
+        Destroy(gameObject, time + deathTimeAfterAni);
     }
 
     /// <summary>
