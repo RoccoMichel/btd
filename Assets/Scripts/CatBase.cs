@@ -78,7 +78,7 @@ public class CatBase : MonoBehaviour
         return null;
 
     }
-    Vector3 findCloseSplinePos()
+    Vector3 FindCloseSplinePos()
     {
         for (int i = 0; i < 1000; i++)
         {
