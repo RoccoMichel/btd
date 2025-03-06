@@ -52,11 +52,16 @@ public class PlaseCat : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0) && !canPlase)
             {
+                cat.GetComponent<CatBase>().canAtacke = true;
                 for (int i = 0; i < meshes.Length; i++)
                     meshes[i].material = oldMaterials[i];
 
                 cat = null;
                 oldMaterials.Clear();
+            }
+            else if (cat != null)
+            {
+                cat.GetComponent<CatBase>().canAtacke = false;
             }
         }
         else RangeVisualization.position = Vector3.down * 1000;

@@ -112,6 +112,7 @@ public class RatBase : MonoBehaviour
     {
         MeshRenderer mech = GetComponentInChildren<MeshRenderer>();
         Material posed = Instantiate(mech.material);
+        mech.material = posed;
 
         posed.color = new Color(0f, 1f, 0f);
     }
@@ -123,11 +124,11 @@ public class RatBase : MonoBehaviour
     public IEnumerator Poisone()
     {
         acivatePosenEfect();
-
+        MeshRenderer mech = GetComponentInChildren<MeshRenderer>();
         for (float time = 0; time < posendTime; time += Time.deltaTime)
         {
-            Debug.Log(poisoneDamage * Time.deltaTime);
-            health -= poisoneDamage * Time.deltaTime;
+            mech.material.color = Color.Lerp(Color.green, Color.white, time/posendTime);
+            Damage(poisoneDamage * Time.deltaTime);
             yield return new WaitForEndOfFrame();
         }
 
