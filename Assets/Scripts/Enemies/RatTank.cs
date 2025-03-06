@@ -5,7 +5,6 @@ public class RatTank : RatBase
 {
     public int spawnAmmount;
     public GameObject[] rats;
-    float t;
 
     public override void Kill()
     {
@@ -16,9 +15,7 @@ public class RatTank : RatBase
             Vector3 s = new Vector3(0, 0, 0);
             GameObject Rat = Instantiate(rats[Random.Range(0, rats.Length)], s, Quaternion.identity);
             Rat.GetComponent<RatBase>().session = session;
-            Rat.GetComponent<RatBase>().OnStart(spline.NormalizedTime + Random.Range(-0.05f, 0.05f));
-            Rat.GetComponent<RatBase>().OnStart(t + Random.Range(-0.01f, 0.01f));
-            Debug.Log(t);
+            Rat.GetComponent<RatBase>().OnStart(spline.normalizedTime + Random.Range(-0.01f, 0.01f));
         }
 
         Destroy(gameObject);
@@ -32,7 +29,6 @@ public class RatTank : RatBase
             Spline splineData = spline.Container.Spline;
 
             // Get current normalized position on spline
-            t = spline.NormalizedTime;
 
             // Get world position using normalized time
             Vector3 position = SplineUtility.EvaluatePosition(splineData, t);

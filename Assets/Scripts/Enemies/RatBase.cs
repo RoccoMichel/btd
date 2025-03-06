@@ -9,7 +9,7 @@ public class RatBase : MonoBehaviour
     public SplineAnimate spline;
     public Session session;
     public float speed, health, damage, value;
-
+    public bool isShoky;
     public bool isPoisoned;
     public float posendTime, poisoneDamage;
 
@@ -26,18 +26,20 @@ public class RatBase : MonoBehaviour
     public GameObject BufeRat;
     public List<AudioClip> deathSound;
     AudioSource AS;
+    public float t;
 
 
     void OnCollisionEnter(Collision collision)
     {
         if (IsDrugdiler
             && collision.gameObject.CompareTag("Rat")
-            && collision.gameObject.name == "Rat Normol")
+            && !collision.gameObject.GetComponentInParent<RatBase>().isShoky)
         {
+            Debug.Log("bog rat");
             Vector3 s = new Vector3(0, 0, 0);
             GameObject Rat = Instantiate(BufeRat, s, Quaternion.identity);
             Rat.GetComponent<RatBase>().session = session;
-            Rat.GetComponent<RatBase>().OnStart(spline.NormalizedTime + Random.Range(-0.05f, 0.05f));
+            Rat.GetComponent<RatBase>().OnStart(spline.NormalizedTime);
             Destroy(collision.gameObject);
         }
     }
@@ -102,15 +104,17 @@ public class RatBase : MonoBehaviour
     /// </summary>
     public virtual void OnStart(float startPos)
     {
-        ofsert = new Vector3
+        if (!IsDrugdiler)
         {
-            x = Random.Range(-.2f, .2f),
-            y = GetComponentInChildren<MeshRenderer>().transform.localPosition.y + .25f,
-            z = 0
+            ofsert = new Vector3
+            {
+                x = Random.Range(-.2f, .2f),
+                y = GetComponentInChildren<MeshRenderer>().transform.localPosition.y + .25f,
+                z = 0
 
-        };
-        GetComponentInChildren<MeshRenderer>().transform.localPosition = ofsert;
-
+            };
+            GetComponentInChildren<MeshRenderer>().transform.localPosition = ofsert;
+        }
 
         transform.SetParent(FindAnyObjectByType<WaveManager>().transform);
         var container = FindAnyObjectByType<SplineContainer>();
@@ -122,18 +126,9 @@ public class RatBase : MonoBehaviour
 
         spline.Container = container;
         spline.MaxSpeed = speed;
-
-        // Set starting position (0 = start, 1 = end)
-
-        spline.StartOffset = startPos;
+        spline.NormalizedTime = startPos;
 
         spline.Play();
-        float startPosition = startPos; // Change this value to set where the object starts (e.g., 0.5f for halfway)
-        spline.NormalizedTime = startPosition;
-        spline.StartOffset = startPosition;
-
-        spline.Play();
-        spline.StartOffset = startPosition;
     }
 
     /// <summary>
@@ -142,7 +137,8 @@ public class RatBase : MonoBehaviour
     public virtual void OnUpdate()
     {
         if (health <= 0) Kill();
-        if (spline.NormalizedTime > 0.9f) Score();
+        if (spline.NormalizedTime > 0.98f) Score();
+        t = spline.NormalizedTime;
     }
 
     // posen efeckt

@@ -14,6 +14,7 @@ public class CatBase : MonoBehaviour
     public bool isColliding;
     public AudioClip AtackSond;
     public bool canAtacke;
+    public bool isLure;
 
     [Header("References")]
     public List<RatBase> Enemies = new();
@@ -142,15 +143,23 @@ public class CatBase : MonoBehaviour
     }
     void Update()
     {
+        if (isLure)
+        {
+            
+        }
 
         // Should run when enemies die or get spawned in : temp
-        UpdateEnemyCount();
-        target = FindTarget();
+        if (!isLure)
+        {
+            UpdateEnemyCount();
+            target = FindTarget();
+        }
         // Attack locking
         attackTimer += Time.deltaTime;
 
 
-        if (canAtacke
+        if (!isLure
+            && canAtacke
             && target != null
             && Enemies.Count() > 0 
             && attackTimer > attackDelay 
