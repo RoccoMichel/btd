@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class WaveManager : MonoBehaviour
 {
@@ -68,9 +69,14 @@ public class WaveManager : MonoBehaviour
 
         currentWaveIndex++;
 
+        if( PlayerPrefs.GetInt($"{SceneManager.GetActiveScene().buildIndex}Highscore", 0) < currentWaveIndex+1)
+            PlayerPrefs.SetInt($"{SceneManager.GetActiveScene().buildIndex}Highscore", currentWaveIndex + 1);
+
         if (currentWaveIndex >= waves.Length)
         {
             Debug.Log("Waves completed");
+            PlayerPrefs.SetInt($"{SceneManager.GetActiveScene().buildIndex}BeatGame", 1);
+
             GameUI.Instance.OnGameWin();
 
             /* waveManagerUI.UpdateTimerText("");
