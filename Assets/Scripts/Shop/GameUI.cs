@@ -4,18 +4,24 @@ using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
 {
+    public static GameUI Instance { get; private set; }
     [HideInInspector] public Session session;
 
     [Header("UI References")]
     [SerializeField] internal GameObject settings;
     [SerializeField] internal GameObject pauseMenu;
     [SerializeField] internal GameObject shop;
+    [SerializeField] internal GameObject loseScreen;
+    [SerializeField] internal GameObject winScreen;
     [SerializeField] internal TMP_Text balanceDisplay;
     [SerializeField] internal TMP_Text wavesDisplay;
     [SerializeField] internal TMP_Text healthDisplay;
     [SerializeField] internal TMP_Text FastForwardText;
     [SerializeField] internal Slider healthBar;
-
+    private void Awake()
+    {
+        Instance = this;
+    }
     private void Start()
     {
         if (session == null)
@@ -61,7 +67,14 @@ public class GameUI : MonoBehaviour
         shop.SetActive(!shop.activeSelf);
     }
 
-
+    public void OnGameLose()
+    {
+        loseScreen.SetActive(true);
+    }
+    public void OnGameWin()
+    {
+        winScreen.SetActive(true);
+    }
     public void ToggleSettings()
     {
         if (settings == null) return;

@@ -71,6 +71,7 @@ public class WaveManager : MonoBehaviour
         if (currentWaveIndex >= waves.Length)
         {
             Debug.Log("Waves completed");
+            GameUI.Instance.OnGameWin();
 
             /* waveManagerUI.UpdateTimerText("");
              waveManagerUI.UpdateWaveText("Waves Completed");

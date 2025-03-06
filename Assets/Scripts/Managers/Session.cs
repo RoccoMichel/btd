@@ -96,6 +96,7 @@ public class Session : MonoBehaviour
     public void Lose()
     {
         Debug.LogWarning($"Player lost at wave {wave}");
-        LoadLogic.LoadSceneByNumber(0);
+        GameUI.Instance.OnGameLose();
     }
 }
+//Rocco hat einen kleinen schwanz
