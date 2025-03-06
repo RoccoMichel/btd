@@ -18,14 +18,29 @@ public class RatBase : MonoBehaviour
     public MeshRenderer ratMesh;
 
     Vector3 ofsert = Vector3.zero;
-
+    public bool IsDrugdiler;
     public Animator ani;
     [AnimatorParam("ani")]
     public string deathParam;
     public float deathTimeAfterAni = 0.2f;
-
+    public GameObject BufeRat;
     public List<AudioClip> deathSound;
     AudioSource AS;
+
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (IsDrugdiler
+            && collision.gameObject.CompareTag("Rat")
+            && collision.gameObject.name == "Rat Normol")
+        {
+            Vector3 s = new Vector3(0, 0, 0);
+            GameObject Rat = Instantiate(BufeRat, s, Quaternion.identity);
+            Rat.GetComponent<RatBase>().session = session;
+            Rat.GetComponent<RatBase>().OnStart(spline.NormalizedTime + Random.Range(-0.05f, 0.05f));
+            Destroy(collision.gameObject);
+        }
+    }
 
     void Start()
     {

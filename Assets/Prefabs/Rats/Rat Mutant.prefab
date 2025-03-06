@@ -59,9 +59,11 @@ MonoBehaviour:
   poisoneDamage: 0
   poisonedMat: {fileID: 2100000, guid: 17595e54bba9a544dae08735b880bc1b, type: 2}
   ratMesh: {fileID: 0}
+  IsDrugdiler: 0
   ani: {fileID: 2485343558227362490}
   deathParam: Dead
   deathTimeAfterAni: 0.2
+  BufeRat: {fileID: 0}
   deathSound: []
 --- !u!33 &6730537279312695796
 MeshFilter:
@@ -126,16 +128,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 1054378809486336649}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3204efa302c9ff842b31baa3e4f376ca, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 42.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3204efa302c9ff842b31baa3e4f376ca, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 26.221096
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3204efa302c9ff842b31baa3e4f376ca, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 42.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3204efa302c9ff842b31baa3e4f376ca, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.7285571
+      value: 0.59
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3204efa302c9ff842b31baa3e4f376ca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.45483607
+      value: -0.33
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3204efa302c9ff842b31baa3e4f376ca, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.417224
+      value: 0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3204efa302c9ff842b31baa3e4f376ca, type: 3}
       propertyPath: m_LocalRotation.w
@@ -165,6 +179,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3204efa302c9ff842b31baa3e4f376ca, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3204efa302c9ff842b31baa3e4f376ca, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9651e74890e69ff42b0e963e257984fe, type: 2}
     - target: {fileID: 919132149155446097, guid: 3204efa302c9ff842b31baa3e4f376ca, type: 3}
       propertyPath: m_Name
       value: Mutant rat
