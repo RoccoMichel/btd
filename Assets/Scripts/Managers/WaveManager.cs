@@ -50,6 +50,16 @@ public class WaveManager : MonoBehaviour
     }
     private void Update()
     {
+        if (currentWaveIndex >= waves.Length)
+        {
+            if (transform.GetComponentInChildren<RatBase>() == null)
+            {
+                Debug.Log("Waves completed");
+                PlayerPrefs.SetInt($"{SceneManager.GetActiveScene().buildIndex}BeatGame", 1);
+
+                GameUI.Instance.OnGameWin();
+            }
+        }
         if (!isTimerOn) return;
         if (timer < waveDuration)
         {
@@ -75,10 +85,8 @@ public class WaveManager : MonoBehaviour
 
         if (currentWaveIndex >= waves.Length)
         {
-            Debug.Log("Waves completed");
-            PlayerPrefs.SetInt($"{SceneManager.GetActiveScene().buildIndex}BeatGame", 1);
-
-            GameUI.Instance.OnGameWin();
+            
+            
 
             /* waveManagerUI.UpdateTimerText("");
              waveManagerUI.UpdateWaveText("Waves Completed");
