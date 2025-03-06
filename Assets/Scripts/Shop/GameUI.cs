@@ -17,7 +17,8 @@ public class GameUI : MonoBehaviour
     [SerializeField] internal TMP_Text wavesDisplay;
     [SerializeField] internal TMP_Text healthDisplay;
     [SerializeField] internal TMP_Text FastForwardText;
-    [SerializeField] internal Slider healthBar;
+    [SerializeField] internal RectTransform healthBarMask, healthBarOutlineMask;
+    Vector3 healthBarStartPos;
     private void Awake()
     {
         Instance = this;
@@ -29,6 +30,8 @@ public class GameUI : MonoBehaviour
             try { session = FindAnyObjectByType<Session>().GetComponent<Session>(); }
             catch { Debug.LogError("No session script was found in active scene"); }
         }
+
+        healthBarStartPos = healthBarOutlineMask.position;
 
         ToggleSettings(false);
         DisplayRefresh();
@@ -44,8 +47,10 @@ public class GameUI : MonoBehaviour
         balanceDisplay.text = $"${session.balance}";
         healthDisplay.text = $"{session.health} HP";
         wavesDisplay.text = $"{session.wave}/{session.maxWaves}";
-        healthBar.maxValue = session.maxHealth;
-        healthBar.value = session.health;
+
+        healthBarMask.localPosition = new Vector3(Mathf.Lerp(-785, 30, session.health / session.maxHealth), 90, 0);
+
+        healthBarOutlineMask.position = healthBarStartPos;
     }
 
     public void Stop()
