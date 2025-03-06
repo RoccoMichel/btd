@@ -48,13 +48,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c37c5dcdd1cd6449a6e9b7723640f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayName: Normal
+  displayName: Melee
   upgradeLevel: 1
   value: 10
   isColliding: 0
   AtackSond: {fileID: 8300000, guid: 5b5933249ecd6fb43b80eba4c9607c70, type: 3}
+  canAtacke: 0
   Enemies: []
   waveMan: {fileID: 0}
+  ani: {fileID: 0}
+  aniShootParam: 
   shootSound:
   - {fileID: 8300000, guid: 48ed9effd7ad9944ca356e47ebb0ecb3, type: 3}
   - {fileID: 8300000, guid: a7b14d676cc65b546a5a80617d141aae, type: 3}
