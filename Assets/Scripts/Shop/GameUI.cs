@@ -52,7 +52,10 @@ public class GameUI : MonoBehaviour
 
         healthBarOutlineMask.position = healthBarStartPos;
     }
-
+    public void Retry()
+    {
+        LoadLogic.ReloadScene();
+    }
     public void Stop()
     {
         Time.timeScale = Time.timeScale == 1 ? 0 : 1;

@@ -29,7 +29,9 @@ public class MusicManager : MonoBehaviour
 
     private void OnValidate()
     {
+#if UNITY_EDITOR
         UnityEditorInternal.ComponentUtility.MoveComponentUp(this);
+#endif
 
         AS = GetComponent<AudioSource>();
         AS.outputAudioMixerGroup = mixerGroup;
