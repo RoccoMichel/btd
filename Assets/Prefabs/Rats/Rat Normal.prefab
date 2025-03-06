@@ -60,9 +60,11 @@ MonoBehaviour:
   poisoneDamage: 0
   poisonedMat: {fileID: 2100000, guid: 17595e54bba9a544dae08735b880bc1b, type: 2}
   ratMesh: {fileID: 0}
+  IsDrugdiler: 0
   ani: {fileID: 8413193543720106235}
   deathParam: Dead
   deathTimeAfterAni: 0.2
+  BufeRat: {fileID: 0}
   deathSound:
   - {fileID: 8300000, guid: a4f793617a278be4b9042080631a782b, type: 3}
   - {fileID: 8300000, guid: 222730ab04c4f584db440881ae8f08cd, type: 3}

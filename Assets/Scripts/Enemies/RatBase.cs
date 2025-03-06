@@ -76,6 +76,7 @@ public class RatBase : MonoBehaviour
 
         session.Profit(value);
         Destroy(gameObject, time + deathTimeAfterAni);
+        health = Mathf.Infinity;
     }
 
     /// <summary>
