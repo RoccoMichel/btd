@@ -38,8 +38,8 @@ public class RatBase : MonoBehaviour
     /// </summary>
     public virtual void Kill()
     {
-        AS.clip = deathSound[Random.Range(0, deathSound.Count - 1)];
-        AS.Play();
+        //AS.clip = deathSound[Random.Range(0, deathSound.Count - 1)];
+        //AS.Play();
 
         session.Profit(value);
         Destroy(gameObject);
@@ -91,10 +91,8 @@ public class RatBase : MonoBehaviour
         spline.MaxSpeed = speed;
 
         // Set starting position (0 = start, 1 = end)
-        float startPosition = startPos; // Change this value to set where the object starts (e.g., 0.5f for halfway)
-        spline.NormalizedTime = startPosition;
 
-        spline.StartOffset = startPosition;
+        spline.StartOffset = startPos;
 
         spline.Play();
     }

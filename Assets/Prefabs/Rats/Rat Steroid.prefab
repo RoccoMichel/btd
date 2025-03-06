@@ -30,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 6.4709305e-10, y: 0.931369, z: -0.000000001715798, w: 0.36407664}
   m_LocalPosition: {x: 6.137911, y: 0.5, z: 5.65795}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6748548083294428272}
   m_Father: {fileID: 0}
@@ -51,12 +51,11 @@ MonoBehaviour:
   spline: {fileID: 3322255633057438394}
   session: {fileID: 0}
   speed: 0.8
-  health: 5
+  health: 20
   damage: 15
   value: 15
   isPoisoned: 0
-  poisoneTimes: 0
-  poisoneRate: 0
+  posendTime: 0
   poisoneDamage: 0
   poisonedMat: {fileID: 2100000, guid: 17595e54bba9a544dae08735b880bc1b, type: 2}
   ratMesh: {fileID: 0}

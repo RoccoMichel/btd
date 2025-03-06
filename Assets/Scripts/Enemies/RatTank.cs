@@ -14,9 +14,9 @@ public class RatTank : RatBase
         for (int i = 0; i < spawnAmmount; i++)
         {
             Vector3 s = new Vector3(0, 0, 0);
-            GameObject Rat = Instantiate(rat, s , Quaternion.identity);
+            GameObject Rat = Instantiate(rat, s, Quaternion.identity);
             Rat.GetComponent<RatBase>().session = session;
-            Rat.GetComponent<RatBase>().OnStart(spline.normalizedTime);
+            Rat.GetComponent<RatBase>().OnStart(spline.NormalizedTime + Random.Range(-0.05f, 0.05f));
         }
 
         Destroy(gameObject);
