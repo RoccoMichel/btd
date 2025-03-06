@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Main Menu.unity
     guid: 0d785ad42588a9c49a0cf8f76683c195
   - enabled: 1
-    path: Assets/Scenes/Prototype Scenes/AllIn1.unity
-    guid: e890ec60c29b28345bcb2f335029b93f
+    path: Assets/Scenes/Levels/Template.unity
+    guid: cc428e24476db5344a9745d5faa70897
   - enabled: 1
     path: Assets/Scenes/Levels/Credits.unity
     guid: b8fd5c89303665e40b335ce259616acb
