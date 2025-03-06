@@ -1,15 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
 public class CameraControler : MonoBehaviour
 {
-    private const float MIN_FOLLOW_YOFFSET = 4f;
-    private const float MAX_FOLLOW_YOFFSET = 24f;
+    public bool useMaxDistance = true;
+    public float xMaxDistance = 25;
+    public float zMaxDistance = 25;
+
+    private const float MIN_FOLLOW_YOFFSET = 4;
+    private const float MAX_FOLLOW_YOFFSET = 30F;
     private Vector3 targetFollowOffset;
     private CinemachineTransposer cinemachineTransposer;
-    [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
+    [Space(25)] [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
 
     public float zoomSpeed = 5f;
 
@@ -32,6 +34,15 @@ public class CameraControler : MonoBehaviour
         Vector3 moveVector = transform.forward * inputMoveDir.y + transform.right * inputMoveDir.x;
 
         transform.position += moveVector * moveSpeed * Time.deltaTime;
+
+        // Clamp position based on Max Distance
+        if (!useMaxDistance) return;
+        transform.position = new Vector3
+        {
+            x = Mathf.Clamp(transform.position.x, -xMaxDistance, xMaxDistance),
+            y = transform.position.y,
+            z = Mathf.Clamp(transform.position.z, -zMaxDistance, zMaxDistance)
+        };
     }
     private void HandleRotation()
     {

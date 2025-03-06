@@ -5,7 +5,7 @@ public class Session : MonoBehaviour
     [Header("Player Economy")]
     public float balance;
     public float minBalance;
-    public float interestRate = 1; // not implemented
+    public float interestRate = 1;
 
     [Header("Player Attributes")]
     public bool immortal = false;
@@ -56,7 +56,7 @@ public class Session : MonoBehaviour
     /// </summary>
     public void Profit(float amount)
     {
-        balance += Mathf.RoundToInt(amount);
+        balance += Mathf.CeilToInt(amount * (1 + (interestRate/10)));
     }
 
     /// <summary>
@@ -99,4 +99,3 @@ public class Session : MonoBehaviour
         GameUI.Instance.OnGameLose();
     }
 }
-//Rocco hat einen kleinen schwanz

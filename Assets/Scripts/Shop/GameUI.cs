@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
 {
@@ -19,6 +18,7 @@ public class GameUI : MonoBehaviour
     [SerializeField] internal TMP_Text FastForwardText;
     [SerializeField] internal RectTransform healthBarMask, healthBarOutlineMask;
     Vector3 healthBarStartPos;
+
     private void Awake()
     {
         Instance = this;
@@ -30,6 +30,7 @@ public class GameUI : MonoBehaviour
             try { session = FindAnyObjectByType<Session>().GetComponent<Session>(); }
             catch { Debug.LogError("No session script was found in active scene"); }
         }
+        if (settings != null) settings.SetActive(false);
 
         healthBarStartPos = healthBarOutlineMask.position;
 
@@ -52,15 +53,10 @@ public class GameUI : MonoBehaviour
 
         healthBarOutlineMask.position = healthBarStartPos;
     }
-    public void Retry()
-    {
-        LoadLogic.ReloadScene();
-    }
     public void Stop()
     {
         Time.timeScale = Time.timeScale == 1 ? 0 : 1;
     }
-
     public void ToggleSpeed()
     {
         
@@ -82,12 +78,15 @@ public class GameUI : MonoBehaviour
     public void OnGameWin()
     {
         winScreen.SetActive(true);
+        pauseMenu.SetActive(false);
+        settings.SetActive(false);
     }
     public void ToggleSettings()
     {
         if (settings == null) return;
 
         settings.SetActive(!settings.activeSelf);
+        pauseMenu.SetActive(false);
     }
 
     public void ToggleSettings(bool state)
@@ -95,11 +94,13 @@ public class GameUI : MonoBehaviour
         if (settings == null) return;
 
         settings.SetActive(state);
+        pauseMenu.SetActive(false);
     }
 
     public void TogglePause()
     {
         Time.timeScale = Time.timeScale == 0 ? 1 : 0;
         pauseMenu.SetActive(!pauseMenu.activeSelf);
+        settings.SetActive(false);
     }
 }

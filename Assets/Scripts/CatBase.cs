@@ -36,6 +36,7 @@ public class CatBase : MonoBehaviour
     public float range = 5;
     public int projectileCount = 3;
     public bool hasBoomb;
+    private int lureStonks = 1;
 
     float attackTimer = 0;
     RatBase target;
@@ -56,6 +57,12 @@ public class CatBase : MonoBehaviour
         if (hasBoomb) splin = FindAnyObjectByType<SplineContainer>();
 
         AS = GetComponent<AudioSource>();
+
+        if (isLure)
+        {
+            try { FindAnyObjectByType<Session>().GetComponent<Session>().interestRate++; }
+            catch { }
+        }
     }
 
     public void FineWaveManager() { waveMan = FindAnyObjectByType<WaveManager>(); }
@@ -143,11 +150,6 @@ public class CatBase : MonoBehaviour
     }
     void Update()
     {
-        if (isLure)
-        {
-            
-        }
-
         // Should run when enemies die or get spawned in : temp
         if (!isLure)
         {
@@ -179,6 +181,8 @@ public class CatBase : MonoBehaviour
     {
         if (!canAtacke) return;
 
+        ToggleRangeVisualization(false);
+
         if (upgradeMenu != null)
         {
             upgradeMenu.KillYourSelf();
@@ -196,6 +200,9 @@ public class CatBase : MonoBehaviour
         upgradeMenu = Instantiate(Resources.Load("Upgrade Menu").GameObject().GetComponent<CatUpgrade>());
         upgradeMenu.gameObject.transform.position = transform.position + Vector3.up * 6; // Position above the cat
         upgradeMenu.cat = this;
+
+        // Show range
+        ToggleRangeVisualization(true);
     }
 
     /// <summary>
@@ -206,6 +213,18 @@ public class CatBase : MonoBehaviour
         upgradeLevel++;
         value *= 1.5f;
 
+        if (isLure)
+        {
+            try 
+            { 
+                FindAnyObjectByType<Session>().GetComponent<Session>().interestRate++; 
+                lureStonks++;
+            }
+            catch { }            
+
+            return;
+        }
+
         float ran = Random.Range(0f, 1f);
 
         if (ran < 0.3f) attackTimer *= 0.6f;
@@ -213,9 +232,10 @@ public class CatBase : MonoBehaviour
         else if (ran < 0.9f) range *= 1.4f;
         else projectileCount++;
 
+        ToggleRangeVisualization(true);
 
         /////////////////////////////////////////////////////
-        // SOMEONE NEEDS THE ACCTUAL UPGRADING OF THE CATS //           !!!
+        // SOMEONE NEEDS THE ACCTUAL UPGRADING OF THE CATS //
         /////////////////////////////////////////////////////
     }
 
@@ -224,6 +244,30 @@ public class CatBase : MonoBehaviour
     /// </summary>
     public void Kill()
     {
+        if (isLure)
+        {
+            try { FindAnyObjectByType<Session>().GetComponent<Session>().interestRate -= lureStonks; }
+            catch { /*ABSOLUTE CINEMA CODE*/ }
+        }
+
         Destroy(gameObject);
+    }
+
+    /// <summary>
+    /// Show the green range indicator under cat
+    /// </summary>
+    /// <param name="b">Should it be set to this cat?</param>
+    public void ToggleRangeVisualization(bool b)
+    {
+        GameObject visualization = GameObject.FindGameObjectWithTag("RangeVisualization");
+        if (b)
+        {
+            visualization.transform.position = transform.position;
+            visualization.transform.localScale = new Vector3 (1, 1, 0) * range * 2;
+        }
+        else
+        {
+            visualization.transform.position = Vector3.down * 1000;
+        }
     }
 }
