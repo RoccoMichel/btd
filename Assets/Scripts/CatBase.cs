@@ -12,6 +12,7 @@ public class CatBase : MonoBehaviour
     public float value = 10;
     public bool isColliding;
     public AudioClip AtackSond;
+    public bool canAtacke;
 
     [Header("References")]
     public List<RatBase> Enemies = new();
@@ -100,8 +101,12 @@ public class CatBase : MonoBehaviour
             spawnPos.position = pos;
         }
         else
-        { 
-            spawnPos.LookAt(FindTarget().transform);
+        {
+            Transform Closet = FindTarget().transform;
+            Vector3 oldPos = spawnPos.position;
+            spawnPos.position = new Vector3(oldPos.x, Closet.position.y, oldPos.z);
+            spawnPos.LookAt(Closet);
+            spawnPos.position = oldPos;
         }
 
         for (float i = 0; i < projectileCount; i++)
@@ -125,6 +130,7 @@ public class CatBase : MonoBehaviour
     }
     void Update()
     {
+
         // Should run when enemies die or get spawned in : temp
         UpdateEnemyCount();
         target = FindTarget();
@@ -132,7 +138,8 @@ public class CatBase : MonoBehaviour
         attackTimer += Time.deltaTime;
 
 
-        if (target != null
+        if (canAtacke
+            && target != null
             && Enemies.Count() > 0 
             && attackTimer > attackDelay 
             && Vector3.Distance(transform.position, target.transform.position) < range)
@@ -149,7 +156,7 @@ public class CatBase : MonoBehaviour
     /// </summary>
     public void ShowUpgrade()
     {
-
+        if (!canAtacke) return;
         if (upgradeMenu != null) 
         { 
             upgradeMenu.KillYourSelf(); 
