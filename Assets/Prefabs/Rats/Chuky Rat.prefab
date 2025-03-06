@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spline: {fileID: 3322255633057438394}
   session: {fileID: 0}
-  speed: 0.8
+  speed: 2
   health: 50
   damage: 15
   value: 15
