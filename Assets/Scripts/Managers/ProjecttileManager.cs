@@ -26,7 +26,7 @@ public class ProjecttileManager : MonoBehaviour
     bool bounce;
 
     bool doPoisone;
-    float poisoneDamage, poisoneRate, poisoneTimes;
+    float poisoneDamage, posenDureshen;
 
     List<GameObject> poiseonedRats = new List<GameObject>();
 
@@ -62,10 +62,11 @@ public class ProjecttileManager : MonoBehaviour
         {
             if (doPoisone)
             {
-                collision.gameObject.GetComponent<RatBase>().isPoisoned = true;
-                collision.gameObject.GetComponent<RatBase>().poisoneTimes = poisoneTimes;
-                collision.gameObject.GetComponent<RatBase>().poisoneRate = poisoneRate;
-                collision.gameObject.GetComponent<RatBase>().poisoneDamage = poisoneDamage;
+                RatBase rat = collision.gameObject.GetComponent<RatBase>();
+                rat.posendTime = posenDureshen;
+                rat.poisoneDamage = poisoneDamage;
+
+                rat.StartCoroutine(rat.Poisone());
             }
 
             // Damage the rat here
@@ -124,7 +125,6 @@ public class ProjecttileManager : MonoBehaviour
         doPoisone = SPM.doPoisone;
 
         poisoneDamage = SPM.poisoneDamage;
-        poisoneRate = SPM.poisoneRate;
-        poisoneTimes = SPM.poisoneTimes;
+        posenDureshen = SPM.poisoneTimes;
     }
 }

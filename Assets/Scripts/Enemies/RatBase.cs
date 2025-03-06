@@ -10,7 +10,7 @@ public class RatBase : MonoBehaviour
     public float speed, health, damage, value;
 
     public bool isPoisoned;
-    public float poisoneTimes, poisoneRate, poisoneDamage;
+    public float posendTime, poisoneDamage;
 
     public Material poisonedMat;
     Material normalMat;
@@ -23,8 +23,8 @@ public class RatBase : MonoBehaviour
 
     void Start()
     {
-        try { normalMat = ratMesh.material; }
-        catch { Debug.LogError("Material couldn't be assigned"); }        
+        //try { normalMat = ratMesh.material; }
+        //catch { Debug.LogError("Material couldn't be assigned"); }        
 
         AS = GetComponent<AudioSource>();
     }
@@ -63,23 +63,6 @@ public class RatBase : MonoBehaviour
         health -= amount;
 
         if (health <= 0) Kill();
-
-        if (isPoisoned)
-        {
-            if(poisoneTimes != 0)
-            {
-                ratMesh.material = poisonedMat;
-
-                StartCoroutine(Poisone());
-
-                poisoneTimes--;
-            }
-            else
-            {
-                ratMesh.material = normalMat;
-                isPoisoned = false;
-            }
-        }
     }
 
     /// <summary>
@@ -124,9 +107,30 @@ public class RatBase : MonoBehaviour
         if (spline.NormalizedTime > 0.9f) Score();
     }
 
-    IEnumerator Poisone()
+    // posen efeckt
+    void acivatePosenEfect()
     {
-        yield return new WaitForSeconds(poisoneRate);
-        Damage(poisoneDamage);
+        MeshRenderer mech = GetComponentInChildren<MeshRenderer>();
+        Material posed = Instantiate(mech.material);
+
+        posed.color = new Color(0f, 1f, 0f);
+    }
+    void DeAcivatePosenEfect()
+    {
+        MeshRenderer mech = GetComponentInChildren<MeshRenderer>();
+        mech.material.color = Color.white;
+    }
+    public IEnumerator Poisone()
+    {
+        acivatePosenEfect();
+
+        for (float time = 0; time < posendTime; time += Time.deltaTime)
+        {
+            Debug.Log(poisoneDamage * Time.deltaTime);
+            health -= poisoneDamage * Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+
+        DeAcivatePosenEfect();
     }
 }
