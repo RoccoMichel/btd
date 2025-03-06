@@ -4,7 +4,7 @@ using UnityEngine.Splines;
 public class RatTank : RatBase
 {
     public int spawnAmmount;
-    public GameObject rat;
+    public GameObject[] rats;
     float t;
 
     public override void Kill()
@@ -14,10 +14,10 @@ public class RatTank : RatBase
         for (int i = 0; i < spawnAmmount; i++)
         {
             Vector3 s = new Vector3(0, 0, 0);
-            GameObject Rat = Instantiate(rat, s, Quaternion.identity);
+            GameObject Rat = Instantiate(rats[Random.Range(0, rats.Length)], s, Quaternion.identity);
             Rat.GetComponent<RatBase>().session = session;
             Rat.GetComponent<RatBase>().OnStart(spline.NormalizedTime + Random.Range(-0.05f, 0.05f));
-            rat.GetComponent<RatBase>().OnStart(t + Random.Range(-0.05f, 0.05f));
+            Rat.GetComponent<RatBase>().OnStart(t + Random.Range(-0.01f, 0.01f));
             Debug.Log(t);
         }
 
