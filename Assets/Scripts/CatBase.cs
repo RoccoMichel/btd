@@ -60,7 +60,9 @@ public class CatBase : MonoBehaviour
     public void FineWaveManager() { waveMan = FindAnyObjectByType<WaveManager>(); }
     void UpdateEnemyCount()
     {
-        Enemies = FindObjectsByType<RatBase>(FindObjectsSortMode.None).ToList();
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Rat");
+        for (int i = 0; i < enemies.Count(); i++)
+            Enemies.Add(enemies[i].GetComponent<RatBase>());
     }
     RatBase FindTarget()
     {

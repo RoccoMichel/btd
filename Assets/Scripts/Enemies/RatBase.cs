@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,10 @@ public class RatBase : MonoBehaviour
     public MeshRenderer ratMesh;
 
     Vector3 ofsert = Vector3.zero;
+
+    public Animator ani;
+    [AnimatorParam("ani")]
+    public string deathParam;
 
     public List<AudioClip> deathSound;
     AudioSource AS;
@@ -41,8 +46,20 @@ public class RatBase : MonoBehaviour
         //AS.clip = deathSound[Random.Range(0, deathSound.Count - 1)];
         //AS.Play();
 
+        spline.Pause();
+
+        ani.SetTrigger(deathParam);
+
+        float time = 0;
+        if (deathParam != null)
+            time = ani.GetCurrentAnimatorStateInfo(0).length;
+        else
+            print(deathParam);
+
+        gameObject.tag = "Untagged";
+
         session.Profit(value);
-        Destroy(gameObject);
+        Destroy(gameObject, time);
     }
 
     /// <summary>
