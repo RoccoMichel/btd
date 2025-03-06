@@ -60,6 +60,8 @@ public class CatBase : MonoBehaviour
     public void FineWaveManager() { waveMan = FindAnyObjectByType<WaveManager>(); }
     void UpdateEnemyCount()
     {
+        Enemies.Clear();
+
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Rat");
         for (int i = 0; i < enemies.Count(); i++)
             Enemies.Add(enemies[i].GetComponent<RatBase>());
@@ -167,6 +169,12 @@ public class CatBase : MonoBehaviour
     public void ShowUpgrade()
     {
         if (!canAtacke) return;
+
+        if (upgradeMenu != null)
+        {
+            upgradeMenu.KillYourSelf();
+            return;
+        }
 
         // Kill all other menus
         if (GameObject.FindGameObjectsWithTag("UpgradeMenu") != null) 
