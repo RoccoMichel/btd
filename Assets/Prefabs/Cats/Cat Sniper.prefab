@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: dbb5003d943b2f04a91dd71008718bab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 9.766449e-18
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dbb5003d943b2f04a91dd71008718bab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dbb5003d943b2f04a91dd71008718bab, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.9927856
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dbb5003d943b2f04a91dd71008718bab, type: 3}
       propertyPath: m_LocalRotation.w
@@ -236,6 +236,14 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 24300002, guid: 5878e928347d1964992c4e44f7cbf0fe, type: 2}
+    - target: {fileID: 6252897910913676649, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7461765394342535601, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2691616098086186636, guid: d3bfbefc068b9724ab3ca65c763a8b15, type: 3}
