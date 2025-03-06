@@ -16,7 +16,7 @@ public class RatTank : RatBase
             Vector3 s = new Vector3(0, 0, 0);
             GameObject Rat = Instantiate(rat, s , Quaternion.identity);
             Rat.GetComponent<RatBase>().session = session;
-            Rat.GetComponent<RatBase>().OnStart(1-t);
+            Rat.GetComponent<RatBase>().OnStart(spline.normalizedTime);
         }
 
         Destroy(gameObject);
