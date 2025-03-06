@@ -1,3 +1,4 @@
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEditor;
 using UnityEngine;
 
@@ -16,49 +17,20 @@ public class Tools : MonoBehaviour
     }
 }
 
-public class SetNewIntOnPlayerPrefs : EditorWindow
+public class SetNewPlayerPrefs : EditorWindow
 {
     string playerPrefs;
-    int newPlayerPrefs;
+    string newPlayerPrefs;
 
     [MenuItem("Tools/Set New Int On PlayerPrefs")]
     public static void ShowWidow()
     {
-        EditorWindow.GetWindow(typeof(SetNewIntOnPlayerPrefs));
+        EditorWindow.GetWindow(typeof(SetNewPlayerPrefs));
     }
 
     private void OnGUI()
     {
         GUILayout.Label("Set New Int On PlayerPrefs", EditorStyles.boldLabel);
-
-        playerPrefs = EditorGUILayout.TextField("PlayerPrefs To Cnange", playerPrefs);
-        newPlayerPrefs = EditorGUILayout.IntField("Set New PlayerPrefs Value", newPlayerPrefs);
-
-        if (GUILayout.Button("Change PlayerPres"))
-            ChangePlayerPres();
-    }
-
-    public void ChangePlayerPres()
-    {
-        PlayerPrefs.SetInt(playerPrefs, newPlayerPrefs);
-    }
-}
-
-
-public class SetNewStringtOnPlayerPrefs : EditorWindow
-{
-    string playerPrefs;
-    string newPlayerPrefs;
-
-    [MenuItem("Tools/Set New String On PlayerPrefs")]
-    public static void ShowWidow()
-    {
-        EditorWindow.GetWindow(typeof(SetNewStringtOnPlayerPrefs));
-    }
-
-    private void OnGUI()
-    {
-        GUILayout.Label("Set New String On PlayerPrefs", EditorStyles.boldLabel);
 
         playerPrefs = EditorGUILayout.TextField("PlayerPrefs To Cnange", playerPrefs);
         newPlayerPrefs = EditorGUILayout.TextField("Set New PlayerPrefs Value", newPlayerPrefs);
@@ -69,14 +41,48 @@ public class SetNewStringtOnPlayerPrefs : EditorWindow
 
     public void ChangePlayerPres()
     {
-        PlayerPrefs.SetString(playerPrefs, newPlayerPrefs);
+        string typeOfPlayerPfrefs = GetPlayerPfresAsString(playerPrefs);
+
+        if (typeOfPlayerPfrefs == "int")
+            PlayerPrefs.SetInt(playerPrefs, int.Parse(newPlayerPrefs));
+        else if (typeOfPlayerPfrefs == "float")
+            PlayerPrefs.SetFloat(playerPrefs, float.Parse(newPlayerPrefs));
+        else if (typeOfPlayerPfrefs == "string")
+            PlayerPrefs.SetString(playerPrefs, newPlayerPrefs);
+        else
+            GUILayout.Label("Error", EditorStyles.boldLabel);
+    }
+
+    public string GetPlayerPfresAsString(string key)
+    {
+        string finalString = "";
+
+        if (!PlayerPrefs.HasKey(key))
+            return key + " Does Not Have A value!";
+
+        int intValue = PlayerPrefs.GetInt(key);
+        float floatValue = PlayerPrefs.GetFloat(key);
+
+        if (intValue != int.MinValue)
+        {
+            finalString = "int";
+        }
+        else if (floatValue != float.MinValue)
+        {
+            finalString = "float";
+        }
+        else
+        {
+            finalString = "string";
+        }
+
+        return finalString;
     }
 }
 
 public class SeePlayerPrefs : EditorWindow
 {
     string playerPfrefs;
-    string playerPrefsValue = "";
 
     string newValue = "";
     bool showText = false;
