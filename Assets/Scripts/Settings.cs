@@ -17,6 +17,11 @@ public class Settings : MonoBehaviour
     public TMP_InputField soundInput;
     public TMP_InputField uiInput;
 
+    float holdTime = 0;
+    public GameObject resetUI;
+    public TMP_Text resetText;
+    float lastSec = -1;
+
     //[Space(15)]
     //public TMP_Text musicText;
     //public TMP_Text soundText;
@@ -117,5 +122,52 @@ public class Settings : MonoBehaviour
     public void Return()
     {
         gameObject.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if(resetUI != null)
+        {
+            if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.R))
+            {
+                resetUI.SetActive(true);
+
+                holdTime += Time.deltaTime;
+
+                int secLeft = Mathf.CeilToInt(3 - holdTime);
+
+                if (secLeft != lastSec && secLeft > 0)
+                {
+                    resetText.text = $"Reseting in: {secLeft}";
+                    lastSec = secLeft;
+                }
+
+                if (holdTime >= 3)
+                {
+                    resetText.text = "Reseted All Progres";
+                    ResetPlayerPrefs();
+                }
+            }
+            else
+            {
+                resetUI.SetActive(false);
+
+                holdTime = 0;
+                lastSec = -1;
+            }
+        }
+    }
+
+    void ResetPlayerPrefs()
+    {
+        float musicVol = PlayerPrefs.GetFloat("Music");
+        float soundVol = PlayerPrefs.GetFloat("Sound");
+        float UIVol = PlayerPrefs.GetFloat("UI");
+
+        PlayerPrefs.DeleteAll();
+
+        PlayerPrefs.SetFloat("Music", musicVol);
+        PlayerPrefs.SetFloat("Sound", soundVol);
+        PlayerPrefs.SetFloat("UI", UIVol);
     }
 }
