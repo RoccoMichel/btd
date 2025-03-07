@@ -6,6 +6,7 @@ public class RatTank : RatBase
     public int spawnAmmount;
     public GameObject[] rats;
 
+   
     public override void Kill()
     {
         session.Profit(value);

@@ -57,6 +57,7 @@ public class GameUI : MonoBehaviour
     {
         Time.timeScale = Time.timeScale == 1 ? 0 : 1;
     }
+
     public void ToggleSpeed()
     {
         
@@ -80,6 +81,12 @@ public class GameUI : MonoBehaviour
         winScreen.SetActive(true);
         pauseMenu.SetActive(false);
         settings.SetActive(false);
+    }
+    public void contiuAfterWin()
+    {
+        winScreen.SetActive(!true);
+        pauseMenu.SetActive(!false);
+        settings.SetActive(!false);
     }
     public void ToggleSettings()
     {

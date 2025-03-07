@@ -69,7 +69,7 @@ MonoBehaviour:
   projectile: {fileID: 2815010670045982513, guid: cb475cffa808c5e43923f10f42096b51, type: 3}
   attackDelay: 1
   projectileSpread: 10
-  range: 2
+  range: 3
   projectileCount: 1
   hasBoomb: 0
 --- !u!136 &688870104695935717
