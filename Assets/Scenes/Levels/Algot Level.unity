@@ -311,11 +311,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2235105960903188471, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
       propertyPath: waves.Array.size
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2235105960903188471, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
       propertyPath: waveTransitionTime
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2235105960903188471, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
       propertyPath: waves.Array.data[0].name
@@ -323,7 +323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2235105960903188471, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
       propertyPath: waves.Array.data[1].name
-      value: Wave 2
+      value: Wave 1
       objectReference: {fileID: 0}
     - target: {fileID: 2235105960903188471, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
       propertyPath: waves.Array.data[2].name
@@ -339,7 +339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2235105960903188471, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
       propertyPath: waves.Array.data[1].segments.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2235105960903188471, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
       propertyPath: waves.Array.data[2].segments.Array.size
@@ -391,11 +391,11 @@ PrefabInstance:
       objectReference: {fileID: 4825668182265712296, guid: adc87514700c40b4eb5933ba5bb8ab5f, type: 3}
     - target: {fileID: 2235105960903188471, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
       propertyPath: waves.Array.data[0].segments.Array.data[0].tStartEnd.y
-      value: 90
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2235105960903188471, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
       propertyPath: waves.Array.data[1].segments.Array.data[0].tStartEnd.y
-      value: 40
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 2235105960903188471, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
       propertyPath: waves.Array.data[1].segments.Array.data[1].tStartEnd.x
@@ -455,7 +455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2235105960903188471, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
       propertyPath: waves.Array.data[0].segments.Array.data[0].spawnFrequency
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2235105960903188471, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
       propertyPath: waves.Array.data[1].segments.Array.data[0].spawnFrequency
@@ -492,6 +492,10 @@ PrefabInstance:
     - target: {fileID: 2235105960903188471, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
       propertyPath: waves.Array.data[3].segments.Array.data[4].spawnFrequency
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103068700183774869, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
+      propertyPath: balance
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5141230678794946091, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
       propertyPath: m_Name
@@ -1699,6 +1703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  billboardType: 0
 --- !u!114 &1109064215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2407,6 +2412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  billboardType: 0
 --- !u!114 &1487939223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2610,6 +2616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  billboardType: 0
 --- !u!212 &1588604731
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2786,6 +2793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  billboardType: 0
 --- !u!212 &1793124968
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2886,6 +2894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  billboardType: 0
 --- !u!212 &1814811752
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2986,6 +2995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  billboardType: 0
 --- !u!212 &1894470050
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3179,6 +3189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  billboardType: 0
 --- !u!212 &1937303320
 SpriteRenderer:
   m_ObjectHideFlags: 0
