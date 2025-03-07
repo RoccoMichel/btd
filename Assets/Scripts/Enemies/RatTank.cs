@@ -6,6 +6,22 @@ public class RatTank : RatBase
     public int spawnAmmount;
     public GameObject[] rats;
 
+    public override void OnStart(float startPos)
+    {
+        transform.SetParent(FindAnyObjectByType<WaveManager>().transform);
+        var container = FindAnyObjectByType<SplineContainer>();
+        if (container == null)
+        {
+            Debug.LogError("SplineContainer not found in the scene!");
+            return;
+        }
+
+        spline.Container = container;
+        spline.MaxSpeed = speed;
+        spline.NormalizedTime = startPos;
+
+        spline.Play();
+    }
     public override void Kill()
     {
         session.Profit(value);

@@ -33,7 +33,9 @@ public class ShopItem : MonoBehaviour
         price.color = Color.Lerp(price.color, Color.white, .1f);
 
         // Purchase item by button press
-        if (Input.GetKeyDown(shortcutKey)) Purchase();
+        if (Input.GetKeyDown(shortcutKey) && FindAnyObjectByType<PlaseCat>().cat == null)
+            Purchase();
+
     }
 
     public void Purchase()
@@ -45,6 +47,8 @@ public class ShopItem : MonoBehaviour
             buildingSystem.cat = Instantiate(structure);
             buildingSystem.cat.GetComponent<CatBase>().FineWaveManager();
             buildingSystem.VisualizeRange();
+            cost = Mathf.RoundToInt(cost * 1.2f);
+            price.text = $"$ {cost}";
         }
         else PurchaseFail();
     }

@@ -18,7 +18,7 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private float waveDuration;
     private float timer;
     private bool isTimerOn;
-    private int currentWaveIndex;
+    public int currentWaveIndex;
     private float waveTransitionTimer;
    [SerializeField] private float waveTransitionTime;
 
