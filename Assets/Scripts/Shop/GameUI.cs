@@ -1,3 +1,5 @@
+// All Code By Charlie And ...
+
 using TMPro;
 using UnityEngine;
 
@@ -51,9 +53,15 @@ public class GameUI : MonoBehaviour
         healthDisplay.text = $"{session.health} HP";
         wavesDisplay.text = $"{session.wave}/{session.maxWaves}";
 
-        healthBarMask.localPosition = new Vector3(Mathf.Lerp(-785, 30, session.health / session.maxHealth), 90, 0);
 
+        // <Code By Charlie>
+        // Sets The Layer Mask That Hides The Health Position To
+        // Corespond To The Amount Of Health The Player Have
+        healthBarMask.localPosition = new Vector3(Mathf.Lerp(-785, 30, session.health / session.maxHealth), 90, 0);
+        // Sets The Position Of The Other Layer Mask To Not Move From Its Start Position
+        // This Is Cuz The First Layer Mask Is A Parent Of This Layer Mask
         healthBarOutlineMask.position = healthBarStartPos;
+        // <Code By Charlie>
     }
     public void Stop()
     {

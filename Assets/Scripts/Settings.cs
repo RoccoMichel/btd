@@ -1,3 +1,5 @@
+// All Code By Charlie
+
 using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -27,6 +29,7 @@ public class Settings : MonoBehaviour
     //public TMP_Text soundText;
     //public TMP_Text uiText;
 
+    // Set The Volume Of Music With A Slider
     public void SetMusicVolumeSlider(float value)
     {
         PlayerPrefs.SetFloat("Music", value);
@@ -34,6 +37,7 @@ public class Settings : MonoBehaviour
         UpdateVolume();
     }
 
+    // Set The Volume Of Sound With A Slider
     public void SetSoundVolumeSlider(float value)
     {
         PlayerPrefs.SetFloat("Sound", value);
@@ -41,6 +45,7 @@ public class Settings : MonoBehaviour
         UpdateVolume();
     }
 
+    // Set The Volume Of UI With A Slider
     public void SetUIVolumeSlider(float value)
     {
         PlayerPrefs.SetFloat("UI", value);
@@ -48,6 +53,7 @@ public class Settings : MonoBehaviour
         UpdateVolume();
     }
 
+    // Set The Volume Of Music By Typing It In A Text Feild
     public void SetMusicVolumeInput(string input)
     {
         int value = int.Parse(input);
@@ -62,6 +68,7 @@ public class Settings : MonoBehaviour
         UpdateVolume();
     }
 
+    // Set The Volume Of Sound By Typing It In A Text Feild
     public void SetSoundVolumeInput(string input)
     {
         int value = int.Parse(input);
@@ -76,6 +83,7 @@ public class Settings : MonoBehaviour
         UpdateVolume();
     }
 
+    // Set The Volume Of UI By Typing It In A Text Feild
     public void SetUIVolumeInput(string input)
     {
         int value = int.Parse(input);
@@ -90,6 +98,7 @@ public class Settings : MonoBehaviour
         UpdateVolume();
     }
 
+    // Updates The Volume On The Volume Mixers
     public void UpdateVolume()
     {
         //musicText.text = "Music: " + PlayerPrefs.GetFloat("Music", 100);
@@ -123,7 +132,8 @@ public class Settings : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
-
+    // <summary>
+    // Resets All PlayerPfres
     private void Update()
     {
         if(resetUI != null)
@@ -170,4 +180,5 @@ public class Settings : MonoBehaviour
         PlayerPrefs.SetFloat("Sound", soundVol);
         PlayerPrefs.SetFloat("UI", UIVol);
     }
+    // <summary>
 }
