@@ -1,3 +1,5 @@
+// Code By Charlie And Algot
+
 using UnityEngine;
 using NaughtyAttributes;
 using System.Collections.Generic;
@@ -23,8 +25,6 @@ public class ProjecttileManager : MonoBehaviour
     GameObject efect;
     Vector3 startSacale = Vector3.one;
 
-    bool bounce;
-
     bool doPoisone;
     float poisoneDamage, posenDureshen;
 
@@ -35,33 +35,35 @@ public class ProjecttileManager : MonoBehaviour
     private void Update()
     {
         transform.localScale = startSacale * SacleOwerTime.Evaluate(timeAlive/lifeTime);
-        if (bounce)
-        {
-            // Algot You Fix This
-            // IDK How To
-        }
-        else
-        {
-            transform.position += transform.forward * speed * Time.deltaTime;
-        }
 
+        // <Code By Charlie>
+        // Moves The Projectile Forword
+        transform.position += transform.forward * speed * Time.deltaTime;
+
+        // Counts The Time The Projectile Is Alive
         timeAlive += Time.deltaTime;
 
+        // Destroys It When The Time Alive Is Bigger The lifeTime
         if(timeAlive >= lifeTime)
         {
+            // If doEfectWhenDied Is True Then It Adds An Effect
             if (doEfectWhenDied) Instantiate(efect, transform.position, Quaternion.identity);
 
-            //Destroy(gameObject);
             DestroyObject(doDamageWhenDied);
         }
+        // <Code By Charlie>
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        // <Code By Charlie>
+        // Cheks If The Projectile Collides With A Rat
         if(collision.transform.tag == "Rat")
         {
+            // If The Projectile Is Poisened
             if (doPoisone)
             {
+                // Do The Poisen
                 RatBase rat = collision.gameObject.GetComponent<RatBase>();
                 rat.posendTime = posenDureshen;
                 rat.poisoneDamage = poisoneDamage;
@@ -69,8 +71,9 @@ public class ProjecttileManager : MonoBehaviour
                 rat.StartCoroutine(rat.Poisone());
             }
 
-            // Damage the rat here
+            // Dose Damage To The Rat
             collision.gameObject.GetComponent<RatBase>().Damage(damage);
+            // <Code By Charlie>
             
             if (!prsig) DestroyObject(doEfectWhenHitEnemy);
         }
@@ -78,11 +81,6 @@ public class ProjecttileManager : MonoBehaviour
 
     void DestroyObject(bool timeRanOut = false)
     {
-        if (doDamageWhenDied)
-        {
-            // Gonna Fix This Later!
-        }
-
         if (doEfectWhenHitEnemy)
             Instantiate(efect, transform.position, Quaternion.identity);
 
@@ -119,8 +117,6 @@ public class ProjecttileManager : MonoBehaviour
         doEfectWhenDied = SPM.doEfectWhenDied;
         doEfectWhenHitEnemy = SPM.doEfectWhenHitEnemy;
         efect = SPM.efect;
-
-        bounce = SPM.bounce;
 
         doPoisone = SPM.doPoisone;
 

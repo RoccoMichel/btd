@@ -1,3 +1,9 @@
+// All Code By Charlie
+
+// <summary>
+// Makse A Scriptable Object For Projectiles
+// <summary>
+
 using UnityEngine;
 using NaughtyAttributes;
 
@@ -22,8 +28,6 @@ public class ScriptableProjecttileManager : ScriptableObject
     public bool doEfectWhenHitEnemy;
     [ShowIf("doEfect")]
     public GameObject efect;
-
-    public bool bounce;
 
     public bool doPoisone;
 
