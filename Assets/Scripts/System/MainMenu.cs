@@ -103,8 +103,8 @@ public class MainMenu : MonoBehaviour
 
             // Makes The Text The Highscore If Played
             string highScoreText = "0";
-            if (PlayerPrefs.HasKey((i + 1).ToString()) && PlayerPrefs.GetFloat((i + 1).ToString()) > 0)
-                highScoreText = PlayerPrefs.GetFloat((i + 1).ToString()).ToString();
+            if (PlayerPrefs.HasKey((i + 1).ToString() + "Highscore") && PlayerPrefs.GetInt((i + 1).ToString() + "Highscore") > 0)
+                highScoreText = PlayerPrefs.GetInt((i + 1).ToString() + "Highscore").ToString();
             else
                 highScoreText = "Not Played";
 
