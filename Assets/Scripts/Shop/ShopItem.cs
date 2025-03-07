@@ -10,7 +10,7 @@ public class ShopItem : MonoBehaviour
     public GameObject structure;
     public TMP_Text price;
     public int cost;
-    [SerializedField] protected KeyCode shortcutKey;
+    [SerializeField] protected KeyCode shortcutKey;
 
     private void Start()
     {
