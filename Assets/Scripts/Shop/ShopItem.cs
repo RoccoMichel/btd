@@ -10,6 +10,7 @@ public class ShopItem : MonoBehaviour
     public GameObject structure;
     public TMP_Text price;
     public int cost;
+    [SerializedField] protected KeyCode shortcutKey;
 
     private void Start()
     {
@@ -30,6 +31,9 @@ public class ShopItem : MonoBehaviour
     private void FixedUpdate()
     {
         price.color = Color.Lerp(price.color, Color.white, .1f);
+
+        // Purchase item by button press
+        if (Input.GetKeyDown(shortcutKey)) Purchase();
     }
 
     public void Purchase()
