@@ -33,6 +33,8 @@ public class CameraControler : MonoBehaviour
         float moveSpeed = 10f;
         Vector3 moveVector = transform.forward * inputMoveDir.y + transform.right * inputMoveDir.x;
 
+        Vector3 absPosition = new Vector3(Mathf.Abs(transform.position.x), Mathf.Abs(transform.position.y), Mathf.Abs(transform.position.z));
+        
         transform.position += moveVector * moveSpeed * Time.deltaTime;
 
         // Clamp position based on Max Distance
