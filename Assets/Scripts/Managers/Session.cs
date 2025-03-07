@@ -27,6 +27,7 @@ public class Session : MonoBehaviour
     {
         if (immortal) return;
         DamitsEfetct.weight += Mathf.Clamp(Mathf.Ceil(amount), 0, maxHealth) / health;
+        if (DamitsEfetct.weight > 1) DamitsEfetct.weight = 1;
         if (amount < 0)
         {
             Debug.LogWarning("Cannot damage by a negative amount. If you wish to heal use: Session.Heal()");
