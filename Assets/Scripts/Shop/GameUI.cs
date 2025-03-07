@@ -84,9 +84,10 @@ public class GameUI : MonoBehaviour
     }
     public void contiuAfterWin()
     {
-        winScreen.SetActive(!true);
-        pauseMenu.SetActive(!false);
-        settings.SetActive(!false);
+        gameObject.SetActive(false);
+        winScreen.SetActive(false);
+        pauseMenu.SetActive(true);
+        settings.SetActive(true);
     }
     public void ToggleSettings()
     {
