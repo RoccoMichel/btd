@@ -25,6 +25,7 @@ public class RatBase : MonoBehaviour
     public float deathTimeAfterAni = 0.2f;
     public GameObject BufeRat;
     public List<AudioClip> deathSound;
+    public ParticleSystem DamiitsEfeckt;
     AudioSource AS;
     public float t;
 
@@ -97,6 +98,11 @@ public class RatBase : MonoBehaviour
     public virtual void Damage(float amount)
     {
         health -= amount;
+        DamiitsEfeckt.Play();
+    }
+    public virtual void DamageNoEfeckt(float amount)
+    {
+        health -= amount;
     }
 
     /// <summary>
@@ -162,7 +168,7 @@ public class RatBase : MonoBehaviour
         for (float time = 0; time < posendTime; time += Time.deltaTime)
         {
             mech.material.color = Color.Lerp(Color.green, Color.white, time/posendTime);
-            Damage(poisoneDamage * Time.deltaTime);
+            DamageNoEfeckt(poisoneDamage * Time.deltaTime);
             yield return new WaitForEndOfFrame();
         }
 

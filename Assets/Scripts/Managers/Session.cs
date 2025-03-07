@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Session : MonoBehaviour
 {
@@ -6,6 +7,7 @@ public class Session : MonoBehaviour
     public float balance;
     public float minBalance;
     public float interestRate = 1;
+
 
     [Header("Player Attributes")]
     public bool immortal = false;
@@ -15,11 +17,16 @@ public class Session : MonoBehaviour
     [Header("Session Details")]
     public int wave = 0;
     public int maxWaves = 20;
+    public Volume DamitsEfetct;
 
+    private void Update()
+    {
+        DamitsEfetct.weight = Mathf.Lerp(DamitsEfetct.weight, 0, Time.deltaTime);
+    }
     public void Damage(float amount)
     {
         if (immortal) return;
-
+        DamitsEfetct.weight += Mathf.Clamp(Mathf.Ceil(amount), 0, maxHealth) / health;
         if (amount < 0)
         {
             Debug.LogWarning("Cannot damage by a negative amount. If you wish to heal use: Session.Heal()");
