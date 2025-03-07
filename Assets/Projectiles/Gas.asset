@@ -23,5 +23,5 @@ MonoBehaviour:
   efect: {fileID: 0}
   bounce: 0
   doPoisone: 1
-  poisoneDamage: 0.025
+  poisoneDamage: 0.005
   poisoneTimes: 10

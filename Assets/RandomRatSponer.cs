@@ -8,14 +8,14 @@ public class RandomRatSponer : MonoBehaviour
     public int[] lastTime = new int[4];
     public float difecolty;
     public float timer = 0;
-
+    public int StartRandomSponing = 11;
     void SpaneRat(int ratTyp)
     {
         GameObject rat = Instantiate(rats[ratTyp], transform.position, transform.rotation);
         rat.GetComponent<RatBase>().session = GetComponent<Session>();
         rat.GetComponent<RatBase>().OnStart(0.01f);
 
-        if (difecolty > 2f) SetBigRat(rat, Mathf.Log(1 + Random.Range(0.25f, 1f) * difecolty, 2));
+       // if (difecolty > 2f) SetBigRat(rat, Mathf.Log(1 + Random.Range(0.25f, 1f) * difecolty, 2));
     }
 
     void SetBigRat(GameObject rat, float scaleProsent)
@@ -29,6 +29,7 @@ public class RandomRatSponer : MonoBehaviour
 
     void Update()
     {
+        if (GetComponent<WaveManager>().currentWaveIndex > StartRandomSponing)
         difecolty += Time.deltaTime * 0.01f;
 
         timer += Time.deltaTime * difecolty * 0.5f;
@@ -51,6 +52,9 @@ public class RandomRatSponer : MonoBehaviour
 
             if (time % 2.5f == 0 && lastTime[4] != time)
                 SpaneRat(4); lastTime[4] = time;
+
+            if (time % 4f == 0 && lastTime[5] != time)
+                SpaneRat(5); lastTime[5] = time;
         }
 
         if (timer > difecolty)
