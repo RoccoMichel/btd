@@ -78,7 +78,7 @@ public class RatBase : MonoBehaviour
         gameObject.tag = "Untagged";
 
         session.Profit(value);
-        Destroy(gameObject, time + deathTimeAfterAni);
+        Destroy(gameObject, deathTimeAfterAni);
         health = Mathf.Infinity;
     }
 
