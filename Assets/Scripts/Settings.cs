@@ -95,13 +95,13 @@ public class Settings : MonoBehaviour
         soundInput.text = PlayerPrefs.GetFloat("Sound", 100).ToString();
         uiInput.text = PlayerPrefs.GetFloat("UI", 100).ToString();
 
-        float musicVolume = Mathf.Lerp(-80, 0, PlayerPrefs.GetFloat("Music", 100) / 100);
+        float musicVolume = Mathf.Lerp(-70, 10, PlayerPrefs.GetFloat("Music", 100) / 100);
         music.SetFloat("Music", musicVolume);
 
-        float soundVolume = Mathf.Lerp(-80, 0, PlayerPrefs.GetFloat("Sound", 100) / 100);
+        float soundVolume = Mathf.Lerp(-70, 10, PlayerPrefs.GetFloat("Sound", 100) / 100);
         sound.SetFloat("Sound", soundVolume);
 
-        float uiVolume = Mathf.Lerp(-80, 0, PlayerPrefs.GetFloat("UI", 100) / 100);
+        float uiVolume = Mathf.Lerp(-70, 10, PlayerPrefs.GetFloat("UI", 100) / 100);
         ui.SetFloat("UISound", uiVolume);
 
         musicSlider.value = PlayerPrefs.GetFloat("Music", 100);
