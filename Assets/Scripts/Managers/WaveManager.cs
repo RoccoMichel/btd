@@ -31,10 +31,11 @@ public class WaveManager : MonoBehaviour
     private void Start()
     {
         StartNextWave();
+
     }
     private void StartWave(int waveIndex)
     {
-       // waveManagerUI.UpdateWaveText("Wave " + (currentWaveIndex + 1));
+        GameUI.Instance.UpdateWavesDisplay(currentWaveIndex + 1);
         localCounters.Clear();
         foreach (WaveSegment segment in waves[waveIndex].segments)
         {
@@ -79,18 +80,17 @@ public class WaveManager : MonoBehaviour
         isTimerOn = false;
 
         currentWaveIndex++;
+        
 
-        if( PlayerPrefs.GetInt($"{SceneManager.GetActiveScene().buildIndex}Highscore", 0) < currentWaveIndex+1)
+        if ( PlayerPrefs.GetInt($"{SceneManager.GetActiveScene().buildIndex}Highscore", 0) < currentWaveIndex+1)
             PlayerPrefs.SetInt($"{SceneManager.GetActiveScene().buildIndex}Highscore", currentWaveIndex + 1);
 
         if (currentWaveIndex >= waves.Length)
         {
-            
-            
 
-            /* waveManagerUI.UpdateTimerText("");
-             waveManagerUI.UpdateWaveText("Waves Completed");
-             GameManager.Instance.SetGameState(GameState.STAGECOMPLETE);*/
+
+
+           
         }
         else StartCoroutine(startNext());
        // else GameManager.Instance.WaveCompletedCallback();
