@@ -19,6 +19,8 @@ public class GameUI : MonoBehaviour
     [SerializeField] internal RectTransform healthBarMask, healthBarOutlineMask;
     Vector3 healthBarStartPos;
 
+    float holdTime;
+
     private void Awake()
     {
         Instance = this;
