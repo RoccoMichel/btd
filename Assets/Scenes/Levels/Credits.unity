@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 0613285d6a7aa0847aab2c54285b28ed, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 080ae961f61ae23489d0638f213638ef, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -340,7 +340,7 @@ Transform:
   m_GameObject: {fileID: 56645040}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -190, y: 30, z: 78}
+  m_LocalPosition: {x: -190, y: 36, z: 78}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -889,7 +889,7 @@ Transform:
   m_GameObject: {fileID: 256239742}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.5735764, z: -0, w: 0.8191521}
-  m_LocalPosition: {x: -245, y: 10, z: -40}
+  m_LocalPosition: {x: -245, y: -10.9, z: -40}
   m_LocalScale: {x: 60, y: 60, z: 60}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1788,7 +1788,7 @@ Transform:
   m_GameObject: {fileID: 535788047}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 50, z: 300}
+  m_LocalPosition: {x: -24.6, y: 29, z: 313}
   m_LocalScale: {x: 160, y: 160, z: 160}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3151,7 +3151,7 @@ GameObject:
   - component: {fileID: 989401747}
   - component: {fileID: 989401746}
   m_Layer: 0
-  m_Name: Directional Light (2)
+  m_Name: SUN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3253,13 +3253,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 989401745}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.9935224, y: -0, z: -0, w: -0.11363672}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.00041602284, y: -0.998553, z: -0.053205855, w: -0.007807803}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1577439738}
-  m_LocalEulerAnglesHint: {x: 193.05, y: 0, z: 0}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 186.1, y: -0.8959961, z: 180}
 --- !u!1 &991597685
 GameObject:
   m_ObjectHideFlags: 0
@@ -3612,7 +3612,7 @@ Transform:
   m_GameObject: {fileID: 1127323797}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -100, y: 15, z: 15}
+  m_LocalPosition: {x: -100, y: 9.2, z: 15}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4232,7 +4232,7 @@ Transform:
   m_GameObject: {fileID: 1339162933}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -150, y: 15, z: -10}
+  m_LocalPosition: {x: -150, y: 3.2, z: -10}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6457,7 +6457,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1859921362}
-  - {fileID: 989401748}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1577439739
@@ -12022,7 +12021,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Designer:\n---------------------------\nALVA ANDSVENDEN\nEVELINE LINDGREN\nMAGNUS
-    GANTUNGS\nSIBEL SK\xC4RSTRAND"
+    GANTUGS\nSIBEL SK\xC4RSTRAND"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -12888,6 +12887,7 @@ SpriteRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 989401748}
   - {fileID: 1577439738}
   - {fileID: 504722727}
   - {fileID: 2073078957}

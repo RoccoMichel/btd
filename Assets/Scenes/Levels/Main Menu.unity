@@ -793,11 +793,11 @@ PrefabInstance:
     - target: {fileID: 787608418155209102, guid: 6ff094bff9a1c504eba507a39b2bb627, type: 3}
       propertyPath: resetUI
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 715988784}
     - target: {fileID: 787608418155209102, guid: 6ff094bff9a1c504eba507a39b2bb627, type: 3}
       propertyPath: resetText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2086532173}
     - target: {fileID: 1557429756326587368, guid: 6ff094bff9a1c504eba507a39b2bb627, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5
@@ -912,11 +912,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5898152543608756104, guid: 6ff094bff9a1c504eba507a39b2bb627, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5898152543608756104, guid: 6ff094bff9a1c504eba507a39b2bb627, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -297
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5898152543608756104, guid: 6ff094bff9a1c504eba507a39b2bb627, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
