@@ -1501,11 +1501,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 13.89
       objectReference: {fileID: 0}
     - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -6.3
       objectReference: {fileID: 0}
     - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1997,11 +1997,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16
+      value: 25.89
       objectReference: {fileID: 0}
     - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -16.3
       objectReference: {fileID: 0}
     - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3917,7 +3917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  billboardType: 1
 --- !u!114 &1109064215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5041,7 +5041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  billboardType: 1
 --- !u!114 &1487939223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7292,11 +7292,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16
+      value: 25.89
       objectReference: {fileID: 0}
     - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -16.3
       objectReference: {fileID: 0}
     - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
       propertyPath: m_LocalRotation.w
