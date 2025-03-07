@@ -30,38 +30,40 @@ public class RandomRatSponer : MonoBehaviour
     void Update()
     {
         if (GetComponent<WaveManager>().currentWaveIndex > StartRandomSponing)
-        difecolty += Time.deltaTime * 0.01f;
-
-        timer += Time.deltaTime * difecolty * 0.5f;
-
-        if (Mathf.Round(timer) != 0)
         {
-            int time = Mathf.RoundToInt(timer);
+            difecolty += Time.deltaTime * 0.01f;
 
-            if (time % 0.5f == 0 && lastTime[0] != time) 
-                SpaneRat(0); lastTime[0] = time;
+            timer += Time.deltaTime * difecolty * 0.5f;
 
-            if (time % 1 == 0 && lastTime[1] != time)
-                SpaneRat(1); lastTime[1] = time;
+            if (Mathf.Round(timer) != 0)
+            {
+                int time = Mathf.RoundToInt(timer);
 
-            if (time % 1.5f == 0 && lastTime[2] != time)
-                SpaneRat(2); lastTime[2] = time;
+                if (time % 0.5f == 0 && lastTime[0] != time)
+                    SpaneRat(0); lastTime[0] = time;
 
-            if (time % 2 == 0 && lastTime[3] != time)
-                SpaneRat(3); lastTime[3] = time;
+                if (time % 1 == 0 && lastTime[1] != time)
+                    SpaneRat(1); lastTime[1] = time;
 
-            if (time % 2.5f == 0 && lastTime[4] != time)
-                SpaneRat(4); lastTime[4] = time;
+                if (time % 1.5f == 0 && lastTime[2] != time)
+                    SpaneRat(2); lastTime[2] = time;
 
-            if (time % 4f == 0 && lastTime[5] != time)
-                SpaneRat(5); lastTime[5] = time;
-        }
+                if (time % 2 == 0 && lastTime[3] != time)
+                    SpaneRat(3); lastTime[3] = time;
 
-        if (timer > difecolty)
-        { 
-            timer = 0;
-            for (int i = 0; i < lastTime.Length; i++)
-                lastTime[i] = -1;
+                if (time % 2.5f == 0 && lastTime[4] != time)
+                    SpaneRat(4); lastTime[4] = time;
+
+                if (time % 4f == 0 && lastTime[5] != time)
+                    SpaneRat(5); lastTime[5] = time;
+            }
+
+            if (timer > difecolty)
+            {
+                timer = 0;
+                for (int i = 0; i < lastTime.Length; i++)
+                    lastTime[i] = -1;
+            }
         }
     }
 }
