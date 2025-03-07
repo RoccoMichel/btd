@@ -51,7 +51,7 @@ public class GameUI : MonoBehaviour
     {
         balanceDisplay.text = $"${session.balance}";
         healthDisplay.text = $"{session.health} HP";
-        wavesDisplay.text = $"{session.wave}/{session.maxWaves}";
+        
 
 
         // <Code By Charlie>
@@ -62,6 +62,11 @@ public class GameUI : MonoBehaviour
         // This Is Cuz The First Layer Mask Is A Parent Of This Layer Mask
         healthBarOutlineMask.position = healthBarStartPos;
         // <Code By Charlie>
+    }
+
+    public void UpdateWavesDisplay(int currentWave)
+    {
+        wavesDisplay.text = ("Wave " + currentWave.ToString());
     }
     public void Stop()
     {
