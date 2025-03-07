@@ -19,6 +19,8 @@ public class GameUI : MonoBehaviour
     [SerializeField] internal RectTransform healthBarMask, healthBarOutlineMask;
     Vector3 healthBarStartPos;
 
+    float holdTime;
+
     private void Awake()
     {
         Instance = this;
@@ -84,9 +86,10 @@ public class GameUI : MonoBehaviour
     }
     public void contiuAfterWin()
     {
-        winScreen.SetActive(!true);
-        pauseMenu.SetActive(!false);
-        settings.SetActive(!false);
+        gameObject.SetActive(false);
+        winScreen.SetActive(false);
+        pauseMenu.SetActive(true);
+        settings.SetActive(true);
     }
     public void ToggleSettings()
     {

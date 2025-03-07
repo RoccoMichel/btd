@@ -845,6 +845,8 @@ MonoBehaviour:
   musicInput: {fileID: 4049511088687568596}
   soundInput: {fileID: 610421394704945929}
   uiInput: {fileID: 4370533926094299222}
+  resetUI: {fileID: 0}
+  resetText: {fileID: 0}
 --- !u!1 &2986572240521157717
 GameObject:
   m_ObjectHideFlags: 0

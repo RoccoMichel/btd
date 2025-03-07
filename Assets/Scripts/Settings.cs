@@ -17,6 +17,11 @@ public class Settings : MonoBehaviour
     public TMP_InputField soundInput;
     public TMP_InputField uiInput;
 
+    float holdTime = 0;
+    public GameObject resetUI;
+    public TMP_Text resetText;
+    float lastSec = -1;
+
     //[Space(15)]
     //public TMP_Text musicText;
     //public TMP_Text soundText;
@@ -95,13 +100,13 @@ public class Settings : MonoBehaviour
         soundInput.text = PlayerPrefs.GetFloat("Sound", 100).ToString();
         uiInput.text = PlayerPrefs.GetFloat("UI", 100).ToString();
 
-        float musicVolume = Mathf.Lerp(-80, 0, PlayerPrefs.GetFloat("Music", 100) / 100);
+        float musicVolume = Mathf.Lerp(-70, 10, PlayerPrefs.GetFloat("Music", 100) / 100);
         music.SetFloat("Music", musicVolume);
 
-        float soundVolume = Mathf.Lerp(-80, 0, PlayerPrefs.GetFloat("Sound", 100) / 100);
+        float soundVolume = Mathf.Lerp(-70, 10, PlayerPrefs.GetFloat("Sound", 100) / 100);
         sound.SetFloat("Sound", soundVolume);
 
-        float uiVolume = Mathf.Lerp(-80, 0, PlayerPrefs.GetFloat("UI", 100) / 100);
+        float uiVolume = Mathf.Lerp(-70, 10, PlayerPrefs.GetFloat("UI", 100) / 100);
         ui.SetFloat("UISound", uiVolume);
 
         musicSlider.value = PlayerPrefs.GetFloat("Music", 100);
@@ -117,5 +122,52 @@ public class Settings : MonoBehaviour
     public void Return()
     {
         gameObject.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if(resetUI != null)
+        {
+            if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.R))
+            {
+                resetUI.SetActive(true);
+
+                holdTime += Time.deltaTime;
+
+                int secLeft = Mathf.CeilToInt(3 - holdTime);
+
+                if (secLeft != lastSec && secLeft > 0)
+                {
+                    resetText.text = $"Reseting in: {secLeft}";
+                    lastSec = secLeft;
+                }
+
+                if (holdTime >= 3)
+                {
+                    resetText.text = "Reseted All Progres";
+                    ResetPlayerPrefs();
+                }
+            }
+            else
+            {
+                resetUI.SetActive(false);
+
+                holdTime = 0;
+                lastSec = -1;
+            }
+        }
+    }
+
+    void ResetPlayerPrefs()
+    {
+        float musicVol = PlayerPrefs.GetFloat("Music");
+        float soundVol = PlayerPrefs.GetFloat("Sound");
+        float UIVol = PlayerPrefs.GetFloat("UI");
+
+        PlayerPrefs.DeleteAll();
+
+        PlayerPrefs.SetFloat("Music", musicVol);
+        PlayerPrefs.SetFloat("Sound", soundVol);
+        PlayerPrefs.SetFloat("UI", UIVol);
     }
 }

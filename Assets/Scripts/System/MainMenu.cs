@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using static Cinemachine.DocumentationSortingAttribute;
 
 public class MainMenu : MonoBehaviour
 {
@@ -27,8 +28,10 @@ public class MainMenu : MonoBehaviour
     [Button("Create New Level")]
     public void CreateNewLevel()
     {
+        int level = levelButtons.Count + 1;
+
         GameObject newLevel = Instantiate(levelButton);
-        newLevel.name = (levelButtons.Count + 1).ToString();
+        newLevel.name = level.ToString();
         newLevel.GetComponentInChildren<TMP_Text>().text = "Level: " + (levelButtons.Count + 1).ToString();
 
         newLevel.GetComponent<RectTransform>().SetParent(parent, false);
@@ -66,7 +69,31 @@ public class MainMenu : MonoBehaviour
         loadingObject.SetActive(false);
 
         for(int i = 0; i < levelButtons.Count; i++)
+        {
+            GameObject highScoreObject = new GameObject();
+
+            highScoreObject.name = "Score";
+
+            RectTransform objectTransform = highScoreObject.AddComponent<RectTransform>();
+            TMP_Text objectText = highScoreObject.AddComponent<TextMeshProUGUI>();
+
+            objectTransform.SetParent(levelButtons[i].GetComponent<RectTransform>(), false);
+            objectTransform.sizeDelta = new Vector2(200, 100);
+            objectTransform.localPosition = new Vector3(0, -100, 0);
+
+            objectText.alignment = TextAlignmentOptions.Center;
+            objectText.fontSize = 45;
+
+            string highScoreText = "0";
+            if (PlayerPrefs.HasKey((i + 1).ToString()) && PlayerPrefs.GetFloat((i + 1).ToString()) > 0)
+                highScoreText = PlayerPrefs.GetFloat((i + 1).ToString()).ToString();
+            else
+                highScoreText = "Not Played";
+
+            objectText.text = highScoreText;
+
             levelButtons[i].GetComponent<Button>().onClick.AddListener(LoadLevel);
+        }
     }
 
     IEnumerator SwitchScenes()
