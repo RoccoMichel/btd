@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2090313794303095872}
   - component: {fileID: 8599412775221659674}
   m_Layer: 0
-  m_Name: DamitshEfeckt
+  m_Name: Damage Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -192,11 +192,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2090313794303095872}
+  - {fileID: 7459600050226712923}
   - {fileID: 7898695268161747470}
+  - {fileID: 2090313794303095872}
   - {fileID: 66147967481891747}
   - {fileID: 9209259447259888134}
-  - {fileID: 7459600050226712923}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4103068700183774869
@@ -219,7 +219,7 @@ MonoBehaviour:
   health: 100
   wave: 0
   maxWaves: 20
-  DamitsEfetct: {fileID: 8599412775221659674}
+  damageEffect: {fileID: 8599412775221659674}
 --- !u!114 &2235105960903188471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7673ec615f517354fa4522a2ed7e5162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sesion: {fileID: 4103068700183774869}
+  session: {fileID: 4103068700183774869}
   waveDuration: 0
   currentWaveIndex: 0
   waveTransitionTime: 0

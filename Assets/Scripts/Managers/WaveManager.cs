@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
-using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
@@ -12,7 +11,7 @@ public class WaveManager : MonoBehaviour
       [SerializeField] private Player player;
       [SerializeField] private WaveManagerUI waveManagerUI;
     */
-    [SerializeField] private Session sesion;
+    [SerializeField] private Session session;
 
     [Header("Settings")]
     [SerializeField] private float waveDuration;
@@ -47,6 +46,7 @@ public class WaveManager : MonoBehaviour
     }
     private void StartNextWave()
     {
+        session.NextWave();
         StartWave(currentWaveIndex);
     }
     private void Update()
@@ -98,7 +98,6 @@ public class WaveManager : MonoBehaviour
 
     public IEnumerator startNext()
     {
-
         yield return new WaitForSeconds(waveTransitionTime);
         StartNextWave();
     }
@@ -120,7 +119,7 @@ public class WaveManager : MonoBehaviour
             if (timeSinceSegmentStart / (1f / segment.spawnFrequency) > localCounters[i])
             {
                 GameObject rat = Instantiate(segment.prefab, GetSpawnPosition(), Quaternion.identity, transform);
-                rat.GetComponent<RatBase>().session = sesion;
+                rat.GetComponent<RatBase>().session = session;
                 rat.GetComponent<RatBase>().OnStart(0.01f);
 
 

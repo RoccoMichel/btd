@@ -8,7 +8,6 @@ public class Session : MonoBehaviour
     public float minBalance;
     public float interestRate = 1;
 
-
     [Header("Player Attributes")]
     public bool immortal = false;
     public float maxHealth = 100f;
@@ -17,22 +16,26 @@ public class Session : MonoBehaviour
     [Header("Session Details")]
     public int wave = 0;
     public int maxWaves = 20;
-    public Volume DamitsEfetct;
+    public Volume damageEffect;
 
     private void Update()
     {
-        DamitsEfetct.weight = Mathf.Lerp(DamitsEfetct.weight, 0, Time.deltaTime);
+        damageEffect.weight = Mathf.Lerp(damageEffect.weight, 0, Time.deltaTime);
     }
+
     public void Damage(float amount)
     {
         if (immortal) return;
-        DamitsEfetct.weight += Mathf.Clamp(Mathf.Ceil(amount), 0, maxHealth) / health;
-        if (DamitsEfetct.weight > 1) DamitsEfetct.weight = 1;
+
         if (amount < 0)
         {
             Debug.LogWarning("Cannot damage by a negative amount. If you wish to heal use: Session.Heal()");
             return;
         }
+
+        // play damage effect
+        damageEffect.weight += Mathf.Clamp(Mathf.Ceil(amount), 0, maxHealth) / health;
+        if (damageEffect.weight > 1) damageEffect.weight = 1;
 
         // subtract a rounded up value between 0 and maxHealth from health
         health -= Mathf.Clamp(Mathf.Ceil(amount), 0, maxHealth);
@@ -54,9 +57,7 @@ public class Session : MonoBehaviour
         wave++;
 
         // give reward money
-        Profit(wave * 100 + 1000);
-
-        // reference the wave manager
+        //Profit(wave * 100 + 1000);
     }
 
     /// <summary>
