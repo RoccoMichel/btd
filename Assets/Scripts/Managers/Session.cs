@@ -4,6 +4,7 @@ using UnityEngine.Rendering;
 public class Session : MonoBehaviour
 {
     [Header("Player Economy")]
+    public bool infiniteWealth;
     public float balance;
     public float minBalance;
     public float interestRate = 1;
@@ -65,27 +66,17 @@ public class Session : MonoBehaviour
     /// </summary>
     public void Profit(float amount)
     {
-        balance += Mathf.CeilToInt(amount * (1 + (interestRate/10)));
+        balance += Mathf.Abs(Mathf.CeilToInt(amount * (1 + (interestRate / 10))));
     }
 
     /// <summary>
     /// REMOVE money from balance
     /// </summary>
     public void Expenditure(float amount)
-    {        
-        balance -= Mathf.RoundToInt(amount);
-    }
-
-    /// <summary>
-    /// Expends funds if CanPurchase()
-    /// </summary>
-    /// <param name="cost">minimum funds needed for purchase</param>
-    /// <returns>if Purchase was success or not</returns>
-    public bool TryPurchase(int cost)
     {
-        //if (CanPurchase(cost)) Expenditure(cost);
+        if (infiniteWealth) return;
 
-        return CanPurchase(cost);
+        balance -= Mathf.Abs(Mathf.RoundToInt(amount));
     }
 
     /// <summary>
@@ -94,6 +85,8 @@ public class Session : MonoBehaviour
     /// <returns>If the player can afford this purchase</returns>
     public bool CanPurchase(int cost)
     {
+        if (infiniteWealth) return true;
+
         if (balance - cost < minBalance) return false;
 
         return true;

@@ -1,4 +1,5 @@
 // All Code By Charlie And ...
+// ahh hell nah, more like 2 fucking lines by Charlie
 
 using TMPro;
 using UnityEngine;
@@ -20,8 +21,6 @@ public class GameUI : MonoBehaviour
     [SerializeField] internal TMP_Text FastForwardText;
     [SerializeField] internal RectTransform healthBarMask, healthBarOutlineMask;
     Vector3 healthBarStartPos;
-
-    float holdTime;
 
     private void Awake()
     {
@@ -49,10 +48,8 @@ public class GameUI : MonoBehaviour
 
     void DisplayRefresh()
     {
-        balanceDisplay.text = $"${session.balance}";
-        healthDisplay.text = $"{session.health} HP";
-        
-
+        balanceDisplay.text = session.infiniteWealth ? "$Unlimited" : $"${session.balance}";
+        healthDisplay.text = session.immortal ? "IMMORTAL" : $"{session.health} HP";
 
         // <Code By Charlie>
         // Sets The Layer Mask That Hides The Health Position To
@@ -96,13 +93,15 @@ public class GameUI : MonoBehaviour
         winScreen.SetActive(true);
         pauseMenu.SetActive(false);
         settings.SetActive(false);
+
+        // Win screen prompts with ContinueAfterWin() Button
     }
-    public void contiuAfterWin()
+    public void ContinueAfterWin()
     {
-        gameObject.SetActive(false);
         winScreen.SetActive(false);
-        pauseMenu.SetActive(true);
-        settings.SetActive(true);
+
+        FindAnyObjectByType<RandomRatSponer>().GetComponent<RandomRatSponer>().enabled = true;
+        FindAnyObjectByType<WaveManager>().GetComponent<WaveManager>().enabled = false;
     }
     public void ToggleSettings()
     {
@@ -110,6 +109,7 @@ public class GameUI : MonoBehaviour
 
         settings.SetActive(!settings.activeSelf);
         pauseMenu.SetActive(false);
+        shop.SetActive(!settings.activeSelf);
     }
 
     public void ToggleSettings(bool state)
@@ -118,6 +118,7 @@ public class GameUI : MonoBehaviour
 
         settings.SetActive(state);
         pauseMenu.SetActive(false);
+        shop.SetActive(!settings.activeSelf);
     }
 
     public void TogglePause()

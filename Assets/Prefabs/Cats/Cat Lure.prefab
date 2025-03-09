@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 7461765394342535601}
   - component: {fileID: 1845095167619360637}
   - component: {fileID: 8186269796262221290}
+  - component: {fileID: 4328193299155820717}
   m_Layer: 2
   m_Name: Mesh
   m_TagString: Untagged
@@ -206,6 +207,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4328193299155820717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3478129005814102448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!1 &3585982105108571785
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c37c5dcdd1cd6449a6e9b7723640f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayName: BASE
+  displayName: Stonks
   upgradeLevel: 1
   value: 5
   isColliding: 0

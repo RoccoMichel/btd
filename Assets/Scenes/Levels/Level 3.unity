@@ -119,6 +119,108 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &4634297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4634298}
+  - component: {fileID: 4634300}
+  - component: {fileID: 4634299}
+  m_Layer: 0
+  m_Name: mountain1 (19)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4634298
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4634297}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.5158901, z: -0, w: 0.85665476}
+  m_LocalPosition: {x: 194.1, y: 33.6, z: 190.7}
+  m_LocalScale: {x: 38.26591, y: 38.265915, z: 38.26591}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1097630846}
+  m_LocalEulerAnglesHint: {x: 0, y: 62.114, z: 0}
+--- !u!114 &4634299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4634297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
+--- !u!212 &4634300
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4634297}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 7e5a69e157fcd7f44920238ff85adca1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &15632378
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +252,7 @@ Transform:
   m_LocalScale: {x: 15.68644, y: 15.68644, z: 15.68644}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 88.743, z: 0}
 --- !u!114 &15632380
 MonoBehaviour:
@@ -164,7 +266,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &15632381
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -249,103 +352,15 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1097630846}
   - {fileID: 394180185}
+  - {fileID: 405288462}
+  - {fileID: 1317620788}
+  - {fileID: 1016916485}
+  - {fileID: 1515738565}
   - {fileID: 749468717}
   - {fileID: 1408179418}
   - {fileID: 1111130151}
-  - {fileID: 1097630846}
-  - {fileID: 1588604729}
-  - {fileID: 871422117}
-  - {fileID: 15632379}
-  - {fileID: 81401928}
-  - {fileID: 276136944}
-  - {fileID: 1425865266}
-  - {fileID: 1661790090}
-  - {fileID: 1823408773}
-  - {fileID: 922637936}
-  - {fileID: 775106192}
-  - {fileID: 1560306900}
-  - {fileID: 1519035613}
-  - {fileID: 1535127918}
-  - {fileID: 370268303}
-  - {fileID: 1894470048}
-  - {fileID: 221199439}
-  - {fileID: 554380551}
-  - {fileID: 144782677}
-  - {fileID: 1793124966}
-  - {fileID: 739965528}
-  - {fileID: 1239455623}
-  - {fileID: 954492966}
-  - {fileID: 987229070}
-  - {fileID: 891196374}
-  - {fileID: 354192675}
-  - {fileID: 2012666498}
-  - {fileID: 1524309336}
-  - {fileID: 239083716}
-  - {fileID: 190152443}
-  - {fileID: 1445288543}
-  - {fileID: 1154575150}
-  - {fileID: 1142037440}
-  - {fileID: 1223208605}
-  - {fileID: 1693200285}
-  - {fileID: 398138892}
-  - {fileID: 1935569852}
-  - {fileID: 188354994}
-  - {fileID: 1164752457}
-  - {fileID: 719007736}
-  - {fileID: 1171536554}
-  - {fileID: 1814811750}
-  - {fileID: 183857396}
-  - {fileID: 1359802648}
-  - {fileID: 100484257}
-  - {fileID: 181187994}
-  - {fileID: 807701763}
-  - {fileID: 2124759049}
-  - {fileID: 1063532258}
-  - {fileID: 1984904751}
-  - {fileID: 292906212}
-  - {fileID: 1726289236}
-  - {fileID: 590703342}
-  - {fileID: 1383511399}
-  - {fileID: 388667254}
-  - {fileID: 1454652007}
-  - {fileID: 1138810551}
-  - {fileID: 780924707}
-  - {fileID: 2092940851}
-  - {fileID: 1402661782}
-  - {fileID: 2020455826}
-  - {fileID: 1662112496}
-  - {fileID: 1414282524}
-  - {fileID: 289249839}
-  - {fileID: 707804565}
-  - {fileID: 58920081}
-  - {fileID: 1937303318}
-  - {fileID: 1934321077}
-  - {fileID: 1048151283}
-  - {fileID: 898745593}
-  - {fileID: 260359120}
-  - {fileID: 977334518}
-  - {fileID: 1963969950}
-  - {fileID: 524195849}
-  - {fileID: 954227183}
-  - {fileID: 1444707768}
-  - {fileID: 270267243}
-  - {fileID: 791429599}
-  - {fileID: 1391959223}
-  - {fileID: 1322042099}
-  - {fileID: 678286740}
-  - {fileID: 561241983}
-  - {fileID: 996723144}
-  - {fileID: 2122357781}
-  - {fileID: 1675446619}
-  - {fileID: 144045745}
-  - {fileID: 58925141}
-  - {fileID: 1402128357}
-  - {fileID: 1443461421}
-  - {fileID: 1814042413}
-  - {fileID: 2026049466}
-  - {fileID: 1109544063}
-  - {fileID: 2022679092}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &58920080
@@ -379,7 +394,7 @@ Transform:
   m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &58920082
 MonoBehaviour:
@@ -393,7 +408,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &58920083
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -477,10 +493,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.004905267, z: -0, w: 0.99998796}
   m_LocalPosition: {x: 32.1, y: 6.94, z: 92.70001}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.4144006, y: 5.4144, z: 5.4144006}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &58925142
 MonoBehaviour:
@@ -494,7 +510,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &58925143
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -674,7 +691,7 @@ Transform:
   m_LocalScale: {x: 15.68644, y: 15.68644, z: 15.68644}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 88.743, z: 0}
 --- !u!114 &81401929
 MonoBehaviour:
@@ -688,7 +705,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &81401930
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1132,7 +1150,7 @@ Transform:
   m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &100484258
 MonoBehaviour:
@@ -1146,7 +1164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &100484259
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1202,6 +1221,108 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &108808774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 108808775}
+  - component: {fileID: 108808777}
+  - component: {fileID: 108808776}
+  m_Layer: 0
+  m_Name: mountain1 (21)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &108808775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108808774}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.36206484, z: -0, w: 0.932153}
+  m_LocalPosition: {x: -137.3, y: 8.5, z: -185.3}
+  m_LocalScale: {x: -37.29885, y: 46.03051, z: -37.29885}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1097630846}
+  m_LocalEulerAnglesHint: {x: 0, y: 42.454, z: 0}
+--- !u!114 &108808776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108808774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
+--- !u!212 &108808777
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108808774}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 0633f568ee3521042b957cb8ae92d968, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &144045744
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,10 +1351,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.004905267, z: -0, w: 0.99998796}
   m_LocalPosition: {x: 32.1, y: 6.94, z: -144}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.4144006, y: 5.4144, z: 5.4144006}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &144045746
 MonoBehaviour:
@@ -1247,7 +1368,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &144045747
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1330,11 +1452,11 @@ Transform:
   m_GameObject: {fileID: 144782676}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 81, y: 11.3, z: 133.6}
+  m_LocalPosition: {x: 81, y: 21.9, z: 133.6}
   m_LocalScale: {x: 27.00107, y: 27.00107, z: 27.00107}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &144782678
 MonoBehaviour:
@@ -1348,7 +1470,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &144782679
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1435,7 +1558,7 @@ Transform:
   m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &181187995
 MonoBehaviour:
@@ -1449,7 +1572,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &181187996
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1533,10 +1657,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.004905267, z: -0, w: 0.99998796}
   m_LocalPosition: {x: -21.8, y: 6.3, z: -123.7}
-  m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
+  m_LocalScale: {x: 6.7720003, y: 6.772, z: 6.7720003}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &183857397
 MonoBehaviour:
@@ -1550,7 +1674,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &183857398
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1637,7 +1762,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &188354995
 MonoBehaviour:
@@ -1651,7 +1776,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &188354996
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1738,7 +1864,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &190152444
 MonoBehaviour:
@@ -1752,7 +1878,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &190152445
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1839,7 +1966,7 @@ Transform:
   m_LocalScale: {x: 27.00107, y: 27.00107, z: 27.00107}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &221199440
 MonoBehaviour:
@@ -1853,7 +1980,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &221199441
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1962,6 +2090,10 @@ PrefabInstance:
       value: CameraControler
       objectReference: {fileID: 0}
     - target: {fileID: 8714859102808792780, guid: db605b050e6706c4ca2c309643f24026, type: 3}
+      propertyPath: InGameVolume
+      value: 
+      objectReference: {fileID: 772087620}
+    - target: {fileID: 8714859102808792780, guid: db605b050e6706c4ca2c309643f24026, type: 3}
       propertyPath: cinemachineVirtualCamera
       value: 
       objectReference: {fileID: 1437885067}
@@ -2001,7 +2133,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &239083717
 MonoBehaviour:
@@ -2015,7 +2147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &239083718
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2099,10 +2232,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6784621, z: -0, w: 0.7346355}
   m_LocalPosition: {x: 80.2, y: 6.94, z: 52.7}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.414401, y: 5.4144, z: 5.414401}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &260359121
 MonoBehaviour:
@@ -2116,7 +2249,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &260359122
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2200,10 +2334,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6784621, z: -0, w: 0.7346355}
   m_LocalPosition: {x: 99.899994, y: 6.94, z: 52.699997}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.414401, y: 5.4144, z: 5.414401}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &270267244
 MonoBehaviour:
@@ -2217,7 +2351,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &270267245
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2304,7 +2439,7 @@ Transform:
   m_LocalScale: {x: 15.68644, y: 15.68644, z: 15.68644}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 88.743, z: 0}
 --- !u!114 &276136945
 MonoBehaviour:
@@ -2318,7 +2453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &276136946
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2402,10 +2538,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.004905267, z: -0, w: 0.99998796}
   m_LocalPosition: {x: 64.1, y: 6.3, z: 113}
-  m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
+  m_LocalScale: {x: 6.7720003, y: 6.772, z: 6.7720003}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &289249840
 MonoBehaviour:
@@ -2419,7 +2555,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &289249841
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2506,7 +2643,7 @@ Transform:
   m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &292906213
 MonoBehaviour:
@@ -2520,7 +2657,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &292906214
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2731,7 +2869,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &354192676
 MonoBehaviour:
@@ -2745,7 +2883,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &354192677
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2987,7 +3126,7 @@ Transform:
   m_LocalScale: {x: 15.68644, y: 15.68644, z: 15.68644}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 88.743, z: 0}
 --- !u!114 &370268304
 MonoBehaviour:
@@ -3001,7 +3140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &370268305
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3085,10 +3225,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.004905267, z: -0, w: 0.99998796}
   m_LocalPosition: {x: 18.8, y: 6.3, z: -123.7}
-  m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
+  m_LocalScale: {x: 6.7720003, y: 6.772, z: 6.7720003}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &388667255
 MonoBehaviour:
@@ -3102,7 +3242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &388667256
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3274,7 +3415,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &398138893
 MonoBehaviour:
@@ -3288,7 +3429,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &398138894
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3344,6 +3486,118 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &405288461
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 58568441}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 220.1578
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 220.1578
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 369.39084
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 34.313
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.59
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 39.055
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6319363
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6319363
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.31726408
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.31726408
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -53.318
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f56dd25d13bda4749bb8f3554e7028a7, type: 2}
+    - target: {fileID: 919132149155446097, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_Name
+      value: Rock (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 405288464}
+  m_SourcePrefab: {fileID: 100100000, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+--- !u!4 &405288462 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+  m_PrefabInstance: {fileID: 405288461}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &405288463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+  m_PrefabInstance: {fileID: 405288461}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &405288464
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405288463}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4493585093827132993, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
 --- !u!1 &463349419
 GameObject:
   m_ObjectHideFlags: 0
@@ -3462,7 +3716,7 @@ Transform:
   m_GameObject: {fileID: 504169415}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25, y: 1.2451932, z: 25}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3553,10 +3807,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.004905267, z: -0, w: 0.99998796}
   m_LocalPosition: {x: -15.8, y: 6.94, z: -144}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.4144006, y: 5.4144, z: 5.4144006}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &524195850
 MonoBehaviour:
@@ -3570,7 +3824,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &524195851
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3657,7 +3912,7 @@ Transform:
   m_LocalScale: {x: 27.00107, y: 27.00107, z: 27.00107}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &554380552
 MonoBehaviour:
@@ -3671,7 +3926,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &554380553
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3755,10 +4011,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6784621, z: -0, w: 0.7346355}
   m_LocalPosition: {x: -92.100006, y: 6.94, z: 52.699997}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.414401, y: 5.4144, z: 5.414401}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &561241984
 MonoBehaviour:
@@ -3772,7 +4028,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &561241985
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3859,7 +4116,7 @@ Transform:
   m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &590703343
 MonoBehaviour:
@@ -3873,7 +4130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &590703344
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4073,7 +4331,7 @@ Transform:
   m_GameObject: {fileID: 606650843}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25, y: 1.2451932, z: 25}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4107,10 +4365,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.004905267, z: -0, w: 0.99998796}
   m_LocalPosition: {x: 5.0999975, y: 6.94, z: 92.70001}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.4144006, y: 5.4144, z: 5.4144006}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &678286741
 MonoBehaviour:
@@ -4124,7 +4382,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &678286742
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4211,7 +4470,7 @@ Transform:
   m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &707804566
 MonoBehaviour:
@@ -4225,7 +4484,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &707804567
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4405,7 +4665,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &719007737
 MonoBehaviour:
@@ -4419,7 +4679,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &719007738
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4500,7 +4761,7 @@ Transform:
   m_GameObject: {fileID: 739560276}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25, y: 1.2451932, z: 25}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4537,7 +4798,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &739965529
 MonoBehaviour:
@@ -4551,7 +4812,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &739965530
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4796,10 +5058,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6993079, z: -0, w: 0.71482056}
   m_LocalPosition: {x: 140.20001, y: -0.1, z: 43.7}
-  m_LocalScale: {x: 15.68644, y: 15.68644, z: 15.68644}
+  m_LocalScale: {x: 15.68644, y: 22.83632, z: 15.68644}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 88.743, z: 0}
 --- !u!114 &775106193
 MonoBehaviour:
@@ -4813,7 +5075,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &775106194
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4905,7 +5168,7 @@ Transform:
   m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &780924708
 MonoBehaviour:
@@ -4919,7 +5182,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &780924709
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5003,10 +5267,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6784621, z: -0, w: 0.7346355}
   m_LocalPosition: {x: -113, y: 6.94, z: -52.100006}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.414401, y: 5.4144, z: 5.414401}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &791429600
 MonoBehaviour:
@@ -5020,7 +5284,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &791429601
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5107,7 +5372,7 @@ Transform:
   m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &807701764
 MonoBehaviour:
@@ -5121,7 +5386,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &807701765
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5249,7 +5515,7 @@ Transform:
   m_LocalScale: {x: 15.68644, y: 15.68644, z: 15.68644}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &871422118
 MonoBehaviour:
@@ -5263,7 +5529,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &871422119
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5350,7 +5617,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &891196375
 MonoBehaviour:
@@ -5364,7 +5631,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &891196376
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5448,10 +5716,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6784621, z: -0, w: 0.7346355}
   m_LocalPosition: {x: -132.7, y: 6.94, z: 52.7}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.414401, y: 5.4144, z: 5.414401}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &898745594
 MonoBehaviour:
@@ -5465,7 +5733,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &898745595
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5579,7 +5848,7 @@ Transform:
   m_LocalScale: {x: 15.68644, y: 15.68644, z: 15.68644}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 88.743, z: 0}
 --- !u!114 &922637937
 MonoBehaviour:
@@ -5593,7 +5862,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &922637938
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5677,10 +5947,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.004905267, z: -0, w: 0.99998796}
   m_LocalPosition: {x: -15.8, y: 6.94, z: 92.70001}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.4144006, y: 5.4144, z: 5.4144006}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &954227184
 MonoBehaviour:
@@ -5694,7 +5964,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &954227185
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5781,7 +6052,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &954492967
 MonoBehaviour:
@@ -5795,7 +6066,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &954492968
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5879,10 +6151,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6784621, z: -0, w: 0.7346355}
   m_LocalPosition: {x: -132.7, y: 6.94, z: -52.100002}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.414401, y: 5.4144, z: 5.414401}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &977334519
 MonoBehaviour:
@@ -5896,7 +6168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &977334520
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5983,7 +6256,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &987229071
 MonoBehaviour:
@@ -5997,7 +6270,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &987229072
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6081,10 +6355,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6784621, z: -0, w: 0.7346355}
   m_LocalPosition: {x: 120.79999, y: 6.94, z: 52.699997}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.414401, y: 5.4144, z: 5.414401}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &996723145
 MonoBehaviour:
@@ -6098,7 +6372,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &996723146
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6154,6 +6429,118 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1016916484
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 58568441}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -126.7515
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 126.75146
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 212.6694
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 29.99
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.89
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 40.48
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6319363
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6319363
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.31726408
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.31726408
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -53.318
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f56dd25d13bda4749bb8f3554e7028a7, type: 2}
+    - target: {fileID: 919132149155446097, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_Name
+      value: Rock (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1016916487}
+  m_SourcePrefab: {fileID: 100100000, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+--- !u!4 &1016916485 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+  m_PrefabInstance: {fileID: 1016916484}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1016916486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+  m_PrefabInstance: {fileID: 1016916484}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1016916487
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016916486}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4493585093827132993, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
 --- !u!1 &1035146089
 GameObject:
   m_ObjectHideFlags: 0
@@ -6179,7 +6566,7 @@ Transform:
   m_GameObject: {fileID: 1035146089}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25, y: 1.2451932, z: 25}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6213,10 +6600,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.004905267, z: -0, w: 0.99998796}
   m_LocalPosition: {x: -35.5, y: 6.94, z: 92.70001}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.4144006, y: 5.4144, z: 5.4144006}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &1048151284
 MonoBehaviour:
@@ -6230,7 +6617,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1048151285
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6314,10 +6702,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.004905267, z: -0, w: 0.99998796}
   m_LocalPosition: {x: -2.0999985, y: 6.3, z: -123.7}
-  m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
+  m_LocalScale: {x: 6.7720003, y: 6.772, z: 6.7720003}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &1063532259
 MonoBehaviour:
@@ -6331,7 +6719,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1063532260
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6504,11 +6893,107 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097630845}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1588604729}
+  - {fileID: 108808775}
+  - {fileID: 871422117}
+  - {fileID: 1606256611}
+  - {fileID: 15632379}
+  - {fileID: 81401928}
+  - {fileID: 276136944}
+  - {fileID: 1425865266}
+  - {fileID: 1661790090}
+  - {fileID: 1823408773}
+  - {fileID: 922637936}
+  - {fileID: 775106192}
+  - {fileID: 1560306900}
+  - {fileID: 1519035613}
+  - {fileID: 1535127918}
+  - {fileID: 370268303}
+  - {fileID: 1894470048}
+  - {fileID: 221199439}
+  - {fileID: 554380551}
+  - {fileID: 1540464768}
+  - {fileID: 144782677}
+  - {fileID: 4634298}
+  - {fileID: 1793124966}
+  - {fileID: 739965528}
+  - {fileID: 1239455623}
+  - {fileID: 954492966}
+  - {fileID: 987229070}
+  - {fileID: 891196374}
+  - {fileID: 354192675}
+  - {fileID: 2012666498}
+  - {fileID: 1524309336}
+  - {fileID: 239083716}
+  - {fileID: 190152443}
+  - {fileID: 1445288543}
+  - {fileID: 1154575150}
+  - {fileID: 1142037440}
+  - {fileID: 1223208605}
+  - {fileID: 1693200285}
+  - {fileID: 398138892}
+  - {fileID: 1935569852}
+  - {fileID: 188354994}
+  - {fileID: 1164752457}
+  - {fileID: 719007736}
+  - {fileID: 1171536554}
+  - {fileID: 1814811750}
+  - {fileID: 183857396}
+  - {fileID: 1359802648}
+  - {fileID: 100484257}
+  - {fileID: 181187994}
+  - {fileID: 807701763}
+  - {fileID: 2124759049}
+  - {fileID: 1063532258}
+  - {fileID: 1984904751}
+  - {fileID: 292906212}
+  - {fileID: 1726289236}
+  - {fileID: 590703342}
+  - {fileID: 1383511399}
+  - {fileID: 388667254}
+  - {fileID: 1454652007}
+  - {fileID: 1138810551}
+  - {fileID: 780924707}
+  - {fileID: 2092940851}
+  - {fileID: 1402661782}
+  - {fileID: 2020455826}
+  - {fileID: 1662112496}
+  - {fileID: 1414282524}
+  - {fileID: 289249839}
+  - {fileID: 707804565}
+  - {fileID: 58920081}
+  - {fileID: 1937303318}
+  - {fileID: 1934321077}
+  - {fileID: 1048151283}
+  - {fileID: 898745593}
+  - {fileID: 260359120}
+  - {fileID: 977334518}
+  - {fileID: 1963969950}
+  - {fileID: 524195849}
+  - {fileID: 954227183}
+  - {fileID: 1444707768}
+  - {fileID: 270267243}
+  - {fileID: 791429599}
+  - {fileID: 1391959223}
+  - {fileID: 1322042099}
+  - {fileID: 678286740}
+  - {fileID: 561241983}
+  - {fileID: 996723144}
+  - {fileID: 2122357781}
+  - {fileID: 1675446619}
+  - {fileID: 144045745}
+  - {fileID: 58925141}
+  - {fileID: 1402128357}
+  - {fileID: 1443461421}
+  - {fileID: 1814042413}
+  - {fileID: 2026049466}
+  - {fileID: 1109544063}
+  - {fileID: 2022679092}
   m_Father: {fileID: 58568441}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1109064213
@@ -6542,6 +7027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offsetRotation: {x: 0, y: 0, z: 0}
   billboardType: 1
 --- !u!114 &1109064215
 MonoBehaviour:
@@ -6729,10 +7215,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6784621, z: -0, w: 0.7346355}
   m_LocalPosition: {x: -94.80001, y: 6.94, z: -58.500008}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.414401, y: 5.4144, z: 5.414401}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &1109544064
 MonoBehaviour:
@@ -6746,7 +7232,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1109544065
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6945,7 +7432,7 @@ Transform:
   m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &1138810552
 MonoBehaviour:
@@ -6959,7 +7446,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1138810553
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7046,7 +7534,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &1142037441
 MonoBehaviour:
@@ -7060,7 +7548,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1142037442
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7147,7 +7636,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &1154575151
 MonoBehaviour:
@@ -7161,7 +7650,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1154575152
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7248,7 +7738,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &1164752458
 MonoBehaviour:
@@ -7262,7 +7752,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1164752459
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7349,7 +7840,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &1171536555
 MonoBehaviour:
@@ -7363,7 +7854,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1171536556
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7450,7 +7942,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &1223208606
 MonoBehaviour:
@@ -7464,7 +7956,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1223208607
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7551,7 +8044,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &1239455624
 MonoBehaviour:
@@ -7565,7 +8058,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1239455625
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7621,6 +8115,118 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1317620787
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 58568441}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 157.28
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalScale.y
+      value: -157.28
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 222.14227
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 44.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.4897451
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 38.06
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6212201
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.4352121
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.457688
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.46389422
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -105.124
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 140.811
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -223.011
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f56dd25d13bda4749bb8f3554e7028a7, type: 2}
+    - target: {fileID: 919132149155446097, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_Name
+      value: Rock (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1317620790}
+  m_SourcePrefab: {fileID: 100100000, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+--- !u!4 &1317620788 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+  m_PrefabInstance: {fileID: 1317620787}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1317620789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+  m_PrefabInstance: {fileID: 1317620787}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1317620790
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317620789}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4493585093827132993, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
 --- !u!1 &1322042098
 GameObject:
   m_ObjectHideFlags: 0
@@ -7649,10 +8255,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.004905267, z: -0, w: 0.99998796}
   m_LocalPosition: {x: 5.0999975, y: 6.94, z: -144}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.4144006, y: 5.4144, z: 5.4144006}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &1322042100
 MonoBehaviour:
@@ -7666,7 +8272,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1322042101
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7750,10 +8357,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.004905267, z: -0, w: 0.99998796}
   m_LocalPosition: {x: -21.8, y: 6.3, z: 113}
-  m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
+  m_LocalScale: {x: 6.7720003, y: 6.772, z: 6.7720003}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &1359802649
 MonoBehaviour:
@@ -7767,7 +8374,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1359802650
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7854,7 +8462,7 @@ Transform:
   m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &1383511400
 MonoBehaviour:
@@ -7868,7 +8476,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1383511401
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7952,10 +8561,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6784621, z: -0, w: 0.7346355}
   m_LocalPosition: {x: 99.899994, y: 6.94, z: -52.100006}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.414401, y: 5.4144, z: 5.414401}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &1391959224
 MonoBehaviour:
@@ -7969,7 +8578,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1391959225
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8053,10 +8663,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6784621, z: -0, w: 0.7346355}
   m_LocalPosition: {x: -120.999985, y: 6.94, z: 7.7999973}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.414401, y: 5.4144, z: 5.414401}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &1402128358
 MonoBehaviour:
@@ -8070,7 +8680,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1402128359
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8154,10 +8765,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.004905267, z: -0, w: 0.99998796}
   m_LocalPosition: {x: 45.8, y: 6.3, z: 113}
-  m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
+  m_LocalScale: {x: 6.7720003, y: 6.772, z: 6.7720003}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &1402661783
 MonoBehaviour:
@@ -8171,7 +8782,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1402661784
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8287,10 +8899,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.004905267, z: -0, w: 0.99998796}
   m_LocalPosition: {x: 64.1, y: 6.3, z: -123.7}
-  m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
+  m_LocalScale: {x: 6.7720003, y: 6.772, z: 6.7720003}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &1414282525
 MonoBehaviour:
@@ -8304,7 +8916,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1414282526
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8387,11 +9000,11 @@ Transform:
   m_GameObject: {fileID: 1425865265}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6993079, z: -0, w: 0.71482056}
-  m_LocalPosition: {x: 120.500015, y: -0.1, z: -3.7}
-  m_LocalScale: {x: 15.68644, y: 15.68644, z: 15.68644}
+  m_LocalPosition: {x: 171.8, y: 3.3, z: -4.1}
+  m_LocalScale: {x: -21.89827, y: 28.454613, z: 21.898272}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 88.743, z: 0}
 --- !u!114 &1425865267
 MonoBehaviour:
@@ -8405,7 +9018,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1425865268
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8500,10 +9114,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6784621, z: -0, w: 0.7346355}
   m_LocalPosition: {x: 91.90001, y: 6.94, z: 7.7999973}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.414401, y: 5.4144, z: 5.414401}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &1443461422
 MonoBehaviour:
@@ -8517,7 +9131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1443461423
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8601,10 +9216,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6784621, z: -0, w: 0.7346355}
   m_LocalPosition: {x: -113, y: 6.94, z: 52.699997}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.414401, y: 5.4144, z: 5.414401}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &1444707769
 MonoBehaviour:
@@ -8618,7 +9233,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1444707770
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8705,7 +9321,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &1445288544
 MonoBehaviour:
@@ -8719,7 +9335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1445288545
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8924,10 +9541,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.004905267, z: -0, w: 0.99998796}
   m_LocalPosition: {x: 18.8, y: 6.3, z: 113}
-  m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
+  m_LocalScale: {x: 6.7720003, y: 6.772, z: 6.7720003}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &1454652008
 MonoBehaviour:
@@ -8941,7 +9558,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1454652009
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9028,6 +9646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offsetRotation: {x: 0, y: 0, z: 0}
   billboardType: 1
 --- !u!114 &1487939223
 MonoBehaviour:
@@ -9187,6 +9806,118 @@ RectTransform:
   m_AnchoredPosition: {x: -16.82, y: 8.03}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.25, y: 0.5}
+--- !u!1001 &1515738564
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 58568441}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -126.7515
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalScale.y
+      value: -126.7515
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 133.72227
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 29.56
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.72
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 36.57
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.23539256
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.23539256
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.6667761
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.6667761
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -141.111
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f56dd25d13bda4749bb8f3554e7028a7, type: 2}
+    - target: {fileID: 919132149155446097, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      propertyPath: m_Name
+      value: Rock (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1515738567}
+  m_SourcePrefab: {fileID: 100100000, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+--- !u!4 &1515738565 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+  m_PrefabInstance: {fileID: 1515738564}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1515738566 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
+  m_PrefabInstance: {fileID: 1515738564}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1515738567
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515738566}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4493585093827132993, guid: fd5499b81f63da64baad19baae81fd46, type: 3}
 --- !u!1 &1519035612
 GameObject:
   m_ObjectHideFlags: 0
@@ -9218,7 +9949,7 @@ Transform:
   m_LocalScale: {x: 15.68644, y: 15.68644, z: 15.68644}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1519035614
 MonoBehaviour:
@@ -9232,7 +9963,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1519035615
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9319,7 +10051,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &1524309337
 MonoBehaviour:
@@ -9333,7 +10065,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1524309338
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9420,7 +10153,7 @@ Transform:
   m_LocalScale: {x: 15.68644, y: 15.68644, z: 15.68644}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 88.743, z: 0}
 --- !u!114 &1535127919
 MonoBehaviour:
@@ -9434,7 +10167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1535127920
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9490,6 +10224,108 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1540464767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1540464768}
+  - component: {fileID: 1540464770}
+  - component: {fileID: 1540464769}
+  m_Layer: 0
+  m_Name: mountain1 (20)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1540464768
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540464767}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.44746616, z: -0, w: 0.8943009}
+  m_LocalPosition: {x: 206.2, y: 11.3, z: -199.3}
+  m_LocalScale: {x: -53.26568, y: 53.26568, z: 53.26568}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1097630846}
+  m_LocalEulerAnglesHint: {x: 0, y: -53.162, z: 0}
+--- !u!114 &1540464769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540464767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
+--- !u!212 &1540464770
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540464767}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 0633f568ee3521042b957cb8ae92d968, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1560306899
 GameObject:
   m_ObjectHideFlags: 0
@@ -9517,11 +10353,11 @@ Transform:
   m_GameObject: {fileID: 1560306899}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.800003, y: -0.1, z: -233.5}
+  m_LocalPosition: {x: 28.800003, y: -9.2, z: -233.5}
   m_LocalScale: {x: 15.68644, y: 15.68644, z: 15.68644}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1560306901
 MonoBehaviour:
@@ -9535,7 +10371,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1560306902
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9618,11 +10455,11 @@ Transform:
   m_GameObject: {fileID: 1588604728}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -55.5, y: -0.1, z: -233.5}
-  m_LocalScale: {x: 15.68644, y: 15.68644, z: 15.68644}
+  m_LocalPosition: {x: -21.6, y: -0.1, z: -225.3}
+  m_LocalScale: {x: -15.68644, y: 14.191679, z: -15.68644}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1588604730
 MonoBehaviour:
@@ -9636,7 +10473,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1588604731
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9692,6 +10530,108 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1606256610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1606256611}
+  - component: {fileID: 1606256613}
+  - component: {fileID: 1606256612}
+  m_Layer: 0
+  m_Name: mountain1 (18)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1606256611
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606256610}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.43287927, z: -0, w: 0.90145195}
+  m_LocalPosition: {x: -226.6, y: -0.1, z: 114.9}
+  m_LocalScale: {x: 47.183464, y: 47.18346, z: 47.183464}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1097630846}
+  m_LocalEulerAnglesHint: {x: 0, y: -51.301, z: 0}
+--- !u!114 &1606256612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606256610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
+--- !u!212 &1606256613
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606256610}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 0633f568ee3521042b957cb8ae92d968, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1661790089
 GameObject:
   m_ObjectHideFlags: 0
@@ -9723,7 +10663,7 @@ Transform:
   m_LocalScale: {x: 15.68644, y: 15.68644, z: 15.68644}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 88.743, z: 0}
 --- !u!114 &1661790091
 MonoBehaviour:
@@ -9737,7 +10677,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1661790092
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9824,7 +10765,7 @@ Transform:
   m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &1662112497
 MonoBehaviour:
@@ -9838,7 +10779,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1662112498
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9922,10 +10864,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6784621, z: -0, w: 0.7346355}
   m_LocalPosition: {x: 120.79999, y: 6.94, z: -52.100006}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.414401, y: 5.4144, z: 5.414401}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &1675446620
 MonoBehaviour:
@@ -9939,7 +10881,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1675446621
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10179,7 +11122,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &1693200286
 MonoBehaviour:
@@ -10193,7 +11136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1693200287
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10280,7 +11224,7 @@ Transform:
   m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &1726289237
 MonoBehaviour:
@@ -10294,7 +11238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1726289238
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11019,7 +11964,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &1793124967
 MonoBehaviour:
@@ -11033,7 +11978,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1793124968
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11117,10 +12063,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.004905267, z: -0, w: 0.99998796}
   m_LocalPosition: {x: 50.399998, y: 6.94, z: -144}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.4144006, y: 5.4144, z: 5.4144006}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &1814042414
 MonoBehaviour:
@@ -11134,7 +12080,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1814042415
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11218,10 +12165,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.004905267, z: -0, w: 0.99998796}
   m_LocalPosition: {x: -21.8, y: 6.3, z: 117}
-  m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
+  m_LocalScale: {x: 6.7720003, y: 6.772, z: 6.7720003}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &1814811751
 MonoBehaviour:
@@ -11235,7 +12182,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1814811752
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11322,7 +12270,7 @@ Transform:
   m_LocalScale: {x: 15.68644, y: 15.68644, z: 15.68644}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 88.743, z: 0}
 --- !u!114 &1823408774
 MonoBehaviour:
@@ -11336,7 +12284,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1823408775
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11420,10 +12369,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.3, y: 11.3, z: -261.9}
-  m_LocalScale: {x: 27.00107, y: 27.00107, z: 27.00107}
+  m_LocalScale: {x: 27.00107, y: 36.788956, z: 27.00107}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1894470049
 MonoBehaviour:
@@ -11437,7 +12386,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1894470050
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11521,10 +12471,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.004905267, z: -0, w: 0.99998796}
   m_LocalPosition: {x: -35.5, y: 6.94, z: -144}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.4144006, y: 5.4144, z: 5.4144006}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &1934321078
 MonoBehaviour:
@@ -11538,7 +12488,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1934321079
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11625,7 +12576,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &1935569853
 MonoBehaviour:
@@ -11639,7 +12590,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1935569854
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11723,10 +12675,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.004905267, z: -0, w: 0.99998796}
   m_LocalPosition: {x: -35.5, y: 6.94, z: 96.7}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.4144006, y: 5.4144, z: 5.4144006}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &1937303319
 MonoBehaviour:
@@ -11740,7 +12692,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1937303320
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11824,10 +12777,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6784621, z: -0, w: 0.7346355}
   m_LocalPosition: {x: 80.2, y: 6.94, z: -52.100002}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.414401, y: 5.4144, z: 5.414401}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &1963969951
 MonoBehaviour:
@@ -11841,7 +12794,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1963969952
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11925,10 +12879,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.004905267, z: -0, w: 0.99998796}
   m_LocalPosition: {x: -2.0999985, y: 6.3, z: 113}
-  m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
+  m_LocalScale: {x: 6.7720003, y: 6.772, z: 6.7720003}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &1984904752
 MonoBehaviour:
@@ -11942,7 +12896,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1984904753
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12029,7 +12984,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &2012666499
 MonoBehaviour:
@@ -12043,7 +12998,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &2012666500
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12130,7 +13086,7 @@ Transform:
   m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &2020455827
 MonoBehaviour:
@@ -12144,7 +13100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &2020455828
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12228,10 +13185,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6784621, z: -0, w: 0.7346355}
   m_LocalPosition: {x: 118.099976, y: 6.94, z: -58.500008}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.414401, y: 5.4144, z: 5.414401}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &2022679093
 MonoBehaviour:
@@ -12245,7 +13202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &2022679094
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12329,10 +13287,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.004905267, z: -0, w: 0.99998796}
   m_LocalPosition: {x: 50.399998, y: 6.94, z: 92.70001}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.4144006, y: 5.4144, z: 5.4144006}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &2026049467
 MonoBehaviour:
@@ -12346,7 +13304,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &2026049468
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12430,10 +13389,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.004905267, z: -0, w: 0.99998796}
   m_LocalPosition: {x: 45.8, y: 6.3, z: -123.7}
-  m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
+  m_LocalScale: {x: 6.7720003, y: 6.772, z: 6.7720003}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 0.562, z: 0}
 --- !u!114 &2092940852
 MonoBehaviour:
@@ -12447,7 +13406,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &2092940853
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12607,7 +13567,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 50, y: 0.837976, z: 50}
-  m_Center: {x: 25, y: 0.4, z: 25}
+  m_Center: {x: 25, y: -0.3, z: 25}
 --- !u!154 &2117421172
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -12711,10 +13671,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6784621, z: -0, w: 0.7346355}
   m_LocalPosition: {x: -92.100006, y: 6.94, z: -52.100006}
-  m_LocalScale: {x: 5.4144, y: 5.4144, z: 5.4144}
+  m_LocalScale: {x: 5.414401, y: 5.4144, z: 5.414401}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &2122357782
 MonoBehaviour:
@@ -12728,7 +13688,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &2122357783
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12815,7 +13776,7 @@ Transform:
   m_LocalScale: {x: 6.772, y: 6.772, z: 6.772}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 58568441}
+  m_Father: {fileID: 1097630846}
   m_LocalEulerAnglesHint: {x: 0, y: 85.447, z: 0}
 --- !u!114 &2124759050
 MonoBehaviour:
@@ -12829,7 +13790,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &2124759051
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13192,6 +14154,10 @@ PrefabInstance:
     - target: {fileID: 3470443951441853603, guid: e78ff6a982ca6e24e8aede454b932714, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634883905084206753, guid: e78ff6a982ca6e24e8aede454b932714, type: 3}
+      propertyPath: m_Color.a
+      value: 0.627451
       objectReference: {fileID: 0}
     - target: {fileID: 3646948490672039488, guid: e78ff6a982ca6e24e8aede454b932714, type: 3}
       propertyPath: m_AnchorMax.y
@@ -13673,6 +14639,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7267161253621726810, guid: e78ff6a982ca6e24e8aede454b932714, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7267161253621726810, guid: e78ff6a982ca6e24e8aede454b932714, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7267161253621726810, guid: e78ff6a982ca6e24e8aede454b932714, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7267161253621726810, guid: e78ff6a982ca6e24e8aede454b932714, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8429148286325767472, guid: e78ff6a982ca6e24e8aede454b932714, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -13717,6 +14699,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8658972171711100186, guid: e78ff6a982ca6e24e8aede454b932714, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658972171711100186, guid: e78ff6a982ca6e24e8aede454b932714, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13727,11 +14717,14 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 739560277}
+  - {fileID: 1677913094}
   - {fileID: 91642662}
   - {fileID: 4617173250956052869}
   - {fileID: 772087621}
   - {fileID: 1448427048}
   - {fileID: 606650844}
+  - {fileID: 1791827859}
+  - {fileID: 520112146}
   - {fileID: 834657460}
   - {fileID: 58568441}
   - {fileID: 1109064217}
@@ -13741,6 +14734,3 @@ SceneRoots:
   - {fileID: 2094656799}
   - {fileID: 366900113}
   - {fileID: 1035146090}
-  - {fileID: 1791827859}
-  - {fileID: 520112146}
-  - {fileID: 1677913094}

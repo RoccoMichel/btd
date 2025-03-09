@@ -244,6 +244,8 @@ public class CatBase : MonoBehaviour
     /// </summary>
     public void Kill()
     {
+        ToggleRangeVisualization(false);
+
         if (isLure)
         {
             try { FindAnyObjectByType<Session>().GetComponent<Session>().interestRate -= lureStonks; }

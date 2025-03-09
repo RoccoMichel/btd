@@ -164,7 +164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &6329753
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -265,7 +266,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &12250771
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -350,6 +352,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1097630846}
+  - {fileID: 476936854}
+  - {fileID: 915040620}
+  - {fileID: 599655221}
+  - {fileID: 2055614078}
   - {fileID: 749468717}
   - {fileID: 1408179418}
   - {fileID: 1111130151}
@@ -358,11 +365,6 @@ Transform:
   - {fileID: 1007005780}
   - {fileID: 1311054232}
   - {fileID: 442250692}
-  - {fileID: 476936854}
-  - {fileID: 915040620}
-  - {fileID: 599655221}
-  - {fileID: 2055614078}
-  - {fileID: 1097630846}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &71921443
@@ -503,7 +505,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &87298280
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -926,7 +929,7 @@ Transform:
   m_GameObject: {fileID: 152013046}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -190, y: 30, z: 78}
+  m_LocalPosition: {x: -200.7, y: 30, z: 70.1}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -944,7 +947,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &152013049
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1045,7 +1049,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &184253080
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1239,7 +1244,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &224768151
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1295,67 +1301,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &231437064
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 23.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707482871443979135, guid: db605b050e6706c4ca2c309643f24026, type: 3}
-      propertyPath: m_Name
-      value: CameraControler
-      objectReference: {fileID: 0}
-    - target: {fileID: 8714859102808792780, guid: db605b050e6706c4ca2c309643f24026, type: 3}
-      propertyPath: cinemachineVirtualCamera
-      value: 
-      objectReference: {fileID: 1437885067}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: db605b050e6706c4ca2c309643f24026, type: 3}
 --- !u!1 &255545172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1401,7 +1346,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &255545175
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1502,7 +1448,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &278979694
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1558,6 +1505,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &320675280
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 26.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -24.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9055894
+      objectReference: {fileID: 0}
+    - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.42415544
+      objectReference: {fileID: 0}
+    - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000030362255
+      objectReference: {fileID: 0}
+    - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.000000014220922
+      objectReference: {fileID: 0}
+    - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124743790754139034, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
+      propertyPath: m_Name
+      value: Main Camera
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
 --- !u!1 &329048261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1603,7 +1607,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &329048264
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1690,68 +1695,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 834657460}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &366900113
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 35.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -25
-      objectReference: {fileID: 0}
-    - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9055894
-      objectReference: {fileID: 0}
-    - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.42415544
-      objectReference: {fileID: 0}
-    - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.000000030362255
-      objectReference: {fileID: 0}
-    - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.000000014220922
-      objectReference: {fileID: 0}
-    - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 850350226821843265, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9124743790754139034, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
-      propertyPath: m_Name
-      value: Main Camera
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
---- !u!20 &366900114 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 6260425138258159843, guid: bcf8dd3558485374f9c3ecadc367f26f, type: 3}
-  m_PrefabInstance: {fileID: 366900113}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &426526221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,7 +1740,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &426526224
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2028,7 +1972,7 @@ Transform:
   m_GameObject: {fileID: 504169415}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25, y: 1.2451932, z: 25}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2079,7 +2023,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &516555319
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2135,6 +2080,71 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &517593013
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707482871443979135, guid: db605b050e6706c4ca2c309643f24026, type: 3}
+      propertyPath: m_Name
+      value: CameraControler
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714859102808792780, guid: db605b050e6706c4ca2c309643f24026, type: 3}
+      propertyPath: InGameVolume
+      value: 
+      objectReference: {fileID: 772087620}
+    - target: {fileID: 8714859102808792780, guid: db605b050e6706c4ca2c309643f24026, type: 3}
+      propertyPath: cinemachineVirtualCamera
+      value: 
+      objectReference: {fileID: 2081133073}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: db605b050e6706c4ca2c309643f24026, type: 3}
 --- !u!1 &526742188
 GameObject:
   m_ObjectHideFlags: 0
@@ -2180,7 +2190,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &526742191
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2353,7 +2364,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599655220}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2418,7 +2429,7 @@ Transform:
   m_GameObject: {fileID: 606650843}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25, y: 1.2451932, z: 25}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2469,7 +2480,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &627864815
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2570,7 +2582,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &662109804
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2671,7 +2684,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &663464375
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2772,7 +2786,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &711467956
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2853,7 +2868,7 @@ Transform:
   m_GameObject: {fileID: 739560276}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25, y: 1.2451932, z: 25}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2998,8 +3013,8 @@ Transform:
   m_GameObject: {fileID: 753706150}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -100, y: 15, z: 15}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalPosition: {x: -100, y: 10.2, z: 15}
+  m_LocalScale: {x: 6.5094004, y: 6.5094004, z: 6.5094004}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2055614078}
@@ -3016,7 +3031,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &753706153
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3121,11 +3137,71 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &777237025 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
-  m_PrefabInstance: {fileID: 231437064}
-  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &792236909
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 26.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -24.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9055894
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.42415544
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00000003036225
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.000000014220919
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405852231933655914, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 2145091538}
+    - target: {fileID: 2405852231933655914, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
+      propertyPath: m_LookAt
+      value: 
+      objectReference: {fileID: 2145091538}
+    - target: {fileID: 8088697309404706483, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
+      propertyPath: m_Name
+      value: Virtual Camera
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
 --- !u!1 &834657459
 GameObject:
   m_ObjectHideFlags: 0
@@ -3281,7 +3357,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 50, y: 1, z: 50}
-  m_Center: {x: 25, y: 1.5, z: 25}
+  m_Center: {x: 25, y: 1.52, z: 25}
 --- !u!1001 &896724361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3418,7 +3494,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915040619}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3682,7 +3758,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1030901813
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3763,7 +3840,7 @@ Transform:
   m_GameObject: {fileID: 1035146089}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25, y: 1.2451932, z: 25}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3837,6 +3914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offsetRotation: {x: 0, y: 0, z: 0}
   billboardType: 1
 --- !u!114 &1109064215
 MonoBehaviour:
@@ -4153,7 +4231,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1144869628
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4254,7 +4333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1174377377
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4337,9 +4417,9 @@ Transform:
   m_GameObject: {fileID: 1178278561}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.8660252, z: -0, w: 0.5000004}
-  m_LocalPosition: {x: -125, y: 10, z: 65}
-  m_LocalScale: {x: 25, y: 25, z: 25}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: -125, y: 4, z: 65}
+  m_LocalScale: {x: -29.3, y: 32.271023, z: 29.300001}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2055614078}
   m_LocalEulerAnglesHint: {x: 0, y: 120, z: 0}
@@ -4355,7 +4435,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1178278564
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4438,8 +4519,8 @@ Transform:
   m_GameObject: {fileID: 1179985343}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -150, y: 15, z: -10}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalPosition: {x: -150, y: 3, z: -10}
+  m_LocalScale: {x: 13.394001, y: 13.394001, z: 13.394001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 915040620}
@@ -4456,7 +4537,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1179985346
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5192,7 +5274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1272885081
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5597,17 +5680,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: d2d19ff1cfaac1d40824cf0f93ca7513, type: 3}
---- !u!114 &1437885067 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2405852231933655914, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
-  m_PrefabInstance: {fileID: 2094656799}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1448427046
 GameObject:
   m_ObjectHideFlags: 0
@@ -5756,7 +5828,7 @@ Transform:
   m_GameObject: {fileID: 1455431338}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -100, y: 15, z: 15}
+  m_LocalPosition: {x: -100, y: 8, z: 15}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5774,7 +5846,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1455431341
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5875,7 +5948,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1475949927
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5976,7 +6050,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1487508829
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6063,6 +6138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offsetRotation: {x: 0, y: 0, z: 0}
   billboardType: 1
 --- !u!114 &1487939223
 MonoBehaviour:
@@ -6249,8 +6325,8 @@ Transform:
   m_GameObject: {fileID: 1561633184}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -150, y: 15, z: -10}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalPosition: {x: -150, y: 13, z: -10}
+  m_LocalScale: {x: 12.827999, y: 12.827999, z: 12.827999}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 476936854}
@@ -6267,7 +6343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1561633187
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6368,7 +6445,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1589604149
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6451,8 +6529,8 @@ Transform:
   m_GameObject: {fileID: 1691265791}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -100, y: 15, z: 15}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalPosition: {x: -100, y: 13, z: 15}
+  m_LocalScale: {x: 7.6967998, y: 7.6967998, z: 7.6967998}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 476936854}
@@ -6469,7 +6547,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1691265794
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6646,7 +6725,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1784768021
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6747,7 +6827,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1793124968
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6848,7 +6929,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1894470050
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7099,7 +7181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1937303320
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7200,7 +7283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11949416aeb38fc4cb0bf8d2ca362f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  billboardType: 0
+  offsetRotation: {x: 0, y: 0, z: 0}
+  billboardType: 2
 --- !u!212 &1971590696
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7373,7 +7457,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055614077}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7387,71 +7471,22 @@ Transform:
   - {fileID: 1144869626}
   m_Father: {fileID: 58568441}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!1001 &2094656799
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 35.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9055894
-      objectReference: {fileID: 0}
-    - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.42415544
-      objectReference: {fileID: 0}
-    - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.00000003036225
-      objectReference: {fileID: 0}
-    - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.000000014220919
-      objectReference: {fileID: 0}
-    - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1736760348625575529, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405852231933655914, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
-      propertyPath: m_Follow
-      value: 
-      objectReference: {fileID: 777237025}
-    - target: {fileID: 2405852231933655914, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
-      propertyPath: m_LookAt
-      value: 
-      objectReference: {fileID: 777237025}
-    - target: {fileID: 8088697309404706483, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
-      propertyPath: m_Name
-      value: Virtual Camera
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
+--- !u!114 &2081133073 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2405852231933655914, guid: 2e02c1d0635347f479924400651ffd3b, type: 3}
+  m_PrefabInstance: {fileID: 792236909}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2145091538 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5208029529594304446, guid: db605b050e6706c4ca2c309643f24026, type: 3}
+  m_PrefabInstance: {fileID: 517593013}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4617173250956052869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7835,7 +7870,7 @@ PrefabInstance:
     - target: {fileID: 3332077694315139140, guid: e78ff6a982ca6e24e8aede454b932714, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 366900114}
+      objectReference: {fileID: 0}
     - target: {fileID: 3332077694315139140, guid: e78ff6a982ca6e24e8aede454b932714, type: 3}
       propertyPath: m_PlaneDistance
       value: 1
@@ -8502,7 +8537,7 @@ SceneRoots:
   - {fileID: 1109064217}
   - {fileID: 1487939225}
   - {fileID: 504169416}
-  - {fileID: 231437064}
-  - {fileID: 2094656799}
-  - {fileID: 366900113}
+  - {fileID: 517593013}
+  - {fileID: 792236909}
+  - {fileID: 320675280}
   - {fileID: 1035146090}

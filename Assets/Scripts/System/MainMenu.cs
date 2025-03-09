@@ -1,4 +1,5 @@
 // All Code By Charlie
+// sure buddy ;P
 
 using UnityEngine;
 using NaughtyAttributes;
@@ -21,6 +22,10 @@ public class MainMenu : MonoBehaviour
     public GameObject loadingObject;
     Animator aniL;
 
+    [Header("Image Icons")]
+    [SerializeField] internal Sprite[] unbeatenIcons;
+    [SerializeField] internal Sprite[] beatenIcons;
+
     public void LoadLevel()
     {
         StartCoroutine(SwitchScenes());        
@@ -35,14 +40,14 @@ public class MainMenu : MonoBehaviour
         // Spawns The Button And Sets All The Information It needs
         GameObject newLevel = Instantiate(levelButton);
         newLevel.name = level.ToString();
-        newLevel.GetComponentInChildren<TMP_Text>().text = "Level: " + (levelButtons.Count + 1).ToString();
+        //newLevel.GetComponentInChildren<TMP_Text>().text = "Level: " + (levelButtons.Count + 1).ToString(); <- Removed because text is already present the images
 
         newLevel.GetComponent<RectTransform>().SetParent(parent, false);
 
         // Adds The Button To A List To Use In The Start Void
         levelButtons.Add(newLevel);
 
-        // Adds The Button To The Exclude List In The AddSoundToButton Sctipt
+        // Adds The Button To The Exclude List In The AddSoundToButton Script
         astb.exclude.Add(newLevel.GetComponent<Button>());
 
         print("Made New Level");
@@ -62,7 +67,7 @@ public class MainMenu : MonoBehaviour
     }
 
     // Adds A Button In The Inspector To Reset Both Lists
-    // Its For Debuging ONLY!!!
+    // Its For Debugging ONLY!!!
     [Button("Reset List")]
     public void ResetList()
     {
@@ -80,7 +85,7 @@ public class MainMenu : MonoBehaviour
         // Adds Text Under The Level Button To Show Your Highscore On That Level
         for (int i = 0; i < levelButtons.Count; i++)
         {
-            // Creats The Game Object
+            // Creates The Game Object
             GameObject highScoreObject = new GameObject();
 
             // Sets Its Name
@@ -90,16 +95,17 @@ public class MainMenu : MonoBehaviour
             RectTransform objectTransform = highScoreObject.AddComponent<RectTransform>();
 
             // Adds A TextMeshProUGUI Component To It
-            TMP_Text objectText = highScoreObject.AddComponent<TextMeshProUGUI>();
+            TMP_Text objectText = highScoreObject.AddComponent<TextMeshProUGUI>();  // charlie hat einen kleinen schawnz
 
             // Sets Its As A Child And Sets The Position And Size
             objectTransform.SetParent(levelButtons[i].GetComponent<RectTransform>(), false);
-            objectTransform.sizeDelta = new Vector2(200, 100);
-            objectTransform.localPosition = new Vector3(0, -100, 0);
+            objectTransform.sizeDelta = new Vector2(300, 100);
+            objectTransform.localPosition = new Vector3(0, -130, 0);
 
             // Sets The Text Settings
+            objectText.enableAutoSizing = true;
+            objectText.fontStyle = FontStyles.Bold;
             objectText.alignment = TextAlignmentOptions.Center;
-            objectText.fontSize = 45;
 
             // Makes The Text The Highscore If Played
             string highScoreText = "0";
@@ -109,6 +115,10 @@ public class MainMenu : MonoBehaviour
                 highScoreText = "Not Played";
 
             objectText.text = highScoreText;
+
+            // Set the image to show if the level has been beaten or not
+            levelButtons[i].GetComponent<Image>().sprite =
+                PlayerPrefs.GetInt($"{i + 1}BeatGame", 0) == 0 ? unbeatenIcons[i] : beatenIcons[i];
 
             // Adds A Listener To Every Button To Load A Level
             levelButtons[i].GetComponent<Button>().onClick.AddListener(LoadLevel);

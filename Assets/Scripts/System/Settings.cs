@@ -24,11 +24,6 @@ public class Settings : MonoBehaviour
     public TMP_Text resetText;
     float lastSec = -1;
 
-    //[Space(15)]
-    //public TMP_Text musicText;
-    //public TMP_Text soundText;
-    //public TMP_Text uiText;
-
     // Set The Volume Of Music With A Slider
     public void SetMusicVolumeSlider(float value)
     {
@@ -101,22 +96,17 @@ public class Settings : MonoBehaviour
     // Updates The Volume On The Volume Mixers
     public void UpdateVolume()
     {
-        //musicText.text = "Music: " + PlayerPrefs.GetFloat("Music", 100);
-        //soundText.text = "Sound Effects: " + PlayerPrefs.GetFloat("Sound", 100);
-        //uiText.text = "UI Sound: " + PlayerPrefs.GetFloat("UI", 100);
 
         musicInput.text = PlayerPrefs.GetFloat("Music", 100).ToString();
         soundInput.text = PlayerPrefs.GetFloat("Sound", 100).ToString();
         uiInput.text = PlayerPrefs.GetFloat("UI", 100).ToString();
 
-        float musicVolume = Mathf.Lerp(-70, 10, PlayerPrefs.GetFloat("Music", 100) / 100);
-        music.SetFloat("Music", musicVolume);
+        // yo code was ass, i fixed with a bunch of shitty math. I hated this, why would you make me do this (you didn't)
+        music.SetFloat("Music", Mathf.Log10(Mathf.Clamp(PlayerPrefs.GetFloat("Music", 100), 0.0001f, 100) / 100) * 20);
 
-        float soundVolume = Mathf.Lerp(-70, 10, PlayerPrefs.GetFloat("Sound", 100) / 100);
-        sound.SetFloat("Sound", soundVolume);
+        sound.SetFloat("Sound", Mathf.Log10(Mathf.Clamp(PlayerPrefs.GetFloat("Sound", 100), 0.0001f, 100) / 100) * 20);
 
-        float uiVolume = Mathf.Lerp(-70, 10, PlayerPrefs.GetFloat("UI", 100) / 100);
-        ui.SetFloat("UISound", uiVolume);
+        ui.SetFloat("UISound", Mathf.Log10(Mathf.Clamp(PlayerPrefs.GetFloat("UI", 100), 0.0001f, 100) / 100) * 20);
 
         musicSlider.value = PlayerPrefs.GetFloat("Music", 100);
         soundSlider.value = PlayerPrefs.GetFloat("Sound", 100);

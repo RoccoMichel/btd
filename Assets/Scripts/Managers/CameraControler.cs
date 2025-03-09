@@ -1,8 +1,12 @@
 using UnityEngine;
 using Cinemachine;
+using System;
+using UnityEngine.Rendering.Universal;
 
 public class CameraControler : MonoBehaviour
 {
+    public static bool debug;
+    [Space(20)]
     public bool useMaxDistance = true;
     public float xMaxDistance = 25;
     public float zMaxDistance = 25;
@@ -22,6 +26,8 @@ public class CameraControler : MonoBehaviour
     }
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F3)) debug = !debug;
+
         HandleMovement();
         HandleRotation();
         HandleZoom();
@@ -60,5 +66,66 @@ public class CameraControler : MonoBehaviour
         targetFollowOffset.y += InputManager.Instance.GetCameraZoomAmmount();
         targetFollowOffset.y = Mathf.Clamp(targetFollowOffset.y, MIN_FOLLOW_YOFFSET, MAX_FOLLOW_YOFFSET);
         cinemachineTransposer.m_FollowOffset = Vector3.Lerp(cinemachineTransposer.m_FollowOffset, targetFollowOffset, Time.deltaTime * zoomSpeed);
+    }
+
+    /*You are entering the*/
+    ////////////////////////////////////////
+    ////////////// DEBUG ZONE //////////////
+    ////////////////////////////////////////
+
+    GameObject[] allTerrain;
+    private void OnGUI()
+    {
+        if (!debug) return;
+
+        Transform camera = Camera.main.transform;
+
+        GUILayout.Label("CAMERA TRANSFORM:");
+        GUILayout.Label(transform.position.ToString());
+        GUILayout.Label(transform.eulerAngles.ToString());
+
+        GUILayout.Label("----------------");
+
+        GUILayout.Label(Mathf.Round(1 / Time.deltaTime).ToString() + " FPS");
+        GUILayout.Label("Time passed (sec): " + Time.time);
+        GUILayout.Label("Delta Time: " + Time.deltaTime);
+
+        if (GUI.Button(new Rect(10, 300, 120, 50), "Toggle PP"))
+        {
+            UnityEngine.Rendering.Universal.UniversalAdditionalCameraData uac = Camera.main.GetComponent<UnityEngine.Rendering.Universal.UniversalAdditionalCameraData>();
+            uac.renderPostProcessing = !uac.renderPostProcessing;
+        }
+        if (GUI.Button(new Rect(10, 370, 120, 50), "Toggle Terrain"))
+        {
+            try { foreach (GameObject terrain in allTerrain) terrain.SetActive(!terrain.activeSelf); }
+            catch
+            {
+                Terrain[] terrains = FindObjectsByType<Terrain>(FindObjectsSortMode.None);
+                allTerrain = Array.ConvertAll(terrains, t => t.gameObject);
+
+                foreach (GameObject terrain in allTerrain) terrain.SetActive(!terrain.activeSelf);
+            }
+        }
+        if (GUI.Button(new Rect(10, 440, 120, 50), "Infinite Wealth"))
+        {
+            FindAnyObjectByType<Session>().GetComponent<Session>().infiniteWealth = !FindAnyObjectByType<Session>().GetComponent<Session>().infiniteWealth;
+        }
+        if (GUI.Button(new Rect(10, 510, 120, 50), "Immortality"))
+        {
+            FindAnyObjectByType<Session>().GetComponent<Session>().immortal = !FindAnyObjectByType<Session>().GetComponent<Session>().immortal;
+        }
+        if (GUI.Button(new Rect(10, 580, 120, 50), "Main Menu"))
+        {
+            LoadLogic.LoadSceneByNumber(0);
+        }
+        if (GUI.Button(new Rect(10, 650, 120, 50), "Reload Level"))
+        {
+            LoadLogic.ReloadScene();
+        }
+        if (GUI.Button(new Rect(10, 790, 120, 50), "Toggle Lens PP"))
+        {
+            FindAnyObjectByType<Session>().GetComponent<Session>().damageEffect.profile.TryGet(out LensDistortion lensDistortion);
+            lensDistortion.active = !lensDistortion.active;
+        }
     }
 }

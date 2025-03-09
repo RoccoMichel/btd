@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Bibord : MonoBehaviour
 {
+    public Vector3 offsetRotation;
     public BillboardTypes billboardType;
     public enum BillboardTypes { lookAt, orthographic, lookedY }
     void Update() 
@@ -10,14 +11,34 @@ public class Bibord : MonoBehaviour
         {
             case BillboardTypes.lookAt:
                 transform.LookAt(Camera.main.transform);
+
+                if (offsetRotation == Vector3.zero) break;
+                transform.rotation = Quaternion.Euler(
+                    transform.eulerAngles.x + offsetRotation.x,
+                    transform.eulerAngles.y + offsetRotation.y,
+                    transform.eulerAngles.z + offsetRotation.z);
+
                 break;
 
             case BillboardTypes.orthographic:
                 transform.rotation = Camera.main.transform.rotation;
+
+                if (offsetRotation == Vector3.zero) break;
+                transform.rotation = Quaternion.Euler(
+                    transform.eulerAngles.x + offsetRotation.x,
+                    transform.eulerAngles.y + offsetRotation.y,
+                    transform.eulerAngles.z + offsetRotation.z);
+
                 break;
 
             case BillboardTypes.lookedY:
-                transform.rotation = Quaternion.Euler(0, transform.eulerAngles.y, 0);
+                transform.LookAt(Camera.main.transform);
+                
+                transform.rotation = Quaternion.Euler(
+                    0 + offsetRotation.x,
+                    transform.eulerAngles.y + offsetRotation.y,
+                    0 + offsetRotation.z);
+
                 break;
         }
     }
