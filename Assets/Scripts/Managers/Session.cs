@@ -35,8 +35,7 @@ public class Session : MonoBehaviour
         }
 
         // play damage effect
-        damageEffect.weight += Mathf.Clamp(Mathf.Ceil(amount), 0, maxHealth) / health;
-        if (damageEffect.weight > 1) damageEffect.weight = 1;
+        damageEffect.weight += Mathf.Clamp(Mathf.Ceil(amount) / health, 0, 1);
 
         // subtract a rounded up value between 0 and maxHealth from health
         health -= Mathf.Clamp(Mathf.Ceil(amount), 0, maxHealth);

@@ -1159,8 +1159,12 @@ PrefabInstance:
       value: SYSTEM
       objectReference: {fileID: 0}
     - target: {fileID: 8599412775221659674, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
-      propertyPath: priority
+      propertyPath: weight
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8599412775221659674, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
+      propertyPath: priority
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
