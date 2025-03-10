@@ -1524,10 +1524,6 @@ PrefabInstance:
       value: CameraControler
       objectReference: {fileID: 0}
     - target: {fileID: 8714859102808792780, guid: db605b050e6706c4ca2c309643f24026, type: 3}
-      propertyPath: InGameVolume
-      value: 
-      objectReference: {fileID: 772087620}
-    - target: {fileID: 8714859102808792780, guid: db605b050e6706c4ca2c309643f24026, type: 3}
       propertyPath: cinemachineVirtualCamera
       value: 
       objectReference: {fileID: 1437885067}

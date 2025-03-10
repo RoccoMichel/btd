@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6707482871443979135}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.43464753, y: -0, z: -0, w: 0.9006007}
+  m_LocalRotation: {x: 0.4346496, y: 0, z: 0, w: 0.90059966}
   m_LocalPosition: {x: 0, y: 10.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -44,4 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e29e4026592fc84d962c91a3cd7afaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useMaxDistance: 1
+  xMaxDistance: 25
+  zMaxDistance: 25
   cinemachineVirtualCamera: {fileID: 0}
+  zoomSpeed: 5

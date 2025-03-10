@@ -47,7 +47,7 @@ public class ShopItem : MonoBehaviour
             buildingSystem.cat = Instantiate(structure);
             buildingSystem.cat.GetComponent<CatBase>().FineWaveManager();
             buildingSystem.VisualizeRange();
-            cost = Mathf.RoundToInt(cost * 1.2f);
+            cost = Mathf.RoundToInt(cost * 1.5f);
             price.text = $"$ {cost}";
         }
         else PurchaseFail();
