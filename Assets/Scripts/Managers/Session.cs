@@ -22,6 +22,7 @@ public class Session : MonoBehaviour
     private void Update()
     {
         damageEffect.weight = Mathf.Lerp(damageEffect.weight, 0, Time.deltaTime);
+        damageEffect.weight = Mathf.Clamp(damageEffect.weight, 0, 1);
     }
 
     public void Damage(float amount)
@@ -35,7 +36,7 @@ public class Session : MonoBehaviour
         }
 
         // play damage effect
-        damageEffect.weight += Mathf.Clamp(Mathf.Ceil(amount) / health, 0, 1);
+        damageEffect.weight += Mathf.Ceil(amount) / health;
 
         // subtract a rounded up value between 0 and maxHealth from health
         health -= Mathf.Clamp(Mathf.Ceil(amount), 0, maxHealth);

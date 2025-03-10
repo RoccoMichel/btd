@@ -98,7 +98,7 @@ public class RatBase : MonoBehaviour
     public virtual void Damage(float amount)
     {
         health -= amount;
-        DamiitsEfeckt.Play();
+        //DamiitsEfeckt.Play();
     }
     public virtual void DamageNoEfeckt(float amount)
     {
@@ -143,8 +143,8 @@ public class RatBase : MonoBehaviour
     public virtual void OnUpdate()
     {
         if (health <= 0) Kill();
-        if (spline.NormalizedTime > 0.98f) Score();
         t = spline.NormalizedTime;
+        if (t > 0.98f) Score();
     }
 
     // posen efeckt

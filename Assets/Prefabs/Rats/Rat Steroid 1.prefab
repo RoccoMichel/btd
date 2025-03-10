@@ -5135,6 +5135,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 8826761745171ee4a8409917cf86f254, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: 8826761745171ee4a8409917cf86f254, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: f41aa73ed53c3b14eb42cf02e1bc7b31, type: 2}
@@ -5145,6 +5149,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8826761745171ee4a8409917cf86f254, type: 3}
       propertyPath: m_Name
       value: untitled
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8826761745171ee4a8409917cf86f254, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3196138216412401344, guid: 8826761745171ee4a8409917cf86f254, type: 3}
       propertyPath: m_LocalRotation.w

@@ -5079,12 +5079,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 3204efa302c9ff842b31baa3e4f376ca, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3204efa302c9ff842b31baa3e4f376ca, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9651e74890e69ff42b0e963e257984fe, type: 2}
     - target: {fileID: 919132149155446097, guid: 3204efa302c9ff842b31baa3e4f376ca, type: 3}
       propertyPath: m_Name
       value: Mutant rat
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3204efa302c9ff842b31baa3e4f376ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
