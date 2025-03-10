@@ -152,6 +152,7 @@ public class CatBase : MonoBehaviour
     }
     void Update()
     {
+
         // Should run when enemies die or get spawned in : temp
         if (!isLure)
         {

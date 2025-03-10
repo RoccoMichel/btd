@@ -275,7 +275,7 @@ MonoBehaviour:
   isColliding: 0
   AtackSond: {fileID: 0}
   canAtacke: 0
-  isLure: 0
+  isLure: 1
   Enemies: []
   waveMan: {fileID: 0}
   ani: {fileID: 0}
