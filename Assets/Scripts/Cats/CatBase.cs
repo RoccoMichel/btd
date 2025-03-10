@@ -76,26 +76,28 @@ public class CatBase : MonoBehaviour
     }
     RatBase FindTarget()
     {
-        float minDis = Mathf.Infinity;
-        int currentTarget = 0;
-        for (int i = 0; i < Enemies.Count; i++)
+        if (target == null || Vector3.Distance(target.transform.position, transform.position) > range)
         {
-            float dis = Vector3.Distance(Enemies[i].transform.position, transform.position);
-            if (dis < minDis)
+            float minDis = Mathf.Infinity;
+            int currentTarget = 0;
+            for (int i = 0; i < Enemies.Count; i++)
             {
-                currentTarget = i;
-                minDis = dis;
+                float dis = Vector3.Distance(Enemies[i].transform.position, transform.position);
+                if (dis < minDis)
+                {
+                    currentTarget = i;
+                    minDis = dis;
+                }
+            }
+
+            if (Enemies.Count > 0 && Vector3.Distance(transform.position, Enemies[currentTarget].transform.position) < range)
+            {
+                transform.LookAt(Enemies[currentTarget].transform);
+                return Enemies[currentTarget];
             }
         }
 
-        if (Enemies.Count > 0 && Vector3.Distance(transform.position, Enemies[currentTarget].transform.position) < range)
-        {
-            transform.LookAt(Enemies[currentTarget].transform);
-            return Enemies[currentTarget];
-        }
-
         return null;
-
     }
     Vector3 findCloseSplinePos()
     {
@@ -120,7 +122,7 @@ public class CatBase : MonoBehaviour
         }
         else
         {
-            Transform Closet = FindTarget().transform;
+            Transform Closet = target.transform;
             Vector3 oldPos = spawnPos.position;
             spawnPos.position = new Vector3(oldPos.x, Closet.position.y, oldPos.z);
             spawnPos.LookAt(Closet);

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4772261539565038271}
   - component: {fileID: 6207711501684155266}
   - component: {fileID: 2054361037597917895}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4905,7 +4905,7 @@ GameObject:
   - component: {fileID: 5788835019495883656}
   - component: {fileID: 3322255633057438394}
   - component: {fileID: -3101570167342603449}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rat Normal
   m_TagString: Rat
   m_Icon: {fileID: 0}
@@ -4955,7 +4955,7 @@ MonoBehaviour:
   ratMesh: {fileID: 0}
   IsDrugdiler: 0
   ani: {fileID: 8413193543720106235}
-  deathParam: Dead
+  deathParam: 
   deathTimeAfterAni: 0.2
   BufeRat: {fileID: 0}
   deathSound:
@@ -4984,7 +4984,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -5176,6 +5176,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9226439adce5f944db877aa4e103179f, type: 3}
       propertyPath: m_Name
       value: Rat Normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9226439adce5f944db877aa4e103179f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9226439adce5f944db877aa4e103179f, type: 3}
       propertyPath: m_IsActive

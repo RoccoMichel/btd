@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5788835019495883656}
   - component: {fileID: 3322255633057438394}
   - component: {fileID: 9036324077626113151}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rat Steroid 1
   m_TagString: Rat
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ MonoBehaviour:
   ratMesh: {fileID: 0}
   IsDrugdiler: 1
   ani: {fileID: 7603502954227691762}
-  deathParam: Dead
+  deathParam: 
   deathTimeAfterAni: 0.2
   BufeRat: {fileID: 4825668182265712296, guid: adc87514700c40b4eb5933ba5bb8ab5f, type: 3}
   deathSound: []
@@ -88,7 +88,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -140,7 +140,7 @@ Rigidbody:
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 1730945356612890673}
   - component: {fileID: 4827331508833922498}
   - component: {fileID: 7008808583746632228}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5106,6 +5106,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 8826761745171ee4a8409917cf86f254, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -7579103995338469470, guid: 8826761745171ee4a8409917cf86f254, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -5477749408508380018, guid: 8826761745171ee4a8409917cf86f254, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.00199
@@ -5151,6 +5159,10 @@ PrefabInstance:
       value: untitled
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8826761745171ee4a8409917cf86f254, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8826761745171ee4a8409917cf86f254, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -5161,6 +5173,14 @@ PrefabInstance:
     - target: {fileID: 3196138216412401344, guid: 8826761745171ee4a8409917cf86f254, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149391955616736821, guid: 8826761745171ee4a8409917cf86f254, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8609243906049295167, guid: 8826761745171ee4a8409917cf86f254, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

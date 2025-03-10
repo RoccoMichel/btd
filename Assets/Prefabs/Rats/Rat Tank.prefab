@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5788835019495883656}
   - component: {fileID: 3322255633057438394}
   - component: {fileID: -5595500191448851335}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rat Tank
   m_TagString: Rat
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 9056370282034449116}
   - component: {fileID: 1340501757557702036}
   - component: {fileID: 10041450549035479}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5205,6 +5205,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rAT (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 42dcb49344b107e44bbb57b889a1d3ce, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5295,6 +5299,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rAT (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 42dcb49344b107e44bbb57b889a1d3ce, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5376,6 +5384,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: aa4a252397e7f8f468219ecd3388ee91, type: 3}
       propertyPath: m_Name
       value: rat in box
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aa4a252397e7f8f468219ecd3388ee91, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5466,6 +5478,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 42dcb49344b107e44bbb57b889a1d3ce, type: 3}
       propertyPath: m_Name
       value: rAT (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 42dcb49344b107e44bbb57b889a1d3ce, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

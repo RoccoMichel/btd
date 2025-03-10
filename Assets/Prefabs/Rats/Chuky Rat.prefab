@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6730537279312695796}
   - component: {fileID: 5788835019495883656}
   - component: {fileID: 3322255633057438394}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Chuky Rat
   m_TagString: Rat
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 1810130424302575693}
   - component: {fileID: 7184122908193361090}
   - component: {fileID: 2552507098277360454}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5093,6 +5093,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 02570e5dfd7b6de4ab9378ee20a77545, type: 3}
       propertyPath: m_Name
       value: BUFF RAT
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 02570e5dfd7b6de4ab9378ee20a77545, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

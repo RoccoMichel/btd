@@ -21,8 +21,9 @@ public class Session : MonoBehaviour
 
     private void Update()
     {
-        damageEffect.weight = Mathf.Lerp(damageEffect.weight, 0, Time.deltaTime);
-        damageEffect.weight = Mathf.Clamp(damageEffect.weight, 0, 1);
+        damageEffect.weight = Mathf.Lerp(damageEffect.weight, 0.001f, Time.deltaTime);
+        if (damageEffect.weight > 1) damageEffect.weight = 1;
+        if (damageEffect.weight < 0) damageEffect.weight = 0;
     }
 
     public void Damage(float amount)
