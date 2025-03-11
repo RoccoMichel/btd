@@ -89,8 +89,8 @@ public class CameraControler : MonoBehaviour
         GUILayout.Label("----------------");
 
         GUILayout.Label(Mathf.Round(1 / Time.deltaTime).ToString() + " FPS");
-        GUILayout.Label("Time passed (sec): " + Time.time);
-        GUILayout.Label("Delta Time: " + Time.deltaTime);
+        GUILayout.Label("Level time passed (sec): " + Time.timeSinceLevelLoad);
+
 
         if (GUI.Button(new Rect(10, 300, 120, 50), "Toggle PP"))
         {
@@ -116,18 +116,13 @@ public class CameraControler : MonoBehaviour
         {
             FindAnyObjectByType<Session>().GetComponent<Session>().immortal = !FindAnyObjectByType<Session>().GetComponent<Session>().immortal;
         }
-        if (GUI.Button(new Rect(10, 580, 120, 50), "Main Menu"))
-        {
-            LoadLogic.LoadSceneByNumber(0);
-        }
-        if (GUI.Button(new Rect(10, 650, 120, 50), "Reload Level"))
+        if (GUI.Button(new Rect(10, 580, 120, 50), "Reload Level"))
         {
             LoadLogic.ReloadScene();
         }
-        if (GUI.Button(new Rect(10, 790, 120, 50), "Toggle Lens PP"))
+        if (GUI.Button(new Rect(10, 650, 120, 50), "Main Menu"))
         {
-            FindAnyObjectByType<Session>().GetComponent<Session>().damageEffect.profile.TryGet(out LensDistortion lensDistortion);
-            lensDistortion.active = !lensDistortion.active;
+            LoadLogic.LoadSceneByNumber(0);
         }
     }
 }

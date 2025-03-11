@@ -107,6 +107,8 @@ public class GameUI : MonoBehaviour
     {
         if (settings == null) return;
 
+        Time.timeScale = 1;
+
         settings.SetActive(!settings.activeSelf);
         pauseMenu.SetActive(false);
         shop.SetActive(!settings.activeSelf);
@@ -115,6 +117,8 @@ public class GameUI : MonoBehaviour
     public void ToggleSettings(bool state)
     {
         if (settings == null) return;
+
+        Time.timeScale = 1;
 
         settings.SetActive(state);
         pauseMenu.SetActive(false);
