@@ -59,9 +59,9 @@ public class CameraControler : MonoBehaviour
         Vector3 rotationVector = new Vector3(0, 0, 0);
         rotationVector.y = InputManager.Instance.GetCameraRotateAmmount();
 
-        float rotationSpeed = 100f;
+        float rotationSpeed = 1.5f;
 
-        transform.eulerAngles += rotationVector * rotationSpeed * Time.deltaTime;
+        transform.eulerAngles += rotationVector * rotationSpeed;
     }
     private void HandleZoom()
     {
