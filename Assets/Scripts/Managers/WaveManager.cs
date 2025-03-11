@@ -3,6 +3,7 @@ using UnityEngine;
 using NaughtyAttributes;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using static UnityEngine.Rendering.HableCurve;
 
 public class WaveManager : MonoBehaviour
 {
@@ -26,12 +27,37 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private Wave[] waves;
     private List<float> localCounters = new List<float>();
 
+    public List<RatBase> BufNorm, BufChoky, BufMutent, BufSterods, BufTacnk;
+
 
     private void Start()
     {
         StartNextWave();
-
     }
+
+    void SponeNewRat(GameObject Rat)
+    {
+        GameObject rat = Instantiate(Rat, GetSpawnPosition(), Quaternion.identity, transform);
+        rat.GetComponent<RatBase>().session = session;
+        rat.GetComponent<RatBase>().OnStart(0.01f);
+    }
+    void SponeOldRat(int type)
+    {
+        if (type == 0) { BufNorm[0].OnStart(0.01f); BufNorm.RemoveAt(0); return; }
+        if (type == 1) { BufChoky[0].OnStart(0.01f); BufChoky.RemoveAt(0); return; }
+        if (type == 2) { BufMutent[0].OnStart(0.01f); BufMutent.RemoveAt(0); return; }
+        if (type == 3) { BufTacnk[0].OnStart(0.01f); BufTacnk.RemoveAt(0); return; }
+        if (type == 4) { BufSterods[0].OnStart(0.01f); BufSterods.RemoveAt(0); return; }
+    }
+
+    public void SponeRat(GameObject rat)
+    {
+        if (rat.name == "Rat Normal" && BufNorm.Count != 0) { SponeOldRat(0); return;};
+        if (rat.name == "RatNormal" && BufChoky.Count != 0) { SponeOldRat(1); return;};
+        if (rat.name == "RatNormal" && BufMutent.Count != 0) { SponeOldRat(2); return;};
+        if (rat.name == "RatNormal" && BufTacnk.Count != 0) { SponeOldRat(3); return;};
+    }
+
     private void StartWave(int waveIndex)
     {
         GameUI.Instance.UpdateWavesDisplay(currentWaveIndex + 1);
@@ -118,6 +144,7 @@ public class WaveManager : MonoBehaviour
 
             if (timeSinceSegmentStart / (1f / segment.spawnFrequency) > localCounters[i])
             {
+                SponeRat(segment.prefab);
                 GameObject rat = Instantiate(segment.prefab, GetSpawnPosition(), Quaternion.identity, transform);
                 rat.GetComponent<RatBase>().session = session;
                 rat.GetComponent<RatBase>().OnStart(0.01f);
