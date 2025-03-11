@@ -34,7 +34,6 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1744694610485694619}
-  - {fileID: 1724486046873892042}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -24.208, y: 0, z: 0}
 --- !u!135 &265688832539884319
@@ -131,6 +130,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  mesh: {fileID: 611726890093652980}
 --- !u!1 &8233882895728590566
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,12 +157,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8233882895728590566}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.009, y: 0.357, z: 0.753}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalRotation: {x: -0.45105037, y: -0, z: -0, w: 0.8924985}
+  m_LocalPosition: {x: 0.0024323852, y: -0.032906428, z: 0.092161074}
+  m_LocalScale: {x: 0.02702703, y: 0.0138647435, z: 0.017837482}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1433930492432655093}
+  m_Father: {fileID: 1744694610485694619}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &1413055808753751134
 ParticleSystem:
@@ -5038,9 +5038,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: f6313a629feafa24bb3319981af2d829, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1724486046873892042}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6313a629feafa24bb3319981af2d829, type: 3}
+--- !u!23 &611726890093652980 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: f6313a629feafa24bb3319981af2d829, type: 3}
+  m_PrefabInstance: {fileID: 2286948985785857904}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1744694610485694619 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f6313a629feafa24bb3319981af2d829, type: 3}

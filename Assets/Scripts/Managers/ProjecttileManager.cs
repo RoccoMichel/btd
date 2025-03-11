@@ -31,9 +31,17 @@ public class ProjecttileManager : MonoBehaviour
     List<GameObject> poiseonedRats = new List<GameObject>();
 
     float timeAlive = 0;
-
+    public MeshRenderer mesh;
     private void Update()
     {
+        if (mesh != null)
+        {
+            Vector3 dir = (transform.position - Camera.main.transform.position).normalized;
+            Vector3 camDir = Camera.main.transform.forward;
+            if (Vector3.Dot(camDir, dir) < 0.5f) mesh.gameObject.SetActive(false);
+            else mesh.gameObject.SetActive(true);
+        }
+
         transform.localScale = startSacale * SacleOwerTime.Evaluate(timeAlive/lifeTime);
 
         // <Code By Charlie>

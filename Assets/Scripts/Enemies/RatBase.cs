@@ -2,6 +2,7 @@ using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.OnScreen;
 using UnityEngine.Splines;
 
 public class RatBase : MonoBehaviour
@@ -47,10 +48,7 @@ public class RatBase : MonoBehaviour
 
     void Start()
     {
-        //try { normalMat = ratMesh.material; }
-        //catch { Debug.LogError("Material couldn't be assigned"); }        
-
-        AS = GetComponent<AudioSource>();
+        OnStart(0);
     }
     void Update()
     {
@@ -110,6 +108,10 @@ public class RatBase : MonoBehaviour
     /// </summary>
     public virtual void OnStart(float startPos)
     {
+        ratMesh = GetComponentInChildren<MeshRenderer>();
+
+        AS = GetComponent<AudioSource>();
+
         if (!IsDrugdiler)
         {
             ofsert = new Vector3
@@ -145,6 +147,11 @@ public class RatBase : MonoBehaviour
         if (health <= 0) Kill();
         t = spline.NormalizedTime;
         if (t > 0.98f) Score();
+
+        Vector3 dir = (transform.position - Camera.main.transform.position).normalized;
+        Vector3 camDir = Camera.main.transform.forward;
+        if (Vector3.Dot(camDir, dir) < 0.5f) ratMesh.gameObject.SetActive(false);
+        else ratMesh.gameObject.SetActive(true);
     }
 
     // posen efeckt
