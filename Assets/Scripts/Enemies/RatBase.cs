@@ -27,6 +27,7 @@ public class RatBase : MonoBehaviour
     public GameObject BufeRat;
     public List<AudioClip> deathSound;
     public ParticleSystem DamiitsEfeckt;
+    public string typ;
     AudioSource AS;
     public float t;
 
@@ -62,6 +63,11 @@ public class RatBase : MonoBehaviour
     {
         //AS.clip = deathSound[Random.Range(0, deathSound.Count - 1)];
         //AS.Play();
+
+        WaveManager whaw = GetComponentInParent<WaveManager>();
+        if (typ == "norm") whaw.BufNorm.Add(this);
+        if (typ == "choky") whaw.BufChoky.Add(this);
+        if (typ == "mutent") whaw.BufMutent.Add(this);
 
         spline.Pause();
 
