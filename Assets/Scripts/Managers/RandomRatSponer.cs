@@ -36,8 +36,8 @@ public class RandomRatSponer : MonoBehaviour
 
             difecolty += Time.deltaTime * 0.01f;
 
-            timer += Time.deltaTime * difecolty * 0.2f;
-            totolTimer += Time.deltaTime* difecolty * 0.2f;
+            timer += Time.deltaTime * 10;
+            totolTimer += Time.deltaTime * 10;
             if (Mathf.Round(timer) != 0)
             {
                 int time = Mathf.RoundToInt(timer);

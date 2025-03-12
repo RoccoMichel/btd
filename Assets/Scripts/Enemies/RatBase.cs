@@ -30,7 +30,7 @@ public class RatBase : MonoBehaviour
     public string typ;
     AudioSource AS;
     public float t;
-
+    float healthSave = 0;
 
     void OnCollisionEnter(Collision collision)
     {
@@ -65,9 +65,11 @@ public class RatBase : MonoBehaviour
         //AS.Play();
 
         WaveManager whaw = GetComponentInParent<WaveManager>();
-        if (typ == "norm") whaw.BufNorm.Add(this);
+        if (typ == "normal") whaw.BufNorm.Add(this);
         if (typ == "choky") whaw.BufChoky.Add(this);
-        if (typ == "mutent") whaw.BufMutent.Add(this);
+        if (typ == "mutant") whaw.BufMutent.Add(this);
+        if (typ == "steroid") whaw.BufSterods.Add(this);
+        if (typ == "tank") whaw.BufTacnk.Add(this);
 
         spline.Pause();
 
@@ -79,11 +81,8 @@ public class RatBase : MonoBehaviour
             time = ani.GetCurrentAnimatorStateInfo(0).length;
         }
 
-        gameObject.tag = "Untagged";
-
         session.Profit(value);
-        Destroy(gameObject, deathTimeAfterAni);
-        health = Mathf.Infinity;
+        gameObject.SetActive(false);
     }
 
     /// <summary>
@@ -109,13 +108,24 @@ public class RatBase : MonoBehaviour
         health -= amount;
     }
 
+    public void OnReStart(float startPos)
+    {
+        health = healthSave;
+        var container = FindAnyObjectByType<SplineContainer>();
+        gameObject.SetActive(true);
+        spline.Container = container;
+        spline.MaxSpeed = speed;
+        spline.NormalizedTime = startPos;
+
+        spline.Play();
+    }
     /// <summary>
     /// Base method for logic that will run when instance is created
     /// </summary>
     public virtual void OnStart(float startPos)
     {
         ratMesh = GetComponentInChildren<MeshRenderer>();
-
+        healthSave = health;
         AS = GetComponent<AudioSource>();
 
         if (!IsDrugdiler)
@@ -163,16 +173,14 @@ public class RatBase : MonoBehaviour
     // posen efeckt
     void acivatePosenEfect()
     {
-        MeshRenderer mech = GetComponentInChildren<MeshRenderer>();
-        Material posed = Instantiate(mech.material);
-        mech.material = posed;
+        Material posed = Instantiate(ratMesh.material);
+        ratMesh.material = posed;
 
         posed.color = new Color(0f, 1f, 0f);
     }
     void DeAcivatePosenEfect()
     {
-        MeshRenderer mech = GetComponentInChildren<MeshRenderer>();
-        mech.material.color = Color.white;
+        ratMesh.material.color = Color.white;
     }
     public IEnumerator Poisone()
     {
