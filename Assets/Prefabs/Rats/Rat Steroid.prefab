@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3322255633057438394}
   - component: {fileID: 9036324077626113151}
   m_Layer: 7
-  m_Name: Rat Steroid 1
+  m_Name: Rat Steroid
   m_TagString: Rat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,6 +69,7 @@ MonoBehaviour:
   BufeRat: {fileID: 4825668182265712296, guid: adc87514700c40b4eb5933ba5bb8ab5f, type: 3}
   deathSound: []
   DamiitsEfeckt: {fileID: 4827331508833922498}
+  typ: steroid
   t: 0
 --- !u!33 &6730537279312695796
 MeshFilter:

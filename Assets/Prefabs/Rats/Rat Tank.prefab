@@ -77,6 +77,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: aea7916139b911e4398fefddc88f7d15, type: 3}
   - {fileID: 8300000, guid: d002ed791cfa2c14ea4499d5928402c0, type: 3}
   DamiitsEfeckt: {fileID: 1340501757557702036}
+  typ: tank
   t: 0
   spawnAmmount: 1
   rats:

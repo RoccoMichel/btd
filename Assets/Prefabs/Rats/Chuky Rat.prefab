@@ -68,6 +68,7 @@ MonoBehaviour:
   BufeRat: {fileID: 0}
   deathSound: []
   DamiitsEfeckt: {fileID: 7184122908193361090}
+  typ: chuky
   t: 0
 --- !u!33 &6730537279312695796
 MeshFilter:

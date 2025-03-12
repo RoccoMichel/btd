@@ -4965,6 +4965,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: aea7916139b911e4398fefddc88f7d15, type: 3}
   - {fileID: 8300000, guid: d002ed791cfa2c14ea4499d5928402c0, type: 3}
   DamiitsEfeckt: {fileID: 6207711501684155266}
+  typ: normal
   t: 0
 --- !u!33 &6730537279312695796
 MeshFilter:

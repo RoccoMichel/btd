@@ -3152,6 +3152,11 @@ MonoBehaviour:
     - tStartEnd: {x: 90, y: 100}
       spawnFrequency: 0.1
       prefab: {fileID: 4825668182265712296, guid: 1c6a6a8a9c04aaf4d9fc45350e669d33, type: 3}
+  BufNorm: []
+  BufChoky: []
+  BufMutent: []
+  BufSterods: []
+  BufTacnk: []
 --- !u!114 &602826314 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4103068700183774869, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
@@ -8536,7 +8541,7 @@ Light:
   serializedVersion: 11
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 2
+  m_Intensity: 3
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

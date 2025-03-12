@@ -9421,7 +9421,7 @@ Light:
   serializedVersion: 11
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 2
+  m_Intensity: 3
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -11076,6 +11076,11 @@ MonoBehaviour:
     - tStartEnd: {x: 0, y: 100}
       spawnFrequency: 4.69
       prefab: {fileID: 4825668182265712296, guid: 6a2b8ba1e932c774aae0168b5f4cfe22, type: 3}
+  BufNorm: []
+  BufChoky: []
+  BufMutent: []
+  BufSterods: []
+  BufTacnk: []
 --- !u!4 &1677913094
 Transform:
   m_ObjectHideFlags: 0
