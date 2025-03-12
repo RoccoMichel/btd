@@ -611,6 +611,10 @@ PrefabInstance:
       value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 2235105960903188471, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
+      propertyPath: currentWaveIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2235105960903188471, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
       propertyPath: waves.Array.size
       value: 10
       objectReference: {fileID: 0}
@@ -2920,6 +2924,18 @@ MonoBehaviour:
   difecolty: 5
   timer: 0
   StartRandomSponing: 9
+  waveManager: {fileID: 602826309}
+--- !u!114 &602826309 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2235105960903188471, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
+  m_PrefabInstance: {fileID: 91642662}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602826294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7673ec615f517354fa4522a2ed7e5162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &606650843
 GameObject:
   m_ObjectHideFlags: 0

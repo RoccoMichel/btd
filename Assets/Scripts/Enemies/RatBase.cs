@@ -92,7 +92,14 @@ public class RatBase : MonoBehaviour
     {
 
         session.Damage(damage);
-        Destroy(gameObject);
+        WaveManager whaw = GetComponentInParent<WaveManager>();
+        if (typ == "normal") whaw.BufNorm.Add(this);
+        if (typ == "choky") whaw.BufChoky.Add(this);
+        if (typ == "mutant") whaw.BufMutent.Add(this);
+        if (typ == "steroid") whaw.BufSterods.Add(this);
+        if (typ == "tank") whaw.BufTacnk.Add(this);
+        gameObject.SetActive(false);
+
     }
 
     /// <summary>
@@ -124,7 +131,6 @@ public class RatBase : MonoBehaviour
     /// </summary>
     public virtual void OnStart(float startPos)
     {
-        ratMesh = GetComponentInChildren<MeshRenderer>();
         healthSave = health;
         AS = GetComponent<AudioSource>();
 
@@ -133,11 +139,11 @@ public class RatBase : MonoBehaviour
             ofsert = new Vector3
             {
                 x = Random.Range(-.2f, .2f),
-                y = GetComponentInChildren<MeshRenderer>().transform.localPosition.y + .25f,
+                y = .25f,
                 z = 0
 
             };
-            GetComponentInChildren<MeshRenderer>().transform.localPosition = ofsert;
+            ratMesh.transform.localPosition = ofsert;
         }
 
         transform.SetParent(FindAnyObjectByType<WaveManager>().transform);
@@ -169,7 +175,12 @@ public class RatBase : MonoBehaviour
         if (Vector3.Dot(camDir, dir) < 0.5f) ratMesh.gameObject.SetActive(false);
         else ratMesh.gameObject.SetActive(true);
     }
-
+    public void SetBigRat(float scaleProsent)
+    {
+        health *= scaleProsent;
+        speed *= scaleProsent;
+        damage *= scaleProsent;
+    }
     // posen efeckt
     void acivatePosenEfect()
     {
@@ -185,10 +196,9 @@ public class RatBase : MonoBehaviour
     public IEnumerator Poisone()
     {
         acivatePosenEfect();
-        MeshRenderer mech = GetComponentInChildren<MeshRenderer>();
         for (float time = 0; time < posendTime; time += Time.deltaTime)
         {
-            mech.material.color = Color.Lerp(Color.green, Color.white, time/posendTime);
+            ratMesh.material.color = Color.Lerp(Color.green, Color.white, time/posendTime);
             DamageNoEfeckt(poisoneDamage * Time.deltaTime);
             yield return new WaitForEndOfFrame();
         }

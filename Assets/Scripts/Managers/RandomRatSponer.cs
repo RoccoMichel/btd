@@ -9,23 +9,15 @@ public class RandomRatSponer : MonoBehaviour
     public float difecolty;
     public float timer = 0;
     public int StartRandomSponing = 11;
+    public WaveManager waveManager;
     float totolTimer = 0;
     void SpaneRat(int ratTyp)
     {
-        GameObject rat = Instantiate(rats[ratTyp], transform.position, transform.rotation);
-        rat.GetComponent<RatBase>().session = GetComponent<Session>();
-        rat.GetComponent<RatBase>().OnStart(0.01f);
+        //GameObject rat = Instantiate(rats[ratTyp], transform.position, transform.rotation);
+        //rat.GetComponent<RatBase>().session = GetComponent<Session>();
+        //rat.GetComponent<RatBase>().OnStart(0.01f);
 
-       if (difecolty > 2f) SetBigRat(rat, Mathf.Log(1 + Random.Range(0.25f, 1f) * difecolty, 2));
-    }
-
-    void SetBigRat(GameObject rat, float scaleProsent)
-    {
-        rat.GetComponent<RatBase>().health *= scaleProsent;
-        rat.GetComponent<RatBase>().speed *= scaleProsent;
-        //rat.GetComponent<RatBase>().value *= scaleProsent;
-        rat.GetComponent<RatBase>().damage *= scaleProsent;
-        //rat.transform.localScale *= scaleProsent;
+        waveManager.SponeRat(rats[ratTyp], Mathf.Log(1 + Random.Range(0.25f, 2f) * difecolty, 2));
     }
 
     void Update()
@@ -36,8 +28,8 @@ public class RandomRatSponer : MonoBehaviour
 
             difecolty += Time.deltaTime * 0.01f;
 
-            timer += Time.deltaTime * 10;
-            totolTimer += Time.deltaTime * 10;
+            timer += Time.deltaTime * 2;
+            totolTimer += Time.deltaTime * 2;
             if (Mathf.Round(timer) != 0)
             {
                 int time = Mathf.RoundToInt(timer);

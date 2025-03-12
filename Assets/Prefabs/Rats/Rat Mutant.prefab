@@ -60,7 +60,7 @@ MonoBehaviour:
   posendTime: 0
   poisoneDamage: 0
   poisonedMat: {fileID: 2100000, guid: 17595e54bba9a544dae08735b880bc1b, type: 2}
-  ratMesh: {fileID: 0}
+  ratMesh: {fileID: 4150139319734067770}
   IsDrugdiler: 0
   ani: {fileID: 2485343558227362490}
   deathParam: 
@@ -5137,5 +5137,10 @@ Animator:
 --- !u!4 &3013872859375114581 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3204efa302c9ff842b31baa3e4f376ca, type: 3}
+  m_PrefabInstance: {fileID: 3339933801496444606}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4150139319734067770 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 3204efa302c9ff842b31baa3e4f376ca, type: 3}
   m_PrefabInstance: {fileID: 3339933801496444606}
   m_PrefabAsset: {fileID: 0}

@@ -33,7 +33,7 @@ public class PreformensMetrrik : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKey(KeyCode.F3)) prefomMetrick = !prefomMetrick;
+        if (Input.GetKeyDown(KeyCode.F3)) prefomMetrick = !prefomMetrick;
 
         if (prefomMetrick)
         {

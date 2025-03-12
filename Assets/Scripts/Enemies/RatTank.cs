@@ -8,6 +8,7 @@ public class RatTank : RatBase
 
     public override void OnStart(float startPos)
     {
+        ratMesh = GetComponentInChildren<MeshRenderer>();
         transform.SetParent(FindAnyObjectByType<WaveManager>().transform);
         var container = FindAnyObjectByType<SplineContainer>();
         if (container == null)

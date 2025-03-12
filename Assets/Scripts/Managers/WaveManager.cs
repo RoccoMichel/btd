@@ -35,27 +35,32 @@ public class WaveManager : MonoBehaviour
         StartNextWave();
     }
 
-    void SponeNewRat(GameObject Rat)
+    void SponeNewRat(GameObject Rat, float scale)
     {
         GameObject rat = Instantiate(Rat, GetSpawnPosition(), Quaternion.identity, transform);
         rat.GetComponent<RatBase>().session = session;
         rat.GetComponent<RatBase>().OnStart(0.01f);
+        rat.GetComponent<RatBase>().SetBigRat(scale);
     }
-    void SponeOldRat(int type)
+    void SponeOldRat(int type, float scale)
     {
-        if (type == 0) { BufNorm[0].OnStart(0.01f); BufNorm.RemoveAt(0); return; }
-        if (type == 1) { BufChoky[0].OnStart(0.01f); BufChoky.RemoveAt(0); return; }
-        if (type == 2) { BufMutent[0].OnStart(0.01f); BufMutent.RemoveAt(0); return; }
-        if (type == 3) { BufTacnk[0].OnStart(0.01f); BufTacnk.RemoveAt(0); return; }
-        if (type == 4) { BufSterods[0].OnStart(0.01f); BufSterods.RemoveAt(0); return; }
+        if (type == 0) { BufNorm[0].OnStart(0.01f); BufNorm[0].SetBigRat(scale); BufNorm.RemoveAt(0); return; }
+        if (type == 1) { BufChoky[0].OnStart(0.01f); BufChoky[0].SetBigRat(scale); BufChoky.RemoveAt(0); return; }
+        if (type == 2) { BufMutent[0].OnStart(0.01f); BufMutent[0].SetBigRat(scale); BufMutent.RemoveAt(0); return; }
+        if (type == 3) { BufSterods[0].OnStart(0.01f); BufSterods[0].SetBigRat(scale); BufSterods.RemoveAt(0); return; }
+        if (type == 4) { BufTacnk[0].OnStart(0.01f); BufTacnk[0].SetBigRat(scale); BufTacnk.RemoveAt(0); return; }
     }
 
-    public void SponeRat(GameObject rat)
+    public void SponeRat(GameObject rat, float scale)
     {
-        if (rat.name == "Rat Normal" && BufNorm.Count != 0) { SponeOldRat(0); return;};
-        if (rat.name == "RatNormal" && BufChoky.Count != 0) { SponeOldRat(1); return;};
-        if (rat.name == "RatNormal" && BufMutent.Count != 0) { SponeOldRat(2); return;};
-        if (rat.name == "RatNormal" && BufTacnk.Count != 0) { SponeOldRat(3); return;};
+        if (rat.name == "Rat Normal" && BufNorm.Count != 0) { SponeOldRat(0, scale); return;};
+        if (rat.name == "Chuky Rat" && BufChoky.Count != 0) { SponeOldRat(1, scale); return;};
+        if (rat.name == "Rat Mutant" && BufMutent.Count != 0) { SponeOldRat(2, scale); return;};
+        if (rat.name == "Rat Steroid" && BufTacnk.Count != 0) { SponeOldRat(3, scale); return;};
+        if (rat.name == "Rat Tank" && BufTacnk.Count != 0) { SponeOldRat(4, scale); return; };
+
+
+        SponeNewRat(rat, scale);
     }
 
     private void StartWave(int waveIndex)
@@ -144,12 +149,7 @@ public class WaveManager : MonoBehaviour
 
             if (timeSinceSegmentStart / (1f / segment.spawnFrequency) > localCounters[i])
             {
-                SponeRat(segment.prefab);
-                GameObject rat = Instantiate(segment.prefab, GetSpawnPosition(), Quaternion.identity, transform);
-                rat.GetComponent<RatBase>().session = session;
-                rat.GetComponent<RatBase>().OnStart(0.01f);
-
-
+                SponeRat(segment.prefab, 1);
                 localCounters[i]++;
             }
         }
