@@ -56,7 +56,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Basick cat
+  m_Name: Lure
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Atck
@@ -99,7 +99,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 6065333994261340666, guid: cfb19813f9df0414b81c8f2c4d0a9529, type: 3}
+  m_Motion: {fileID: 4781951162920444690, guid: 6709362f88fa22543bea1b83c6a4d383, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -148,7 +148,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 4781951162920444690, guid: fad651bb534df204598a5405308e974e, type: 3}
+  m_Motion: {fileID: 6065333994261340666, guid: 6709362f88fa22543bea1b83c6a4d383, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

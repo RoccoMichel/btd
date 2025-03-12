@@ -149,7 +149,7 @@ public class WaveManager : MonoBehaviour
 
             if (timeSinceSegmentStart / (1f / segment.spawnFrequency) > localCounters[i])
             {
-                SponeRat(segment.prefab, 1);
+                SponeRat(segment.prefab,1 + (currentWaveIndex / 5));
                 localCounters[i]++;
             }
         }
