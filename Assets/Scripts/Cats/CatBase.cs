@@ -15,6 +15,8 @@ public class CatBase : MonoBehaviour
     public AudioClip AtackSond;
     public bool canAtacke;
     public bool isLure;
+    public MeshRenderer boom;
+    public Transform rotator;
 
     [Header("References")]
     public List<RatBase> Enemies = new();
@@ -92,7 +94,8 @@ public class CatBase : MonoBehaviour
 
             if (Enemies.Count > 0 && Vector3.Distance(transform.position, Enemies[currentTarget].transform.position) < range)
             {
-                transform.LookAt(Enemies[currentTarget].transform);
+                rotator.LookAt(Enemies[currentTarget].transform);
+                transform.rotation = Quaternion.Lerp(transform.rotation, rotator.rotation, Time.deltaTime * 15);
                 return Enemies[currentTarget];
             }
         }
@@ -152,7 +155,6 @@ public class CatBase : MonoBehaviour
     }
     void Update()
     {
-
         // Should run when enemies die or get spawned in : temp
         if (!isLure)
         {
