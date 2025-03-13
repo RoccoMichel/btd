@@ -6,22 +6,24 @@ public class PlaseCat : MonoBehaviour
     public GameObject cat;
     public LayerMask ground;
     public Material canBild;
-    public List<Material> oldMaterials;
+    public List<Material> oldMehsMaterials;
+    public List<Material> oldSkinMehsMaterials;
     public Transform RangeVisualization;
 
     public void VisualizeRange()
     {
-        oldMaterials.Clear();
+        oldMehsMaterials.Clear();
+        oldSkinMehsMaterials.Clear();
         
         MeshRenderer[] meshes = cat.GetComponentsInChildren<MeshRenderer>();
         SkinnedMeshRenderer[] skins = cat.GetComponentsInChildren<SkinnedMeshRenderer>();
 
-        for (int i = 0; i < meshes.Length; i++) { oldMaterials.Add(meshes[i].material); }
-        for (int i = 0; i < skins.Length; i++) { oldMaterials.Add(skins[i].material); }
+        for (int i = 0; i < meshes.Length; i++) { oldMehsMaterials.Add(meshes[i].material); }
+        for (int i = 0; i < skins.Length; i++) { oldSkinMehsMaterials.Add(skins[i].material); }
     }
     void Update()
     {
-        if (cat != null && oldMaterials.Count > 0)
+        if (cat != null && oldMehsMaterials.Count > 0)
         {
 
             RangeVisualization.position = cat.transform.position + Vector3.up * 0.01f;
@@ -63,13 +65,13 @@ public class PlaseCat : MonoBehaviour
 
                 int n = 0;
                 for (int i = 0; i < meshes.Length; i++)
-                { meshes[i].material = oldMaterials[i]; n++; }
+                { meshes[i].material = oldMehsMaterials[i]; n++; }
 
                 for (int i = 0; i < skins.Length; i++)
-                    skins[i].material = oldMaterials[i + n];
+                    skins[i].material = oldSkinMehsMaterials[i + n];
 
                 cat = null;
-                oldMaterials.Clear();
+                oldMehsMaterials.Clear();
             }
             else if (cat != null)
             {

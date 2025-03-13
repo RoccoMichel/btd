@@ -32,6 +32,9 @@ public class ProjecttileManager : MonoBehaviour
 
     float timeAlive = 0;
     public MeshRenderer mesh;
+
+    Rigidbody rb;
+
     private void Update()
     {
         if (mesh != null)
@@ -46,7 +49,7 @@ public class ProjecttileManager : MonoBehaviour
 
         // <Code By Charlie>
         // Moves The Projectile Forword
-        transform.position += transform.forward * speed * Time.deltaTime;
+        rb.linearVelocity = transform.forward * speed * Time.deltaTime;
 
         // Counts The Time The Projectile Is Alive
         timeAlive += Time.deltaTime;
@@ -130,5 +133,7 @@ public class ProjecttileManager : MonoBehaviour
 
         poisoneDamage = SPM.poisoneDamage;
         posenDureshen = SPM.poisoneTimes;
+
+        rb = GetComponent<Rigidbody>();
     }
 }
