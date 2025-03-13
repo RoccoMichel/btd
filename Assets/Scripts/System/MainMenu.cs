@@ -99,22 +99,41 @@ public class MainMenu : MonoBehaviour
 
             // Sets Its As A Child And Sets The Position And Size
             objectTransform.SetParent(levelButtons[i].GetComponent<RectTransform>(), false);
-            objectTransform.sizeDelta = new Vector2(300, 100);
+            objectTransform.sizeDelta = new Vector2(450, 100);
             objectTransform.localPosition = new Vector3(0, -130, 0);
 
             // Sets The Text Settings
-            objectText.enableAutoSizing = true;
+            objectText.fontSize = 50;
             objectText.fontStyle = FontStyles.Bold;
             objectText.alignment = TextAlignmentOptions.Center;
+            objectText.alignment = TextAlignmentOptions.Top;
 
             // Makes The Text The Highscore If Played
             string highScoreText = "0";
-            if (PlayerPrefs.HasKey((i + 1).ToString() + "Highscore") && PlayerPrefs.GetInt((i + 1).ToString() + "Highscore") > 0)
-                highScoreText = PlayerPrefs.GetInt((i + 1).ToString() + "Highscore").ToString();
-            else
-                highScoreText = "Not Played";
+            string finalText = "";
+            bool hasplayed = false;
 
-            objectText.text = highScoreText;
+            if (PlayerPrefs.HasKey((i + 1).ToString() + "Highscore") && PlayerPrefs.GetInt((i + 1).ToString() + "Highscore") > 0)
+            {
+                highScoreText = (PlayerPrefs.GetInt((i + 1).ToString() + "Highscore")).ToString();
+
+                finalText = "<sprite index=9>" + "<br>";
+
+                hasplayed = true;
+            }
+            else
+                finalText = "<sprite index=10>";
+            if (hasplayed)
+            {
+                foreach(char c in highScoreText)
+                {
+
+                    string spriteIndex = ("<sprite index=" + c + ">");
+                    finalText += spriteIndex;
+                }
+            }
+
+            objectText.text = finalText;
 
             // Set the image to show if the level has been beaten or not
             levelButtons[i].GetComponent<Image>().sprite =

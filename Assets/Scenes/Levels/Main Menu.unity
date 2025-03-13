@@ -2989,12 +2989,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1539034608235557529, guid: d78eec1d5d354d446b51e311c1fb03d0, type: 3}
       propertyPath: exclude.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1539034608235557529, guid: d78eec1d5d354d446b51e311c1fb03d0, type: 3}
       propertyPath: 'exclude.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1026111755}
+    - target: {fileID: 1539034608235557529, guid: d78eec1d5d354d446b51e311c1fb03d0, type: 3}
+      propertyPath: 'exclude.Array.data[1]'
+      value: 
+      objectReference: {fileID: 46919586}
+    - target: {fileID: 1539034608235557529, guid: d78eec1d5d354d446b51e311c1fb03d0, type: 3}
+      propertyPath: 'exclude.Array.data[2]'
+      value: 
+      objectReference: {fileID: 419103311}
+    - target: {fileID: 1539034608235557529, guid: d78eec1d5d354d446b51e311c1fb03d0, type: 3}
+      propertyPath: 'exclude.Array.data[3]'
+      value: 
+      objectReference: {fileID: 449774832}
     - target: {fileID: 1539034608235557529, guid: d78eec1d5d354d446b51e311c1fb03d0, type: 3}
       propertyPath: unLoadOnStart.Array.size
       value: 2
