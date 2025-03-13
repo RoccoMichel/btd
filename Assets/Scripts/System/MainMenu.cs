@@ -8,6 +8,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -74,7 +75,10 @@ public class MainMenu : MonoBehaviour
         levelButtons.Clear();
         astb.exclude.Clear();
     }
-
+    public void lodeLevelSene()
+    {
+        SceneManager.LoadScene("LevelSelekt");
+    }
     public void Start()
     {
         loadingObject.SetActive(true);

@@ -731,7 +731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2235105960903188471, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
       propertyPath: currentWaveIndex
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2235105960903188471, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
       propertyPath: waves.Array.size
@@ -3159,7 +3159,7 @@ MonoBehaviour:
   lastTime: 000000000000000000000000000000000000000000000000
   difecolty: 1
   timer: 0
-  StartRandomSponing: 10
+  StartRandomSponing: 9
   waveManager: {fileID: 602826309}
 --- !u!114 &602826309 stripped
 MonoBehaviour:
