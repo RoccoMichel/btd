@@ -2404,6 +2404,7 @@ MonoBehaviour:
   difecolty: 1
   timer: 0
   StartRandomSponing: 11
+  waveManager: {fileID: 0}
 --- !u!1 &606650843
 GameObject:
   m_ObjectHideFlags: 0
@@ -4889,27 +4890,9 @@ MonoBehaviour:
       Rotation:
         value:
           x: 0
-          y: -0.1974122
+          y: -0.19741218
           z: -0
-          w: 0.9803205
-    - Position:
-        x: -25.84
-        y: 0
-        z: 38.73
-      TangentIn:
-        x: 0
-        y: 0
-        z: -1.7568439
-      TangentOut:
-        x: 0
-        y: 0
-        z: 1.7568439
-      Rotation:
-        value:
-          x: 0
-          y: 0.82419604
-          z: 0
-          w: -0.56630456
+          w: 0.98032063
     - Position:
         x: -30.599998
         y: 0
@@ -5086,8 +5069,6 @@ MonoBehaviour:
     - Mode: 3
       Tension: 0.5
     - Mode: 0
-      Tension: 0.5
-    - Mode: 2
       Tension: 0.5
     - Mode: 2
       Tension: 0.5
@@ -7905,6 +7886,10 @@ PrefabInstance:
     - target: {fileID: 3470443951441853603, guid: e78ff6a982ca6e24e8aede454b932714, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634883905084206753, guid: e78ff6a982ca6e24e8aede454b932714, type: 3}
+      propertyPath: m_Color.a
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3646948490672039488, guid: e78ff6a982ca6e24e8aede454b932714, type: 3}
       propertyPath: m_AnchorMax.y
