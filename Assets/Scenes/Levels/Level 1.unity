@@ -3136,23 +3136,6 @@ MonoBehaviour:
     - tStartEnd: {x: 90, y: 100}
       spawnFrequency: 0.1
       prefab: {fileID: 4825668182265712296, guid: 1c6a6a8a9c04aaf4d9fc45350e669d33, type: 3}
-  - name: Wave 13
-    segments:
-    - tStartEnd: {x: 0, y: 100}
-      spawnFrequency: 2.1
-      prefab: {fileID: 4825668182265712296, guid: 32acb91f6111e7e49bdea406bab32e7a, type: 3}
-    - tStartEnd: {x: 0, y: 100}
-      spawnFrequency: 4.3
-      prefab: {fileID: 919132149155446097, guid: 9226439adce5f944db877aa4e103179f, type: 3}
-    - tStartEnd: {x: 0, y: 100}
-      spawnFrequency: 3.8
-      prefab: {fileID: 4825668182265712296, guid: adc87514700c40b4eb5933ba5bb8ab5f, type: 3}
-    - tStartEnd: {x: 39.5131, y: 49.513092}
-      spawnFrequency: 0.1
-      prefab: {fileID: 4825668182265712296, guid: 1c6a6a8a9c04aaf4d9fc45350e669d33, type: 3}
-    - tStartEnd: {x: 90, y: 100}
-      spawnFrequency: 0.1
-      prefab: {fileID: 4825668182265712296, guid: 1c6a6a8a9c04aaf4d9fc45350e669d33, type: 3}
   BufNorm: []
   BufChoky: []
   BufMutent: []
