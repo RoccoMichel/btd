@@ -63,12 +63,11 @@ public class PlaseCat : MonoBehaviour
             {
                 cat.GetComponent<CatBase>().canAtacke = true;
 
-                int n = 0;
                 for (int i = 0; i < meshes.Length; i++)
-                { meshes[i].material = oldMehsMaterials[i]; n++; }
+                { meshes[i].material = oldMehsMaterials[i]; }
 
                 for (int i = 0; i < skins.Length; i++)
-                    skins[i].material = oldSkinMehsMaterials[i + n];
+                    skins[i].material = oldSkinMehsMaterials[i];
 
                 cat = null;
                 oldMehsMaterials.Clear();

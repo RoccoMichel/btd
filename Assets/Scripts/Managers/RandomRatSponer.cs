@@ -17,7 +17,7 @@ public class RandomRatSponer : MonoBehaviour
         //rat.GetComponent<RatBase>().session = GetComponent<Session>();
         //rat.GetComponent<RatBase>().OnStart(0.01f);
 
-        waveManager.SponeRat(rats[ratTyp], Mathf.Log(1 + Random.Range(0.25f, 2f) * difecolty, 2));
+        waveManager.SponeRat(rats[ratTyp], Mathf.Log(1 + Random.Range(0.25f, 1f) * difecolty, 2));
     }
 
     void Update()
@@ -26,7 +26,7 @@ public class RandomRatSponer : MonoBehaviour
         if (GetComponent<WaveManager>().currentWaveIndex > StartRandomSponing)
         {
 
-            difecolty += Time.deltaTime * 0.01f;
+            difecolty += Time.deltaTime * 0.1f;
 
             timer += Time.deltaTime * 2;
             totolTimer += Time.deltaTime * 2;
@@ -54,7 +54,7 @@ public class RandomRatSponer : MonoBehaviour
             }
 
             if (Mathf.Round(totolTimer) % 5 == 0)
-                GetComponent<WaveManager>().currentWaveIndex++;
+                GetComponent<WaveManager>().startNext();
 
             if (timer > difecolty)
             {

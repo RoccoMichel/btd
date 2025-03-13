@@ -50,6 +50,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c349d1662e7fd25499608926654b8b4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rats:
+    serializedVersion: 2
+    m_Bits: 128
   SPM: {fileID: 11400000, guid: 95c24bee785498141b4380791bce120e, type: 2}
   prsig: 0
   SacleOwerTime:
@@ -85,6 +88,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  mesh: {fileID: 0}
 --- !u!23 &8484349293958041298
 MeshRenderer:
   m_ObjectHideFlags: 0

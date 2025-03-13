@@ -77,7 +77,7 @@ public class WaveManager : MonoBehaviour
     }
     private void StartNextWave()
     {
-        session.NextWave();
+         session.NextWave();
         StartWave(currentWaveIndex);
     }
     private void Update()

@@ -7,9 +7,10 @@ using System.Linq;
 
 public class ProjecttileManager : MonoBehaviour
 {
+    public LayerMask rats;
     [Expandable]
     public ScriptableProjecttileManager SPM;
-
+    
     float lifeTime;
 
     float damage;
@@ -49,8 +50,8 @@ public class ProjecttileManager : MonoBehaviour
 
         // <Code By Charlie>
         // Moves The Projectile Forword
-        rb.linearVelocity = transform.forward * speed * Time.deltaTime;
-
+        transform.position += transform.forward * Time.deltaTime * speed;
+        runHitDetecshen();
         // Counts The Time The Projectile Is Alive
         timeAlive += Time.deltaTime;
 
@@ -64,29 +65,42 @@ public class ProjecttileManager : MonoBehaviour
         }
         // <Code By Charlie>
     }
+    void runHitDetecshen()
+    {
+        RaycastHit hit;
 
+        if (Physics.SphereCast(new Vector3(transform.position.x, 1, transform.position.z), transform.localScale.magnitude/3, -transform.forward, out hit, Time.deltaTime * speed, rats))
+        {
+            onHit(hit.collider.gameObject);
+        }
+    }
+
+    void onHit(GameObject hit)
+    {
+        // If The Projectile Is Poisened
+        if (doPoisone)
+        {
+            // Do The Poisen
+            RatBase rat = hit.GetComponent<RatBase>();
+            rat.posendTime = posenDureshen;
+            rat.poisoneDamage = poisoneDamage;
+
+            rat.StartCoroutine(rat.Poisone());
+        }
+
+        // Dose Damage To The Rat
+        hit.GetComponent<RatBase>().Damage(damage);
+        // <Code By Charlie>
+
+        if (!prsig) DestroyObject(doEfectWhenHitEnemy);
+    }
     private void OnCollisionEnter(Collision collision)
     {
         // <Code By Charlie>
         // Cheks If The Projectile Collides With A Rat
         if(collision.transform.tag == "Rat")
         {
-            // If The Projectile Is Poisened
-            if (doPoisone)
-            {
-                // Do The Poisen
-                RatBase rat = collision.gameObject.GetComponent<RatBase>();
-                rat.posendTime = posenDureshen;
-                rat.poisoneDamage = poisoneDamage;
-
-                rat.StartCoroutine(rat.Poisone());
-            }
-
-            // Dose Damage To The Rat
-            collision.gameObject.GetComponent<RatBase>().Damage(damage);
-            // <Code By Charlie>
-            
-            if (!prsig) DestroyObject(doEfectWhenHitEnemy);
+            onHit(collision.gameObject);
         }
     }
 

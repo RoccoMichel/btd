@@ -34,17 +34,20 @@ public class ShopItem : MonoBehaviour
 
     public void Purchase()
     {
-        if (ui.session.CanPurchase(cost))
+        if (buildingSystem.cat == null)
         {
-            ui.session.Expenditure(cost);
+            if (ui.session.CanPurchase(cost))
+            {
+                ui.session.Expenditure(cost);
 
-            buildingSystem.cat = Instantiate(structure);
-            buildingSystem.cat.GetComponent<CatBase>().FineWaveManager();
-            buildingSystem.VisualizeRange();
-            cost = Mathf.RoundToInt(cost * 1.5f);
-            price.text = $"$ {cost}";
+                buildingSystem.cat = Instantiate(structure);
+                buildingSystem.cat.GetComponent<CatBase>().FineWaveManager();
+                buildingSystem.VisualizeRange();
+                cost = Mathf.RoundToInt(cost * 1.5f);
+                price.text = $"$ {cost}";
+            }
+            else PurchaseFail();
         }
-        else PurchaseFail();
     }
 
     void PurchaseFail()
