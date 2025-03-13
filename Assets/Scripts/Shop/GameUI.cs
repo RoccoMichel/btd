@@ -146,6 +146,18 @@ public class GameUI : MonoBehaviour
         infoCard.GetComponent<InfoCard>().SetValues(lifeTime, title, description);
     }
 
+    /// <summary>
+    /// Create the bottom left pop card with Text on it.
+    /// </summary>
+    /// <param name="lifeTime">Time Object will exist, leave 0 to not kill</param>
+    public void InstantiateInfoCard(float lifeTime, string title, string description, Color titleColor, Color descriptionColor)
+    {
+        DestroyInfoCard();
+
+        infoCard = Instantiate(Resources.Load("Info Card"), transform).GameObject();
+        infoCard.GetComponent<InfoCard>().SetValues(lifeTime, title, description, titleColor, descriptionColor);
+    }
+
     public void DestroyInfoCard()
     {
         if (infoCard == null) return;

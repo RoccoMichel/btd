@@ -216,7 +216,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 168}
+  m_SizeDelta: {x: 110, y: 168}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1267150808315106598
 CanvasRenderer:
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 21.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 128.22772}
+  m_margin: {x: 10.420277, y: 0, z: 10.898579, w: 128.22772}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -536,7 +536,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 168}
+  m_SizeDelta: {x: 110, y: 168}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6258117033804439607
 CanvasRenderer:
@@ -593,7 +593,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 21.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -631,7 +631,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 131.31743}
+  m_margin: {x: 10.518368, y: 0, z: 10.279556, w: 128.44873}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -672,7 +672,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 168}
+  m_SizeDelta: {x: 110, y: 168}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6080002179878814335
 CanvasRenderer:
@@ -729,7 +729,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 21.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -767,7 +767,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 129.00015}
+  m_margin: {x: 10.1887665, y: 0, z: 10.883308, w: 129.00015}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1007,9 +1007,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7524f60d87bec8c4aa4c3679aeb898f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemDescription: Awwwww, he thinks he knows the market. What a silly guy, nobody
-    can predict the market with absolute certainty. Yet, somehow, he seems to be
-    printing money for you.
+  itemDescription: 'Awwwww, he thinks he knows the market.
+
+    What a silly guy,
+    nobody can predict the market with absolute certainty.
+
+    Yet, somehow, he
+    seems to be printing money for you.'
   structure: {fileID: 3585982105108571785, guid: 9f66905933c9a1445a8bf743f03280c6, type: 3}
   price: {fileID: 7842330395008277282}
   cost: 100
@@ -1171,7 +1175,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 168}
+  m_SizeDelta: {x: 110, y: 168}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5673745373334454702
 CanvasRenderer:
@@ -1228,7 +1232,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 21.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1266,7 +1270,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 127.4554}
+  m_margin: {x: 10.518368, y: 0, z: 10.757683, w: 128.17258}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1325,9 +1329,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7524f60d87bec8c4aa4c3679aeb898f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemDescription: Stincky! Will gas any unfortunate rats who walk in her way. When
-    they are poisoned they will take damage over time, which eventualy wears off
-    and doesn't stack! All thanks to her special formula!
+  itemDescription: 'Stincky!
+
+    Will gas any unfortunate rats who walk in her way.
+    When they are poisoned they will take damage over time, which eventualy wears
+    off and doesn''t stack! All thanks to her special formula!'
   structure: {fileID: 6280059827579928464, guid: eade510a720819743a5c66abf966960e, type: 3}
   price: {fileID: 2787335774957008458}
   cost: 150
@@ -1507,9 +1513,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7524f60d87bec8c4aa4c3679aeb898f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemDescription: Who knew a sniper can miss their shots? NOBODY! That's because
-    Pablo never misses! And if he does that is propaganda orchestrated by his biggest
-    haters (smelly rats).
+  itemDescription: 'Who knew a sniper can miss their shots? NOBODY! That''s because
+    Pablo never misses!
+
+
+    And if he does that is propaganda orchestrated by his
+    biggest haters (smelly rats).'
   structure: {fileID: 8006304788743560243, guid: 75b6f13f63769b74d81e142d5532bf85, type: 3}
   price: {fileID: 5419960196312876276}
   cost: 150
@@ -1671,7 +1680,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 168}
+  m_SizeDelta: {x: 110, y: 168}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3764257966906983658
 CanvasRenderer:
@@ -1728,7 +1737,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 21.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1766,7 +1775,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 128.22757}
+  m_margin: {x: 10.757465, y: 0, z: 10.518478, w: 128.22757}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1807,7 +1816,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 168}
+  m_SizeDelta: {x: 110, y: 168}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5345225246030075282
 CanvasRenderer:
@@ -1864,7 +1873,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 21.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1902,7 +1911,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 128.2276}
+  m_margin: {x: 10.518368, y: 0, z: 10.757687, w: 128.2276}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

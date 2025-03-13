@@ -76,7 +76,7 @@ public class Session : MonoBehaviour
     {
         const string lurePraise = " working unpaid overtime this sum of extra money was no simple feat for our boy who is demanding a raise in cat nips!";
 
-        GameUI.Instance.InstantiateInfoCard(5, "Lure(s) work:", $"$ {interestMoney} {lurePraise}");
+        GameUI.Instance.InstantiateInfoCard(5, "Lure(s) work:", $"$ {Mathf.CeilToInt(interestMoney)} {lurePraise}", Color.green, Color.white);
 
         balance += Mathf.Abs(Mathf.CeilToInt(interestMoney));
         interestMoney = 0;

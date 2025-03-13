@@ -101,7 +101,7 @@ public class Settings : MonoBehaviour
         soundInput.text = PlayerPrefs.GetFloat("Sound", 100).ToString();
         uiInput.text = PlayerPrefs.GetFloat("UI", 100).ToString();
 
-        // yo code was ass, i fixed with a bunch of shitty math. I hated this, why would you make me do this (you didn't)
+        // Change the Volume from the Linear Slider to the Logarithm db curve
         music.SetFloat("Music", Mathf.Log10(Mathf.Clamp(PlayerPrefs.GetFloat("Music", 100), 0.0001f, 100) / 100) * 20);
 
         sound.SetFloat("Sound", Mathf.Log10(Mathf.Clamp(PlayerPrefs.GetFloat("Sound", 100), 0.0001f, 100) / 100) * 20);
@@ -123,7 +123,7 @@ public class Settings : MonoBehaviour
         gameObject.SetActive(false);
     }
     // <summary>
-    // Resets All PlayerPfres
+    // Resets All PlayerPrefs
     private void Update()
     {
         if(resetUI != null)

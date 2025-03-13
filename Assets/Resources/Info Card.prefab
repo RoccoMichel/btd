@@ -333,6 +333,7 @@ MonoBehaviour:
   lifeTime: 0
   title: Card Title
   description: The following description has not be set!
+  spawnSide: 0
   titleDisplay: {fileID: 1699091587289995276}
   descriptionDisplay: {fileID: 2431231624469817764}
 --- !u!222 &951221478597894705

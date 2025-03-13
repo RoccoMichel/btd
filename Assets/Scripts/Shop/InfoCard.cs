@@ -11,6 +11,8 @@ public class InfoCard : MonoBehaviour
     public float lifeTime;
     public string title = "Card Title";
     public string description = "The following description has not be set!";
+    public Side spawnSide;
+    public enum Side { left, right }
 
     [Header("References")]
     [SerializeField] private TMP_Text titleDisplay;
@@ -19,9 +21,9 @@ public class InfoCard : MonoBehaviour
     void Start()
     {
         SetDisplays();
+        SetSide(spawnSide);
 
         if (lifeTime > 0) Destroy(gameObject, lifeTime);
-
     }
 
     public void SetValues(float lifeTime, string title, string description)
@@ -29,6 +31,20 @@ public class InfoCard : MonoBehaviour
         this.lifeTime = lifeTime;
         this.title = title;
         this.description = description;
+
+        SetDisplays();
+
+        if (lifeTime > 0) Destroy(gameObject, lifeTime);
+    }
+
+    public void SetValues(float lifeTime, string title, string description, Color titleColor, Color descriptionColor)
+    {
+        this.lifeTime = lifeTime;
+        this.title = title;
+        this.description = description;
+
+        titleDisplay.color = titleColor;
+        descriptionDisplay.color = descriptionColor;
 
         SetDisplays();
 
@@ -44,5 +60,22 @@ public class InfoCard : MonoBehaviour
     {
         titleDisplay.text = title;
         descriptionDisplay.text = description;
+    }
+
+    void SetSide(Side side)
+    {
+        RectTransform transform = GetComponent<RectTransform>();
+        switch (side)
+        {
+            case Side.left:
+                transform.anchoredPosition = new Vector2(90, transform.anchoredPosition.y);
+
+                break;
+
+            case Side.right:
+                transform.anchoredPosition = new Vector2(1430, transform.anchoredPosition.y);
+
+                break;
+        }
     }
 }
