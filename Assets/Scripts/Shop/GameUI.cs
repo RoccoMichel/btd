@@ -2,12 +2,14 @@
 // ahh hell nah, more like 2 fucking lines by Charlie
 
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameUI : MonoBehaviour
 {
     public static GameUI Instance { get; private set; }
     [HideInInspector] public Session session;
+    [HideInInspector] public GameObject infoCard;
 
     [Header("UI References")]
     [SerializeField] internal GameObject settings;
@@ -65,6 +67,7 @@ public class GameUI : MonoBehaviour
     {
         wavesDisplay.text = ("Wave " + currentWave.ToString());
     }
+
     public void Stop()
     {
         Time.timeScale = Time.timeScale == 1 ? 0 : 1;
@@ -100,7 +103,7 @@ public class GameUI : MonoBehaviour
         winScreen.SetActive(false);
 
         FindAnyObjectByType<RandomRatSponer>().GetComponent<RandomRatSponer>().enabled = true;
-        FindAnyObjectByType<WaveManager>().GetComponent<WaveManager>().enabled = false;
+        //FindAnyObjectByType<WaveManager>().GetComponent<WaveManager>().enabled = false;
     }
     public void ToggleSettings()
     {
@@ -129,5 +132,24 @@ public class GameUI : MonoBehaviour
         Time.timeScale = Time.timeScale == 0 ? 1 : 0;
         pauseMenu.SetActive(!pauseMenu.activeSelf);
         settings.SetActive(false);
+    }
+
+    /// <summary>
+    /// Create the bottom left pop card with Text on it.
+    /// </summary>
+    /// <param name="lifeTime">Time Object will exist, leave 0 to not kill</param>
+    public void InstantiateInfoCard(float lifeTime, string title, string description)
+    {
+        DestroyInfoCard();
+
+        infoCard = Instantiate(Resources.Load("Info Card"), transform).GameObject();
+        infoCard.GetComponent<InfoCard>().SetValues(lifeTime, title, description);
+    }
+
+    public void DestroyInfoCard()
+    {
+        if (infoCard == null) return;
+
+        infoCard.GetComponent<InfoCard>().Kill();
     }
 }

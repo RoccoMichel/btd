@@ -3,10 +3,14 @@ using UnityEngine;
 
 public class ShopItem : MonoBehaviour
 {
+    [Header("Item info:")] [TextArea] [SerializeField] 
+    string itemDescription = "Description missing!";
+
     private GameUI ui;
     private PlaseCat buildingSystem;
 
-    [Tooltip("File name in Resources")]
+
+
     public GameObject structure;
     public TMP_Text price;
     public int cost;
@@ -45,6 +49,8 @@ public class ShopItem : MonoBehaviour
                 buildingSystem.VisualizeRange();
                 cost = Mathf.RoundToInt(cost * 1.5f);
                 price.text = $"$ {cost}";
+
+                ui.DestroyInfoCard();
             }
             else PurchaseFail();
         }
@@ -54,5 +60,30 @@ public class ShopItem : MonoBehaviour
     {
         price.color = Color.red;
         ui.balanceDisplay.color = Color.red;
+    }
+
+    public void ShowInfoCard()
+    {
+        if (ui == null)
+        {
+            Debug.LogWarning("Cannot Display Info Card without GameUI!");
+            return;
+        }
+
+        // Show Information if it is a cat
+        if (structure.TryGetComponent(out CatBase cat))
+        {
+            string description;
+
+            if (cat.isLure) description = $"${cost}\n\n{itemDescription}";
+            else description = $"${cost}\n\nRange: {cat.range}\n Speed: {cat.attackDelay}\n\n{itemDescription}";
+
+            ui.InstantiateInfoCard(0, cat.displayName, description);
+
+            return;
+        }
+
+        // Show Text if it is not a Cat
+        ui.InstantiateInfoCard(0, structure.name, $"${cost}\n\n{itemDescription}");
     }
 }
