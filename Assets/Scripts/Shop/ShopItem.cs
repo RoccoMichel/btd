@@ -76,7 +76,7 @@ public class ShopItem : MonoBehaviour
             string description;
 
             if (cat.isLure) description = $"${cost}\n\n{itemDescription}";
-            else description = $"${cost}\n\nRange: {cat.range}\n Speed: {cat.attackDelay}\n\n{itemDescription}";
+            else description = $"${cost}\n\nRange: {cat.range}\n Speed: {Mathf.RoundToInt(10*(1f/cat.attackDelay))}\n\n{itemDescription}";
 
             ui.InstantiateInfoCard(0, cat.displayName, description);
 

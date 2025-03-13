@@ -45,6 +45,8 @@ public class CatBase : MonoBehaviour
     RatBase target;
     CatUpgrade upgradeMenu;
     SplineContainer splin;
+
+    public ParticleSystem muselFlash;
     private void OnCollisionStay(Collision collision)
     {
         isColliding = true;
@@ -133,6 +135,9 @@ public class CatBase : MonoBehaviour
             spawnPos.LookAt(Closet);
             spawnPos.position = oldPos;
         }
+
+
+        if (muselFlash != null) muselFlash.Play();
 
         for (float i = 0; i < projectileCount; i++)
         {
