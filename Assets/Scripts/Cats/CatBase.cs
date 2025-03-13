@@ -12,8 +12,8 @@ public class CatBase : MonoBehaviour
     public int upgradeLevel = 1;
     public float value = 10;
     public bool isColliding;
-    public AudioClip AtackSond;
-    public bool canAtacke;
+    public AudioClip AttackSound;
+    public bool canAttack;
     public bool isLure;
     public MeshRenderer boom;
     public Transform rotator;
@@ -37,13 +37,14 @@ public class CatBase : MonoBehaviour
     public float projectileSpread;
     public float range = 5;
     public int projectileCount = 3;
-    public bool hasBoomb;
+    public bool hasBomb;
     private int lureStonks = 1;
 
     float attackTimer = 0;
     RatBase target;
     CatUpgrade upgradeMenu;
-    SplineContainer splin;
+    SplineContainer spline;
+    
     private void OnCollisionStay(Collision collision)
     {
         isColliding = true;
