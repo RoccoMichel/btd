@@ -826,8 +826,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7524f60d87bec8c4aa4c3679aeb898f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemDescription: He isn't a terrorist. He just a weird obsession with deadly explosives
-    that can cause mass destruction on ratkind.
+  itemDescription: He isn't a terrorist. He just has weird obsession with deadly
+    explosives that can cause mass destruction on ratkind (net-positive)
   structure: {fileID: 5529446915622836170, guid: 840d47f0dae77f248a4100e3e741fe33, type: 3}
   price: {fileID: 6284854370778448435}
   cost: 250
@@ -1325,9 +1325,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7524f60d87bec8c4aa4c3679aeb898f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemDescription: Stincky! Will gas any unfortunate rats to walk in her way. When
-    they are poisned they will take damage over time which eventually weras off and
-    doesn't stack! All thanks to her special formula!
+  itemDescription: Stincky! Will gas any unfortunate rats who walk in her way. When
+    they are poisoned they will take damage over time, which eventualy wears off
+    and doesn't stack! All thanks to her special formula!
   structure: {fileID: 6280059827579928464, guid: eade510a720819743a5c66abf966960e, type: 3}
   price: {fileID: 2787335774957008458}
   cost: 150
@@ -1507,8 +1507,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7524f60d87bec8c4aa4c3679aeb898f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemDescription: Who knew a sniper can miss their shots? NOBODY because Pablo never
-    misses! And if he does that is propaganda.
+  itemDescription: Who knew a sniper can miss their shots? NOBODY! That's because
+    Pablo never misses! And if he does that is propaganda orchestrated by his biggest
+    haters (smelly rats).
   structure: {fileID: 8006304788743560243, guid: 75b6f13f63769b74d81e142d5532bf85, type: 3}
   price: {fileID: 5419960196312876276}
   cost: 150
