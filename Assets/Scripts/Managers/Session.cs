@@ -74,11 +74,9 @@ public class Session : MonoBehaviour
 
     public void ProfitFromInterest()
     {
-        foreach (GameObject cat in GameObject.FindGameObjectsWithTag("Cat"))
-        {
-            cat.TryGetComponent(out CatBase catScript);
-            if (catScript != null && catScript.isLure) catScript.CreateInfoText($"+ ${interestMoney}", 6);
-        }
+        const string lurePraise = " working unpaid overtime this sum of extra money was no simple feat for our boy who is demanding a raise in cat nips!";
+
+        GameUI.Instance.InstantiateInfoCard(5, "Lure(s) work:", $"$ {interestMoney} {lurePraise}");
 
         balance += Mathf.Abs(Mathf.CeilToInt(interestMoney));
         interestMoney = 0;
