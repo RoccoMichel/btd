@@ -12,7 +12,7 @@ public class WaveManager : MonoBehaviour
       [SerializeField] private Player player;
       [SerializeField] private WaveManagerUI waveManagerUI;
     */
-    [SerializeField] private Session session;
+    [SerializeField] public Session session;
 
     [Header("Settings")]
     [SerializeField] private float waveDuration;

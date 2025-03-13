@@ -14,14 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: 2
   damage: 5
-  speed: 100
+  speed: 250
   doDamageWhenDied: 0
   damageRange: 0
   doEfect: 0
   doEfectWhenDied: 0
   doEfectWhenHitEnemy: 0
   efect: {fileID: 0}
-  bounce: 0
   doPoisone: 0
   poisoneDamage: 0
   poisoneTimes: 0

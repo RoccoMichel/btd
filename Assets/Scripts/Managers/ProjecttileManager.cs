@@ -69,7 +69,7 @@ public class ProjecttileManager : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (Physics.SphereCast(new Vector3(transform.position.x, 1, transform.position.z), transform.localScale.magnitude/3, -transform.forward, out hit, Time.deltaTime * speed, rats))
+        if (Physics.Raycast(new Vector3(transform.position.x, 1, transform.position.z), -transform.forward, out hit, Time.deltaTime * speed, rats))
         {
             onHit(hit.collider.gameObject);
         }
@@ -149,5 +149,12 @@ public class ProjecttileManager : MonoBehaviour
         posenDureshen = SPM.poisoneTimes;
 
         rb = GetComponent<Rigidbody>();
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position,
+            transform.position - transform.forward * Time.deltaTime * speed); 
     }
 }
