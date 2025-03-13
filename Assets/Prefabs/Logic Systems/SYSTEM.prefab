@@ -211,10 +211,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1af367eb98d192f43b88b20eb27d1394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TextAnimashen: {fileID: 0}
   infiniteWealth: 0
   balance: 500
   minBalance: 0
-  interestRate: 1
+  interestRate: 0
   immortal: 0
   maxHealth: 100
   health: 100
@@ -243,6 +244,11 @@ MonoBehaviour:
     - tStartEnd: {x: 0, y: 0}
       spawnFrequency: 0
       prefab: {fileID: 0}
+  BufNorm: []
+  BufChoky: []
+  BufMutent: []
+  BufSterods: []
+  BufTacnk: []
 --- !u!114 &9120303583111777466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,7 +266,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   canBild: {fileID: 2100000, guid: 35eb8a2c6b4957146811fcfa7bd38904, type: 2}
-  oldMaterials: []
+  oldMehsMaterials: []
+  oldSkinMehsMaterials: []
   RangeVisualization: {fileID: 66147967481891747}
 --- !u!114 &3129400066393429972
 MonoBehaviour:
