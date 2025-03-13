@@ -14,7 +14,7 @@ public class ProjecttileManager : MonoBehaviour
     float lifeTime;
 
     float damage;
-    float speed;
+    public float speed;
     public bool prsig;
     public AnimationCurve SacleOwerTime;
     bool doDamageWhenDied;

@@ -40,6 +40,7 @@ public class CatBase : MonoBehaviour
     public bool hasBoomb;
     private int lureStonks = 1;
 
+    float orgRansh = 0;
     float attackTimer = 0;
     RatBase target;
     CatUpgrade upgradeMenu;
@@ -56,6 +57,7 @@ public class CatBase : MonoBehaviour
 
     private void Start()
     {
+        orgRansh = range;
         if (hasBoomb) splin = FindAnyObjectByType<SplineContainer>();
 
         AS = GetComponent<AudioSource>();
@@ -139,9 +141,12 @@ public class CatBase : MonoBehaviour
 
             AS.pitch = Random.Range(0.95f, 1.05f);
             AS.PlayOneShot(AtackSond);
-            
 
-            Instantiate(projectile, spawnPos.position, spawnPos.rotation).transform.rotation =
+
+            GameObject prodektile =
+            Instantiate(projectile, spawnPos.position, spawnPos.rotation);
+            if (orgRansh != 0) prodektile.GetComponent<ProjecttileManager>().speed *= range / orgRansh;
+            prodektile.transform.rotation =
                 Quaternion.Euler(0, ((i - (projectileCount - 1) / 2) / projectileCount) * projectileSpread, 0) * spawnPos.rotation;
 
             if (ani != null)
