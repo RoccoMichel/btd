@@ -3010,6 +3010,7 @@ MonoBehaviour:
   difecolty: 1
   timer: 0
   StartRandomSponing: 11
+  waveManager: {fileID: 0}
 --- !u!114 &602826311
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3,8 +3,6 @@ using UnityEngine.Rendering;
 
 public class Session : MonoBehaviour
 {
-    public TextVisols TextAnimashen;
-
     [Header("Player Economy")]
     public bool infiniteWealth;
     public float balance;
@@ -21,7 +19,7 @@ public class Session : MonoBehaviour
     public int maxWaves = 20;
     public Volume damageEffect;
 
-    float intresrMuny = 0;
+    float interestMoney = 0;
     private void Update()
     {
         damageEffect.weight = Mathf.Lerp(damageEffect.weight, 0.001f, Time.deltaTime);
@@ -60,7 +58,7 @@ public class Session : MonoBehaviour
     public void NextWave()
     {
         wave++;
-        if (intresrMuny > 0) ProfitFromIntrest();
+        if (interestMoney > 0) ProfitFromInterest();
         // give reward money
         //Profit(wave * 100 + 1000);
     }
@@ -71,15 +69,19 @@ public class Session : MonoBehaviour
     public void Profit(float amount)
     {
         balance += Mathf.Abs(Mathf.CeilToInt(amount));
-        intresrMuny += amount * (interestRate / 10f);
+        interestMoney += amount * (interestRate / 10f);
     }
 
-    public void ProfitFromIntrest()
+    public void ProfitFromInterest()
     {
-        balance += Mathf.Abs(Mathf.CeilToInt(intresrMuny));
-        TextVisols te = Instantiate(TextAnimashen.gameObject).GetComponent<TextVisols>();
-        te.StartCoroutine(te.runTextAnimashen("+ $" + intresrMuny, Camera.main.transform.position + Camera.main.transform.forward, Color.black));
-        intresrMuny = 0;
+        foreach (GameObject cat in GameObject.FindGameObjectsWithTag("Cat"))
+        {
+            cat.TryGetComponent(out CatBase catScript);
+            if (catScript != null && catScript.isLure) catScript.CreateInfoText($"+ ${interestMoney}", 6);
+        }
+
+        balance += Mathf.Abs(Mathf.CeilToInt(interestMoney));
+        interestMoney = 0;
     }
 
     /// <summary>

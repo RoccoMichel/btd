@@ -18,7 +18,7 @@ public class GameUI : MonoBehaviour
     [SerializeField] internal TMP_Text balanceDisplay;
     [SerializeField] internal TMP_Text wavesDisplay;
     [SerializeField] internal TMP_Text healthDisplay;
-    [SerializeField] internal TMP_Text FastForwardText;
+    [SerializeField] internal GameObject FastForwardText;
     [SerializeField] internal RectTransform healthBarMask, healthBarOutlineMask;
     Vector3 healthBarStartPos;
 
@@ -71,8 +71,7 @@ public class GameUI : MonoBehaviour
     }
 
     public void ToggleSpeed()
-    {
-        
+    {        
         Time.timeScale = Time.timeScale == 1 ? 3 : 1;
         FastForwardText.gameObject.SetActive(Time.timeScale != 1);
     }

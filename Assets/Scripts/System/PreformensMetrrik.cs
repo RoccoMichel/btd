@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class PreformensMetrrik : MonoBehaviour
 {
-    public bool prefomMetrick;
+    public static bool prefomMetrick;
     public int dataPonts;
     public float scale;
     public float[] data = new float[10];

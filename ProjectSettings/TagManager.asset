@@ -8,6 +8,7 @@ TagManager:
   - Rat
   - UpgradeMenu
   - RangeVisualization
+  - Cat
   layers:
   - Default
   - TransparentFX

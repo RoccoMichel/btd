@@ -220,10 +220,13 @@ public class CatBase : MonoBehaviour
 
         if (isLure)
         {
-            try 
+            CreateInfoText("+ 1% PROFITS", 8);
+
+            try
             { 
                 FindAnyObjectByType<Session>().GetComponent<Session>().interestRate++; 
                 lureStonks++;
+
             }
             catch { }            
 
@@ -232,16 +235,34 @@ public class CatBase : MonoBehaviour
 
         float ran = Random.Range(0f, 1f);
 
-        if (ran < 0.3f) attackTimer *= 0.6f;
-        else if (ran < 0.6f) projectileSpread *= 0.6f;
-        else if (ran < 0.9f) range *= 1.4f;
-        else projectileCount++;
+        switch (ran)
+        {
+            case < 0.3f: // 30% chance to increase attack speed by 20%
+                attackDelay *= 0.8f;
+                CreateInfoText("+ SPEED", 8);
+
+                break;
+
+            case < 0.6f: // 30% chance to increase spread;
+                projectileSpread *= 0.6f;
+                CreateInfoText("+ SPREAD", 8);
+
+                break;
+
+            case < 0.9f: // 30% chance to increase range
+                range *= 1.4f;
+                CreateInfoText("+ RANGE", 8);
+
+                break;
+
+            default: // 10% chance to increase Projectile Count
+                projectileCount++;
+                CreateInfoText("+ BULLETS", 8);
+
+                break;
+        }
 
         ToggleRangeVisualization(true);
-
-        /////////////////////////////////////////////////////
-        // SOMEONE NEEDS THE ACCTUAL UPGRADING OF THE CATS //
-        /////////////////////////////////////////////////////
     }
 
     /// <summary>
@@ -276,5 +297,18 @@ public class CatBase : MonoBehaviour
         {
             visualization.transform.position = Vector3.down * 1000;
         }
+    }
+
+    /// <summary>
+    /// Creates a 3D Text Prefab from Resources that floats away
+    /// while fading.
+    /// </summary>
+    /// <param name="info">Text to be displayed in World Space</param>
+    /// <param name="height">height above the cats feet</param>
+    public void CreateInfoText(string info, float height)
+    {
+        InfoText infoText = Instantiate(Resources.Load("Info Text")).GetComponent<InfoText>();
+        infoText.transform.position = transform.position + Vector3.up * height;
+        infoText.info = info;
     }
 }

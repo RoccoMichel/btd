@@ -5081,7 +5081,7 @@ GameObject:
   - component: {fileID: 5814849705636762059}
   m_Layer: 0
   m_Name: Cat BASE
-  m_TagString: Untagged
+  m_TagString: Cat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5123,6 +5123,7 @@ MonoBehaviour:
   AtackSond: {fileID: 0}
   canAtacke: 0
   isLure: 0
+  boom: {fileID: 0}
   rotator: {fileID: 8619734213923151078}
   Enemies: []
   waveMan: {fileID: 0}
