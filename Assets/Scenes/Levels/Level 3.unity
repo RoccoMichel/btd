@@ -4306,6 +4306,7 @@ MonoBehaviour:
   difecolty: 1
   timer: 0
   StartRandomSponing: 11
+  waveManager: {fileID: 1677913093}
 --- !u!1 &606650843
 GameObject:
   m_ObjectHideFlags: 0
