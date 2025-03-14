@@ -72,6 +72,7 @@ public class CatBase : MonoBehaviour
     }
 
     public void FineWaveManager() { waveMan = FindAnyObjectByType<WaveManager>(); }
+
     void UpdateEnemyCount()
     {
         Enemies.Clear();
@@ -226,7 +227,7 @@ public class CatBase : MonoBehaviour
     public void Upgrade()
     {
         upgradeLevel++;
-        value *= 1.5f;
+        value *= 1.8f;
 
         if (isLure)
         {
@@ -292,7 +293,7 @@ public class CatBase : MonoBehaviour
     }
 
     /// <summary>
-    /// Show the green range indicator under cat
+    /// Show the blue range indicator under cat
     /// </summary>
     /// <param name="b">Should it be set to this cat?</param>
     public void ToggleRangeVisualization(bool b)

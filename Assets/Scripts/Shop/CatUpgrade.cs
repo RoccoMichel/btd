@@ -37,7 +37,7 @@ public class CatUpgrade : MonoBehaviour
         // Animation & Sound ?
 
         // Sell value is half of cat value
-        shop.session.Profit(Mathf.Abs(cat.value / 2));
+        shop.session.Profit(Mathf.Abs(cat.value));
         shop.balanceDisplay.color = Color.green;
         cat.Kill();
         KillYourSelf();
@@ -61,7 +61,7 @@ public class CatUpgrade : MonoBehaviour
     {
         nameDisplay.text = $"{cat.displayName}\n(lv. {cat.upgradeLevel})";
         upgradeDisplay.text = $"UPGRADE\n$ {Mathf.Abs(Mathf.RoundToInt(cat.value * 2))}";
-        sellDisplay.text = $"$ {Mathf.Abs(Mathf.RoundToInt(cat.value / 2))}";
+        sellDisplay.text = $"$ {Mathf.Abs(Mathf.RoundToInt(cat.value))}";
         // Sell value is half of cat value
     }
 
