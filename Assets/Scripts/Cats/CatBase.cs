@@ -174,7 +174,7 @@ public class CatBase : MonoBehaviour
     void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0)) ShowUpgrade();
-        MoseOwer.SetFloat("_Alpha", 5f);
+        MoseOwer.SetFloat("_Alpha", 2.5f);
     }
 
     private void OnMouseExit()
