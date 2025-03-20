@@ -67,7 +67,9 @@ public class PlaseCat : MonoBehaviour
                 { meshes[i].material = oldMehsMaterials[i]; }
 
                 for (int i = 0; i < skins.Length; i++)
-                    skins[i].material = oldSkinMehsMaterials[i];
+                {
+                    skins[i].material = Instantiate(oldSkinMehsMaterials[i]); 
+                }
 
                 cat = null;
                 oldMehsMaterials.Clear();

@@ -5125,6 +5125,7 @@ MonoBehaviour:
   isLure: 0
   boom: {fileID: 0}
   rotator: {fileID: 8619734213923151078}
+  MoseOwer: {fileID: 2100000, guid: b7cbc51bab5cb8646a98712116c8b87a, type: 2}
   Enemies: []
   waveMan: {fileID: 0}
   ani: {fileID: 0}
@@ -5142,6 +5143,7 @@ MonoBehaviour:
   range: 2
   projectileCount: 3
   hasBoomb: 0
+  muselFlash: {fileID: 0}
 --- !u!136 &688870104695935717
 CapsuleCollider:
   m_ObjectHideFlags: 0

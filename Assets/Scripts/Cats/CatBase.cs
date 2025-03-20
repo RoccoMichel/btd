@@ -17,6 +17,7 @@ public class CatBase : MonoBehaviour
     public bool isLure;
     public MeshRenderer boom;
     public Transform rotator;
+    public Material MoseOwer;
 
     [Header("References")]
     public List<RatBase> Enemies = new();
@@ -45,6 +46,7 @@ public class CatBase : MonoBehaviour
     RatBase target;
     CatUpgrade upgradeMenu;
     SplineContainer splin;
+    SkinnedMeshRenderer scin;
 
     public ParticleSystem muselFlash;
     private void OnCollisionStay(Collision collision)
@@ -59,7 +61,15 @@ public class CatBase : MonoBehaviour
 
     private void Start()
     {
+        scin = GetComponentInChildren<SkinnedMeshRenderer>();
+
+        List<Material> materials = scin.materials.ToList();
+        materials.Add(Instantiate(MoseOwer));
+        MoseOwer = materials.Last();
+
+        scin.materials = materials.ToArray(); 
         orgRansh = range;
+
         if (hasBoomb) splin = FindAnyObjectByType<SplineContainer>();
 
         AS = GetComponent<AudioSource>();
@@ -145,8 +155,9 @@ public class CatBase : MonoBehaviour
             //AS.Stop();
             //AS.clip = shootSound[Random.Range(0, shootSound.Count - 1)];
 
-            AS.pitch = Random.Range(0.95f, 1.05f);
-            AS.PlayOneShot(AtackSond);
+            // [NOT WORKING PLISE FIXE]
+            //AS.pitch = Random.Range(0.95f, 1.05f);
+            //AS.PlayOneShot(AtackSond);
 
 
             GameObject prodektile =
@@ -163,6 +174,12 @@ public class CatBase : MonoBehaviour
     void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0)) ShowUpgrade();
+        MoseOwer.SetFloat("_Alpha", 5f);
+    }
+
+    private void OnMouseExit()
+    {
+        MoseOwer.SetFloat("_Alpha", 0);
     }
     void Update()
     {
