@@ -28,7 +28,7 @@ public class WaveManager : MonoBehaviour
     private List<float> localCounters = new List<float>();
 
     public List<RatBase> BufNorm, BufChoky, BufMutent, BufSterods, BufTacnk;
-
+    public float startingDifecolty;
 
     private void Start()
     {
@@ -149,7 +149,7 @@ public class WaveManager : MonoBehaviour
 
             if (timeSinceSegmentStart / (1f / segment.spawnFrequency) > localCounters[i])
             {
-                SponeRat(segment.prefab,1 + (currentWaveIndex / 5));
+                SponeRat(segment.prefab,(1 + (currentWaveIndex / 5))*startingDifecolty);
                 localCounters[i]++;
             }
         }

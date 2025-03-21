@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NormolCat
   m_EditorClassIdentifier: 
   lifeTime: 0.2
-  damage: 5
+  damage: 1
   speed: 0
   doDamageWhenDied: 0
   damageRange: 5

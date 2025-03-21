@@ -69,7 +69,7 @@ public class ProjecttileManager : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(new Vector3(transform.position.x, 1, transform.position.z), -transform.forward, out hit, Time.deltaTime * speed, rats))
+        if (Physics.Raycast(transform.position, -transform.forward, out hit, Time.deltaTime * speed, rats))
         {
             onHit(hit.collider.gameObject);
         }
