@@ -3141,6 +3141,7 @@ MonoBehaviour:
   BufMutent: []
   BufSterods: []
   BufTacnk: []
+  startingDifecolty: 0
 --- !u!114 &602826314 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4103068700183774869, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
@@ -6077,6 +6078,76 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1048349218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1048349219}
+  - component: {fileID: 1048349220}
+  - component: {fileID: 1048349221}
+  m_Layer: 0
+  m_Name: Descriptor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1048349219
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048349218}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1408179418}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1048349220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048349218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f457ae14d15b04b99a055f3acadd23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Evil Log
+  description: "This log has been brutally enslaved to serve the evil rats by bringing
+    the rats as close to the holy cheese as possible. \n\nhe chosen cats have to
+    stop them before the world is doomed!"
+--- !u!65 &1048349221
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048349218}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0110833, y: 0.019845752, z: 0.015669508}
+  m_Center: {x: -0.0005416606, y: 0.024378225, z: -0.002834754}
 --- !u!1 &1051611197
 GameObject:
   m_ObjectHideFlags: 0
@@ -11006,7 +11077,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: d2d19ff1cfaac1d40824cf0f93ca7513, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1048349219}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d2d19ff1cfaac1d40824cf0f93ca7513, type: 3}
       insertIndex: -1

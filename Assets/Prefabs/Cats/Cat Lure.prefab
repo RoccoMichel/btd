@@ -278,6 +278,7 @@ MonoBehaviour:
   isLure: 1
   boom: {fileID: 0}
   rotator: {fileID: 0}
+  MoseOwer: {fileID: 2100000, guid: b7cbc51bab5cb8646a98712116c8b87a, type: 2}
   Enemies: []
   waveMan: {fileID: 0}
   ani: {fileID: 3755946775198888757}
@@ -290,11 +291,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e9046485fd3fd0b46a028a8c980f298b, type: 3}
   spawnPos: {fileID: 6120640807579444328}
   projectile: {fileID: 2815010670045982513, guid: cb475cffa808c5e43923f10f42096b51, type: 3}
-  attackDelay: 1
-  projectileSpread: 10
+  attackDelay: 0
+  projectileSpread: 0
   range: 0
-  projectileCount: 3
+  projectileCount: 0
   hasBoomb: 0
+  muselFlash: {fileID: 0}
 --- !u!136 &688870104695935717
 CapsuleCollider:
   m_ObjectHideFlags: 0

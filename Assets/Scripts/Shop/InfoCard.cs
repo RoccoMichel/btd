@@ -10,13 +10,13 @@ public class InfoCard : MonoBehaviour
     [Tooltip("Leave 0 to not be killed by time")]
     public float lifeTime;
     public string title = "Card Title";
-    public string description = "The following description has not be set!";
+    [TextArea] public string description = "The following description has not be set!";
     public Side spawnSide;
     public enum Side { left, right }
 
     [Header("References")]
-    [SerializeField] private TMP_Text titleDisplay;
-    [SerializeField] private TMP_Text descriptionDisplay;
+    [SerializeField] protected TMP_Text titleDisplay;
+    [SerializeField] protected TMP_Text descriptionDisplay;
 
     void Start()
     {
@@ -26,26 +26,59 @@ public class InfoCard : MonoBehaviour
         if (lifeTime > 0) Destroy(gameObject, lifeTime);
     }
 
-    public void SetValues(float lifeTime, string title, string description)
+    public void SetValues(float lifeTime, string title, string description, Side side)
     {
         this.lifeTime = lifeTime;
         this.title = title;
         this.description = description;
+        spawnSide = side;
 
+        SetSide(spawnSide);
         SetDisplays();
 
         if (lifeTime > 0) Destroy(gameObject, lifeTime);
     }
 
-    public void SetValues(float lifeTime, string title, string description, Color titleColor, Color descriptionColor)
+    public void SetValuesAndStats(float lifeTime, string title, string description, string[] statNames, float[] statValues, Side side)
     {
         this.lifeTime = lifeTime;
         this.title = title;
         this.description = description;
+        spawnSide = side;
 
+        TrySetStats(statNames, statValues, false);
+        SetSide(spawnSide);
+        SetDisplays();
+
+        if (lifeTime > 0) Destroy(gameObject, lifeTime);
+    }
+
+    public void SetValues(float lifeTime, string title, string description, Color titleColor, Color descriptionColor, Side side)
+    {
+        this.lifeTime = lifeTime;
+        this.title = title;
+        this.description = description;
         titleDisplay.color = titleColor;
         descriptionDisplay.color = descriptionColor;
+        spawnSide = side;
 
+        SetSide(spawnSide);
+        SetDisplays();
+
+        if (lifeTime > 0) Destroy(gameObject, lifeTime);
+    }
+
+    public void SetValuesAndStats(float lifeTime, string title, string description, string[] statNames, float[] statValues, Color titleColor, Color descriptionColor, Side side)
+    {
+        this.lifeTime = lifeTime;
+        this.title = title;
+        this.description = description;
+        titleDisplay.color = titleColor;
+        descriptionDisplay.color = descriptionColor;
+        spawnSide = side;
+
+        TrySetStats(statNames, statValues, false);
+        SetSide(spawnSide);
         SetDisplays();
 
         if (lifeTime > 0) Destroy(gameObject, lifeTime);
@@ -53,18 +86,32 @@ public class InfoCard : MonoBehaviour
 
     public void Kill()
     {
+        // animation and sound?
+
         Destroy(gameObject);
     }
 
-    void SetDisplays()
+    protected void TrySetStats(string[] names, float[] values, bool preview)
+    {
+        StatDisplay statsManager = GetComponentInChildren<StatDisplay>();
+
+        if (statsManager != null)
+        {
+            statsManager.CreateStats(names, values, preview);
+        }
+    }
+
+    protected virtual void SetDisplays()
     {
         titleDisplay.text = title;
         descriptionDisplay.text = description;
     }
 
-    void SetSide(Side side)
+    protected void SetSide(Side side)
     {
         RectTransform transform = GetComponent<RectTransform>();
+
+        // Numbers should work in any use case because the Canvas Scaler
         switch (side)
         {
             case Side.left:

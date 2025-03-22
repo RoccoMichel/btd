@@ -1,7 +1,6 @@
 using UnityEngine;
 using Cinemachine;
 using System;
-using UnityEngine.Rendering.Universal;
 
 public class CameraControler : MonoBehaviour
 {
@@ -59,9 +58,9 @@ public class CameraControler : MonoBehaviour
         Vector3 rotationVector = new Vector3(0, 0, 0);
         rotationVector.y = InputManager.Instance.GetCameraRotateAmmount();
 
-        float rotationSpeed = 1.5f;
+        float rotationSpeed = 100f / Time.timeScale;
 
-        transform.eulerAngles += rotationVector * rotationSpeed;
+        transform.eulerAngles += rotationVector * rotationSpeed * Time.deltaTime;
     }
     private void HandleZoom()
     {
@@ -76,6 +75,8 @@ public class CameraControler : MonoBehaviour
     ////////////////////////////////////////
 
     GameObject[] allTerrain;
+    GameObject[] allUI;
+
     private void OnGUI()
     {
         if (!debug) return;
@@ -116,11 +117,22 @@ public class CameraControler : MonoBehaviour
         {
             FindAnyObjectByType<Session>().GetComponent<Session>().immortal = !FindAnyObjectByType<Session>().GetComponent<Session>().immortal;
         }
-        if (GUI.Button(new Rect(10, 580, 120, 50), "Reload Level"))
+        if (GUI.Button(new Rect(10, 580, 120, 50), "Toggle UI"))
+        {
+            try { foreach (GameObject canvas in allUI) canvas.SetActive(!canvas.activeSelf); }
+            catch
+            {
+                Canvas[] canvases = FindObjectsByType<Canvas>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+                allUI = Array.ConvertAll(canvases, t => t.gameObject);
+
+                foreach (GameObject canvas in allUI) canvas.SetActive(!canvas.activeSelf);
+            }
+        }
+        if (GUI.Button(new Rect(10, 650, 120, 50), "Reload Level"))
         {
             LoadLogic.ReloadScene();
         }
-        if (GUI.Button(new Rect(10, 650, 120, 50), "Main Menu"))
+        if (GUI.Button(new Rect(10, 720, 120, 50), "Main Menu"))
         {
             LoadLogic.LoadSceneByNumber(0);
         }

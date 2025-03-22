@@ -4,12 +4,13 @@
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using static InfoCard;
 
 public class GameUI : MonoBehaviour
 {
     public static GameUI Instance { get; private set; }
     [HideInInspector] public Session session;
-    [HideInInspector] public GameObject infoCard;
+    [HideInInspector] public GameObject[] infoCard = new GameObject[System.Enum.GetValues(typeof(Side)).Length];
 
     [Header("UI References")]
     [SerializeField] internal GameObject settings;
@@ -38,6 +39,7 @@ public class GameUI : MonoBehaviour
         if (settings != null) settings.SetActive(false);
 
         healthBarStartPos = healthBarOutlineMask.position;
+        infoCard = new GameObject[System.Enum.GetValues(typeof(Side)).Length];
 
         ToggleSettings(false);
         DisplayRefresh();
@@ -50,7 +52,7 @@ public class GameUI : MonoBehaviour
 
     void DisplayRefresh()
     {
-        balanceDisplay.text = session.infiniteWealth ? "$Unlimited" : $"${session.balance}";
+        balanceDisplay.text = session.infiniteWealth ? "$ INFINITE" : $"${session.balance}";
         healthDisplay.text = session.immortal ? "IMMORTAL" : $"{session.health} HP";
 
         // <Code By Charlie>
@@ -134,34 +136,84 @@ public class GameUI : MonoBehaviour
         settings.SetActive(false);
     }
 
+    public void DestroyInfoCard(Side side)
+    {
+        if (infoCard[(int)side] == null) return;
+
+        infoCard[(int)side].GetComponent<InfoCard>().Kill();
+        infoCard[(int)side] = null;
+    }
+
+    // NORMAL CARDS:
+
     /// <summary>
-    /// Create the bottom left pop card with Text on it.
+    /// Create a card with Text on it.
     /// </summary>
     /// <param name="lifeTime">Time Object will exist, leave 0 to not kill</param>
-    public void InstantiateInfoCard(float lifeTime, string title, string description)
+    public void InstantiateInfoCard(float lifeTime, string title, string description, Side side)
     {
-        DestroyInfoCard();
+        DestroyInfoCard(side);
 
-        infoCard = Instantiate(Resources.Load("Info Card"), transform).GameObject();
-        infoCard.GetComponent<InfoCard>().SetValues(lifeTime, title, description);
+        infoCard[(int)side] = Instantiate(Resources.Load("Info Card"), transform).GameObject();
+        infoCard[(int)side].GetComponent<InfoCard>().SetValues(lifeTime, title, description, side);
     }
 
     /// <summary>
-    /// Create the bottom left pop card with Text on it.
+    /// Create a card with Text on it.
+    /// You can also Control the Color of the Text
     /// </summary>
     /// <param name="lifeTime">Time Object will exist, leave 0 to not kill</param>
-    public void InstantiateInfoCard(float lifeTime, string title, string description, Color titleColor, Color descriptionColor)
+    public void InstantiateInfoCard(float lifeTime, string title, string description, Color titleColor, Color descriptionColor, Side side)
     {
-        DestroyInfoCard();
+        DestroyInfoCard(side);
 
-        infoCard = Instantiate(Resources.Load("Info Card"), transform).GameObject();
-        infoCard.GetComponent<InfoCard>().SetValues(lifeTime, title, description, titleColor, descriptionColor);
+        infoCard[(int)side] = Instantiate(Resources.Load("Info Card"), transform).GameObject();
+        infoCard[(int)side].GetComponent<InfoCard>().SetValues(lifeTime, title, description, titleColor, descriptionColor, side);
     }
 
-    public void DestroyInfoCard()
-    {
-        if (infoCard == null) return;
+    // STAT CARDS:
 
-        infoCard.GetComponent<InfoCard>().Kill();
+    /// <summary>
+    /// Create a card with Text on it.
+    /// </summary>
+    /// <param name="lifeTime">Time Object will exist, leave 0 to not kill</param>
+    public void InstantiateInfoStatCard(float lifeTime, string title, string description, string[] statNames, float[] statValues ,Side side)
+    {
+        DestroyInfoCard(side);
+
+        infoCard[(int)side] = Instantiate(Resources.Load("Info Stat Card"), transform).GameObject();
+        infoCard[(int)side].GetComponent<InfoCard>().SetValuesAndStats(lifeTime, title, description, statNames, statValues, side);
+    }
+
+    /// <summary>
+    /// Create a card with Text on it.
+    /// You can also Control the Color of the Text
+    /// </summary>
+    /// <param name="lifeTime">Time Object will exist, leave 0 to not kill</param>
+    public void InstantiateInfoStatCard(float lifeTime, string title, string description, Color titleColor, Color descriptionColor, string[] statNames, float[] statValues, Side side)
+    {
+        DestroyInfoCard(side);
+
+        infoCard[(int)side] = Instantiate(Resources.Load("Info Stat Card"), transform).GameObject();
+        infoCard[(int)side].GetComponent<InfoCard>().SetValuesAndStats(lifeTime, title, description, statNames, statValues, titleColor, descriptionColor, side);
+    }
+
+    public void InstantiateUpgradeCard(CatBase cat, Side side)
+    {
+        DestroyInfoCard(side);
+
+        infoCard[(int)side] = Instantiate(Resources.Load("Upgrade Card"), transform).GameObject();
+        infoCard[(int)side].GetComponent<UpgradeCard>().SetUpgradeValues(side, cat, this);
+
+    }
+
+    // The following two method are only for unity buttons
+    public void DestroyLeftCard()
+    {
+        DestroyInfoCard(Side.left);
+    }
+    public void DestroyRightCard()
+    {
+        DestroyInfoCard(Side.right);
     }
 }

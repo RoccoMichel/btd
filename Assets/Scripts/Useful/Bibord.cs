@@ -5,7 +5,18 @@ public class Bibord : MonoBehaviour
     public Vector3 offsetRotation;
     public BillboardTypes billboardType;
     public enum BillboardTypes { lookAt, orthographic, lookedY }
-    void Update() 
+
+    private void Start()
+    {
+        BillboardLogic();
+    }
+
+    void Update()
+    {
+        BillboardLogic();
+    }
+
+    private void BillboardLogic()
     {
         switch (billboardType)
         {
@@ -33,7 +44,7 @@ public class Bibord : MonoBehaviour
 
             case BillboardTypes.lookedY:
                 transform.LookAt(Camera.main.transform);
-                
+
                 transform.rotation = Quaternion.Euler(
                     0 + offsetRotation.x,
                     transform.eulerAngles.y + offsetRotation.y,

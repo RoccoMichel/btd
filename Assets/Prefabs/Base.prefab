@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6549511638973717422}
+  - component: {fileID: 7435453325112994531}
+  - component: {fileID: 705899020649218496}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -32,6 +34,54 @@ Transform:
   - {fileID: 5579296629075975221}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7435453325112994531
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196908136128269772}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.0128336, y: 2.0021675, z: 2.794767}
+  m_Center: {x: -0.061305605, y: 11.7041445, z: -0.002801047}
+--- !u!114 &705899020649218496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196908136128269772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f457ae14d15b04b99a055f3acadd23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: HOLY CHEESE
+  description: 'It must be defended at all cost!
+
+    If not, Rat-kind will rise
+    and their evil will destroy everything!
+
+    
+
+    What makes it so all-powerful?
+    Why is it placed high up on some random towers in the middle of nowhere unguarded?
+
+    
+
+    Stop
+    asking so many pointless questions and save it already!'
 --- !u!1001 &5397315406986148830
 PrefabInstance:
   m_ObjectHideFlags: 0

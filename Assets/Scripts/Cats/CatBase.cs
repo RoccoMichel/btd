@@ -44,9 +44,9 @@ public class CatBase : MonoBehaviour
     float orgRansh = 0;
     float attackTimer = 0;
     RatBase target;
-    CatUpgrade upgradeMenu;
     SplineContainer splin;
     SkinnedMeshRenderer scin;
+    UpgradeCard upgradeCard;
 
     public ParticleSystem muselFlash;
     private void OnCollisionStay(Collision collision)
@@ -189,9 +189,9 @@ public class CatBase : MonoBehaviour
             UpdateEnemyCount();
             target = FindTarget();
         }
+
         // Attack locking
         attackTimer += Time.deltaTime;
-
 
         if (!isLure
             && canAtacke
@@ -216,23 +216,8 @@ public class CatBase : MonoBehaviour
 
         ToggleRangeVisualization(false);
 
-        if (upgradeMenu != null)
-        {
-            upgradeMenu.KillYourSelf();
-            return;
-        }
-
-        // Kill all other menus
-        if (GameObject.FindGameObjectsWithTag("UpgradeMenu") != null) 
-        {
-            GameObject[] unwantedMenus = GameObject.FindGameObjectsWithTag("UpgradeMenu");
-            foreach (GameObject unwantedMenu in unwantedMenus) unwantedMenu.GetComponent<CatUpgrade>().KillYourSelf();
-        }
-
         // Create new menu
-        upgradeMenu = Instantiate(Resources.Load("Upgrade Menu").GameObject().GetComponent<CatUpgrade>());
-        upgradeMenu.gameObject.transform.position = transform.position + Vector3.up * 6; // Position above the cat
-        upgradeMenu.cat = this;
+        FindAnyObjectByType<GameUI>().InstantiateUpgradeCard(this, InfoCard.Side.left);
 
         // Show range
         ToggleRangeVisualization(true);
@@ -248,7 +233,7 @@ public class CatBase : MonoBehaviour
 
         if (isLure)
         {
-            CreateInfoText("+ 1% PROFITS", 8);
+            CreateInfoText("+ 1% PROFITS", 3);
 
             try
             { 
@@ -256,41 +241,80 @@ public class CatBase : MonoBehaviour
                 lureStonks++;
 
             }
-            catch { }            
+            catch { /*PLAYER GOT SCAMMED LOL*/ }            
 
             return;
         }
 
         float ran = Random.Range(0f, 1f);
-
         switch (ran)
         {
             case < 0.3f: // 30% chance to increase attack speed by 20%
-                attackDelay *= 0.8f;
-                CreateInfoText("+ SPEED", 8);
+                
+                attackDelay = Mathf.Round(attackDelay *= 0.8f);
+                CreateInfoText("+ SPEED", 3);
 
                 break;
 
             case < 0.6f: // 30% chance to increase spread;
-                projectileSpread *= 0.6f;
-                CreateInfoText("+ SPREAD", 8);
+                
+                attackDelay = Mathf.Round(projectileSpread *= 0.6f);
+                CreateInfoText("+ SPREAD", 3);
 
                 break;
 
             case < 0.9f: // 30% chance to increase range
-                range *= 1.4f;
-                CreateInfoText("+ RANGE", 8);
+
+                range = Mathf.Round(range * 1.4f);
+                CreateInfoText("+ RANGE", 3);
 
                 break;
 
             default: // 10% chance to increase Projectile Count
                 projectileCount++;
-                CreateInfoText("+ BULLETS", 8);
+                CreateInfoText("+ BULLETS", 3);
 
                 break;
         }
 
         ToggleRangeVisualization(true);
+    }
+
+    /// <summary>
+    /// Get the relevant stat names depending on what type of cat
+    /// </summary>
+    /// <returns>string[] of stats the cat uses</returns>
+    public string[] GetStatNames() // I would love to check if Stats are being used but the CarBase Code is too ass.
+    {
+        // Lure Stat Name
+        if (isLure)
+        {
+            return new string[] { $"Profits\t[{lureStonks}]" };
+        }
+
+        // All other Cats
+        return new string[] { $"Speed\t[{attackDelay}]", $"Spread\t[{projectileSpread}]", $"Range\t[{range}]", $"Count\t[{projectileCount}]" };
+    }
+
+    /// <summary>
+    /// All relative values from the cats statistics get converted for in Sliders
+    /// </summary>
+    /// <returns>array of floats between 0 & 1</returns>
+    public float[] GetStatValues()                                                     ////////////// ADD YOUR CODE IN THIS METHOD ALGOT!!!!
+    {
+        // Lure Stat Values
+        if (isLure)
+        {
+            return new float[] { lureStonks };
+        }
+
+        // All other Cats
+        return new float[] { 
+            attackDelay, 
+            projectileSpread, 
+            range, 
+            projectileCount 
+        };
     }
 
     /// <summary>

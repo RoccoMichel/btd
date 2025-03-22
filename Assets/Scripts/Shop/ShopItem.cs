@@ -50,7 +50,7 @@ public class ShopItem : MonoBehaviour
                 cost = Mathf.RoundToInt(cost * 1.5f);
                 price.text = $"$ {cost}";
 
-                ui.DestroyInfoCard();
+                ui.DestroyInfoCard(InfoCard.Side.right);
             }
             else PurchaseFail();
         }
@@ -73,17 +73,12 @@ public class ShopItem : MonoBehaviour
         // Show Information if it is a cat
         if (structure.TryGetComponent(out CatBase cat))
         {
-            string description;
-
-            if (cat.isLure) description = $"${cost}\n\n{itemDescription}";
-            else description = $"${cost}\n\nRange: {cat.range}\n Speed: {Mathf.RoundToInt(10*(1f/cat.attackDelay))}\n\n{itemDescription}";
-
-            ui.InstantiateInfoCard(0, cat.displayName, description);
+            ui.InstantiateInfoStatCard(0, cat.displayName, itemDescription, cat.GetStatNames(), cat.GetStatValues(), InfoCard.Side.right);
 
             return;
         }
 
         // Show Text if it is not a Cat
-        ui.InstantiateInfoCard(0, structure.name, $"${cost}\n\n{itemDescription}");
+        ui.InstantiateInfoCard(0, structure.name, itemDescription, InfoCard.Side.right);
     }
 }

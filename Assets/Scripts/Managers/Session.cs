@@ -68,7 +68,7 @@ public class Session : MonoBehaviour
     /// </summary>
     public void Profit(float amount)
     {
-        balance += Mathf.Abs(Mathf.CeilToInt(amount));
+        balance += Mathf.Abs(Mathf.Ceil(amount));
         interestMoney += amount * (interestRate / 10f);
     }
 
@@ -76,9 +76,9 @@ public class Session : MonoBehaviour
     {
         const string lurePraise = " working unpaid overtime this sum of extra money was no simple feat for our boy who is demanding a raise in cat nips!";
 
-        GameUI.Instance.InstantiateInfoCard(5, "Lure(s) work:", $"$ {Mathf.CeilToInt(interestMoney)} {lurePraise}", Color.green, Color.white);
+        GameUI.Instance.InstantiateInfoCard(5, "Lure(s) work:", $"$ {Mathf.Ceil(interestMoney)} {lurePraise}", Color.green, Color.white, InfoCard.Side.right);
 
-        balance += Mathf.Abs(Mathf.CeilToInt(interestMoney));
+        balance += Mathf.Abs(Mathf.Ceil(interestMoney));
         interestMoney = 0;
     }
 
@@ -89,14 +89,14 @@ public class Session : MonoBehaviour
     {
         if (infiniteWealth) return;
 
-        balance -= Mathf.Abs(Mathf.RoundToInt(amount));
+        balance -= Mathf.Abs(Mathf.Round(amount));
     }
 
     /// <summary>
     /// Is player balance big enough for this purchase?
     /// </summary>
     /// <returns>If the player can afford this purchase</returns>
-    public bool CanPurchase(int cost)
+    public bool CanPurchase(float cost)
     {
         if (infiniteWealth) return true;
 
