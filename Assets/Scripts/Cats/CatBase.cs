@@ -251,21 +251,21 @@ public class CatBase : MonoBehaviour
         {
             case < 0.3f: // 30% chance to increase attack speed by 20%
                 
-                attackDelay = Mathf.Round(attackDelay *= 0.8f);
+                attackDelay = Mathf.Round(attackDelay * 0.8f * 10)/10f;
                 CreateInfoText("+ SPEED", 3);
 
                 break;
 
             case < 0.6f: // 30% chance to increase spread;
                 
-                attackDelay = Mathf.Round(projectileSpread *= 0.6f);
+                projectileSpread = Mathf.Round(projectileSpread * 0.6f * 10)/10f;
                 CreateInfoText("+ SPREAD", 3);
 
                 break;
 
             case < 0.9f: // 30% chance to increase range
 
-                range = Mathf.Round(range * 1.4f);
+                range = Mathf.Round(range * 1.4f*10)/10f;
                 CreateInfoText("+ RANGE", 3);
 
                 break;
@@ -309,11 +309,16 @@ public class CatBase : MonoBehaviour
         }
 
         // All other Cats
+        float maxVal = ((15 - attackDelay) + (90 - projectileSpread) + range + projectileCount)/5f;
         return new float[] { 
-            attackDelay, 
-            projectileSpread, 
-            range, 
-            projectileCount 
+            //attackDelay
+            1 - Mathf.InverseLerp(0, maxVal/50f, attackDelay), 
+            // projectileSpread
+            1 - Mathf.InverseLerp(0, maxVal, projectileSpread), 
+            // range
+            Mathf.InverseLerp(0, maxVal, range), 
+            // projectileCount
+            Mathf.InverseLerp(0, maxVal/10f, projectileCount),
         };
     }
 
