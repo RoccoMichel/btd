@@ -2,6 +2,7 @@ using NaughtyAttributes;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.Rendering;
 using UnityEngine;
 using UnityEngine.Splines;
 
@@ -296,6 +297,35 @@ public class CatBase : MonoBehaviour
         return new string[] { $"Speed\t[{attackDelay}]", $"Spread\t[{projectileSpread}]", $"Range\t[{range}]", $"Count\t[{projectileCount}]" };
     }
 
+    float GetMax(float[] valus)
+    {
+        float max = 0;
+        for (int i = 0; i < valus.Length; i++)
+            if (valus[i] > max) max = valus[i];
+
+        return max;
+    }
+
+    float[] GetScaldValus(float[] valus)
+    {
+        float[] midValus = new float[]
+        { 
+            0.5f, // atackDilay
+            30, // spred
+            5, // ransh
+            3 // buletCont
+        };
+
+        float[] ret = new float[4];
+
+        for (int i = 0; i < 4; i++)
+        {
+            ret[i] = (1 / midValus[i]) * valus[i];
+        }
+
+        return ret;
+    }
+
     /// <summary>
     /// All relative values from the cats statistics get converted for in Sliders
     /// </summary>
@@ -308,17 +338,22 @@ public class CatBase : MonoBehaviour
             return new float[] { lureStonks };
         }
 
+
+
+        float[] scaldVal = GetScaldValus(new float[]{attackDelay, projectileSpread, range, projectileCount});
+
         // All other Cats
-        float maxVal = ((15 - attackDelay) + (90 - projectileSpread) + range + projectileCount)/5f;
+        float maxVal = GetMax(scaldVal);
+
         return new float[] { 
             //attackDelay
-            1 - Mathf.InverseLerp(0, maxVal/50f, attackDelay), 
+            1 - Mathf.InverseLerp(0, maxVal, scaldVal[0]), 
             // projectileSpread
-            1 - Mathf.InverseLerp(0, maxVal, projectileSpread), 
+            1 - Mathf.InverseLerp(0, maxVal, scaldVal[1]), 
             // range
-            Mathf.InverseLerp(0, maxVal, range), 
+            Mathf.InverseLerp(0, maxVal, scaldVal[2]), 
             // projectileCount
-            Mathf.InverseLerp(0, maxVal/10f, projectileCount),
+            Mathf.InverseLerp(0, maxVal, scaldVal[3]),
         };
     }
 
