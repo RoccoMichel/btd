@@ -77,7 +77,7 @@ public class WaveManager : MonoBehaviour
     }
     private void StartNextWave()
     {
-         session.NextWave();
+        session.NextWave();
         StartWave(currentWaveIndex);
     }
     private void Update()
@@ -110,21 +110,16 @@ public class WaveManager : MonoBehaviour
     {
         isTimerOn = false;
 
-        currentWaveIndex++;
-        
+        currentWaveIndex++;        
 
         if ( PlayerPrefs.GetInt($"{SceneManager.GetActiveScene().buildIndex}Highscore", 0) < currentWaveIndex+1)
             PlayerPrefs.SetInt($"{SceneManager.GetActiveScene().buildIndex}Highscore", currentWaveIndex + 1);
 
         if (currentWaveIndex >= waves.Length)
         {
-
-
-
            
         }
         else StartCoroutine(startNext());
-       // else GameManager.Instance.WaveCompletedCallback();
     }
 
     public IEnumerator startNext()
@@ -156,10 +151,11 @@ public class WaveManager : MonoBehaviour
         timer += Time.deltaTime;
     }
 
-    private void ClearAllEnemies()
+    public void ClearAllEnemies()
     {
         transform.Clear();
     }
+
     private Vector2 GetSpawnPosition()
     {
         Vector2 targetPos = new Vector2(1000, 1000);
@@ -182,6 +178,23 @@ public class WaveManager : MonoBehaviour
 
         }
     }*/
+
+    // Have 2 buttons in debug mode to increase/decrease the current wave
+    private void OnGUI()
+    {
+        if (!CameraControler.debug) return;
+
+        if (GUI.Button(new Rect(10, 790, 120, 50), "Decrease Wave"))
+        {
+            currentWaveIndex = Mathf.Clamp(currentWaveIndex - 1, 0, waves.Length);
+            print($"Wave decreased to: {currentWaveIndex}");
+        }  
+        if (GUI.Button(new Rect(10, 860, 120, 50), "Increase Wave"))
+        {
+            currentWaveIndex = Mathf.Clamp(currentWaveIndex + 1, 0, waves.Length);
+            print($"Wave increased to: {currentWaveIndex}");
+        }
+    }
 }
 
 

@@ -370,11 +370,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7524f60d87bec8c4aa4c3679aeb898f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemDescription: 'OMG SHE HAS A FUCKING MINIGUN!
+  itemDescription: 'OMG SHE HAS A MINIGUN!
 
-    Sadly all the budget was
-    spent on the gun itself instead of the bullets so she might not be as effective
-    as one may first be led to believe.'
+    Sadly all the budget was spent on
+    the gun itself instead of the bullets so she might not be as effective as one
+    may first be led to believe.'
   structure: {fileID: 3108415689083583674, guid: fc33e34d5cec6a34ea3f8d89ae26aee3, type: 3}
   price: {fileID: 5898018204720478923}
   cost: 100

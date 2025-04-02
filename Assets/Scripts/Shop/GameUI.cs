@@ -1,6 +1,7 @@
 // All Code By Charlie And ...
-// ahh hell nah, more like 2 fucking lines by Charlie
+// ahh hell nah, more like 2 lines by Charlie
 
+using System;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -90,6 +91,8 @@ public class GameUI : MonoBehaviour
 
     public void OnGameLose()
     {
+        DestroyAllInfoCards();
+
         loseScreen.SetActive(true);
     }
     public void OnGameWin()
@@ -134,14 +137,6 @@ public class GameUI : MonoBehaviour
         Time.timeScale = Time.timeScale == 0 ? 1 : 0;
         pauseMenu.SetActive(!pauseMenu.activeSelf);
         settings.SetActive(false);
-    }
-
-    public void DestroyInfoCard(Side side)
-    {
-        if (infoCard[(int)side] == null) return;
-
-        infoCard[(int)side].GetComponent<InfoCard>().Kill();
-        infoCard[(int)side] = null;
     }
 
     // NORMAL CARDS:
@@ -205,6 +200,25 @@ public class GameUI : MonoBehaviour
         infoCard[(int)side] = Instantiate(Resources.Load("Upgrade Card"), transform).GameObject();
         infoCard[(int)side].GetComponent<UpgradeCard>().SetUpgradeValues(side, cat, this);
 
+    }
+
+    public void DestroyInfoCard(Side side)
+    {
+        if (infoCard[(int)side] == null) return;
+
+        infoCard[(int)side].GetComponent<InfoCard>().Kill();
+        infoCard[(int)side] = null;
+    }
+
+    public void DestroyAllInfoCards()
+    {
+        for (int i = 0; i < Enum.GetValues(typeof(Side)).Length; i++)
+        {
+            if (infoCard[i] == null) continue;
+
+            infoCard[i].GetComponent<InfoCard>().Kill();
+            infoCard[i] = null;
+        }
     }
 
     // The following two method are only for unity buttons
