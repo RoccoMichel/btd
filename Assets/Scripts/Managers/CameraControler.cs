@@ -66,7 +66,8 @@ public class CameraControler : MonoBehaviour
 
         float rotationSpeed = 100f / Time.timeScale;
 
-        transform.eulerAngles += rotationVector * rotationSpeed * Time.deltaTime;
+        if (Time.timeScale == 0) return;
+        transform.eulerAngles += rotationSpeed * Time.deltaTime * rotationVector;
     }
     private void HandleZoom()
     {

@@ -6125,8 +6125,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Evil Log
   description: "This log has been brutally enslaved to serve the evil rats by bringing
-    the rats as close to the holy cheese as possible. \n\nhe chosen cats have to
+    the rats as close to the holy cheese as possible. \n\nThe chosen cats have to
     stop them before the world is doomed!"
+  displayTime: 0
 --- !u!65 &1048349221
 BoxCollider:
   m_ObjectHideFlags: 0
