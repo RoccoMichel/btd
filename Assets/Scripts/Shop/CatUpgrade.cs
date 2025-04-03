@@ -37,7 +37,7 @@ public class CatUpgrade : MonoBehaviour
         // Animation & Sound ?
 
         // Sell value is half of cat value
-        shop.session.Profit(Mathf.Abs(cat.value));
+        shop.session.Profit(Mathf.Abs(cat.value/2));
         shop.balanceDisplay.color = Color.green;
         cat.Kill();
         KillYourSelf();
@@ -45,10 +45,10 @@ public class CatUpgrade : MonoBehaviour
 
     public void Upgrade()
     {
-        // Cost is 2 times of cat value rounded up
-        if (shop.session.CanPurchase(Mathf.Abs(Mathf.RoundToInt(cat.value * 2))))
+        // Cost is 1/4th of cat value rounded up
+        if (shop.session.CanPurchase(Mathf.Abs(Mathf.RoundToInt(cat.value / 4))))
         {
-            shop.session.Expenditure(Mathf.Abs(Mathf.RoundToInt(cat.value * 2)));
+            shop.session.Expenditure(Mathf.Abs(Mathf.RoundToInt(cat.value / 4)));
             cat.Upgrade();
             shop.balanceDisplay.color = Color.yellow;
         }
@@ -60,8 +60,8 @@ public class CatUpgrade : MonoBehaviour
     public void RefreshDisplays()
     {
         nameDisplay.text = $"{cat.displayName}\n(lv. {cat.upgradeLevel})";
-        upgradeDisplay.text = $"UPGRADE\n$ {Mathf.Abs(Mathf.RoundToInt(cat.value * 2))}";
-        sellDisplay.text = $"$ {Mathf.Abs(Mathf.RoundToInt(cat.value))}";
+        upgradeDisplay.text = $"UPGRADE\n$ {Mathf.Abs(Mathf.RoundToInt(cat.value / 4))}";
+        sellDisplay.text = $"$ {Mathf.Abs(Mathf.RoundToInt(cat.value / 2))}";
         // Sell value is half of cat value
     }
 

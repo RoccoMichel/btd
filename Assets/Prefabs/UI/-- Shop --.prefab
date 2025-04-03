@@ -830,7 +830,7 @@ MonoBehaviour:
     explosives that can cause mass destruction on ratkind (net-positive)
   structure: {fileID: 5529446915622836170, guid: 840d47f0dae77f248a4100e3e741fe33, type: 3}
   price: {fileID: 6284854370778448435}
-  cost: 250
+  cost: 150
 --- !u!114 &3925233966918780521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1016,7 +1016,7 @@ MonoBehaviour:
     seems to be printing money for you.'
   structure: {fileID: 3585982105108571785, guid: 9f66905933c9a1445a8bf743f03280c6, type: 3}
   price: {fileID: 7842330395008277282}
-  cost: 100
+  cost: 150
 --- !u!114 &977073838363917135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1336,7 +1336,7 @@ MonoBehaviour:
     off and doesn''t stack! All thanks to her special formula!'
   structure: {fileID: 6280059827579928464, guid: eade510a720819743a5c66abf966960e, type: 3}
   price: {fileID: 2787335774957008458}
-  cost: 150
+  cost: 200
 --- !u!114 &6492625926472882962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1950,10 +1950,10 @@ RectTransform:
   m_Children:
   - {fileID: 1336069194308672011}
   - {fileID: 3064682243784315628}
+  - {fileID: 6328372350416769269}
+  - {fileID: 540099274924934059}
   - {fileID: 7954553384955893000}
   - {fileID: 7173047287705407704}
-  - {fileID: 540099274924934059}
-  - {fileID: 6328372350416769269}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}

@@ -271,7 +271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Lure
   upgradeLevel: 1
-  value: 5
+  value: 150
   isColliding: 0
   AtackSond: {fileID: 0}
   canAtacke: 0

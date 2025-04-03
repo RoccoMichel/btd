@@ -1278,6 +1278,10 @@ PrefabInstance:
       value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 4103068700183774869, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
+      propertyPath: maxWaves
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103068700183774869, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
       propertyPath: DamitsEfetct
       value: 
       objectReference: {fileID: 1222406635}
@@ -3034,7 +3038,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602826294}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9528636c8961454b890d11091e4597d, type: 3}
   m_Name: 

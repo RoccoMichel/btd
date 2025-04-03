@@ -229,7 +229,7 @@ public class CatBase : MonoBehaviour
     public void Upgrade()
     {
         upgradeLevel++;
-        value *= 1.8f;
+        value *= 1.5f;
 
         if (isLure)
         {

@@ -82,7 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: F. Alfred
   upgradeLevel: 1
-  value: 10
+  value: 50
   isColliding: 0
   AtackSond: {fileID: 8300000, guid: 5b5933249ecd6fb43b80eba4c9607c70, type: 3}
   canAtacke: 0
