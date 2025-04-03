@@ -906,7 +906,7 @@ TerrainCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: b7d8ac6420688734f8275a239646e7e7, type: 2}
   m_EnableTreeColliders: 1
@@ -1323,7 +1323,7 @@ TerrainCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 2c38b399d86688c4c810d5afe1bd7f79, type: 2}
   m_EnableTreeColliders: 1
@@ -1895,7 +1895,7 @@ TerrainCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: b7440432742f325499e17887a96dec77, type: 2}
   m_EnableTreeColliders: 1
@@ -2075,7 +2075,7 @@ TerrainCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: bb56f055505038b449ca6c28c3e7b175, type: 2}
   m_EnableTreeColliders: 1
@@ -2516,7 +2516,7 @@ TerrainCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: fcd337e9fe17b9d428076caada87937e, type: 2}
   m_EnableTreeColliders: 1
@@ -2807,7 +2807,7 @@ TerrainCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: a346af1f9ca58b04192f14ebcf06e747, type: 2}
   m_EnableTreeColliders: 1
@@ -3475,7 +3475,7 @@ TerrainCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 2397342ed04b39b4b8b05e7282cec8fc, type: 2}
   m_EnableTreeColliders: 1
@@ -3791,7 +3791,7 @@ TerrainCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 2161521dfb335804ba9513d5f826cd91, type: 2}
   m_EnableTreeColliders: 1
