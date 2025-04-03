@@ -1,8 +1,7 @@
 using UnityEngine;
 using Cinemachine;
 using System;
-using UnityEngine.Rendering;
-using NUnit.Framework.Constraints;
+using UnityEngine.SceneManagement;
 
 public class CameraControler : MonoBehaviour
 {
@@ -11,9 +10,10 @@ public class CameraControler : MonoBehaviour
     public bool useMaxDistance = true;
     public float xMaxDistance = 25;
     public float zMaxDistance = 25;
-   
+    public float moveSpeed = 10f;
+
     private const float MIN_FOLLOW_YOFFSET = 4;
-    private const float MAX_FOLLOW_YOFFSET = 30F;
+    [SerializeField] private float MAX_FOLLOW_YOFFSET = 30F;
     private Vector3 targetFollowOffset;
     private CinemachineTransposer cinemachineTransposer;
     float hite;
@@ -42,14 +42,11 @@ public class CameraControler : MonoBehaviour
     {
         Vector2 inputMoveDir = InputManager.Instance.GetCameraMoveVector();
 
-        float moveSpeed = 10f;
-
-        if (Input.GetKey(KeyCode.LeftShift)) moveSpeed = 40f;
         Vector3 moveVector = transform.forward * inputMoveDir.y + transform.right * inputMoveDir.x;
 
         Vector3 absPosition = new Vector3(Mathf.Abs(transform.position.x), Mathf.Abs(transform.position.y), Mathf.Abs(transform.position.z));
-        
-        transform.position += moveVector * moveSpeed * Time.deltaTime;
+
+        transform.position += moveVector * Time.deltaTime * (Input.GetKey(KeyCode.LeftShift) ? moveSpeed * 4 : moveSpeed);
         // Clamp position based on Max Distance
         if (!useMaxDistance) return;
         transform.position = new Vector3
@@ -96,7 +93,7 @@ public class CameraControler : MonoBehaviour
 
         Transform camera = Camera.main.transform;
 
-        GUILayout.Label("CAMERA TRANSFORM:");
+        GUILayout.Label(SceneManager.GetActiveScene().name + "| CAMERA TRANSFORM:");
         GUILayout.Label(transform.position.ToString());
         GUILayout.Label(transform.eulerAngles.ToString());
 

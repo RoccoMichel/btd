@@ -18,6 +18,8 @@ public class GameUI : MonoBehaviour
     [SerializeField] internal GameObject pauseMenu;
     [SerializeField] internal GameObject shop;
     [SerializeField] internal GameObject loseScreen;
+    [SerializeField] internal GameObject tutorialButton;
+    [SerializeField] internal GameObject tutorialText;
     [SerializeField] internal GameObject winScreen;
     [SerializeField] internal TMP_Text balanceDisplay;
     [SerializeField] internal TMP_Text wavesDisplay;
@@ -32,6 +34,7 @@ public class GameUI : MonoBehaviour
     }
     private void Start()
     {
+        tutorialText.SetActive(false);
         if (session == null)
         {
             try { session = FindAnyObjectByType<Session>().GetComponent<Session>(); }
@@ -64,6 +67,12 @@ public class GameUI : MonoBehaviour
         // This Is Cuz The First Layer Mask Is A Parent Of This Layer Mask
         healthBarOutlineMask.position = healthBarStartPos;
         // <Code By Charlie>
+    }
+
+    public void ToggleTutorial()
+    {
+        tutorialButton.SetActive(!tutorialButton.activeSelf);
+        tutorialText.SetActive(!tutorialText.activeSelf);
     }
 
     public void UpdateWavesDisplay(int currentWave)

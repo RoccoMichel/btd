@@ -4303,7 +4303,7 @@ MonoBehaviour:
   - {fileID: 4825668182265712296, guid: adc87514700c40b4eb5933ba5bb8ab5f, type: 3}
   - {fileID: 4825668182265712296, guid: 09beb7ad2c3fa144cbd190e370efc975, type: 3}
   lastTime: 0000000000000000000000000000000000000000
-  difecolty: 1
+  difecolty: 0.8
   timer: 0
   StartRandomSponing: 11
   waveManager: {fileID: 1677913093}
@@ -11082,6 +11082,7 @@ MonoBehaviour:
   BufMutent: []
   BufSterods: []
   BufTacnk: []
+  startingDifecolty: 0.9
 --- !u!4 &1677913094
 Transform:
   m_ObjectHideFlags: 0

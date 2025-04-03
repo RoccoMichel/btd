@@ -3050,7 +3050,7 @@ MonoBehaviour:
   - {fileID: 4825668182265712296, guid: 1c6a6a8a9c04aaf4d9fc45350e669d33, type: 3}
   - {fileID: 4825668182265712296, guid: 32acb91f6111e7e49bdea406bab32e7a, type: 3}
   lastTime: 000000000000000000000000000000000000000000000000
-  difecolty: 1
+  difecolty: 0.9
   timer: 0
   StartRandomSponing: 9
   waveManager: {fileID: 602826309}

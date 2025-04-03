@@ -33,7 +33,10 @@ public class UpgradeCard : InfoCard
         TrySetStats(cat.GetStatNames(), cat.GetStatValues(), true);
 
         titleDisplay.text = $"{cat.displayName}\n(lv. {cat.upgradeLevel})";
+
+        upgradeDisplay.color = shop.session.CanPurchase(cat.value / 4) ? Color.black : Color.grey;
         upgradeDisplay.text = $"UPGRADE\n$ {Mathf.Abs(Mathf.Round(cat.value / 4))}";
+
         sellDisplay.text = $"SELL\n$ {Mathf.Abs(Mathf.Round(cat.value / 2))}";
     }
 

@@ -3,7 +3,6 @@ using UnityEngine;
 using NaughtyAttributes;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using static UnityEngine.Rendering.HableCurve;
 
 public class WaveManager : MonoBehaviour
 {
@@ -28,7 +27,7 @@ public class WaveManager : MonoBehaviour
     private List<float> localCounters = new List<float>();
 
     public List<RatBase> BufNorm, BufChoky, BufMutent, BufSterods, BufTacnk;
-    public float startingDifecolty;
+    public float startingDifecolty = 1f;
 
     private void Start()
     {

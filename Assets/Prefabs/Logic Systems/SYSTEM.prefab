@@ -211,7 +211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1af367eb98d192f43b88b20eb27d1394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextAnimashen: {fileID: 0}
   infiniteWealth: 0
   balance: 500
   minBalance: 0
@@ -249,6 +248,7 @@ MonoBehaviour:
   BufMutent: []
   BufSterods: []
   BufTacnk: []
+  startingDifecolty: 1
 --- !u!114 &9120303583111777466
 MonoBehaviour:
   m_ObjectHideFlags: 0
