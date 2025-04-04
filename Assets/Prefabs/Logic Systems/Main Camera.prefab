@@ -132,7 +132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a591f88cb68d430418efe3e0ce59792a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefomMetrick: 0
   dataPonts: 60
   scale: 4
   data:
@@ -784,7 +783,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9124743790754139034}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!114 &8817227157920424058
 MonoBehaviour:
   m_ObjectHideFlags: 0
