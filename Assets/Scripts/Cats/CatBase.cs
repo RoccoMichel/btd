@@ -214,6 +214,14 @@ public class CatBase : MonoBehaviour
     {
         if (!canAtacke) return;
 
+        // Remove the Upgrade Menu if it was already selected
+        if (IsRangeVisualized())
+        {
+            GameUI.Instance.DestroyInfoCard(InfoCard.Side.left);
+            ToggleRangeVisualization(false);
+            return;
+        }
+
         ToggleRangeVisualization(false);
 
         // Create new menu
@@ -388,6 +396,14 @@ public class CatBase : MonoBehaviour
         {
             visualization.transform.position = Vector3.down * 1000;
         }
+    }
+
+    public bool IsRangeVisualized()
+    {
+        if (GameObject.FindGameObjectWithTag("RangeVisualization").transform.position == transform.position)
+            return true;
+
+        return false;
     }
 
     /// <summary>

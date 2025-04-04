@@ -4380,7 +4380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1419809324982909049, guid: 2762d5a3a67b39943a40971a4e58099a, type: 3}
       propertyPath: startingDifecolty
-      value: 1.5
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 5470129827567853989, guid: 2762d5a3a67b39943a40971a4e58099a, type: 3}
       propertyPath: m_Name

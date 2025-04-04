@@ -11082,7 +11082,7 @@ MonoBehaviour:
   BufMutent: []
   BufSterods: []
   BufTacnk: []
-  startingDifecolty: 0.2
+  startingDifecolty: 0.6
 --- !u!4 &1677913094
 Transform:
   m_ObjectHideFlags: 0

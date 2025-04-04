@@ -3130,7 +3130,7 @@ MonoBehaviour:
       prefab: {fileID: 4825668182265712296, guid: 32acb91f6111e7e49bdea406bab32e7a, type: 3}
     - tStartEnd: {x: 0, y: 100}
       spawnFrequency: 2.143
-      prefab: {fileID: 919132149155446097, guid: 9226439adce5f944db877aa4e103179f, type: 3}
+      prefab: {fileID: 4825668182265712296, guid: 6a2b8ba1e932c774aae0168b5f4cfe22, type: 3}
     - tStartEnd: {x: 62.583267, y: 72.58327}
       spawnFrequency: 0.1
       prefab: {fileID: 4825668182265712296, guid: 1c6a6a8a9c04aaf4d9fc45350e669d33, type: 3}
@@ -3139,7 +3139,7 @@ MonoBehaviour:
   BufMutent: []
   BufSterods: []
   BufTacnk: []
-  startingDifecolty: 0.3
+  startingDifecolty: 0.5
 --- !u!114 &602826314 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4103068700183774869, guid: 0866e1d181db0ed4f9f90f00cb3b24dd, type: 3}
